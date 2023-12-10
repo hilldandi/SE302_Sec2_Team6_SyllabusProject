@@ -519,4 +519,123 @@ public class CourseInformationx {
     public void setReasonForUpdate(String reasonForUpdate) {
         this.reasonForUpdate = reasonForUpdate;
     }
+
+    public CourseInformationx(String version, String courseName, String code, String season, String theory, String lab, String localCredits, String ects, String prerequisities, String courseLanguage, String courseType, String courseLevel, String modeOfDelivery, String teachingMethodsAndTechniques, String courseCoordinator, String[] courseLecturers, String[] courseAssistants, String courseObjectives, String learningOutcomes, String courseDescription, String courseCategory, String weeklySubjectsAndRequiredMaterials, String courseNotesAndTextBooks, String suggestedReadingsAndMaterials, String weightOfParticipation, String weightOfLabOrApplication, String weightOfFieldWork, String weightOfQuizOrStudioCritique, String weightOfHwOrAssignment, String weightOfPresentationOrJury, String weightOfProject, String weightOfSeminarOrWorkshop, String weightOfOralExam, String weightOfMidterm, String weightOfFinalExam, String totalWeight, String courseHours, String labOrApplicationHours, String studyHourseOutsideClass, String fieldWork, String quizOrStudioCritique, String homeworkOrAssignment, String presentationOrJury, String project, String portfolio, String seminarOrWorkshop, String oralExam, String midterm, String aFinal, String totalWorkload, String week, String programOutcomes, String contributionLevel, String LO, String reasonForUpdate) {
+        this.version = version;
+        this.courseName = courseName;
+        this.code = code;
+        this.season = season;
+        this.theory = theory;
+        this.lab = lab;
+        this.localCredits = localCredits;
+        this.ects = ects;
+        this.prerequisities = prerequisities;
+        this.courseLanguage = courseLanguage;
+        this.courseType = courseType;
+        this.courseLevel = courseLevel;
+        this.modeOfDelivery = modeOfDelivery;
+        this.teachingMethodsAndTechniques = teachingMethodsAndTechniques;
+        this.courseCoordinator = courseCoordinator;
+        this.courseLecturers = courseLecturers;
+        this.courseAssistants = courseAssistants;
+        this.courseObjectives = courseObjectives;
+        this.learningOutcomes = learningOutcomes;
+        this.courseDescription = courseDescription;
+        this.courseCategory = courseCategory;
+        this.weeklySubjectsAndRequiredMaterials = weeklySubjectsAndRequiredMaterials;
+        this.courseNotesAndTextBooks = courseNotesAndTextBooks;
+        this.suggestedReadingsAndMaterials = suggestedReadingsAndMaterials;
+        this.weightOfParticipation = weightOfParticipation;
+        this.weightOfLabOrApplication = weightOfLabOrApplication;
+        this.weightOfFieldWork = weightOfFieldWork;
+        this.weightOfQuizOrStudioCritique = weightOfQuizOrStudioCritique;
+        this.weightOfHwOrAssignment = weightOfHwOrAssignment;
+        this.weightOfPresentationOrJury = weightOfPresentationOrJury;
+        this.weightOfProject = weightOfProject;
+        this.weightOfSeminarOrWorkshop = weightOfSeminarOrWorkshop;
+        this.weightOfOralExam = weightOfOralExam;
+        this.weightOfMidterm = weightOfMidterm;
+        this.weightOfFinalExam = weightOfFinalExam;
+        TotalWeight = totalWeight;
+        this.courseHours = courseHours;
+        this.labOrApplicationHours = labOrApplicationHours;
+        this.studyHourseOutsideClass = studyHourseOutsideClass;
+        this.fieldWork = fieldWork;
+        this.quizOrStudioCritique = quizOrStudioCritique;
+        this.homeworkOrAssignment = homeworkOrAssignment;
+        this.presentationOrJury = presentationOrJury;
+        this.project = project;
+        this.portfolio = portfolio;
+        this.seminarOrWorkshop = seminarOrWorkshop;
+        this.oralExam = oralExam;
+        this.midterm = midterm;
+        Final = aFinal;
+        TotalWorkload = totalWorkload;
+        this.week = week;
+        this.programOutcomes = programOutcomes;
+        this.contributionLevel = contributionLevel;
+        this.LO = LO;
+        this.reasonForUpdate = reasonForUpdate;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "version='" + version + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", code='" + code + '\'' +
+                ", season='" + season + '\'' +
+                ", theory='" + theory + '\'' +
+                ", lab='" + lab + '\'' +
+                ", localCredits='" + localCredits + '\'' +
+                ", ects='" + ects + '\'' +
+                ", prerequisities='" + prerequisities + '\'' +
+                ", courseLanguage='" + courseLanguage + '\'' +
+                ", courseType='" + courseType + '\'' +
+                ", courseLevel='" + courseLevel + '\'' +
+                ", modeOfDelivery='" + modeOfDelivery + '\'' +
+                ", teachingMethodsAndTechniques='" + teachingMethodsAndTechniques + '\'' +
+                ", courseCoordinator='" + courseCoordinator + '\'' +
+                ", courseLecturers=" + java.util.Arrays.toString(courseLecturers) +
+                ", courseAssistants=" + java.util.Arrays.toString(courseAssistants) +
+                ", courseObjectives='" + courseObjectives + '\'' +
+                ", learningOutcomes='" + learningOutcomes + '\'' +
+                ", courseDescription='" + courseDescription + '\'' +
+                ", courseCategory='" + courseCategory + '\'' +
+                ", weeklySubjectsAndRequiredMaterials='" + weeklySubjectsAndRequiredMaterials + '\'' +
+                ", courseNotesAndTextBooks='" + courseNotesAndTextBooks + '\'' +
+                ", suggestedReadingsAndMaterials='" + suggestedReadingsAndMaterials + '\'' +
+                ", weightOfParticipation='" + weightOfParticipation + '\'' +
+                ", weightOfLabOrApplication='" + weightOfLabOrApplication + '\'' +
+                ", weightOfFieldWork='" + weightOfFieldWork + '\'' +
+                ", weightOfQuizOrStudioCritique='" + weightOfQuizOrStudioCritique + '\'' +
+                ", weightOfHwOrAssignment='" + weightOfHwOrAssignment + '\'' +
+                ", weightOfPresentationOrJury='" + weightOfPresentationOrJury + '\'' +
+                ", weightOfProject='" + weightOfProject + '\'' +
+                ", weightOfSeminarOrWorkshop='" + weightOfSeminarOrWorkshop + '\'' +
+                ", weightOfOralExam='" + weightOfOralExam + '\'' +
+                ", weightOfMidterm='" + weightOfMidterm + '\'' +
+                ", weightOfFinalExam='" + weightOfFinalExam + '\'' +
+                ", TotalWeight='" + TotalWeight + '\'' +
+                ", courseHours='" + courseHours + '\'' +
+                ", labOrApplicationHours='" + labOrApplicationHours + '\'' +
+                ", studyHourseOutsideClass='" + studyHourseOutsideClass + '\'' +
+                ", fieldWork='" + fieldWork + '\'' +
+                ", quizOrStudioCritique='" + quizOrStudioCritique + '\'' +
+                ", homeworkOrAssignment='" + homeworkOrAssignment + '\'' +
+                ", presentationOrJury='" + presentationOrJury + '\'' +
+                ", project='" + project + '\'' +
+                ", portfolio='" + portfolio + '\'' +
+                ", seminarOrWorkshop='" + seminarOrWorkshop + '\'' +
+                ", oralExam='" + oralExam + '\'' +
+                ", midterm='" + midterm + '\'' +
+                ", Final='" + Final + '\'' +
+                ", TotalWorkload='" + TotalWorkload + '\'' +
+                ", week='" + week + '\'' +
+                ", programOutcomes='" + programOutcomes + '\'' +
+                ", contributionLevel='" + contributionLevel + '\'' +
+                ", LO='" + LO + '\'' +
+                ", reasonForUpdate='" + reasonForUpdate + '\'' +
+                '}';
+    }
 }
