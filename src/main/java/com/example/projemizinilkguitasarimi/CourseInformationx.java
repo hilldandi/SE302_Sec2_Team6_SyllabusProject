@@ -1,3 +1,5 @@
+package com.example.projemizinilkguitasarimi;
+
 public class CourseInformationx {
 	private String version;
     // The data on TAB1
@@ -38,6 +40,45 @@ public class CourseInformationx {
     private String weeklySubjectsAndRequiredMaterials;
     private String courseNotesAndTextBooks;
     private String suggestedReadingsAndMaterials;
+
+    //the data on TAB4 Assessment
+    private String weightOfParticipation;
+    private String weightOfLabOrApplication;
+    private String weightOfFieldWork;
+    private String weightOfQuizOrStudioCritique;
+    private String weightOfHwOrAssignment;
+    private String weightOfPresentationOrJury;
+    private String weightOfProject;
+    private String weightOfSeminarOrWorkshop;
+    private String weightOfOralExam;
+    private String weightOfMidterm;
+    private String weightOfFinalExam;
+    private String TotalWeight;
+
+    //the data on TAB5 ECTS / Workload Table
+    private String courseHours;
+    private String labOrApplicationHours;
+    private String studyHourseOutsideClass;
+    private String fieldWork;
+    private String quizOrStudioCritique;
+    private String homeworkOrAssignment;
+    private String presentationOrJury;
+    private String project;
+    private String portfolio;
+    private String seminarOrWorkshop;
+    private String oralExam;
+    private String midterm;
+    private String Final;
+    private String TotalWorkload;
+
+    //the data on TAB6 Course outcome matrix
+    private String week;
+    private String programOutcomes;
+    private String contributionLevel;
+    private String LO;
+
+    //the data on the SAVE TAB
+    private String reasonForUpdate;
 
     public String getVersion() {
         return version;
@@ -229,5 +270,253 @@ public class CourseInformationx {
 
     public void setSuggestedReadingsAndMaterials(String suggestedReadingsAndMaterials) {
         this.suggestedReadingsAndMaterials = suggestedReadingsAndMaterials;
+    }
+
+    public String getWeightOfParticipation() {
+        return weightOfParticipation;
+    }
+
+    public void setWeightOfParticipation(String weightOfParticipation) {
+        this.weightOfParticipation = weightOfParticipation;
+    }
+
+    public String getWeightOfLabOrApplication() {
+        return weightOfLabOrApplication;
+    }
+
+    public void setWeightOfLabOrApplication(String weightOfLabOrApplication) {
+        this.weightOfLabOrApplication = weightOfLabOrApplication;
+    }
+
+    public String getWeightOfFieldWork() {
+        return weightOfFieldWork;
+    }
+
+    public void setWeightOfFieldWork(String weightOfFieldWork) {
+        this.weightOfFieldWork = weightOfFieldWork;
+    }
+
+    public String getWeightOfQuizOrStudioCritique() {
+        return weightOfQuizOrStudioCritique;
+    }
+
+    public void setWeightOfQuizOrStudioCritique(String weightOfQuizOrStudioCritique) {
+        this.weightOfQuizOrStudioCritique = weightOfQuizOrStudioCritique;
+    }
+
+    public String getWeightOfHwOrAssignment() {
+        return weightOfHwOrAssignment;
+    }
+
+    public void setWeightOfHwOrAssignment(String weightOfHwOrAssignment) {
+        this.weightOfHwOrAssignment = weightOfHwOrAssignment;
+    }
+
+    public String getWeightOfPresentationOrJury() {
+        return weightOfPresentationOrJury;
+    }
+
+    public void setWeightOfPresentationOrJury(String weightOfPresentationOrJury) {
+        this.weightOfPresentationOrJury = weightOfPresentationOrJury;
+    }
+
+    public String getWeightOfProject() {
+        return weightOfProject;
+    }
+
+    public void setWeightOfProject(String weightOfProject) {
+        this.weightOfProject = weightOfProject;
+    }
+
+    public String getWeightOfSeminarOrWorkshop() {
+        return weightOfSeminarOrWorkshop;
+    }
+
+    public void setWeightOfSeminarOrWorkshop(String weightOfSeminarOrWorkshop) {
+        this.weightOfSeminarOrWorkshop = weightOfSeminarOrWorkshop;
+    }
+
+    public String getWeightOfOralExam() {
+        return weightOfOralExam;
+    }
+
+    public void setWeightOfOralExam(String weightOfOralExam) {
+        this.weightOfOralExam = weightOfOralExam;
+    }
+
+    public String getWeightOfMidterm() {
+        return weightOfMidterm;
+    }
+
+    public void setWeightOfMidterm(String weightOfMidterm) {
+        this.weightOfMidterm = weightOfMidterm;
+    }
+
+    public String getWeightOfFinalExam() {
+        return weightOfFinalExam;
+    }
+
+    public void setWeightOfFinalExam(String weightOfFinalExam) {
+        this.weightOfFinalExam = weightOfFinalExam;
+    }
+
+    public String getTotalWeight() {
+        return TotalWeight;
+    }
+
+    public void setTotalWeight(String totalWeight) {
+        TotalWeight = totalWeight;
+    }
+
+    public String getCourseHours() {
+        return courseHours;
+    }
+
+    public void setCourseHours(String courseHours) {
+        this.courseHours = courseHours;
+    }
+
+    public String getLabOrApplicationHours() {
+        return labOrApplicationHours;
+    }
+
+    public void setLabOrApplicationHours(String labOrApplicationHours) {
+        this.labOrApplicationHours = labOrApplicationHours;
+    }
+
+    public String getStudyHourseOutsideClass() {
+        return studyHourseOutsideClass;
+    }
+
+    public void setStudyHourseOutsideClass(String studyHourseOutsideClass) {
+        this.studyHourseOutsideClass = studyHourseOutsideClass;
+    }
+
+    public String getFieldWork() {
+        return fieldWork;
+    }
+
+    public void setFieldWork(String fieldWork) {
+        this.fieldWork = fieldWork;
+    }
+
+    public String getQuizOrStudioCritique() {
+        return quizOrStudioCritique;
+    }
+
+    public void setQuizOrStudioCritique(String quizOrStudioCritique) {
+        this.quizOrStudioCritique = quizOrStudioCritique;
+    }
+
+    public String getHomeworkOrAssignment() {
+        return homeworkOrAssignment;
+    }
+
+    public void setHomeworkOrAssignment(String homeworkOrAssignment) {
+        this.homeworkOrAssignment = homeworkOrAssignment;
+    }
+
+    public String getPresentationOrJury() {
+        return presentationOrJury;
+    }
+
+    public void setPresentationOrJury(String presentationOrJury) {
+        this.presentationOrJury = presentationOrJury;
+    }
+
+    public String getProject() {
+        return project;
+    }
+
+    public void setProject(String project) {
+        this.project = project;
+    }
+
+    public String getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(String portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    public String getSeminarOrWorkshop() {
+        return seminarOrWorkshop;
+    }
+
+    public void setSeminarOrWorkshop(String seminarOrWorkshop) {
+        this.seminarOrWorkshop = seminarOrWorkshop;
+    }
+
+    public String getOralExam() {
+        return oralExam;
+    }
+
+    public void setOralExam(String oralExam) {
+        this.oralExam = oralExam;
+    }
+
+    public String getMidterm() {
+        return midterm;
+    }
+
+    public void setMidterm(String midterm) {
+        this.midterm = midterm;
+    }
+
+    public String getFinal() {
+        return Final;
+    }
+
+    public void setFinal(String aFinal) {
+        Final = aFinal;
+    }
+
+    public String getTotalWorkload() {
+        return TotalWorkload;
+    }
+
+    public void setTotalWorkload(String totalWorkload) {
+        TotalWorkload = totalWorkload;
+    }
+
+    public String getWeek() {
+        return week;
+    }
+
+    public void setWeek(String week) {
+        this.week = week;
+    }
+
+    public String getProgramOutcomes() {
+        return programOutcomes;
+    }
+
+    public void setProgramOutcomes(String programOutcomes) {
+        this.programOutcomes = programOutcomes;
+    }
+
+    public String getContributionLevel() {
+        return contributionLevel;
+    }
+
+    public void setContributionLevel(String contributionLevel) {
+        this.contributionLevel = contributionLevel;
+    }
+
+    public String getLO() {
+        return LO;
+    }
+
+    public void setLO(String LO) {
+        this.LO = LO;
+    }
+
+    public String getReasonForUpdate() {
+        return reasonForUpdate;
+    }
+
+    public void setReasonForUpdate(String reasonForUpdate) {
+        this.reasonForUpdate = reasonForUpdate;
     }
 }
