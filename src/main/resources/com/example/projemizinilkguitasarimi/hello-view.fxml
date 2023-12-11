@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainController">
+    <children>
+        <TabPane layoutX="14.0" layoutY="103.0" prefHeight="834.0" prefWidth="1294.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="tab1">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutY="7.0" prefHeight="562.0" prefWidth="1294.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+                                    <children>
+                                        <Label fx:id="generalInfoLabel2" prefHeight="40.0" prefWidth="1294.0" text="1. GENERAL INFORMATION" />
+                                        <HBox prefHeight="36.0" prefWidth="1294.0">
+                                            <children>
+                                                <Label fx:id="courseNameLabel2" prefHeight="54.0" prefWidth="119.0" text="Course Name" />
+                                                <TextField fx:id="courseNameText2" prefHeight="61.0" prefWidth="187.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="84.0" prefWidth="1294.0">
+                                            <children>
+                                                <VBox prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="codeLabel2" alignment="CENTER" prefHeight="40.0" prefWidth="157.0" text="Code " />
+                                                        <TextField fx:id="codeText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="10.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="fallLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="Fall " />
+                                                        <TextField fx:id="fallText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="149.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="springLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="Spring " />
+                                                        <TextField fx:id="springText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="288.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="theoryLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="Theory" />
+                                                        <Label fx:id="hourLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="(hour/week)" />
+                                                        <TextField fx:id="theoryText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="427.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="labLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="Application/Lab" />
+                                                        <Label fx:id="hourLabel3" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="(hour/week)" />
+                                                        <TextField fx:id="applicationText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="566.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="localCredits" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="LocalCredits" />
+                                                        <TextField fx:id="localCreditsText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="705.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
+                                                    <children>
+                                                        <Label fx:id="ectsLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="ECTS" />
+                                                        <TextField fx:id="ectsText2" prefHeight="40.0" prefWidth="139.0" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <VBox prefHeight="210.0" prefWidth="1294.0">
+                                            <children>
+                                                <HBox prefHeight="29.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="prerequisitesLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="207.0" text="Prerequisites" />
+                                                        <TextField fx:id="prerequisitesText" prefHeight="31.0" prefWidth="1032.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="34.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="courseLanguageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="202.0" text="Course Language" />
+                                                        <CheckBox fx:id="englishCheckBox" mnemonicParsing="false" prefHeight="33.0" prefWidth="130.0" text="English " />
+                                                        <CheckBox fx:id="turkishCheckBox" mnemonicParsing="false" prefHeight="33.0" prefWidth="106.0" text="Turkish" />
+                                                        <CheckBox fx:id="secondForeignCheckBox" mnemonicParsing="false" prefHeight="34.0" prefWidth="201.0" text="Second Foreign Language" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="23.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="courseTypeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="203.0" text="Course Type" />
+                                                        <CheckBox fx:id="requiredCheckBox" mnemonicParsing="false" prefHeight="21.0" prefWidth="130.0" text="Required" />
+                                                        <CheckBox fx:id="ElectiveCheckBox" mnemonicParsing="false" prefHeight="21.0" prefWidth="114.0" text="Elective" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="44.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="courseLevelLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="203.0" text="Course Level" />
+                                                        <CheckBox fx:id="shortCycleCheck" mnemonicParsing="false" text="Short Cycle " />
+                                                        <CheckBox fx:id="firstCycleCheck" mnemonicParsing="false" text="First Cycle" />
+                                                        <CheckBox fx:id="secondCycleCheck" mnemonicParsing="false" text="Second Cycle" />
+                                                        <CheckBox fx:id="thirdCycleCheck" mnemonicParsing="false" text="Third Cycle" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="modelDeleveryLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="198.0" text="Mode of Delivery" />
+                                                        <CheckBox fx:id="facetwofaceCheck" mnemonicParsing="false" text="Face-to-Face" />
+                                                        <CheckBox fx:id="onlineCheck" mnemonicParsing="false" text="Online" />
+                                                        <CheckBox fx:id="blendedCheck" mnemonicParsing="false" text="Blended" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="teachingMethodsLabel" prefHeight="83.0" prefWidth="259.0" text="Teaching Methods andTechniques" />
+                                                        <TextArea fx:id="teachingMethodsText" prefHeight="83.0" prefWidth="995.0" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox prefHeight="51.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="coursecoordinatorLabel" prefHeight="51.0" prefWidth="170.0" text="Course Coordinator" />
+                                                        <TextField fx:id="coursecoordinatorText" prefHeight="31.0" prefWidth="545.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="51.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="courselecturerLabel" prefHeight="51.0" prefWidth="170.0" text="Course Lecturer(s)" />
+                                                        <TextField fx:id="courselecturerText" prefHeight="31.0" prefWidth="545.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="51.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="assistantLabel" prefHeight="51.0" prefWidth="170.0" text="Assistant(s)" />
+                                                        <TextField fx:id="assistantText" prefHeight="31.0" prefWidth="545.0" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="tab 2">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="286.0" layoutY="190.0" prefHeight="650.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox prefHeight="75.0" prefWidth="1294.0">
+                                            <children>
+                                                <Label fx:id="courseobjectivesLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="199.0" text="Course Objectives" />
+                                                <TextArea fx:id="courseobjectivesText" prefHeight="75.0" prefWidth="1071.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="75.0" prefWidth="199.0">
+                                            <children>
+                                                <Label fx:id="learningoutcomesLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="199.0" text="Learning Outcomes" />
+                                                <TextArea fx:id="learningoutcomesText" prefHeight="75.0" prefWidth="1071.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="40.0" prefWidth="1294.0">
+                                            <children>
+                                                <Label fx:id="coursedescriptionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="199.0" text="Course Description" />
+                                                <TextArea fx:id="coursedescriptionText" prefHeight="40.0" prefWidth="1071.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="188.0" prefWidth="1294.0">
+                                            <children>
+                                                <Label fx:id="courseCategoryLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="230.0" prefWidth="199.0" text="Course Category" />
+                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                    <children>
+                                                        <TextField fx:id="coreCourseText" prefHeight="31.0" />
+                                                        <TextField fx:id="majorAreaCourseText" prefHeight="40.0" />
+                                                        <TextField fx:id="supportiveCourseText" prefHeight="31.0" />
+                                                        <TextField fx:id="communicationandManagementSkillsCourseText" prefHeight="31.0" />
+                                                        <TextField fx:id="transferableSkillCourseText" prefHeight="31.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="188.0" prefWidth="974.0">
+                                                    <children>
+                                                        <Label fx:id="coreCourseLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" text="Core Course" />
+                                                        <Label fx:id="majorAreaCourseLabel" prefHeight="31.0" text="Major Area Course" />
+                                                        <Label fx:id="supportiveCourseLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" text="Supportive Course" />
+                                                        <Label fx:id="communicationandManagementSkillsCourseLabel" prefHeight="31.0" text="Communication and Management Skills Course" />
+                                                        <Label fx:id="transferableSkillCourseLabel" prefHeight="31.0" text="Transferable Skill Course" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="tab3">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ScrollPane prefHeight="855.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <VBox prefHeight="1038.0" prefWidth="1294.0">
+                                            <children>
+                                                <Label fx:id="weeklySubjectsLabel1" contentDisplay="CENTER" prefHeight="21.0" prefWidth="1289.0" text="2. WEEKLY SUBJECTS AND REQUIRED MATERIALS" />
+                                                <HBox prefHeight="21.0" prefWidth="1294.0">
+                                                    <children>
+                                                        <Label fx:id="WeekLabel1" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="75.0" text="Week" />
+                                                        <Label fx:id="SubjectsLabel1" prefHeight="21.0" prefWidth="577.0" text="Subjects " />
+                                                        <Label prefWidth="549.0" text="Required Materials" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="1" />
+                                                        <TextArea fx:id="subject1" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial1" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="2" />
+                                                        <TextArea fx:id="subject11" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial11" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="3" />
+                                                        <TextArea fx:id="subject21" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial21" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="4" />
+                                                        <TextArea fx:id="subject31" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial31" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="5" />
+                                                        <TextArea fx:id="subject41" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial41" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="6" />
+                                                        <TextArea fx:id="subject51" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial51" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="7" />
+                                                        <TextArea fx:id="subject61" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial61" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="8" />
+                                                        <TextArea fx:id="subject71" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial71" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="9" />
+                                                        <TextArea fx:id="subject81" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial81" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="10" />
+                                                        <TextArea fx:id="subject91" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial91" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="11" />
+                                                        <TextArea fx:id="subject101" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial101" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="12" />
+                                                        <TextArea fx:id="subject111" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial111" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="13" />
+                                                        <TextArea fx:id="subject121" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial121" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="14" />
+                                                        <TextArea fx:id="subject131" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial131" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="75.0" text="15" />
+                                                        <TextArea fx:id="subject141" prefHeight="50.0" prefWidth="577.0" />
+                                                        <TextArea fx:id="reqMaterial141" prefHeight="50.0" prefWidth="577.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <VBox prefHeight="99.0" prefWidth="258.0">
+                                                            <children>
+                                                                <Label fx:id="courseNotesLabel" prefHeight="55.0" prefWidth="267.0" text="Course Notes/Textbooks" />
+                                                                <Label fx:id="suggestedReadingsLabel" prefHeight="45.0" prefWidth="260.0" text="Suggested Readings/Materials" />
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox prefHeight="99.0" prefWidth="934.0">
+                                                            <children>
+                                                                <TextArea fx:id="courseNotesText" prefHeight="200.0" prefWidth="200.0" />
+                                                                <TextArea fx:id="suggestedReadingsText" prefHeight="200.0" prefWidth="200.0" />
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="tab 4">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ScrollPane layoutX="71.0" layoutY="111.0" prefHeight="855.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <VBox prefHeight="839.0" prefWidth="1271.0">
+                                            <children>
+                                                <HBox prefHeight="22.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="assesmentsLabel" prefHeight="21.0" prefWidth="1022.0" text="3. ASSESSMENT" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="21.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="semesterActivitiesLabel" prefHeight="21.0" prefWidth="229.0" text="Semester Activities" />
+                                                        <Label fx:id="numberLabel" prefHeight="21.0" prefWidth="111.0" text="Number" />
+                                                        <Label fx:id="weigthingLabel" prefHeight="21.0" prefWidth="111.0" text="Weigthing" />
+                                                        <Label fx:id="LO1Label" prefHeight="21.0" prefWidth="111.0" text="LO1 " />
+                                                        <Label fx:id="LO2Label" prefHeight="21.0" prefWidth="111.0" text="LO2" />
+                                                        <Label fx:id="LO3Label" prefHeight="21.0" prefWidth="111.0" text="LO3" />
+                                                        <Label fx:id="LO4Label" prefHeight="21.0" prefWidth="111.0" text="LO4" />
+                                                        <Label fx:id="LO5Label" prefWidth="111.0" text="LO5" />
+                                                        <Label fx:id="LO6Label" prefWidth="111.0" text="LO6 " />
+                                                        <Label fx:id="LO7Label" prefWidth="111.0" text="LO7" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="participationLabel" prefHeight="21.0" prefWidth="229.0" text="Participation" />
+                                                        <TextArea fx:id="participateNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="participateo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="53.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="labLabel" prefHeight="21.0" prefWidth="229.0" text="Laboratory/Application" />
+                                                        <TextArea fx:id="labNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="labo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="83.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="fieldLabel" prefHeight="21.0" prefWidth="229.0" text="Field Work" />
+                                                        <TextArea fx:id="fieldNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="fieldo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="113.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="quizLabel" prefHeight="21.0" prefWidth="229.0" text="Quiz/Studio Critique" />
+                                                        <TextArea fx:id="quizNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quizo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="quiz7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="143.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="homeworkLabel1" prefHeight="21.0" prefWidth="229.0" text="Homework/Assignment" />
+                                                        <TextArea fx:id="homeworkNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworkWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="homeworko7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="173.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="juryLabel11" prefHeight="21.0" prefWidth="229.0" text="Presentation/Jury" />
+                                                        <TextArea fx:id="juryNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="juryo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="203.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="ProjectLabel" prefHeight="21.0" prefWidth="229.0" text="Project" />
+                                                        <TextArea fx:id="ProjectNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projectWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="projecto7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="233.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="seminarLabel" prefHeight="21.0" prefWidth="229.0" text="Seminar/Workshop" />
+                                                        <TextArea fx:id="seminarNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminarWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="seminaro7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="263.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="oralLabel" prefHeight="21.0" prefWidth="229.0" text="Oral Exam" />
+                                                        <TextArea fx:id="oralNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="oralo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="293.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="midtermLabel" prefHeight="21.0" prefWidth="229.0" text="Midterm" />
+                                                        <TextArea fx:id="midtermNum" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermW" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="midtermo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="323.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="finalLabel" prefHeight="21.0" prefWidth="229.0" text="Final Exam" />
+                                                        <TextArea fx:id="finalNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="finalo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="353.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label prefHeight="21.0" prefWidth="229.0" text="Presentation/Jury" />
+                                                        <TextArea prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="383.0" prefHeight="30.0" prefWidth="1271.0">
+                                                    <children>
+                                                        <Label fx:id="totalLabel" prefHeight="21.0" prefWidth="229.0" text="Total " />
+                                                        <TextArea fx:id="totalNumText" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalWWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo2Text" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                        <TextArea fx:id="totalo7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox prefHeight="100.0" prefWidth="1008.0">
+                                                            <children>
+                                                                <Label fx:id="finalgradeLabel" prefHeight="105.0" prefWidth="1011.0" text="Weighting of Semester Activities on the Final Grade" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextField fx:id="finalgrade1" prefHeight="31.0" prefWidth="110.0" />
+                                                        <TextField fx:id="finalgrade2" prefHeight="31.0" prefWidth="111.0" />
+                                                    </children></HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox prefHeight="100.0" prefWidth="1007.0">
+                                                            <children>
+                                                                <Label fx:id="finalEndGradeLabel" prefHeight="103.0" prefWidth="1007.0" text="Weighting of End-of-Semester Activities on the Final Grade" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextField fx:id="finalEGrade1" prefHeight="31.0" prefWidth="116.0" />
+                                                        <TextField fx:id="finalEGrade2" prefHeight="31.0" prefWidth="101.0" />
+                                                    </children></HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="totalGLabel" prefHeight="100.0" prefWidth="1009.0" text="Total " />
+                                                        <TextField fx:id="totalG1" prefHeight="31.0" prefWidth="116.0" />
+                                                        <TextField fx:id="totalG2" prefHeight="31.0" prefWidth="99.0" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </ScrollPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="tab 5">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="178.0" layoutY="36.0" prefHeight="855.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label fx:id="ectsWorkloadLabel" prefHeight="21.0" prefWidth="1297.0" text="4. ECTS / WORKLOAD TABLE" />
+                                        <HBox prefHeight="21.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="semesterALabel" prefHeight="21.0" prefWidth="450.0" text="Semester Activities" />
+                                                <Label fx:id="numberWLabel" prefWidth="200.0" text="Number " />
+                                                <Label fx:id="durationWLabel" prefWidth="200.0" text="Duration(Hours)" />
+                                                <Label fx:id="workloadWLabel" prefWidth="200.0" text="Workload" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="courseWLabel" prefHeight="21.0" prefWidth="450.0" text="Course Hours(Including exam week: 16 x total hours)" />
+                                                <Label fx:id="numberWLabel1" prefWidth="200.0" text="16" />
+                                                <TextField fx:id="cdText" />
+                                                <TextField fx:id="cwText" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="52.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="labWLabel" prefHeight="21.0" prefWidth="450.0" text="Laboratory/Application Hours" />
+                                                <Label fx:id="lnLabel" prefWidth="200.0" text="16" />
+                                                <TextField fx:id="ldText" />
+                                                <TextField fx:id="lwText" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="83.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="studyWLabel" prefHeight="21.0" prefWidth="450.0" text="Study Hours out of Class" />
+                                                <TextField fx:id="snText" prefWidth="200.0" />
+                                                <TextField fx:id="sdText" />
+                                                <TextField fx:id="swText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="114.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="fieldWLabel" prefHeight="21.0" prefWidth="450.0" text="Field Work" />
+                                                <TextField fx:id="fnText" prefWidth="200.0" />
+                                                <TextField fx:id="fdText" />
+                                                <TextField fx:id="fwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="145.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="quizWLabel" prefHeight="21.0" prefWidth="450.0" text="Quiz/Studio Critique" />
+                                                <TextField fx:id="qnText1" prefWidth="200.0" />
+                                                <TextField fx:id="qdText1" />
+                                                <TextField fx:id="qwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="176.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="homeworkWLabel1" prefHeight="21.0" prefWidth="450.0" text="Homework/Assignments" />
+                                                <TextField fx:id="hnText" prefWidth="200.0" />
+                                                <TextField fx:id="hdText" />
+                                                <TextField fx:id="hwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="207.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="presentWLabel11" prefHeight="21.0" prefWidth="450.0" text="Presentation/Jury" />
+                                                <TextField fx:id="prnText" prefWidth="200.0" />
+                                                <TextField fx:id="prdText" />
+                                                <TextField fx:id="prwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="238.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="projectWLabel" prefHeight="21.0" prefWidth="450.0" text="Project" />
+                                                <TextField fx:id="pronText" prefWidth="200.0" />
+                                                <TextField fx:id="prodText" />
+                                                <TextField fx:id="prowText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="269.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="presentWLabel1111" prefHeight="21.0" prefWidth="450.0" text="Portfolio" />
+                                                <TextField fx:id="portnText" prefWidth="200.0" />
+                                                <TextField fx:id="portdText11" />
+                                                <TextField fx:id="portwText11" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="300.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="seminarWLabel" prefHeight="21.0" prefWidth="450.0" text="Seminar/Workshop" />
+                                                <TextField fx:id="semnText" prefWidth="200.0" />
+                                                <TextField fx:id="semdText" />
+                                                <TextField fx:id="semwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="331.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="oralWLabel" prefHeight="21.0" prefWidth="450.0" text="Oral Exam" />
+                                                <TextField fx:id="ornText" prefWidth="200.0" />
+                                                <TextField fx:id="ordText" />
+                                                <TextField fx:id="orwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="362.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="midWLabel1" prefHeight="21.0" prefWidth="450.0" text="Midterm" />
+                                                <TextField fx:id="midnText" prefWidth="200.0" />
+                                                <TextField fx:id="middText" />
+                                                <TextField fx:id="midwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="393.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="examWLabel" prefHeight="21.0" prefWidth="450.0" text="Final Exam" />
+                                                <TextField fx:id="exnText" prefWidth="200.0" />
+                                                <TextField fx:id="exdText" />
+                                                <TextField fx:id="exwText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="10.0" layoutY="424.0" prefHeight="31.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="totalWLabel" prefHeight="21.0" prefWidth="837.0" text="Tota" />
+                                                <TextField fx:id="totallWText" layoutX="460.0" layoutY="10.0" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="tab 6">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ScrollPane prefHeight="855.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <VBox prefHeight="1038.0" prefWidth="1294.0">
+                                            <children>
+                                                <Label fx:id="course5Label" prefHeight="21.0" prefWidth="1294.0" text="5. COURSE/PROGRAM OUTCOME MATRIX" />
+                                                <HBox prefHeight="60.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="108.0" prefWidth="121.0" text="#" />
+                                                        <Label fx:id="outcomesLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="697.0" text="Program Competencies/Outcomes" />
+                                                        <VBox prefHeight="100.0" prefWidth="387.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="389.0" text="Contribution Level," />
+                                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                    <children>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="73.0" prefWidth="62.0" text="1" />
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="62.0" text="2" />
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="10.0" prefHeight="73.0" prefWidth="62.0" text="3" />
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="10.0" prefHeight="73.0" prefWidth="62.0" text="4" />
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="10.0" prefHeight="73.0" prefWidth="62.0" text="5" />
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="10.0" prefHeight="73.0" prefWidth="62.0" text="LO#" />
+                                                                    </children>
+                                                                </HBox>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="1" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="131.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="2" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="231.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="3" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="331.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="4" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="431.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="5" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="531.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="6" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="631.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="7" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="731.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="7" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="772.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="8" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="781.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="9" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="789.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="10" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="795.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="11" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="800.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="12" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="805.0" prefHeight="60.0">
+                                                    <children>
+                                                        <Label prefHeight="115.0" prefWidth="137.0" text="13" />
+                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </ScrollPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Save Tab">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button layoutX="503.0" layoutY="356.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="289.0" text="Save All" />
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="188.0" prefHeight="21.0" prefWidth="1153.0" text="Explain your reason for saving the new version." />
+                                <TextArea layoutX="339.0" layoutY="411.0" prefHeight="200.0" prefWidth="622.0" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="trButton" layoutX="1156.0" layoutY="38.0" mnemonicParsing="false" text="Tr" />
+        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" text="Eng" />
+        <ImageView fitHeight="77.0" fitWidth="72.0" layoutX="622.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../demo1/src/main/resources/11266808971314.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="Old Versions" />
+        <Button layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToScene2" text="Back To Main Menu" />
+    </children>
+</AnchorPane>
