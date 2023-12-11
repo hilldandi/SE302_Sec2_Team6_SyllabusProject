@@ -43,6 +43,10 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    void SaveAll(ActionEvent event) {
+        //Furkan Save Button is Here
+    }
     public void saveButton(ActionEvent event )throws IOException{
         MainApplicationa mainApplicationa=new MainApplicationa();
         mainApplicationa.SaveFile(codeText2);

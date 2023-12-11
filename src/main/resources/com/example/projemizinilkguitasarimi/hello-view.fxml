@@ -31,7 +31,7 @@
                                                 <VBox prefHeight="15.0" prefWidth="139.0">
                                                     <children>
                                                         <Label fx:id="codeLabel2" alignment="CENTER" prefHeight="40.0" prefWidth="157.0" text="Code " />
-                                                        <TextField fx:id="codeText2" prefHeight="40.0" prefWidth="139.0" />
+                                                        <TextField fx:id="codeTextt2" prefHeight="40.0" prefWidth="139.0" />
                                                     </children>
                                                 </VBox>
                                                 <VBox layoutX="10.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
@@ -85,33 +85,25 @@
                                                 <HBox prefHeight="34.0" prefWidth="1294.0">
                                                     <children>
                                                         <Label fx:id="courseLanguageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="202.0" text="Course Language" />
-                                                        <CheckBox fx:id="englishCheckBox" mnemonicParsing="false" prefHeight="33.0" prefWidth="130.0" text="English " />
-                                                        <CheckBox fx:id="turkishCheckBox" mnemonicParsing="false" prefHeight="33.0" prefWidth="106.0" text="Turkish" />
-                                                        <CheckBox fx:id="secondForeignCheckBox" mnemonicParsing="false" prefHeight="34.0" prefWidth="201.0" text="Second Foreign Language" />
+                                          <TextField fx:id="CourseLanguageText" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="23.0" prefWidth="1294.0">
                                                     <children>
                                                         <Label fx:id="courseTypeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="203.0" text="Course Type" />
-                                                        <CheckBox fx:id="requiredCheckBox" mnemonicParsing="false" prefHeight="21.0" prefWidth="130.0" text="Required" />
-                                                        <CheckBox fx:id="ElectiveCheckBox" mnemonicParsing="false" prefHeight="21.0" prefWidth="114.0" text="Elective" />
+                                          <TextField fx:id="CourseTypeText" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="44.0" prefWidth="1294.0">
                                                     <children>
                                                         <Label fx:id="courseLevelLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="203.0" text="Course Level" />
-                                                        <CheckBox fx:id="shortCycleCheck" mnemonicParsing="false" text="Short Cycle " />
-                                                        <CheckBox fx:id="firstCycleCheck" mnemonicParsing="false" text="First Cycle" />
-                                                        <CheckBox fx:id="secondCycleCheck" mnemonicParsing="false" text="Second Cycle" />
-                                                        <CheckBox fx:id="thirdCycleCheck" mnemonicParsing="false" text="Third Cycle" />
+                                          <TextField fx:id="CourseLevelText" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="46.0" prefWidth="1294.0">
                                                     <children>
                                                         <Label fx:id="modelDeleveryLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="198.0" text="Mode of Delivery" />
-                                                        <CheckBox fx:id="facetwofaceCheck" mnemonicParsing="false" text="Face-to-Face" />
-                                                        <CheckBox fx:id="onlineCheck" mnemonicParsing="false" text="Online" />
-                                                        <CheckBox fx:id="blendedCheck" mnemonicParsing="false" text="Blended" />
+                                          <TextField fx:id="ModeOfDeleveryText" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
@@ -753,169 +745,157 @@
                                                 <HBox prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="1" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText1" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText11" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText12" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText13" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText14" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText15" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText1LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="131.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="2" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText2" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText21" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText22" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText23" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText24" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText25" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText2LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="231.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="3" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText3" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText31" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText32" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText33" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText34" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText35" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText32LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="331.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="4" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText4" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText41" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText42" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText43" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText44" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText45" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText4LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="431.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="5" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText5" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText51" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText52" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText53" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText54" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText55" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText5LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="531.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="6" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText6" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText61" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText62" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText63" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText64" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText65" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText6LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="631.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="7" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                    </children>
-                                                </HBox>
-                                                <HBox layoutX="10.0" layoutY="731.0" prefHeight="60.0">
-                                                    <children>
-                                                        <Label prefHeight="115.0" prefWidth="137.0" text="7" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText7" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText71" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText72" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText73" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText74" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText75" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText7LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="772.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="8" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText8" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText81" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText82" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText83" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText84" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText85" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText8LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="781.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="9" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText9" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText91" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText92" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText93" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText94" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText95" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText9LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="789.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="10" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText10" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText101" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText102" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText103" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText104" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText105" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText10LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="795.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="11" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText110" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText111" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText112" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText113" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText114" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText115" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText11LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="800.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="12" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText120" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText121" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText122" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText123" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText124" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText125" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText12LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="805.0" prefHeight="60.0">
                                                     <children>
                                                         <Label prefHeight="115.0" prefWidth="137.0" text="13" />
-                                                        <TextArea prefHeight="100.0" prefWidth="677.0" />
-                                                        <TextField prefHeight="100.0" prefWidth="64.0" />
-                                                        <TextField layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
-                                                        <TextField layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextArea fx:id="CoursePOMText130" prefHeight="100.0" prefWidth="677.0" />
+                                                        <TextField fx:id="CoursePOMText131" prefHeight="100.0" prefWidth="64.0" />
+                                                        <TextField fx:id="CoursePOMText132" layoutX="824.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText133" layoutX="888.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText134" layoutX="955.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText135" layoutX="1022.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
+                                                        <TextField fx:id="CoursePOMText13LO" layoutX="1089.0" layoutY="10.0" prefHeight="100.0" prefWidth="67.0" />
                                                     </children>
                                                 </HBox>
                                             </children>
@@ -929,9 +909,9 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <Button layoutX="503.0" layoutY="356.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="289.0" text="Save All" />
+                                <Button layoutX="503.0" layoutY="356.0" mnemonicParsing="false" onAction="#SaveAll" prefHeight="48.0" prefWidth="289.0" text="Save All" />
                                 <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="188.0" prefHeight="21.0" prefWidth="1153.0" text="Explain your reason for saving the new version." />
-                                <TextArea layoutX="339.0" layoutY="411.0" prefHeight="200.0" prefWidth="622.0" />
+                                <TextArea fx:id="SaveAllText" layoutX="339.0" layoutY="411.0" prefHeight="200.0" prefWidth="622.0" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
