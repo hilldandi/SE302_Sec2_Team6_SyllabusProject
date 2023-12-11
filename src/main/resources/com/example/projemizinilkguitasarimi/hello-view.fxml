@@ -919,9 +919,9 @@
         </TabPane>
         <Button fx:id="trButton" layoutX="1156.0" layoutY="38.0" mnemonicParsing="false" text="Tr" />
         <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" text="Eng" />
-        <ImageView fitHeight="77.0" fitWidth="72.0" layoutX="622.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="75.0" fitWidth="190.0" layoutX="593.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../../../../demo1/src/main/resources/11266808971314.jpg" />
+                <Image url="@logo.png" />
             </image>
         </ImageView>
         <Button layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="Old Versions" />
