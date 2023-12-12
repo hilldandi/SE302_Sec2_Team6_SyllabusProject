@@ -6,9 +6,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.projemizinilkguitasarimi.MainController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="800.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="66.0" prefWidth="567.0" text="All Created Versions" />
+        <ScrollPane layoutX="22.0" layoutY="80.0" prefHeight="601.0" prefWidth="1282.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <VBox layoutX="24.0" layoutY="-8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button layoutX="874.0" layoutY="721.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Open" />
+        <Button layoutX="1034.0" layoutY="721.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Delete" />
+        <TextField layoutX="911.0" layoutY="23.0" />
+        <Button layoutX="1099.0" layoutY="23.0" mnemonicParsing="false" text="Search" />
+    </children>
 </AnchorPane>
