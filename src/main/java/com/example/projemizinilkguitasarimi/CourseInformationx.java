@@ -6,7 +6,11 @@ public class CourseInformationx {
 
     private String courseName;
     private String code;
-    private String season;
+    private String season; // fall ve spring olarak böldüm
+
+    private String seasonFall;
+    private String seasonSpring;
+
     private String theory;
     private String lab;
     private String localCredits;
@@ -34,14 +38,70 @@ public class CourseInformationx {
     private String courseObjectives;
     private String learningOutcomes;
     private String courseDescription;
-    private String courseCategory; // <---tickbox
+
+    private String courseCategory; // bunu aşağıdaki variablelere böldüm
+
+    private String CCCoreCourse;
+    private String CCMajorAreaCourse;
+    private String CCSupportiveCourse;
+    private String CCComAndManagementSkillsCourse;
+    private String CCTransferableSkillCourse;
 
     //the data on TAB3
-    private String weeklySubjectsAndRequiredMaterials;
+    private String week1Subjects;
+    private String week2Subjects;
+    private String week3Subjects;
+    private String week4Subjects;
+    private String week5Subjects;
+    private String week6Subjects;
+    private String week7Subjects;
+    private String week8Subjects;
+    private String week9Subjects;
+    private String week10Subjects;
+    private String week11Subjects;
+    private String week12Subjects;
+    private String week13Subjects;
+    private String week14Subjects;
+    private String week15Subjects;
+
+    private String week1ReqMat;
+    private String week2ReqMat;
+    private String week3ReqMat;
+    private String week4ReqMat;
+    private String week5ReqMat;
+    private String week6ReqMat;
+    private String week7ReqMat;
+    private String week8ReqMat;
+    private String week9ReqMat;
+    private String week10ReqMat;
+    private String week11ReqMat;
+    private String week12ReqMat;
+    private String week13ReqMat;
+    private String week14ReqMat;
+    private String week15ReqMat;
+
+
+    private String weeklySubjectsAndRequiredMaterials; //bunu yukarıdaki variablelere böldüm.
+
     private String courseNotesAndTextBooks;
     private String suggestedReadingsAndMaterials;
 
     //the data on TAB4 Assessment
+
+    private String noOfParticipation;
+    private String noOfLabOrApplication;
+    private String noOfFieldWork;
+    private String noOfQuizOrStudioCritique;
+    private String noOfHwOrAssignment;
+    private String noOfPresentationOrJury;
+    private String noOfProject;
+    private String noOfSeminarOrWorkshop;
+    private String noOfOralExam;
+    private String noOfMidterm;
+    private String noOfFinalExam;
+    private String noOfPresentationJury;
+    private String noOfTotalWeight;
+
     private String weightOfParticipation;
     private String weightOfLabOrApplication;
     private String weightOfFieldWork;
@@ -53,7 +113,117 @@ public class CourseInformationx {
     private String weightOfOralExam;
     private String weightOfMidterm;
     private String weightOfFinalExam;
-    private String TotalWeight;
+    private String weightOfPresentationJury;
+    private String weightOfTotalWeight; // burayı değiştirmek zorundayım
+
+    private String LO1OfParticipation;
+    private String LO1OfLabOrApplication;
+    private String LO1OfFieldWork;
+    private String LO1OfQuizOrStudioCritique;
+    private String LO1OfHwOrAssignment;
+    private String LO1OfPresentationOrJury;
+    private String LO1OfProject;
+    private String LO1OfSeminarOrWorkshop;
+    private String LO1OfOralExam;
+    private String LO1OfMidterm;
+    private String LO1OfFinalExam;
+    private String LO1OfPresentationJury;
+    private String LO1OfTotalWeight;
+
+    private String LO2OfParticipation;
+    private String LO2OfLabOrApplication;
+    private String LO2OfFieldWork;
+    private String LO2OfQuizOrStudioCritique;
+    private String LO2OfHwOrAssignment;
+    private String LO2OfPresentationOrJury;
+    private String LO2OfProject;
+    private String LO2OfSeminarOrWorkshop;
+    private String LO2OfOralExam;
+    private String LO2OfMidterm;
+    private String LO2OfFinalExam;
+    private String LO2OfPresentationJury;
+    private String LO2OfTotalWeight;
+
+    private String LO3OfParticipation;
+    private String LO3OfLabOrApplication;
+    private String LO3OfFieldWork;
+    private String LO3OfQuizOrStudioCritique;
+    private String LO3OfHwOrAssignment;
+    private String LO3OfPresentationOrJury;
+    private String LO3OfProject;
+    private String LO3OfSeminarOrWorkshop;
+    private String LO3OfOralExam;
+    private String LO3OfMidterm;
+    private String LO3OfFinalExam;
+    private String LO3OfPresentationJury;
+    private String LO3OfTotalWeight;
+
+    private String LO4OfParticipation;
+    private String LO4OfLabOrApplication;
+    private String LO4OfFieldWork;
+    private String LO4OfQuizOrStudioCritique;
+    private String LO4OfHwOrAssignment;
+    private String LO4OfPresentationOrJury;
+    private String LO4OfProject;
+    private String LO4OfSeminarOrWorkshop;
+    private String LO4OfOralExam;
+    private String LO4OfMidterm;
+    private String LO4OfFinalExam;
+    private String LO4OfPresentationJury;
+    private String LO4OfTotalWeight;
+
+    private String LO5OfParticipation;
+    private String LO5OfLabOrApplication;
+    private String LO5OfFieldWork;
+    private String LO5OfQuizOrStudioCritique;
+    private String LO5OfHwOrAssignment;
+    private String LO5OfPresentationOrJury;
+    private String LO5OfProject;
+    private String LO5OfSeminarOrWorkshop;
+    private String LO5OfOralExam;
+    private String LO5OfMidterm;
+    private String LO5OfFinalExam;
+    private String LO5OfPresentationJury;
+    private String LO5OfTotalWeight;
+
+    private String LO6OfParticipation;
+    private String LO6OfLabOrApplication;
+    private String LO6OfFieldWork;
+    private String LO6OfQuizOrStudioCritique;
+    private String LO6OfHwOrAssignment;
+    private String LO6OfPresentationOrJury;
+    private String LO6OfProject;
+    private String LO6OfSeminarOrWorkshop;
+    private String LO6OfOralExam;
+    private String LO6OfMidterm;
+    private String LO6OfFinalExam;
+    private String LO6OfPresentationJury;
+    private String LO6OfTotalWeight;
+
+    private String LO7OfParticipation;
+    private String LO7OfLabOrApplication;
+    private String LO7OfFieldWork;
+    private String LO7OfQuizOrStudioCritique;
+    private String LO7OfHwOrAssignment;
+    private String LO7OfPresentationOrJury;
+    private String LO7OfProject;
+    private String LO7OfSeminarOrWorkshop;
+    private String LO7OfOralExam;
+    private String LO7OfMidterm;
+    private String LO7OfFinalExam;
+    private String LO7OfPresentationJury;
+    private String LO7OfTotalWeight;
+
+    private String weightOfSemActivitiesOnFinalGrade1;
+    private String weightOfSemActivitiesOnFinalGrade2;
+
+    private String weightOfEndOfSemActivitiesOnFinalGrade1;
+    private String weightOfEndOfSemActivitiesOnFinalGrade2;
+
+    private String endOfTab4Total1;
+    private String endOfTab4Total2;
+
+
 
     //the data on TAB5 ECTS / Workload Table
     private String courseHours;
@@ -71,11 +241,142 @@ public class CourseInformationx {
     private String Final;
     private String TotalWorkload;
 
+    private String courseHoursDur;
+    private String labOrApplicationHoursDur;
+    private String studyHourseOutsideClassDur;
+    private String fieldWorkDur;
+    private String quizOrStudioCritiqueDur;
+    private String homeworkOrAssignmentDur;
+    private String presentationOrJuryDur;
+    private String projectDur;
+    private String portfolioDur;
+    private String seminarOrWorkshopDur;
+    private String oralExamDur;
+    private String midtermDur;
+    private String FinalDur;
+    private String TotalWorkloadDur;
+
+    private String courseHoursWL;
+    private String labOrApplicationHourWL;
+    private String studyHourseOutsideClassWL;
+    private String fieldWorkWL;
+    private String quizOrStudioCritiqueWL;
+    private String homeworkOrAssignmentWL;
+    private String presentationOrJuryWL;
+    private String projectWL;
+    private String portfolioWL;
+    private String seminarOrWorkshopWL;
+    private String oralExamWL;
+    private String midtermWL;
+    private String FinalWL;
+    private String TotalWorkloadWL;
+
+
+
     //the data on TAB6 Course outcome matrix
     private String week;
     private String programOutcomes;
     private String contributionLevel;
     private String LO;
+    //now more variables to suit more spaces :)
+
+    private String programCompetenciesOutcome1;
+    private String programCompetenciesOutcome1ContributionLevel1;
+    private String programCompetenciesOutcome1ContributionLevel2;
+    private String programCompetenciesOutcome1ContributionLevel3;
+    private String programCompetenciesOutcome1ContributionLevel4;
+    private String programCompetenciesOutcome1ContributionLevel5;
+    private String programCompetenciesOutcome1LOno;
+
+    private String programCompetenciesOutcome2;
+    private String programCompetenciesOutcome2ContributionLevel1;
+    private String programCompetenciesOutcome2ContributionLevel2;
+    private String programCompetenciesOutcome2ContributionLevel3;
+    private String programCompetenciesOutcome2ContributionLevel4;
+    private String programCompetenciesOutcome2ContributionLevel5;
+    private String programCompetenciesOutcome2LOno;
+
+    private String programCompetenciesOutcome3;
+    private String programCompetenciesOutcome3ContributionLevel1;
+    private String programCompetenciesOutcome3ContributionLevel2;
+    private String programCompetenciesOutcome3ContributionLevel3;
+    private String programCompetenciesOutcome3ContributionLevel4;
+    private String programCompetenciesOutcome3ContributionLevel5;
+    private String programCompetenciesOutcome3LOno;
+
+    private String programCompetenciesOutcome4;
+    private String programCompetenciesOutcome4ContributionLevel1;
+    private String programCompetenciesOutcome4ContributionLevel2;
+    private String programCompetenciesOutcome4ContributionLevel3;
+    private String programCompetenciesOutcome4ContributionLevel4;
+    private String programCompetenciesOutcome4ContributionLevel5;
+    private String programCompetenciesOutcome4LOno;
+
+    private String programCompetenciesOutcome5;
+    private String programCompetenciesOutcome5ContributionLevel1;
+    private String programCompetenciesOutcome5ContributionLevel2;
+    private String programCompetenciesOutcome5ContributionLevel3;
+    private String programCompetenciesOutcome5ContributionLevel4;
+    private String programCompetenciesOutcome5ContributionLevel5;
+    private String programCompetenciesOutcome5LOno;
+
+    private String programCompetenciesOutcome6;
+    private String programCompetenciesOutcome6ContributionLevel1;
+    private String programCompetenciesOutcome6ContributionLevel2;
+    private String programCompetenciesOutcome6ContributionLevel3;
+    private String programCompetenciesOutcome6ContributionLevel4;
+    private String programCompetenciesOutcome6ContributionLevel5;
+    private String programCompetenciesOutcome6LOno;
+
+
+    private String programCompetenciesOutcome7;
+    private String programCompetenciesOutcome7ContributionLevel1;
+    private String programCompetenciesOutcome7ContributionLevel2;
+    private String programCompetenciesOutcome7ContributionLevel3;
+    private String programCompetenciesOutcome7ContributionLevel4;
+    private String programCompetenciesOutcome7ContributionLevel5;
+    private String programCompetenciesOutcome7LOno;
+
+    private String programCompetenciesOutcome8;
+    private String programCompetenciesOutcome8ContributionLevel1;
+    private String programCompetenciesOutcome8ContributionLevel2;
+    private String programCompetenciesOutcome8ContributionLevel3;
+    private String programCompetenciesOutcome8ContributionLevel4;
+    private String programCompetenciesOutcome8ContributionLevel5;
+    private String programCompetenciesOutcome8LOno;
+
+    private String programCompetenciesOutcome9;
+    private String programCompetenciesOutcome9ContributionLevel1;
+    private String programCompetenciesOutcome9ContributionLevel2;
+    private String programCompetenciesOutcome9ContributionLevel3;
+    private String programCompetenciesOutcome9ContributionLevel4;
+    private String programCompetenciesOutcome9ContributionLevel5;
+    private String programCompetenciesOutcome9LOno;
+
+    private String programCompetenciesOutcome10;
+    private String programCompetenciesOutcome10ContributionLevel1;
+    private String programCompetenciesOutcome10ContributionLevel2;
+    private String programCompetenciesOutcome10ContributionLevel3;
+    private String programCompetenciesOutcome10ContributionLevel4;
+    private String programCompetenciesOutcome10ContributionLevel5;
+    private String programCompetenciesOutcome10LOno;
+
+    private String programCompetenciesOutcome11;
+    private String programCompetenciesOutcome11ContributionLevel1;
+    private String programCompetenciesOutcome11ContributionLevel2;
+    private String programCompetenciesOutcome11ContributionLevel3;
+    private String programCompetenciesOutcome11ContributionLevel4;
+    private String programCompetenciesOutcome11ContributionLevel5;
+    private String programCompetenciesOutcome11LOno;
+
+    private String programCompetenciesOutcome12;
+    private String programCompetenciesOutcome12ContributionLevel1;
+    private String programCompetenciesOutcome12ContributionLevel2;
+    private String programCompetenciesOutcome12ContributionLevel3;
+    private String programCompetenciesOutcome12ContributionLevel4;
+    private String programCompetenciesOutcome12ContributionLevel5;
+    private String programCompetenciesOutcome12LOno;
+
 
     //the data on the SAVE TAB
     private String reasonForUpdate;
@@ -361,11 +662,11 @@ public class CourseInformationx {
     }
 
     public String getTotalWeight() {
-        return TotalWeight;
+        return weightOfTotalWeight;
     }
 
     public void setTotalWeight(String totalWeight) {
-        TotalWeight = totalWeight;
+        weightOfTotalWeight = totalWeight;
     }
 
     public String getCourseHours() {
@@ -556,7 +857,7 @@ public class CourseInformationx {
         this.weightOfOralExam = weightOfOralExam;
         this.weightOfMidterm = weightOfMidterm;
         this.weightOfFinalExam = weightOfFinalExam;
-        TotalWeight = totalWeight;
+        this.weightOfTotalWeight = totalWeight;
         this.courseHours = courseHours;
         this.labOrApplicationHours = labOrApplicationHours;
         this.studyHourseOutsideClass = studyHourseOutsideClass;
@@ -616,7 +917,7 @@ public class CourseInformationx {
                 ", weightOfOralExam='" + weightOfOralExam + '\'' +
                 ", weightOfMidterm='" + weightOfMidterm + '\'' +
                 ", weightOfFinalExam='" + weightOfFinalExam + '\'' +
-                ", TotalWeight='" + TotalWeight + '\'' +
+                ", TotalWeight='" + weightOfTotalWeight + '\'' +
                 ", courseHours='" + courseHours + '\'' +
                 ", labOrApplicationHours='" + labOrApplicationHours + '\'' +
                 ", studyHourseOutsideClass='" + studyHourseOutsideClass + '\'' +
