@@ -1,11 +1,65 @@
-package com.example.demo4;
+package com.example.projemizinilkguitasarimi;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class MainControllerX {
+
+
+    /* they add i main
+        public static void main(String[] args) {
+        Gson gson = new Gson();
+
+        // Add a new object with user input
+        CourseInformationx updatedCourse = createNewCourse();
+        String newJson = gson.toJson(updatedCourse);
+
+        // Write the updated JSON to a new file
+        String newFilePath = updatedCourse.getCode() + ".json";
+        writeJsonToFile(newJson, newFilePath);
+
+        // Read and print the updated JSON
+        CourseInformationx updatedFromJson = readJsonFile(newFilePath);
+        System.out.println("Updated data:\n" + updatedFromJson);
+    }
+     */
+    public void CreateNewCourse()throws IOException {//Ezgi versiyon kontrolu için burayı doldur
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Course Name: ");
+        String courseName = scanner.nextLine();
+
+        System.out.print("Enter Version: ");
+        String version = scanner.nextLine();
+
+        // Create a new CourseInformationx object
+        CourseInformationx newCourse = new CourseInformationx();
+        newCourse.setCourseName(courseName);
+        newCourse.setVersion(String.valueOf(version));
+
+        // Populate other properties
+        addNewCourse(newCourse);
+
+        String code =codeTextt2.getText();
+        CourseInformationx course=new CourseInformationx();
+        fillCourse(course);
+        String newJson = gson.toJson(course);
+        String newFilePath = updatedCourse.getCourseName() +"-v"+ updatedCourse.getVersion() + ".json";
+
+        //Create new directory according to course code
+        File dir = new File("SE302_Sec2_Team6_SyllabusProject-course_information/"+code);
+        dir.mkdirs();
+        File file = new File(dir, newFilePath);
+
+        try (FileWriter fileWriter = new FileWriter(file)) {
+            fileWriter.write(newJson);
+            System.out.println("JSON written to file successfully.");
+        }
     @FXML
     public void fillCourse(CourseInformationx course) {
         //Tab1
