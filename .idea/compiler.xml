@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ProjemizinIlkGuiTasarimi" />
-        <module name="SE302_Sec2_Team6_SyllabusProject" />
       </profile>
     </annotationProcessing>
   </component>
