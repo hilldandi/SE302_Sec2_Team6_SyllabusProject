@@ -1,5 +1,12 @@
 package com.example.projemizinilkguitasarimi;
 
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class CourseInformationx {
 	private String version;
     // The data on TAB1
@@ -30,8 +37,8 @@ public class CourseInformationx {
     private String courseCoordinator;
 
     //this part will be editted
-    private String courseLecturers[];
-    private String courseAssistants[];
+    private String courseLecturers;
+    private String courseAssistants;
 
     //the data on TAB2
 
@@ -501,19 +508,19 @@ public class CourseInformationx {
         this.courseCoordinator = courseCoordinator;
     }
 
-    public String[] getCourseLecturers() {
+    public String getCourseLecturers() {
         return courseLecturers;
     }
 
-    public void setCourseLecturers(String[] courseLecturers) {
+    public void setCourseLecturers(String courseLecturers) {
         this.courseLecturers = courseLecturers;
     }
 
-    public String[] getCourseAssistants() {
+    public String getCourseAssistants() {
         return courseAssistants;
     }
 
-    public void setCourseAssistants(String[] courseAssistants) {
+    public void setCourseAssistants(String courseAssistants) {
         this.courseAssistants = courseAssistants;
     }
 
@@ -3530,4 +3537,25 @@ public class CourseInformationx {
                 ", reasonForUpdate='" + reasonForUpdate + '\'' +
                 '}';
     }
+    private static CourseInformationx readJsonFile(String filePath) {
+        try (FileReader fileReader = new FileReader(filePath)) {
+            return new Gson().fromJson(fileReader, CourseInformationx.class);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found. Creating a new object.");
+            return new CourseInformationx();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private static void writeJsonToFile(String json, String filePath) {
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            fileWriter.write(json);
+            System.out.println("JSON written to file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
