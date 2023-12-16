@@ -1,5 +1,6 @@
 package com.example.projemizinilkguitasarimi;
 
+import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -48,6 +52,27 @@ public class MainControllerX {
         System.out.println("Updated data:\n" + updatedFromJson);
     }
      */
+            //read ve write fonksiyonlarını koydum
+    private static CourseInformationx readJsonFile(String filePath) {
+        try (FileReader fileReader = new FileReader(filePath)) {
+            return new Gson().fromJson(fileReader, CourseInformationx.class);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found. Creating a new object.");
+            return new CourseInformationx();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private static void writeJsonToFile(String json, String filePath) {
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            fileWriter.write(json);
+            System.out.println("JSON written to file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void CreateNewCourse()throws IOException {//Ezgi versiyon kontrolu için burayı doldur
         Scanner scanner = new Scanner(System.in);
 

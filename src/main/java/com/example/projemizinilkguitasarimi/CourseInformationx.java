@@ -384,6 +384,13 @@ public class CourseInformationx {
     private String programCompetenciesOutcome12ContributionLevel5;
     private String programCompetenciesOutcome12LOno;
 
+    private String programCompetenciesOutcome13;
+    private String programCompetenciesOutcome13ContributionLevel1;
+    private String programCompetenciesOutcome13ContributionLevel2;
+    private String programCompetenciesOutcome13ContributionLevel3;
+    private String programCompetenciesOutcome13ContributionLevel4;
+    private String programCompetenciesOutcome13ContributionLevel5;
+    private String programCompetenciesOutcome13LOno;
 
     //the data on the SAVE TAB
     private String reasonForUpdate;
@@ -2916,6 +2923,62 @@ public class CourseInformationx {
         this.programCompetenciesOutcome12LOno = programCompetenciesOutcome12LOno;
     }
 
+    public String getProgramCompetenciesOutcome13() {
+        return programCompetenciesOutcome13;
+    }
+
+    public void setProgramCompetenciesOutcome13(String programCompetenciesOutcome13) {
+        this.programCompetenciesOutcome13 = programCompetenciesOutcome13;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel1() {
+        return programCompetenciesOutcome13ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel1(String programCompetenciesOutcome13ContributionLevel1) {
+        this.programCompetenciesOutcome13ContributionLevel1 = programCompetenciesOutcome13ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel2() {
+        return programCompetenciesOutcome13ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel2(String programCompetenciesOutcome13ContributionLevel2) {
+        this.programCompetenciesOutcome13ContributionLevel2 = programCompetenciesOutcome13ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel3() {
+        return programCompetenciesOutcome13ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel3(String programCompetenciesOutcome13ContributionLevel3) {
+        this.programCompetenciesOutcome13ContributionLevel3 = programCompetenciesOutcome13ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel4() {
+        return programCompetenciesOutcome13ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel4(String programCompetenciesOutcome13ContributionLevel4) {
+        this.programCompetenciesOutcome13ContributionLevel4 = programCompetenciesOutcome13ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel5() {
+        return programCompetenciesOutcome13ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel5(String programCompetenciesOutcome13ContributionLevel5) {
+        this.programCompetenciesOutcome13ContributionLevel5 = programCompetenciesOutcome13ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome13LOno() {
+        return programCompetenciesOutcome13LOno;
+    }
+
+    public void setProgramCompetenciesOutcome13LOno(String programCompetenciesOutcome13LOno) {
+        this.programCompetenciesOutcome13LOno = programCompetenciesOutcome13LOno;
+    }
+
     public CourseInformationx() {
         this.version = " ";
         this.courseName = " ";
@@ -3537,25 +3600,4 @@ public class CourseInformationx {
                 ", reasonForUpdate='" + reasonForUpdate + '\'' +
                 '}';
     }
-    private static CourseInformationx readJsonFile(String filePath) {
-        try (FileReader fileReader = new FileReader(filePath)) {
-            return new Gson().fromJson(fileReader, CourseInformationx.class);
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found. Creating a new object.");
-            return new CourseInformationx();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    private static void writeJsonToFile(String json, String filePath) {
-        try (FileWriter fileWriter = new FileWriter(filePath)) {
-            fileWriter.write(json);
-            System.out.println("JSON written to file successfully.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 }
