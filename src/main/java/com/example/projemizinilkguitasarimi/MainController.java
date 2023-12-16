@@ -24,11 +24,38 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class MainController {
+    //başlangıç ekranı butonları--------------------------------------(switch metodu mantığında ilerlenilcek aşağada örneği var
+    @FXML
+    private Button OldVerMainButton;
+
+
+
+    @FXML
+    void OldVerMainButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void EditButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void CompareButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HelpButton(ActionEvent event) {
+
+    }
+    //başlangıç ekranı butonları--------------------------------------
+
     private Stage stage;
     private Scene scene;
     private Parent root;
     private TextField codeText2;
-
+//örnek bir (bunu zaten kullanıyoruz)
     public void switchToScene1(ActionEvent event ) throws IOException {
         Parent root=FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
@@ -36,6 +63,7 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+    //örnek iki (bunu zaten kullanıyoruz)
     public void switchToScene2(ActionEvent event ) throws IOException {
         Parent root=FXMLLoader.load(getClass().getResource("start.fxml"));
         stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
