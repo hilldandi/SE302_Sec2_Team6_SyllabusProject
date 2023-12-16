@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainController">
     <children>
         <TabPane layoutX="14.0" layoutY="103.0" prefHeight="834.0" prefWidth="1294.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
@@ -895,22 +901,36 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <Button layoutX="503.0" layoutY="356.0" mnemonicParsing="false" onAction="#SaveAll" prefHeight="48.0" prefWidth="289.0" text="Save All" />
-                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="188.0" prefHeight="21.0" prefWidth="1153.0" text="Explain your reason for saving the new version." />
-                                <TextArea fx:id="SaveAllText" layoutX="339.0" layoutY="411.0" prefHeight="200.0" prefWidth="622.0" />
+                                <Button layoutX="495.0" layoutY="626.0" mnemonicParsing="false" onAction="#SaveAll" prefHeight="54.0" prefWidth="290.0" text="Save All" textFill="#0d0505">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Button>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="294.0" prefHeight="35.0" prefWidth="1154.0" text="The main reason for changes made in the syllabus : " textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                                <TextArea fx:id="SaveAllText" layoutX="335.0" layoutY="372.0" prefHeight="205.0" prefWidth="638.0" />
+                        <Accordion layoutX="419.0" layoutY="80.0" />
+                        <AnchorPane layoutX="172.0" layoutY="197.0" prefHeight="42.0" prefWidth="336.0" />
+                        <Label layoutX="587.0" layoutY="80.0" prefHeight="42.0" prefWidth="262.0" text="Date &amp;Time  ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextArea layoutX="335.0" layoutY="143.0" prefHeight="75.0" prefWidth="642.0" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
             </tabs>
         </TabPane>
-        <Button fx:id="trButton" layoutX="1156.0" layoutY="38.0" mnemonicParsing="false" text="Tr" />
-        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" text="Eng" />
+        <Button fx:id="trButton" layoutX="1156.0" layoutY="38.0" mnemonicParsing="false" text="TR" />
+        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" text="ENG" />
         <ImageView fitHeight="75.0" fitWidth="190.0" layoutX="593.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@logo.png" />
             </image>
         </ImageView>
-        <Button layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="Old Versions" />
+        <Button layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToScene3" text="Old Versions" />
         <Button layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToScene2" text="Back To Main Menu" />
     </children>
 </AnchorPane>

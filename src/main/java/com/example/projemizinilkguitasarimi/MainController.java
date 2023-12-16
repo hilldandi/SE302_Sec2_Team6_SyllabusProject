@@ -3,7 +3,8 @@
  */
 
 package com.example.projemizinilkguitasarimi;
-
+import com.google.gson.Gson;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,8 +28,6 @@ public class MainController {
     //başlangıç ekranı butonları--------------------------------------(switch metodu mantığında ilerlenilcek aşağada örneği var
     @FXML
     private Button OldVerMainButton;
-
-
 
     @FXML
     void OldVerMainButton(ActionEvent event) {
@@ -54,31 +53,59 @@ public class MainController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private TextField codeText2;
-//örnek bir (bunu zaten kullanıyoruz)
-    public void switchToScene1(ActionEvent event ) throws IOException {
-        Parent root=FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
-        scene=new Scene(root);
+    private TextField codeTextt2;
+    private Gson gson;
+    private String code;
+
+
+    //örnek bir (bunu zaten kullanıyoruz)
+    public void switchToScene1(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
     //örnek iki (bunu zaten kullanıyoruz)
-    public void switchToScene2(ActionEvent event ) throws IOException {
-        Parent root=FXMLLoader.load(getClass().getResource("start.fxml"));
-        stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
-        scene=new Scene(root);
+    public void switchToScene2(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToScene3(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("old,.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
     @FXML
     void SaveAll(ActionEvent event) {
-        //Furkan Save Button is Here
+
     }
+
+/*
     public void saveButton(ActionEvent event )throws IOException{
         MainApplicationa mainApplicationa=new MainApplicationa();
         mainApplicationa.SaveFile(codeText2);
     }
 
-    }
+ */
+
+}
+
+
+
+
+
+
+
+
+
 

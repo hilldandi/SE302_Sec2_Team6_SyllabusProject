@@ -10,11 +10,11 @@
    <children>
       <VBox layoutY="100.0" prefHeight="200.0" prefWidth="600.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToScene1" prefHeight="31.0" prefWidth="601.0" text="Create a New Version" />
-            <Button fx:id="OldVerMainButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OldVerMainButton" prefHeight="31.0" prefWidth="601.0" text="Old Versions" />
+            <Button mnemonicParsing="false" onAction="#switchToScene1" prefHeight="31.0" prefWidth="601.0" text="CREATE A NEW VERSION " />
+            <Button fx:id="OldVerMainButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="31.0" prefWidth="601.0" text="OLD VERSIONS" />
             <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#EditButton" prefHeight="31.0" prefWidth="601.0" text="Edit" />
             <Button layoutX="10.0" layoutY="103.0" mnemonicParsing="false" onAction="#CompareButton" prefHeight="31.0" prefWidth="601.0" text="Compare" />
-            <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#HelpButton" prefHeight="31.0" prefWidth="601.0" text="Help" />
+            <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#HelpButton" prefHeight="31.0" prefWidth="601.0" text="HELP" />
          </children>
       </VBox>
    </children>

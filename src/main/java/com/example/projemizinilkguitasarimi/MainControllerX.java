@@ -12,10 +12,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class MainControllerX {
@@ -302,12 +299,6 @@ public class MainControllerX {
     private TextField CourseTypeText;
 
 
-
-
-
-
-
-
     @FXML
     private TextField ModeOfDeleveryText;
 
@@ -319,12 +310,8 @@ public class MainControllerX {
     private TextArea SaveAllText;
 
 
-
-
-
     @FXML
     private TextField applicationText2;
-
 
 
     @FXML
@@ -332,7 +319,6 @@ public class MainControllerX {
 
     @FXML
     private TextField cdText;
-
 
 
     @FXML
@@ -347,19 +333,12 @@ public class MainControllerX {
     private TextField coreCourseText;
 
 
-
-
-
-
-
     @FXML
     private TextField courseNameText2;
 
 
     @FXML
     private TextArea courseNotesText;
-
-
 
 
     @FXML
@@ -379,8 +358,6 @@ public class MainControllerX {
 
     @FXML
     private TextField cwText;
-
-
 
 
     @FXML
@@ -439,7 +416,6 @@ public class MainControllerX {
     private TextField finalEGrade2;
 
 
-
     @FXML
     private TextArea finalNumText;
 
@@ -481,7 +457,6 @@ public class MainControllerX {
     private TextField fwText;
 
 
-
     @FXML
     private TextField hdText;
 
@@ -489,10 +464,8 @@ public class MainControllerX {
     private TextField hnText;
 
 
-
     @FXML
     private TextArea homeworkNumText;
-
 
 
     @FXML
@@ -520,12 +493,8 @@ public class MainControllerX {
     private TextArea homeworko7Text;
 
 
-
-
-
     @FXML
     private TextField hwText;
-
 
 
     @FXML
@@ -554,8 +523,6 @@ public class MainControllerX {
 
     @FXML
     private TextArea juryo7Text;
-
-
 
 
     @FXML
@@ -594,8 +561,6 @@ public class MainControllerX {
     private TextArea learningoutcomesText;
 
 
-
-
     @FXML
     private TextField localCreditsText2;
 
@@ -605,7 +570,6 @@ public class MainControllerX {
 
     @FXML
     private TextField majorAreaCourseText;
-
 
 
     @FXML
@@ -644,11 +608,6 @@ public class MainControllerX {
 
     @FXML
     private TextField midwText;
-
-
-
-
-
 
 
     @FXML
@@ -732,9 +691,6 @@ public class MainControllerX {
 
     @FXML
     private TextField prerequisitesText;
-
-
-
 
 
     @FXML
@@ -871,8 +827,6 @@ public class MainControllerX {
     private TextField semdText;
 
 
-
-
     @FXML
     private TextArea seminarNumText;
 
@@ -972,7 +926,6 @@ public class MainControllerX {
     private TextArea teachingMethodsText;
 
 
-
     @FXML
     private TextField theoryText2;
 
@@ -981,7 +934,6 @@ public class MainControllerX {
 
     @FXML
     private TextField totalG2;
-
 
 
     @FXML
@@ -1023,25 +975,35 @@ public class MainControllerX {
     private TextField transferableSkillCourseText;
 
 
-
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private Gson gson;
+    private String code;
 
-    public void switchToScene1(ActionEvent event ) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+    public void switchToScene1(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToScene2(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToScene3(ActionEvent event ) throws IOException {
+        Parent root=FXMLLoader.load(getClass().getResource("old.fxml"));
         stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-    public void switchToScene2(ActionEvent event ) throws IOException {
-        Parent root=FXMLLoader.load(getClass().getResource("start.fxml"));
-        stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 
     /* they add i main
         public static void main(String[] args) {
@@ -1060,7 +1022,7 @@ public class MainControllerX {
         System.out.println("Updated data:\n" + updatedFromJson);
     }
      */
-            //read ve write fonksiyonlarını koydum
+
     private static CourseInformationx readJsonFile(String filePath) {
         try (FileReader fileReader = new FileReader(filePath)) {
             return new Gson().fromJson(fileReader, CourseInformationx.class);
@@ -1081,7 +1043,9 @@ public class MainControllerX {
             e.printStackTrace();
         }
     }
-    public void CreateNewCourse()throws IOException {//Ezgi versiyon kontrolu için burayı doldur
+
+
+    public void CreateNewCourse() throws IOException {//Ezgi versiyon kontrolu için burayı doldur
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter Course Name: ");
@@ -1098,14 +1062,15 @@ public class MainControllerX {
         // Populate other properties
         addNewCourse(newCourse);
 
-        String code =codeTextt2.getText();
-        CourseInformationx course=new CourseInformationx();
+        //String code =codeTextt2.getText();
+        CourseInformationx course = new CourseInformationx();
         fillCourse(course);
         String newJson = gson.toJson(course);
-        String newFilePath = updatedCourse.getCourseName() +"-v"+ updatedCourse.getVersion() + ".json";
+        CourseInformationx updatedCourse = new CourseInformationx();
+        String newFilePath = updatedCourse.getCourseName() + "-v" + updatedCourse.getVersion() + ".json";
 
         //Create new directory according to course code
-        File dir = new File("SE302_Sec2_Team6_SyllabusProject-course_information/"+code);
+        File dir = new File("SE302_Sec2_Team6_SyllabusProject-course_information/" + code);
         dir.mkdirs();
         File file = new File(dir, newFilePath);
 
@@ -1113,8 +1078,9 @@ public class MainControllerX {
             fileWriter.write(newJson);
             System.out.println("JSON written to file successfully.");
         }
-    @FXML
-    public void fillCourse(CourseInformationx course) {
+
+
+        public void fillCourse(CourseInformationx course) {
         //Tab1
         course.setCourseName(courseNameText2.getText());
         course.setCode(codeTextt2.getText());
@@ -1427,11 +1393,7 @@ public class MainControllerX {
 
 
 
-
-
-
-
-
+    }
 }
 
 
