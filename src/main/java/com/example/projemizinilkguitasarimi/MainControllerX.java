@@ -1043,8 +1043,138 @@ public class MainControllerX {
             e.printStackTrace();
         }
     }
+    public void CompareVersions(String filePathOfOldVersion , String filePathOfNewVersion){
 
+        CourseInformationx oldVersion, newVersion;
+        oldVersion = readJsonFile(filePathOfOldVersion);
+        newVersion = readJsonFile(filePathOfNewVersion);
 
+        //declaring String arrays of tabs to compare
+        String[] oldtab1 = oldVersion.getTAB1();
+        String[] newtab1 = newVersion.getTAB1();
+
+        String[] oldtab2 = oldVersion.getTAB2();
+        String[] newtab2 = newVersion.getTAB2();
+
+        String[] oldtab3 = oldVersion.getTAB3();
+        String[] newtab3 = newVersion.getTAB3();
+
+        String[] oldtab4 = oldVersion.getTAB4();
+        String[] newtab4 = newVersion.getTAB4();
+
+        String[] oldtab5 = oldVersion.getTAB5();
+        String[] newtab5 = newVersion.getTAB5();
+
+        String[] oldtab6 = oldVersion.getTAB6();
+        String[] newtab6 = newVersion.getTAB6();
+
+        //comparing tabs. might implement Threads to make this process faster :)
+        //has some unused variables inside.
+        for(int i = 0; i<oldtab1.length;i++){
+            if(!newtab1[i].equals(oldtab1[i])){}
+        }
+        for(int i = 0; i<oldtab2.length;i++){
+            if(!newtab2[i].equals(oldtab2[i])){}
+        }
+        for(int i = 0; i<oldtab3.length;i++){
+            if(!newtab3[i].equals(oldtab3[i])){}
+        }
+        for(int i = 0; i<oldtab4.length;i++){
+            if(!newtab4[i].equals(oldtab4[i])){}
+        }
+        for(int i = 0; i<oldtab5.length;i++){
+            if(!newtab5[i].equals(oldtab5[i])){}
+        }
+        for(int i = 0; i<oldtab6.length;i++){
+            if(!newtab6[i].equals(oldtab6[i])){}
+        }
+        /* if all else fails
+                                    // comparing new version to old version's TAB1
+        if (!newVersion.getCourseName().equals(oldVersion.getCourseName())) {
+
+        }
+
+        if (!newVersion.getCode().equals(oldVersion.getCode())) {
+
+        }
+
+        if (!newVersion.getSeason().equals(oldVersion.getSeason())) {
+
+        }
+
+        if (!newVersion.getSeasonFall().equals(oldVersion.getSeasonFall())) {
+
+        }
+
+        if (!newVersion.getSeasonSpring().equals(oldVersion.getSeasonSpring())) {
+
+        }
+
+        if (!newVersion.getTheory().equals(oldVersion.getTheory())) {
+
+        }
+
+        if (!newVersion.getLab().equals(oldVersion.getLab())) {
+
+        }
+
+        if (!newVersion.getLocalCredits().equals(oldVersion.getLocalCredits())) {
+
+        }
+
+        if (!newVersion.getEcts().equals(oldVersion.getEcts())) {
+
+        }
+
+        if (!newVersion.getPrerequisities().equals(oldVersion.getPrerequisities())) {
+
+        }
+
+        if (!newVersion.getCourseLanguage().equals(oldVersion.getCourseLanguage())) {
+
+        }
+
+        if (!newVersion.getCourseType().equals(oldVersion.getCourseType())) {
+
+        }
+
+        if (!newVersion.getCourseLevel().equals(oldVersion.getCourseLevel())) {
+
+        }
+
+        if (!newVersion.getModeOfDelivery().equals(oldVersion.getModeOfDelivery())) {
+
+        }
+
+        if (!newVersion.getTeachingMethodsAndTechniques().equals(oldVersion.getTeachingMethodsAndTechniques())) {
+
+        }
+
+        if (!newVersion.getCourseCoordinator().equals(oldVersion.getCourseCoordinator())) {
+
+        }
+
+        if (!newVersion.getCourseLecturers().equals(oldVersion.getCourseLecturers())) {
+
+        }
+
+        if (!newVersion.getCourseAssistants().equals(oldVersion.getCourseAssistants())) {
+
+        }
+
+                        //TAB2
+
+                        //TAB3
+
+                        //TAB4
+
+                        //TAB5
+
+                        //TAB6
+
+                        //LAST TAB
+            */
+    }
     public void CreateNewCourse() throws IOException {//Ezgi versiyon kontrolu için burayı doldur
         Scanner scanner = new Scanner(System.in);
 
@@ -1390,7 +1520,6 @@ public class MainControllerX {
         course.setReasonForUpdate(SaveAllText.getText());
 
     }
-
 
 
     }

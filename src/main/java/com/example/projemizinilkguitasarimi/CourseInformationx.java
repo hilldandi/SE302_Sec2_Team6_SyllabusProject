@@ -24,7 +24,7 @@ public class CourseInformationx {
     private String ects;
     private String prerequisities;
 
-    
+
 
     //the ones in tickbox
     private String courseLanguage;
@@ -40,6 +40,10 @@ public class CourseInformationx {
     private String courseLecturers;
     private String courseAssistants;
 
+    //list of data on tab1 to make comparing easier seasonfall ve spring eklenmedi
+    private String[] TAB1 = {courseName,code,season,theory,lab,localCredits,ects,prerequisities,courseLanguage,
+            courseType,courseLevel,modeOfDelivery,teachingMethodsAndTechniques,courseCoordinator,courseLecturers,
+            courseAssistants};
     //the data on TAB2
 
     private String courseObjectives;
@@ -53,6 +57,10 @@ public class CourseInformationx {
     private String CCSupportiveCourse;
     private String CCComAndManagementSkillsCourse;
     private String CCTransferableSkillCourse;
+
+    //list of data on tab2 to make comparing easier
+    private String[] TAB2 = {courseObjectives,learningOutcomes,courseDescription,courseCategory,CCCoreCourse,
+            CCMajorAreaCourse,CCSupportiveCourse,CCComAndManagementSkillsCourse,CCTransferableSkillCourse};
 
     //the data on TAB3
     private String week1Subjects;
@@ -87,11 +95,17 @@ public class CourseInformationx {
     private String week14ReqMat;
     private String week15ReqMat;
 
-
     private String weeklySubjectsAndRequiredMaterials; //bunu yukarıdaki variablelere böldüm.
 
     private String courseNotesAndTextBooks;
     private String suggestedReadingsAndMaterials;
+
+    //list of data on tab3 to make comparing easier weeklysubjectsandRequiredMaterials eklenmedi
+    private String[] TAB3 = {week1Subjects,week2Subjects,week3Subjects,week4Subjects,week5Subjects,week6Subjects,
+            week7Subjects,week8Subjects,week9Subjects,week10Subjects,week11Subjects,week12Subjects,week13Subjects,
+            week14Subjects,week15Subjects,week1ReqMat,week2ReqMat,week3ReqMat,week4ReqMat,week5ReqMat,week6ReqMat,
+            week7ReqMat,week8ReqMat,week9ReqMat,week10ReqMat,week11ReqMat,week12ReqMat,week13ReqMat,week14ReqMat,
+            week15ReqMat,courseNotesAndTextBooks,suggestedReadingsAndMaterials};
 
     //the data on TAB4 Assessment
 
@@ -230,7 +244,48 @@ public class CourseInformationx {
     private String endOfTab4Total1;
     private String endOfTab4Total2;
 
+    //list of data on tab4
+    private String[] TAB4 = {
+            noOfParticipation,noOfLabOrApplication,noOfFieldWork,noOfQuizOrStudioCritique,noOfHwOrAssignment,
+            noOfPresentationOrJury,noOfProject,noOfSeminarOrWorkshop,noOfOralExam,noOfMidterm,noOfFinalExam,
+            noOfPresentationJury,noOfTotalWeight,
 
+            weightOfParticipation,weightOfLabOrApplication,weightOfFieldWork,weightOfQuizOrStudioCritique,
+            weightOfHwOrAssignment,weightOfPresentationOrJury,weightOfProject,weightOfSeminarOrWorkshop,
+            weightOfOralExam, weightOfMidterm,weightOfFinalExam,weightOfPresentationJury,weightOfTotalWeight,
+
+            LO1OfParticipation,LO1OfLabOrApplication,LO1OfFieldWork,LO1OfQuizOrStudioCritique,LO1OfHwOrAssignment,
+            LO1OfPresentationOrJury,LO1OfProject,LO1OfSeminarOrWorkshop,LO1OfOralExam,LO1OfMidterm,LO1OfFinalExam,
+            LO1OfPresentationJury,LO1OfTotalWeight,
+
+            LO2OfParticipation,LO2OfLabOrApplication,LO2OfFieldWork,LO2OfQuizOrStudioCritique,LO2OfHwOrAssignment,
+            LO2OfPresentationOrJury,LO2OfProject,LO2OfSeminarOrWorkshop,LO2OfOralExam,LO2OfMidterm,LO2OfFinalExam,
+            LO2OfPresentationJury,LO2OfTotalWeight,
+
+            LO3OfParticipation,LO3OfLabOrApplication,LO3OfFieldWork,LO3OfQuizOrStudioCritique,LO3OfHwOrAssignment,
+            LO3OfPresentationOrJury,LO3OfProject,LO3OfSeminarOrWorkshop, LO3OfOralExam,LO3OfMidterm,LO3OfFinalExam,
+            LO3OfPresentationJury,LO3OfTotalWeight,
+
+            LO4OfParticipation,LO4OfLabOrApplication,LO4OfFieldWork,LO4OfQuizOrStudioCritique,LO4OfHwOrAssignment,
+            LO4OfPresentationOrJury,LO4OfProject,LO4OfSeminarOrWorkshop,LO4OfOralExam,LO4OfMidterm,LO4OfFinalExam,
+            LO4OfPresentationJury,LO4OfTotalWeight,
+
+            LO5OfParticipation,LO5OfLabOrApplication,LO5OfFieldWork,LO5OfQuizOrStudioCritique,LO5OfHwOrAssignment,
+            LO5OfPresentationOrJury,LO5OfProject,LO5OfSeminarOrWorkshop,LO5OfOralExam,LO5OfMidterm,LO5OfFinalExam,
+            LO5OfPresentationJury,LO5OfTotalWeight,
+
+            LO6OfParticipation,LO6OfLabOrApplication,LO6OfFieldWork,LO6OfQuizOrStudioCritique,LO6OfHwOrAssignment,
+            LO6OfPresentationOrJury,LO6OfProject,LO6OfSeminarOrWorkshop,LO6OfOralExam,LO6OfMidterm,LO6OfFinalExam,
+            LO6OfPresentationJury,LO6OfTotalWeight,
+
+            LO7OfParticipation,LO7OfLabOrApplication,LO7OfFieldWork,LO7OfQuizOrStudioCritique,LO7OfHwOrAssignment,
+            LO7OfPresentationOrJury,LO7OfProject,LO7OfSeminarOrWorkshop,LO7OfOralExam,LO7OfMidterm,LO7OfFinalExam,
+            LO7OfPresentationJury,LO7OfTotalWeight,
+
+            weightOfSemActivitiesOnFinalGrade1,weightOfSemActivitiesOnFinalGrade2,
+            weightOfEndOfSemActivitiesOnFinalGrade1,weightOfEndOfSemActivitiesOnFinalGrade2,endOfTab4Total1,
+            endOfTab4Total2
+    };
 
     //the data on TAB5 ECTS / Workload Table
     private String courseHours;
@@ -278,7 +333,14 @@ public class CourseInformationx {
     private String FinalWL;
     private String TotalWorkloadWL;
 
-
+    //list of data on tab5
+    private String[] TAB5 = {courseHours,labOrApplicationHours,studyHourseOutsideClass,fieldWork,quizOrStudioCritique,
+            homeworkOrAssignment,presentationOrJury,project,portfolio,seminarOrWorkshop,oralExam,midterm,Final,
+            TotalWorkload,courseHoursDur,labOrApplicationHoursDur,studyHourseOutsideClassDur,fieldWorkDur,
+            quizOrStudioCritiqueDur,homeworkOrAssignmentDur,presentationOrJuryDur,projectDur,portfolioDur,
+            seminarOrWorkshopDur,oralExamDur,midtermDur,FinalDur,TotalWorkloadDur,courseHoursWL,labOrApplicationHourWL,
+            studyHourseOutsideClassWL,fieldWorkWL,quizOrStudioCritiqueWL,homeworkOrAssignmentWL,presentationOrJuryWL,
+            projectWL,portfolioWL,seminarOrWorkshopWL,oralExamWL,midtermWL,FinalWL,TotalWorkloadWL};
 
     //the data on TAB6 Course outcome matrix
     private String week;
@@ -391,6 +453,73 @@ public class CourseInformationx {
     private String programCompetenciesOutcome13ContributionLevel4;
     private String programCompetenciesOutcome13ContributionLevel5;
     private String programCompetenciesOutcome13LOno;
+
+    //list of data on tab6
+    private String[] TAB6 = {
+            programCompetenciesOutcome1,programCompetenciesOutcome1ContributionLevel1,
+            programCompetenciesOutcome1ContributionLevel2,programCompetenciesOutcome1ContributionLevel3,
+            programCompetenciesOutcome1ContributionLevel4,programCompetenciesOutcome1ContributionLevel5,
+            programCompetenciesOutcome1LOno,
+
+            programCompetenciesOutcome2,programCompetenciesOutcome2ContributionLevel1,
+            programCompetenciesOutcome2ContributionLevel2,programCompetenciesOutcome2ContributionLevel3,
+            programCompetenciesOutcome2ContributionLevel4,programCompetenciesOutcome2ContributionLevel5,
+            programCompetenciesOutcome2LOno,
+
+            programCompetenciesOutcome3,programCompetenciesOutcome3ContributionLevel1,
+            programCompetenciesOutcome3ContributionLevel2,programCompetenciesOutcome3ContributionLevel3,
+            programCompetenciesOutcome3ContributionLevel4,programCompetenciesOutcome3ContributionLevel5,
+            programCompetenciesOutcome3LOno,
+
+            programCompetenciesOutcome4,programCompetenciesOutcome4ContributionLevel1,
+            programCompetenciesOutcome4ContributionLevel2,programCompetenciesOutcome4ContributionLevel3,
+            programCompetenciesOutcome4ContributionLevel4,programCompetenciesOutcome4ContributionLevel5,
+            programCompetenciesOutcome4LOno,
+
+            programCompetenciesOutcome5,programCompetenciesOutcome5ContributionLevel1,
+            programCompetenciesOutcome5ContributionLevel2,programCompetenciesOutcome5ContributionLevel3,
+            programCompetenciesOutcome5ContributionLevel4,programCompetenciesOutcome5ContributionLevel5,
+            programCompetenciesOutcome5LOno,
+
+            programCompetenciesOutcome6,programCompetenciesOutcome6ContributionLevel1,
+            programCompetenciesOutcome6ContributionLevel2,programCompetenciesOutcome6ContributionLevel3,
+            programCompetenciesOutcome6ContributionLevel4,programCompetenciesOutcome6ContributionLevel5,
+            programCompetenciesOutcome6LOno,
+
+            programCompetenciesOutcome7,programCompetenciesOutcome7ContributionLevel1,
+            programCompetenciesOutcome7ContributionLevel2,programCompetenciesOutcome7ContributionLevel3,
+            programCompetenciesOutcome7ContributionLevel4,programCompetenciesOutcome7ContributionLevel5,
+            programCompetenciesOutcome7LOno,
+
+            programCompetenciesOutcome8,programCompetenciesOutcome8ContributionLevel1,
+            programCompetenciesOutcome8ContributionLevel2,programCompetenciesOutcome8ContributionLevel3,
+            programCompetenciesOutcome8ContributionLevel4,programCompetenciesOutcome8ContributionLevel5,
+            programCompetenciesOutcome8LOno,
+
+            programCompetenciesOutcome9,programCompetenciesOutcome9ContributionLevel1,
+            programCompetenciesOutcome9ContributionLevel2,programCompetenciesOutcome9ContributionLevel3,
+            programCompetenciesOutcome9ContributionLevel4,programCompetenciesOutcome9ContributionLevel5,
+            programCompetenciesOutcome9LOno,
+
+            programCompetenciesOutcome10,programCompetenciesOutcome10ContributionLevel1,
+            programCompetenciesOutcome10ContributionLevel2,programCompetenciesOutcome10ContributionLevel3,
+            programCompetenciesOutcome10ContributionLevel4,programCompetenciesOutcome10ContributionLevel5,
+            programCompetenciesOutcome10LOno,
+
+            programCompetenciesOutcome11,programCompetenciesOutcome11ContributionLevel1,
+            programCompetenciesOutcome11ContributionLevel2,programCompetenciesOutcome11ContributionLevel3,
+            programCompetenciesOutcome11ContributionLevel4,programCompetenciesOutcome11ContributionLevel5,
+            programCompetenciesOutcome11LOno,
+
+            programCompetenciesOutcome12,programCompetenciesOutcome12ContributionLevel1,
+            programCompetenciesOutcome12ContributionLevel2,programCompetenciesOutcome12ContributionLevel3,
+            programCompetenciesOutcome12ContributionLevel4,programCompetenciesOutcome12ContributionLevel5,
+            programCompetenciesOutcome12LOno,
+
+            programCompetenciesOutcome13,programCompetenciesOutcome13ContributionLevel1,
+            programCompetenciesOutcome13ContributionLevel2,programCompetenciesOutcome13ContributionLevel3,
+            programCompetenciesOutcome13ContributionLevel4,programCompetenciesOutcome13ContributionLevel5,
+            programCompetenciesOutcome13LOno};
 
     //the data on the SAVE TAB
     private String reasonForUpdate;
@@ -2977,6 +3106,30 @@ public class CourseInformationx {
 
     public void setProgramCompetenciesOutcome13LOno(String programCompetenciesOutcome13LOno) {
         this.programCompetenciesOutcome13LOno = programCompetenciesOutcome13LOno;
+    }
+
+    public String[] getTAB1() {
+        return TAB1;
+    }
+
+    public String[] getTAB2() {
+        return TAB2;
+    }
+
+    public String[] getTAB3() {
+        return TAB3;
+    }
+
+    public String[] getTAB4() {
+        return TAB4;
+    }
+
+    public String[] getTAB5() {
+        return TAB5;
+    }
+
+    public String[] getTAB6() {
+        return TAB6;
     }
 
     public CourseInformationx() {
