@@ -3373,7 +3373,7 @@ public class CourseInformationx {
     @Override
     public String toString() {
         return "CourseInformationx{" +
-                "version='" + version + '\'' +
+                "version='" + version + '\'' + // now we made version an int it gives an error when reading.
                 ", courseName='" + courseName + '\'' +
                 ", code='" + code + '\'' +
                 ", season='" + season + '\'' +

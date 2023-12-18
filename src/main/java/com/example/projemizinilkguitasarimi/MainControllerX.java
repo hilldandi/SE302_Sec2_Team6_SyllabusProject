@@ -11,9 +11,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.junit.Test;
 
 import java.io.*;
 import java.util.Scanner;
+
+import static org.junit.Assert.assertEquals;
 
 public class MainControllerX {
     @FXML
@@ -251,6 +254,81 @@ public class MainControllerX {
                         //LAST TAB
 
     }*/
+    @Test
+    public void CompareVersionsTAB1Test(){// works
+        String filePathOfOldVersion = "Document/CE323/CE323.json";
+        String filePathOfNewVersion = "Document/CE323v1/CE323v1.json";
+        int noOfMismatches = 0;
+
+        CourseInformationx oldVersion, newVersion;
+        oldVersion = readJsonFile(filePathOfOldVersion);
+        newVersion = readJsonFile(filePathOfNewVersion);
+
+        //declaring String arrays of tabs to compare
+        String[] oldtab1 = oldVersion.getTAB1();
+        String[] newtab1 = newVersion.getTAB1();
+        String[] vChanges1 = new String[oldtab1.length]; // not sure if this works
+
+        String[] oldtab2 = oldVersion.getTAB2();
+        String[] newtab2 = newVersion.getTAB2();
+        String[] vChanges2 = new String[oldtab2.length];
+
+        String[] oldtab3 = oldVersion.getTAB3();
+        String[] newtab3 = newVersion.getTAB3();
+        String[] vChanges3 = new String[oldtab3.length];
+
+        String[] oldtab4 = oldVersion.getTAB4();
+        String[] newtab4 = newVersion.getTAB4();
+        String[] vChanges4 = new String[oldtab4.length];
+
+        String[] oldtab5 = oldVersion.getTAB5();
+        String[] newtab5 = newVersion.getTAB5();
+        String[] vChanges5 = new String[oldtab5.length];
+
+        String[] oldtab6 = oldVersion.getTAB6();
+        String[] newtab6 = newVersion.getTAB6();
+        String[] vChanges6 = new String[oldtab6.length];
+
+        //comparing tabs. might implement Threads to make this process faster :)
+        //has some unused variables inside.
+        for (int i = 0; i < oldtab1.length; i++) {
+            if (!newtab1[i].equals(oldtab1[i])) {
+                vChanges1[i] = newtab1[i];
+                noOfMismatches++;
+            }
+        }
+        for (int i = 0; i < oldtab2.length; i++) {
+            if (!newtab2[i].equals(oldtab2[i])) {
+                vChanges2[i] = newtab2[i];
+                noOfMismatches++;
+            }
+        }
+        for (int i = 0; i < oldtab3.length; i++) {
+            if (!newtab3[i].equals(oldtab3[i])) {
+                vChanges3[i] = newtab3[i];
+                noOfMismatches++;
+            }
+        }
+        for (int i = 0; i < oldtab4.length; i++) {
+            if (!newtab4[i].equals(oldtab4[i])) {
+                vChanges4[i] = newtab4[i];
+                noOfMismatches++;
+            }
+        }
+        for (int i = 0; i < oldtab5.length; i++) {
+            if (!newtab5[i].equals(oldtab5[i])) {
+                vChanges5[i] = newtab5[i];
+                noOfMismatches++;
+            }
+        }
+        for (int i = 0; i < oldtab6.length; i++) {
+            if (!newtab6[i].equals(oldtab6[i])) {
+                vChanges6[i] = newtab6[i];
+                noOfMismatches++;
+            }
+        }
+        assertEquals(noOfMismatches , 11); //there should be 12 missmatches
+    }
     public void CreateNewCourse() throws IOException {
         Gson gson=new Gson();
         String code =codeTextt2.getText();
