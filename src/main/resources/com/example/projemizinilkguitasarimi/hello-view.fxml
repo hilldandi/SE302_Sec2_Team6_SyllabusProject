@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
     <children>
         <TabPane layoutX="14.0" layoutY="103.0" prefHeight="834.0" prefWidth="1294.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
@@ -42,14 +42,8 @@
                                                 </VBox>
                                                 <VBox layoutX="10.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
                                                     <children>
-                                                        <Label fx:id="fallLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="Fall " />
-                                                        <TextField fx:id="fallText2" prefHeight="40.0" prefWidth="139.0" />
-                                                    </children>
-                                                </VBox>
-                                                <VBox layoutX="149.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
-                                                    <children>
-                                                        <Label fx:id="springLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="Spring " />
-                                                        <TextField fx:id="springText2" prefHeight="40.0" prefWidth="139.0" />
+                                                        <Label fx:id="seasonLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="139.0" text="Fall " />
+                                                        <TextField fx:id="seasontext" prefHeight="40.0" prefWidth="139.0" />
                                                     </children>
                                                 </VBox>
                                                 <VBox layoutX="288.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">

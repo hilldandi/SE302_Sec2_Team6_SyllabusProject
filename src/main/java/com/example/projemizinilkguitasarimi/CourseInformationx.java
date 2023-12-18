@@ -8,244 +8,394 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CourseInformationx {
-	private String version;
+	public String version;
     // The data on TAB1
 
-    private String courseName;
-    private String code;
-    private String season; // fall ve spring olarak böldüm
+    public String courseName;
+    public String code;
+    public String season;
 
-    private String seasonFall;
-    private String seasonSpring;
+    public String theory;
+    public String lab;
+    public String localCredits;
+    public String ects;
+    public String prerequisities;
+    public String courseLanguage;
+    public String courseType;
+    public String courseLevel;
+    public String modeOfDelivery;
 
-    private String theory;
-    private String lab;
-    private String localCredits;
-    private String ects;
-    private String prerequisities;
+    public String teachingMethodsAndTechniques;
+    public String courseCoordinator;
 
+    public String courseLecturers;
+    public String courseAssistants;
 
-
-    //the ones in tickbox
-    private String courseLanguage;
-    private String courseType;
-    private String courseLevel;
-    private String modeOfDelivery;
-    //
-
-    private String teachingMethodsAndTechniques;
-    private String courseCoordinator;
-
-    //this part will be editted
-    private String courseLecturers;
-    private String courseAssistants;
-
-    //list of data on tab1 to make comparing easier seasonfall ve spring eklenmedi
-    private String[] TAB1 = {courseName,code,season,theory,lab,localCredits,ects,prerequisities,courseLanguage,
-            courseType,courseLevel,modeOfDelivery,teachingMethodsAndTechniques,courseCoordinator,courseLecturers,
-            courseAssistants};
     //the data on TAB2
 
-    private String courseObjectives;
-    private String learningOutcomes;
-    private String courseDescription;
+    public String courseObjectives;
+    public String learningOutcomes;
+    public String courseDescription;
 
-    private String courseCategory; // bunu aşağıdaki variablelere böldüm
-
-    private String CCCoreCourse;
-    private String CCMajorAreaCourse;
-    private String CCSupportiveCourse;
-    private String CCComAndManagementSkillsCourse;
-    private String CCTransferableSkillCourse;
-
-    //list of data on tab2 to make comparing easier
-    private String[] TAB2 = {courseObjectives,learningOutcomes,courseDescription,courseCategory,CCCoreCourse,
-            CCMajorAreaCourse,CCSupportiveCourse,CCComAndManagementSkillsCourse,CCTransferableSkillCourse};
+    public String CCCoreCourse;
+    public String CCMajorAreaCourse;
+    public String CCSupportiveCourse;
+    public String CCComAndManagementSkillsCourse;
+    public String CCTransferableSkillCourse;
 
     //the data on TAB3
-    private String week1Subjects;
-    private String week2Subjects;
-    private String week3Subjects;
-    private String week4Subjects;
-    private String week5Subjects;
-    private String week6Subjects;
-    private String week7Subjects;
-    private String week8Subjects;
-    private String week9Subjects;
-    private String week10Subjects;
-    private String week11Subjects;
-    private String week12Subjects;
-    private String week13Subjects;
-    private String week14Subjects;
-    private String week15Subjects;
+    public String week1Subjects;
+    public String week2Subjects;
+    public String week3Subjects;
+    public String week4Subjects;
+    public String week5Subjects;
+    public String week6Subjects;
+    public String week7Subjects;
+    public String week8Subjects;
+    public String week9Subjects;
+    public String week10Subjects;
+    public String week11Subjects;
+    public String week12Subjects;
+    public String week13Subjects;
+    public String week14Subjects;
+    public String week15Subjects;
 
-    private String week1ReqMat;
-    private String week2ReqMat;
-    private String week3ReqMat;
-    private String week4ReqMat;
-    private String week5ReqMat;
-    private String week6ReqMat;
-    private String week7ReqMat;
-    private String week8ReqMat;
-    private String week9ReqMat;
-    private String week10ReqMat;
-    private String week11ReqMat;
-    private String week12ReqMat;
-    private String week13ReqMat;
-    private String week14ReqMat;
-    private String week15ReqMat;
+    public String week1ReqMat;
+    public String week2ReqMat;
+    public String week3ReqMat;
+    public String week4ReqMat;
+    public String week5ReqMat;
+    public String week6ReqMat;
+    public String week7ReqMat;
+    public String week8ReqMat;
+    public String week9ReqMat;
+    public String week10ReqMat;
+    public String week11ReqMat;
+    public String week12ReqMat;
+    public String week13ReqMat;
+    public String week14ReqMat;
+    public String week15ReqMat;
 
-    private String weeklySubjectsAndRequiredMaterials; //bunu yukarıdaki variablelere böldüm.
+    public String courseNotesAndTextBooks;
+    public String suggestedReadingsAndMaterials;
 
-    private String courseNotesAndTextBooks;
-    private String suggestedReadingsAndMaterials;
+    //the data on TAB4 Assessment
+
+    public String noOfParticipation;
+    public String noOfLabOrApplication;
+    public String noOfFieldWork;
+    public String noOfQuizOrStudioCritique;
+    public String noOfHwOrAssignment;
+    public String noOfPresentationOrJury;
+    public String noOfProject;
+    public String noOfSeminarOrWorkshop;
+    public String noOfOralExam;
+    public String noOfMidterm;
+    public String noOfFinalExam;
+    public String noOfPresentationJury;
+    public String noOfTotalWeight;
+    public String weightOfParticipation;
+    public String weightOfLabOrApplication;
+    public String weightOfFieldWork;
+    public String weightOfQuizOrStudioCritique;
+    public String weightOfHwOrAssignment;
+    public String weightOfPresentationOrJury;
+    public String weightOfProject;
+    public String weightOfSeminarOrWorkshop;
+    public String weightOfOralExam;
+    public String weightOfMidterm;
+    public String weightOfFinalExam;
+    public String weightOfPresentationJury;
+    public String weightOfTotalWeight;
+
+    public String LO1OfParticipation;
+    public String LO1OfLabOrApplication;
+    public String LO1OfFieldWork;
+    public String LO1OfQuizOrStudioCritique;
+    public String LO1OfHwOrAssignment;
+    public String LO1OfPresentationOrJury;
+    public String LO1OfProject;
+    public String LO1OfSeminarOrWorkshop;
+    public String LO1OfOralExam;
+    public String LO1OfMidterm;
+    public String LO1OfFinalExam;
+    public String LO1OfPresentationJury;
+    public String LO1OfTotalWeight;
+
+    public String LO2OfParticipation;
+    public String LO2OfLabOrApplication;
+    public String LO2OfFieldWork;
+    public String LO2OfQuizOrStudioCritique;
+    public String LO2OfHwOrAssignment;
+    public String LO2OfPresentationOrJury;
+    public String LO2OfProject;
+    public String LO2OfSeminarOrWorkshop;
+    public String LO2OfOralExam;
+    public String LO2OfMidterm;
+    public String LO2OfFinalExam;
+    public String LO2OfPresentationJury;
+    public String LO2OfTotalWeight;
+
+    public String LO3OfParticipation;
+    public String LO3OfLabOrApplication;
+    public String LO3OfFieldWork;
+    public String LO3OfQuizOrStudioCritique;
+    public String LO3OfHwOrAssignment;
+    public String LO3OfPresentationOrJury;
+    public String LO3OfProject;
+    public String LO3OfSeminarOrWorkshop;
+    public String LO3OfOralExam;
+    public String LO3OfMidterm;
+    public String LO3OfFinalExam;
+    public String LO3OfPresentationJury;
+    public String LO3OfTotalWeight;
+
+    public String LO4OfParticipation;
+    public String LO4OfLabOrApplication;
+    public String LO4OfFieldWork;
+    public String LO4OfQuizOrStudioCritique;
+    public String LO4OfHwOrAssignment;
+    public String LO4OfPresentationOrJury;
+    public String LO4OfProject;
+    public String LO4OfSeminarOrWorkshop;
+    public String LO4OfOralExam;
+    public String LO4OfMidterm;
+    public String LO4OfFinalExam;
+    public String LO4OfPresentationJury;
+    public String LO4OfTotalWeight;
+
+    public String LO5OfParticipation;
+    public String LO5OfLabOrApplication;
+    public String LO5OfFieldWork;
+    public String LO5OfQuizOrStudioCritique;
+    public String LO5OfHwOrAssignment;
+    public String LO5OfPresentationOrJury;
+    public String LO5OfProject;
+    public String LO5OfSeminarOrWorkshop;
+    public String LO5OfOralExam;
+    public String LO5OfMidterm;
+    public String LO5OfFinalExam;
+    public String LO5OfPresentationJury;
+    public String LO5OfTotalWeight;
+
+    public String LO6OfParticipation;
+    public String LO6OfLabOrApplication;
+    public String LO6OfFieldWork;
+    public String LO6OfQuizOrStudioCritique;
+    public String LO6OfHwOrAssignment;
+    public String LO6OfPresentationOrJury;
+    public String LO6OfProject;
+    public String LO6OfSeminarOrWorkshop;
+    public String LO6OfOralExam;
+    public String LO6OfMidterm;
+    public String LO6OfFinalExam;
+    public String LO6OfPresentationJury;
+    public String LO6OfTotalWeight;
+
+    public String LO7OfParticipation;
+    public String LO7OfLabOrApplication;
+    public String LO7OfFieldWork;
+    public String LO7OfQuizOrStudioCritique;
+    public String LO7OfHwOrAssignment;
+    public String LO7OfPresentationOrJury;
+    public String LO7OfProject;
+    public String LO7OfSeminarOrWorkshop;
+    public String LO7OfOralExam;
+    public String LO7OfMidterm;
+    public String LO7OfFinalExam;
+    public String LO7OfPresentationJury;
+    public String LO7OfTotalWeight;
+
+    public String weightOfSemActivitiesOnFinalGrade1;
+    public String weightOfSemActivitiesOnFinalGrade2;
+
+    public String weightOfEndOfSemActivitiesOnFinalGrade1;
+    public String weightOfEndOfSemActivitiesOnFinalGrade2;
+
+    public String endOfTab4Total1;
+    public String endOfTab4Total2;
+
+
+
+    //the data on TAB5 ECTS / Workload Table
+    public String studyHourseOutsideClass;
+    public String fieldWork;
+    public String quizOrStudioCritique;
+    public String homeworkOrAssignment;
+    public String presentationOrJury;
+    public String project;
+    public String portfolio;
+    public String seminarOrWorkshop;
+    public String oralExam;
+    public String midterm;
+    public String Final;
+    public String TotalWorkload;
+
+    public String courseHoursDur;
+    public String labOrApplicationHoursDur;
+    public String studyHourseOutsideClassDur;
+    public String fieldWorkDur;
+    public String quizOrStudioCritiqueDur;
+    public String homeworkOrAssignmentDur;
+    public String presentationOrJuryDur;
+    public String projectDur;
+    public String portfolioDur;
+    public String seminarOrWorkshopDur;
+    public String oralExamDur;
+    public String midtermDur;
+    public String FinalDur;
+
+    public String courseHoursWL;
+    public String labOrApplicationHourWL;
+    public String studyHourseOutsideClassWL;
+    public String fieldWorkWL;
+    public String quizOrStudioCritiqueWL;
+    public String homeworkOrAssignmentWL;
+    public String presentationOrJuryWL;
+    public String projectWL;
+    public String portfolioWL;
+    public String seminarOrWorkshopWL;
+    public String oralExamWL;
+    public String midtermWL;
+    public String FinalWL;
+
+
+
+    public String TotalWorkloadWL;
+
+
+
+
+    //the data on TAB6 Course outcome matrix
+
+    public String programCompetenciesOutcome1;
+    public String programCompetenciesOutcome1ContributionLevel1;
+    public String programCompetenciesOutcome1ContributionLevel2;
+    public String programCompetenciesOutcome1ContributionLevel3;
+    public String programCompetenciesOutcome1ContributionLevel4;
+    public String programCompetenciesOutcome1ContributionLevel5;
+    public String programCompetenciesOutcome1LOno;
+
+    public String programCompetenciesOutcome2;
+    public String programCompetenciesOutcome2ContributionLevel1;
+    public String programCompetenciesOutcome2ContributionLevel2;
+    public String programCompetenciesOutcome2ContributionLevel3;
+    public String programCompetenciesOutcome2ContributionLevel4;
+    public String programCompetenciesOutcome2ContributionLevel5;
+    public String programCompetenciesOutcome2LOno;
+
+    public String programCompetenciesOutcome3;
+    public String programCompetenciesOutcome3ContributionLevel1;
+    public String programCompetenciesOutcome3ContributionLevel2;
+    public String programCompetenciesOutcome3ContributionLevel3;
+    public String programCompetenciesOutcome3ContributionLevel4;
+    public String programCompetenciesOutcome3ContributionLevel5;
+    public String programCompetenciesOutcome3LOno;
+
+    public String programCompetenciesOutcome4;
+    public String programCompetenciesOutcome4ContributionLevel1;
+    public String programCompetenciesOutcome4ContributionLevel2;
+    public String programCompetenciesOutcome4ContributionLevel3;
+    public String programCompetenciesOutcome4ContributionLevel4;
+    public String programCompetenciesOutcome4ContributionLevel5;
+    public String programCompetenciesOutcome4LOno;
+
+    public String programCompetenciesOutcome5;
+    public String programCompetenciesOutcome5ContributionLevel1;
+    public String programCompetenciesOutcome5ContributionLevel2;
+    public String programCompetenciesOutcome5ContributionLevel3;
+    public String programCompetenciesOutcome5ContributionLevel4;
+    public String programCompetenciesOutcome5ContributionLevel5;
+    public String programCompetenciesOutcome5LOno;
+
+    public String programCompetenciesOutcome6;
+    public String programCompetenciesOutcome6ContributionLevel1;
+    public String programCompetenciesOutcome6ContributionLevel2;
+    public String programCompetenciesOutcome6ContributionLevel3;
+    public String programCompetenciesOutcome6ContributionLevel4;
+    public String programCompetenciesOutcome6ContributionLevel5;
+    public String programCompetenciesOutcome6LOno;
+
+
+    public String programCompetenciesOutcome7;
+    public String programCompetenciesOutcome7ContributionLevel1;
+    public String programCompetenciesOutcome7ContributionLevel2;
+    public String programCompetenciesOutcome7ContributionLevel3;
+    public String programCompetenciesOutcome7ContributionLevel4;
+    public String programCompetenciesOutcome7ContributionLevel5;
+    public String programCompetenciesOutcome7LOno;
+
+    public String programCompetenciesOutcome8;
+    public String programCompetenciesOutcome8ContributionLevel1;
+    public String programCompetenciesOutcome8ContributionLevel2;
+    public String programCompetenciesOutcome8ContributionLevel3;
+    public String programCompetenciesOutcome8ContributionLevel4;
+    public String programCompetenciesOutcome8ContributionLevel5;
+    public String programCompetenciesOutcome8LOno;
+
+    public String programCompetenciesOutcome9;
+    public String programCompetenciesOutcome9ContributionLevel1;
+    public String programCompetenciesOutcome9ContributionLevel2;
+    public String programCompetenciesOutcome9ContributionLevel3;
+    public String programCompetenciesOutcome9ContributionLevel4;
+    public String programCompetenciesOutcome9ContributionLevel5;
+    public String programCompetenciesOutcome9LOno;
+
+    public String programCompetenciesOutcome10;
+    public String programCompetenciesOutcome10ContributionLevel1;
+    public String programCompetenciesOutcome10ContributionLevel2;
+    public String programCompetenciesOutcome10ContributionLevel3;
+    public String programCompetenciesOutcome10ContributionLevel4;
+    public String programCompetenciesOutcome10ContributionLevel5;
+    public String programCompetenciesOutcome10LOno;
+
+    public String programCompetenciesOutcome11;
+    public String programCompetenciesOutcome11ContributionLevel1;
+    public String programCompetenciesOutcome11ContributionLevel2;
+    public String programCompetenciesOutcome11ContributionLevel3;
+    public String programCompetenciesOutcome11ContributionLevel4;
+    public String programCompetenciesOutcome11ContributionLevel5;
+    public String programCompetenciesOutcome11LOno;
+    public String programCompetenciesOutcome12;
+    public String programCompetenciesOutcome12ContributionLevel1;
+    public String programCompetenciesOutcome12ContributionLevel2;
+    public String programCompetenciesOutcome12ContributionLevel3;
+    public String programCompetenciesOutcome12ContributionLevel4;
+    public String programCompetenciesOutcome12ContributionLevel5;
+    public String programCompetenciesOutcome12LOno;
+
+
+    public String programCompetenciesOutcome13;
+    public String programCompetenciesOutcome13ContributionLevel1;
+    public String programCompetenciesOutcome13ContributionLevel2;
+    public String programCompetenciesOutcome13ContributionLevel3;
+    public String programCompetenciesOutcome13ContributionLevel4;
+    public String programCompetenciesOutcome13ContributionLevel5;
+    public String programCompetenciesOutcome13LOno;
+
+
+    //the data on the SAVE TAB
+    public String reasonForUpdate;
+
+
+    //list of data on tab1 to make comparing easier seasonfall ve spring eklenmedi
+    public String[] TAB1 = {courseName,code,season,theory,lab,localCredits,ects,prerequisities,courseLanguage,
+            courseType,courseLevel,modeOfDelivery,teachingMethodsAndTechniques,courseCoordinator,courseLecturers,
+            courseAssistants};
+
+    //list of data on tab2 to make comparing easier
+    public String[] TAB2 = {courseObjectives,learningOutcomes,courseDescription,CCCoreCourse,
+            CCMajorAreaCourse,CCSupportiveCourse,CCComAndManagementSkillsCourse,CCTransferableSkillCourse};
 
     //list of data on tab3 to make comparing easier weeklysubjectsandRequiredMaterials eklenmedi
-    private String[] TAB3 = {week1Subjects,week2Subjects,week3Subjects,week4Subjects,week5Subjects,week6Subjects,
+    public String[] TAB3 = {week1Subjects,week2Subjects,week3Subjects,week4Subjects,week5Subjects,week6Subjects,
             week7Subjects,week8Subjects,week9Subjects,week10Subjects,week11Subjects,week12Subjects,week13Subjects,
             week14Subjects,week15Subjects,week1ReqMat,week2ReqMat,week3ReqMat,week4ReqMat,week5ReqMat,week6ReqMat,
             week7ReqMat,week8ReqMat,week9ReqMat,week10ReqMat,week11ReqMat,week12ReqMat,week13ReqMat,week14ReqMat,
             week15ReqMat,courseNotesAndTextBooks,suggestedReadingsAndMaterials};
 
-    //the data on TAB4 Assessment
-
-    private String noOfParticipation;
-    private String noOfLabOrApplication;
-    private String noOfFieldWork;
-    private String noOfQuizOrStudioCritique;
-    private String noOfHwOrAssignment;
-    private String noOfPresentationOrJury;
-    private String noOfProject;
-    private String noOfSeminarOrWorkshop;
-    private String noOfOralExam;
-    private String noOfMidterm;
-    private String noOfFinalExam;
-    private String noOfPresentationJury;
-    private String noOfTotalWeight;
-
-    private String weightOfParticipation;
-    private String weightOfLabOrApplication;
-    private String weightOfFieldWork;
-    private String weightOfQuizOrStudioCritique;
-    private String weightOfHwOrAssignment;
-    private String weightOfPresentationOrJury;
-    private String weightOfProject;
-    private String weightOfSeminarOrWorkshop;
-    private String weightOfOralExam;
-    private String weightOfMidterm;
-    private String weightOfFinalExam;
-    private String weightOfPresentationJury;
-    private String weightOfTotalWeight; // burayı değiştirmek zorundayım
-
-    private String LO1OfParticipation;
-    private String LO1OfLabOrApplication;
-    private String LO1OfFieldWork;
-    private String LO1OfQuizOrStudioCritique;
-    private String LO1OfHwOrAssignment;
-    private String LO1OfPresentationOrJury;
-    private String LO1OfProject;
-    private String LO1OfSeminarOrWorkshop;
-    private String LO1OfOralExam;
-    private String LO1OfMidterm;
-    private String LO1OfFinalExam;
-    private String LO1OfPresentationJury;
-    private String LO1OfTotalWeight;
-
-    private String LO2OfParticipation;
-    private String LO2OfLabOrApplication;
-    private String LO2OfFieldWork;
-    private String LO2OfQuizOrStudioCritique;
-    private String LO2OfHwOrAssignment;
-    private String LO2OfPresentationOrJury;
-    private String LO2OfProject;
-    private String LO2OfSeminarOrWorkshop;
-    private String LO2OfOralExam;
-    private String LO2OfMidterm;
-    private String LO2OfFinalExam;
-    private String LO2OfPresentationJury;
-    private String LO2OfTotalWeight;
-
-    private String LO3OfParticipation;
-    private String LO3OfLabOrApplication;
-    private String LO3OfFieldWork;
-    private String LO3OfQuizOrStudioCritique;
-    private String LO3OfHwOrAssignment;
-    private String LO3OfPresentationOrJury;
-    private String LO3OfProject;
-    private String LO3OfSeminarOrWorkshop;
-    private String LO3OfOralExam;
-    private String LO3OfMidterm;
-    private String LO3OfFinalExam;
-    private String LO3OfPresentationJury;
-    private String LO3OfTotalWeight;
-
-    private String LO4OfParticipation;
-    private String LO4OfLabOrApplication;
-    private String LO4OfFieldWork;
-    private String LO4OfQuizOrStudioCritique;
-    private String LO4OfHwOrAssignment;
-    private String LO4OfPresentationOrJury;
-    private String LO4OfProject;
-    private String LO4OfSeminarOrWorkshop;
-    private String LO4OfOralExam;
-    private String LO4OfMidterm;
-    private String LO4OfFinalExam;
-    private String LO4OfPresentationJury;
-    private String LO4OfTotalWeight;
-
-    private String LO5OfParticipation;
-    private String LO5OfLabOrApplication;
-    private String LO5OfFieldWork;
-    private String LO5OfQuizOrStudioCritique;
-    private String LO5OfHwOrAssignment;
-    private String LO5OfPresentationOrJury;
-    private String LO5OfProject;
-    private String LO5OfSeminarOrWorkshop;
-    private String LO5OfOralExam;
-    private String LO5OfMidterm;
-    private String LO5OfFinalExam;
-    private String LO5OfPresentationJury;
-    private String LO5OfTotalWeight;
-
-    private String LO6OfParticipation;
-    private String LO6OfLabOrApplication;
-    private String LO6OfFieldWork;
-    private String LO6OfQuizOrStudioCritique;
-    private String LO6OfHwOrAssignment;
-    private String LO6OfPresentationOrJury;
-    private String LO6OfProject;
-    private String LO6OfSeminarOrWorkshop;
-    private String LO6OfOralExam;
-    private String LO6OfMidterm;
-    private String LO6OfFinalExam;
-    private String LO6OfPresentationJury;
-    private String LO6OfTotalWeight;
-
-    private String LO7OfParticipation;
-    private String LO7OfLabOrApplication;
-    private String LO7OfFieldWork;
-    private String LO7OfQuizOrStudioCritique;
-    private String LO7OfHwOrAssignment;
-    private String LO7OfPresentationOrJury;
-    private String LO7OfProject;
-    private String LO7OfSeminarOrWorkshop;
-    private String LO7OfOralExam;
-    private String LO7OfMidterm;
-    private String LO7OfFinalExam;
-    private String LO7OfPresentationJury;
-    private String LO7OfTotalWeight;
-
-    private String weightOfSemActivitiesOnFinalGrade1;
-    private String weightOfSemActivitiesOnFinalGrade2;
-
-    private String weightOfEndOfSemActivitiesOnFinalGrade1;
-    private String weightOfEndOfSemActivitiesOnFinalGrade2;
-
-    private String endOfTab4Total1;
-    private String endOfTab4Total2;
-
     //list of data on tab4
-    private String[] TAB4 = {
+    public String[] TAB4 = {
             noOfParticipation,noOfLabOrApplication,noOfFieldWork,noOfQuizOrStudioCritique,noOfHwOrAssignment,
             noOfPresentationOrJury,noOfProject,noOfSeminarOrWorkshop,noOfOralExam,noOfMidterm,noOfFinalExam,
             noOfPresentationJury,noOfTotalWeight,
@@ -287,175 +437,17 @@ public class CourseInformationx {
             endOfTab4Total2
     };
 
-    //the data on TAB5 ECTS / Workload Table
-    private String courseHours;
-    private String labOrApplicationHours;
-    private String studyHourseOutsideClass;
-    private String fieldWork;
-    private String quizOrStudioCritique;
-    private String homeworkOrAssignment;
-    private String presentationOrJury;
-    private String project;
-    private String portfolio;
-    private String seminarOrWorkshop;
-    private String oralExam;
-    private String midterm;
-    private String Final;
-    private String TotalWorkload;
-
-    private String courseHoursDur;
-    private String labOrApplicationHoursDur;
-    private String studyHourseOutsideClassDur;
-    private String fieldWorkDur;
-    private String quizOrStudioCritiqueDur;
-    private String homeworkOrAssignmentDur;
-    private String presentationOrJuryDur;
-    private String projectDur;
-    private String portfolioDur;
-    private String seminarOrWorkshopDur;
-    private String oralExamDur;
-    private String midtermDur;
-    private String FinalDur;
-    private String TotalWorkloadDur;
-
-    private String courseHoursWL;
-    private String labOrApplicationHourWL;
-    private String studyHourseOutsideClassWL;
-    private String fieldWorkWL;
-    private String quizOrStudioCritiqueWL;
-    private String homeworkOrAssignmentWL;
-    private String presentationOrJuryWL;
-    private String projectWL;
-    private String portfolioWL;
-    private String seminarOrWorkshopWL;
-    private String oralExamWL;
-    private String midtermWL;
-    private String FinalWL;
-    private String TotalWorkloadWL;
-
     //list of data on tab5
-    private String[] TAB5 = {courseHours,labOrApplicationHours,studyHourseOutsideClass,fieldWork,quizOrStudioCritique,
+    public String[] TAB5 = {studyHourseOutsideClass,fieldWork,quizOrStudioCritique,
             homeworkOrAssignment,presentationOrJury,project,portfolio,seminarOrWorkshop,oralExam,midterm,Final,
             TotalWorkload,courseHoursDur,labOrApplicationHoursDur,studyHourseOutsideClassDur,fieldWorkDur,
             quizOrStudioCritiqueDur,homeworkOrAssignmentDur,presentationOrJuryDur,projectDur,portfolioDur,
-            seminarOrWorkshopDur,oralExamDur,midtermDur,FinalDur,TotalWorkloadDur,courseHoursWL,labOrApplicationHourWL,
+            seminarOrWorkshopDur,oralExamDur,midtermDur,FinalDur,courseHoursWL,labOrApplicationHourWL,
             studyHourseOutsideClassWL,fieldWorkWL,quizOrStudioCritiqueWL,homeworkOrAssignmentWL,presentationOrJuryWL,
-            projectWL,portfolioWL,seminarOrWorkshopWL,oralExamWL,midtermWL,FinalWL,TotalWorkloadWL};
-
-    //the data on TAB6 Course outcome matrix
-    private String week;
-    private String programOutcomes;
-    private String contributionLevel;
-    private String LO;
-    //now more variables to suit more spaces :)
-
-    private String programCompetenciesOutcome1;
-    private String programCompetenciesOutcome1ContributionLevel1;
-    private String programCompetenciesOutcome1ContributionLevel2;
-    private String programCompetenciesOutcome1ContributionLevel3;
-    private String programCompetenciesOutcome1ContributionLevel4;
-    private String programCompetenciesOutcome1ContributionLevel5;
-    private String programCompetenciesOutcome1LOno;
-
-    private String programCompetenciesOutcome2;
-    private String programCompetenciesOutcome2ContributionLevel1;
-    private String programCompetenciesOutcome2ContributionLevel2;
-    private String programCompetenciesOutcome2ContributionLevel3;
-    private String programCompetenciesOutcome2ContributionLevel4;
-    private String programCompetenciesOutcome2ContributionLevel5;
-    private String programCompetenciesOutcome2LOno;
-
-    private String programCompetenciesOutcome3;
-    private String programCompetenciesOutcome3ContributionLevel1;
-    private String programCompetenciesOutcome3ContributionLevel2;
-    private String programCompetenciesOutcome3ContributionLevel3;
-    private String programCompetenciesOutcome3ContributionLevel4;
-    private String programCompetenciesOutcome3ContributionLevel5;
-    private String programCompetenciesOutcome3LOno;
-
-    private String programCompetenciesOutcome4;
-    private String programCompetenciesOutcome4ContributionLevel1;
-    private String programCompetenciesOutcome4ContributionLevel2;
-    private String programCompetenciesOutcome4ContributionLevel3;
-    private String programCompetenciesOutcome4ContributionLevel4;
-    private String programCompetenciesOutcome4ContributionLevel5;
-    private String programCompetenciesOutcome4LOno;
-
-    private String programCompetenciesOutcome5;
-    private String programCompetenciesOutcome5ContributionLevel1;
-    private String programCompetenciesOutcome5ContributionLevel2;
-    private String programCompetenciesOutcome5ContributionLevel3;
-    private String programCompetenciesOutcome5ContributionLevel4;
-    private String programCompetenciesOutcome5ContributionLevel5;
-    private String programCompetenciesOutcome5LOno;
-
-    private String programCompetenciesOutcome6;
-    private String programCompetenciesOutcome6ContributionLevel1;
-    private String programCompetenciesOutcome6ContributionLevel2;
-    private String programCompetenciesOutcome6ContributionLevel3;
-    private String programCompetenciesOutcome6ContributionLevel4;
-    private String programCompetenciesOutcome6ContributionLevel5;
-    private String programCompetenciesOutcome6LOno;
-
-
-    private String programCompetenciesOutcome7;
-    private String programCompetenciesOutcome7ContributionLevel1;
-    private String programCompetenciesOutcome7ContributionLevel2;
-    private String programCompetenciesOutcome7ContributionLevel3;
-    private String programCompetenciesOutcome7ContributionLevel4;
-    private String programCompetenciesOutcome7ContributionLevel5;
-    private String programCompetenciesOutcome7LOno;
-
-    private String programCompetenciesOutcome8;
-    private String programCompetenciesOutcome8ContributionLevel1;
-    private String programCompetenciesOutcome8ContributionLevel2;
-    private String programCompetenciesOutcome8ContributionLevel3;
-    private String programCompetenciesOutcome8ContributionLevel4;
-    private String programCompetenciesOutcome8ContributionLevel5;
-    private String programCompetenciesOutcome8LOno;
-
-    private String programCompetenciesOutcome9;
-    private String programCompetenciesOutcome9ContributionLevel1;
-    private String programCompetenciesOutcome9ContributionLevel2;
-    private String programCompetenciesOutcome9ContributionLevel3;
-    private String programCompetenciesOutcome9ContributionLevel4;
-    private String programCompetenciesOutcome9ContributionLevel5;
-    private String programCompetenciesOutcome9LOno;
-
-    private String programCompetenciesOutcome10;
-    private String programCompetenciesOutcome10ContributionLevel1;
-    private String programCompetenciesOutcome10ContributionLevel2;
-    private String programCompetenciesOutcome10ContributionLevel3;
-    private String programCompetenciesOutcome10ContributionLevel4;
-    private String programCompetenciesOutcome10ContributionLevel5;
-    private String programCompetenciesOutcome10LOno;
-
-    private String programCompetenciesOutcome11;
-    private String programCompetenciesOutcome11ContributionLevel1;
-    private String programCompetenciesOutcome11ContributionLevel2;
-    private String programCompetenciesOutcome11ContributionLevel3;
-    private String programCompetenciesOutcome11ContributionLevel4;
-    private String programCompetenciesOutcome11ContributionLevel5;
-    private String programCompetenciesOutcome11LOno;
-
-    private String programCompetenciesOutcome12;
-    private String programCompetenciesOutcome12ContributionLevel1;
-    private String programCompetenciesOutcome12ContributionLevel2;
-    private String programCompetenciesOutcome12ContributionLevel3;
-    private String programCompetenciesOutcome12ContributionLevel4;
-    private String programCompetenciesOutcome12ContributionLevel5;
-    private String programCompetenciesOutcome12LOno;
-
-    private String programCompetenciesOutcome13;
-    private String programCompetenciesOutcome13ContributionLevel1;
-    private String programCompetenciesOutcome13ContributionLevel2;
-    private String programCompetenciesOutcome13ContributionLevel3;
-    private String programCompetenciesOutcome13ContributionLevel4;
-    private String programCompetenciesOutcome13ContributionLevel5;
-    private String programCompetenciesOutcome13LOno;
+            projectWL,portfolioWL,seminarOrWorkshopWL,oralExamWL,midtermWL,FinalWL};
 
     //list of data on tab6
-    private String[] TAB6 = {
+    public String[] TAB6 = {
             programCompetenciesOutcome1,programCompetenciesOutcome1ContributionLevel1,
             programCompetenciesOutcome1ContributionLevel2,programCompetenciesOutcome1ContributionLevel3,
             programCompetenciesOutcome1ContributionLevel4,programCompetenciesOutcome1ContributionLevel5,
@@ -522,7 +514,7 @@ public class CourseInformationx {
             programCompetenciesOutcome13LOno};
 
     //the data on the SAVE TAB
-    private String reasonForUpdate;
+
 
     public String getVersion() {
         return version;
@@ -684,21 +676,6 @@ public class CourseInformationx {
         this.courseDescription = courseDescription;
     }
 
-    public String getCourseCategory() {
-        return courseCategory;
-    }
-
-    public void setCourseCategory(String courseCategory) {
-        this.courseCategory = courseCategory;
-    }
-
-    public String getWeeklySubjectsAndRequiredMaterials() {
-        return weeklySubjectsAndRequiredMaterials;
-    }
-
-    public void setWeeklySubjectsAndRequiredMaterials(String weeklySubjectsAndRequiredMaterials) {
-        this.weeklySubjectsAndRequiredMaterials = weeklySubjectsAndRequiredMaterials;
-    }
 
     public String getCourseNotesAndTextBooks() {
         return courseNotesAndTextBooks;
@@ -812,21 +789,6 @@ public class CourseInformationx {
         weightOfTotalWeight = totalWeight;
     }
 
-    public String getCourseHours() {
-        return courseHours;
-    }
-
-    public void setCourseHours(String courseHours) {
-        this.courseHours = courseHours;
-    }
-
-    public String getLabOrApplicationHours() {
-        return labOrApplicationHours;
-    }
-
-    public void setLabOrApplicationHours(String labOrApplicationHours) {
-        this.labOrApplicationHours = labOrApplicationHours;
-    }
 
     public String getStudyHourseOutsideClass() {
         return studyHourseOutsideClass;
@@ -924,37 +886,6 @@ public class CourseInformationx {
         TotalWorkload = totalWorkload;
     }
 
-    public String getWeek() {
-        return week;
-    }
-
-    public void setWeek(String week) {
-        this.week = week;
-    }
-
-    public String getProgramOutcomes() {
-        return programOutcomes;
-    }
-
-    public void setProgramOutcomes(String programOutcomes) {
-        this.programOutcomes = programOutcomes;
-    }
-
-    public String getContributionLevel() {
-        return contributionLevel;
-    }
-
-    public void setContributionLevel(String contributionLevel) {
-        this.contributionLevel = contributionLevel;
-    }
-
-    public String getLO() {
-        return LO;
-    }
-
-    public void setLO(String LO) {
-        this.LO = LO;
-    }
 
     public String getReasonForUpdate() {
         return reasonForUpdate;
@@ -964,21 +895,6 @@ public class CourseInformationx {
         this.reasonForUpdate = reasonForUpdate;
     }
 
-    public String getSeasonFall() {
-        return seasonFall;
-    }
-
-    public void setSeasonFall(String seasonFall) {
-        this.seasonFall = seasonFall;
-    }
-
-    public String getSeasonSpring() {
-        return seasonSpring;
-    }
-
-    public void setSeasonSpring(String seasonSpring) {
-        this.seasonSpring = seasonSpring;
-    }
 
     public String getCCCoreCourse() {
         return CCCoreCourse;
@@ -2260,14 +2176,6 @@ public class CourseInformationx {
         FinalDur = finalDur;
     }
 
-    public String getTotalWorkloadDur() {
-        return TotalWorkloadDur;
-    }
-
-    public void setTotalWorkloadDur(String totalWorkloadDur) {
-        TotalWorkloadDur = totalWorkloadDur;
-    }
-
     public String getCourseHoursWL() {
         return courseHoursWL;
     }
@@ -2372,13 +2280,6 @@ public class CourseInformationx {
         FinalWL = finalWL;
     }
 
-    public String getTotalWorkloadWL() {
-        return TotalWorkloadWL;
-    }
-
-    public void setTotalWorkloadWL(String totalWorkloadWL) {
-        TotalWorkloadWL = totalWorkloadWL;
-    }
 
     public String getProgramCompetenciesOutcome1() {
         return programCompetenciesOutcome1;
@@ -3108,6 +3009,14 @@ public class CourseInformationx {
         this.programCompetenciesOutcome13LOno = programCompetenciesOutcome13LOno;
     }
 
+    public String getTotalWorkloadWL() {
+        return TotalWorkloadWL;
+    }
+
+    public void setTotalWorkloadWL(String totalWorkloadWL) {
+        TotalWorkloadWL = totalWorkloadWL;
+    }
+
     public String[] getTAB1() {
         return TAB1;
     }
@@ -3338,7 +3247,6 @@ public class CourseInformationx {
         this.oralExamDur =  " ";
         this.midtermDur =  " ";
         this.FinalDur =  " ";
-        this.TotalWorkloadDur =  " ";
         this.courseHoursWL =  " ";
         this.labOrApplicationHourWL =  " ";
         this.studyHourseOutsideClassWL =  " ";
@@ -3352,11 +3260,6 @@ public class CourseInformationx {
         this.oralExamWL =  " ";
         this.midtermWL =  " ";
         this.FinalWL = " ";
-        this.TotalWorkloadWL =  " ";
-        this.week =  " ";
-        this.programOutcomes =  " ";
-        this.contributionLevel =  " ";
-        this.LO =  " ";
         this.programCompetenciesOutcome1 =  " ";
         this.programCompetenciesOutcome1ContributionLevel1 =  " ";
         this.programCompetenciesOutcome1ContributionLevel2 =  " ";
@@ -3651,7 +3554,6 @@ public class CourseInformationx {
                 ", oralExamDur='" + oralExamDur + '\'' +
                 ", midtermDur='" + midtermDur + '\'' +
                 ", FinalDur='" + FinalDur + '\'' +
-                ", TotalWorkloadDur='" + TotalWorkloadDur + '\'' +
                 ", courseHoursWL='" + courseHoursWL + '\'' +
                 ", labOrApplicationHourWL='" + labOrApplicationHourWL + '\'' +
                 ", studyHourseOutsideClassWL='" + studyHourseOutsideClassWL + '\'' +
