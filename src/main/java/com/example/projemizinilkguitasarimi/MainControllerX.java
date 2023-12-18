@@ -1043,74 +1043,72 @@ public class MainControllerX {
             e.printStackTrace();
         }
     }
+    public void CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
 
-    public void CreateNewCourse() throws IOException {//Ezgi versiyon kontrolu için burayı doldur
-        public void CompareVersions(String filePathOfOldVersion , String filePathOfNewVersion){
+        CourseInformationx oldVersion, newVersion;
+        oldVersion = readJsonFile(filePathOfOldVersion);
+        newVersion = readJsonFile(filePathOfNewVersion);
 
-            CourseInformationx oldVersion, newVersion;
-            oldVersion = readJsonFile(filePathOfOldVersion);
-            newVersion = readJsonFile(filePathOfNewVersion);
+        //declaring String arrays of tabs to compare
+        String[] oldtab1 = oldVersion.getTAB1();
+        String[] newtab1 = newVersion.getTAB1();
+        String[] vChanges1 = new String[oldtab1.length]; // not sure if this works
 
-            //declaring String arrays of tabs to compare
-            String[] oldtab1 = oldVersion.getTAB1();
-            String[] newtab1 = newVersion.getTAB1();
-            String[] vChanges1 = new String[oldtab1.length]; // not sure if this works
+        String[] oldtab2 = oldVersion.getTAB2();
+        String[] newtab2 = newVersion.getTAB2();
+        String[] vChanges2 = new String[oldtab2.length];
 
-            String[] oldtab2 = oldVersion.getTAB2();
-            String[] newtab2 = newVersion.getTAB2();
-            String[] vChanges2 = new String[oldtab2.length];
+        String[] oldtab3 = oldVersion.getTAB3();
+        String[] newtab3 = newVersion.getTAB3();
+        String[] vChanges3 = new String[oldtab3.length];
 
-            String[] oldtab3 = oldVersion.getTAB3();
-            String[] newtab3 = newVersion.getTAB3();
-            String[] vChanges3 = new String[oldtab3.length];
+        String[] oldtab4 = oldVersion.getTAB4();
+        String[] newtab4 = newVersion.getTAB4();
+        String[] vChanges4 = new String[oldtab4.length];
 
-            String[] oldtab4 = oldVersion.getTAB4();
-            String[] newtab4 = newVersion.getTAB4();
-            String[] vChanges4 = new String[oldtab4.length];
+        String[] oldtab5 = oldVersion.getTAB5();
+        String[] newtab5 = newVersion.getTAB5();
+        String[] vChanges5 = new String[oldtab5.length];
 
-            String[] oldtab5 = oldVersion.getTAB5();
-            String[] newtab5 = newVersion.getTAB5();
-            String[] vChanges5 = new String[oldtab5.length];
+        String[] oldtab6 = oldVersion.getTAB6();
+        String[] newtab6 = newVersion.getTAB6();
+        String[] vChanges6 = new String[oldtab6.length];
 
-            String[] oldtab6 = oldVersion.getTAB6();
-            String[] newtab6 = newVersion.getTAB6();
-            String[] vChanges6 = new String[oldtab6.length];
-
-            //comparing tabs. might implement Threads to make this process faster :)
-            //has some unused variables inside.
-            for(int i = 0; i<oldtab1.length;i++){
-                if(!newtab1[i].equals(oldtab1[i])){
-                    vChanges1[i] = newtab1[i];
-                }
+        //comparing tabs. might implement Threads to make this process faster :)
+        //has some unused variables inside.
+        for (int i = 0; i < oldtab1.length; i++) {
+            if (!newtab1[i].equals(oldtab1[i])) {
+                vChanges1[i] = newtab1[i];
             }
-            for(int i = 0; i<oldtab2.length;i++){
-                if(!newtab2[i].equals(oldtab2[i])){
-                    vChanges2[i] = newtab2[i];
-                }
+        }
+        for (int i = 0; i < oldtab2.length; i++) {
+            if (!newtab2[i].equals(oldtab2[i])) {
+                vChanges2[i] = newtab2[i];
             }
-            for(int i = 0; i<oldtab3.length;i++){
-                if(!newtab3[i].equals(oldtab3[i])){
-                    vChanges3[i] = newtab3[i];
-                }
+        }
+        for (int i = 0; i < oldtab3.length; i++) {
+            if (!newtab3[i].equals(oldtab3[i])) {
+                vChanges3[i] = newtab3[i];
             }
-            for(int i = 0; i<oldtab4.length;i++){
-                if(!newtab4[i].equals(oldtab4[i])){
-                    vChanges4[i] = newtab4[i];
-                }
+        }
+        for (int i = 0; i < oldtab4.length; i++) {
+            if (!newtab4[i].equals(oldtab4[i])) {
+                vChanges4[i] = newtab4[i];
             }
-            for(int i = 0; i<oldtab5.length;i++){
-                if(!newtab5[i].equals(oldtab5[i])){
-                    vChanges5[i] = newtab5[i];
-                }
+        }
+        for (int i = 0; i < oldtab5.length; i++) {
+            if (!newtab5[i].equals(oldtab5[i])) {
+                vChanges5[i] = newtab5[i];
             }
-            for(int i = 0; i<oldtab6.length;i++){
-                if(!newtab6[i].equals(oldtab6[i])){
-                    vChanges6[i] = newtab6[i];
-                }
+        }
+        for (int i = 0; i < oldtab6.length; i++) {
+            if (!newtab6[i].equals(oldtab6[i])) {
+                vChanges6[i] = newtab6[i];
             }
-            System.out.println("\nDifferences on tab1: "+ vChanges1 +"\nDifferences on tab2: "+ vChanges2 +
-                    "\nDifferences on tab3: "+ vChanges3 +"\nDifferences on tab4: "+ vChanges4 +
-                    "\nDifferences on tab5: "+ vChanges5 +"\nDifferences on tab6: "+ vChanges6 );
+        }
+        System.out.println("\nDifferences on tab1: " + vChanges1 + "\nDifferences on tab2: " + vChanges2 +
+                "\nDifferences on tab3: " + vChanges3 + "\nDifferences on tab4: " + vChanges4 +
+                "\nDifferences on tab5: " + vChanges5 + "\nDifferences on tab6: " + vChanges6);
         /* if all else fails
                                     // comparing new version to old version's TAB1
         if (!newVersion.getCourseName().equals(oldVersion.getCourseName())) {
@@ -1197,7 +1195,9 @@ public class MainControllerX {
 
                         //LAST TAB
             */
-        }
+    }
+    public void CreateNewCourse() throws IOException {//Ezgi versiyon kontrolu için burayı doldur
+
         //versiyon kotnrol son
         Scanner scanner = new Scanner(System.in);
 
@@ -1231,321 +1231,320 @@ public class MainControllerX {
             fileWriter.write(newJson);
             System.out.println("JSON written to file successfully.");
         }
-
-
-        public void fillCourse(CourseInformationx course) {
-        //Tab1
-        course.setCourseName(courseNameText2.getText());
-        course.setCode(codeTextt2.getText());
-        course.setSeason(seasontext.getText());
-        course.setTheory(theoryText2.getText());
-        course.setLab(applicationText2.getText());
-        course.setLocalCredits(localCreditsText2.getText());
-        course.setEcts(ectsText2.getText());
-        course.setPrerequisities(prerequisitesText.getText());
-        course.setCourseLanguage(CourseLanguageText.getText());
-        course.setCourseType(CourseTypeText.getText());
-        course.setCourseLevel(CourseLevelText.getText());
-        course.setModeOfDelivery(ModeOfDeleveryText.getText());
-        course.setTeachingMethodsAndTechniques(teachingMethodsText.getText());
-        course.setCourseCoordinator(coursecoordinatorText.getText());
-        course.setCourseLecturers(courselecturerText.getText());
-        course.setCourseAssistants(assistantText.getText());
-        //Tab2
-        course.setCourseObjectives(courseobjectivesText.getText());
-        course.setLearningOutcomes(learningoutcomesText.getText());
-        course.setCourseDescription(coursedescriptionText.getText());
-        course.setCCCoreCourse(coreCourseText.getText());
-        course.setCCMajorAreaCourse(majorAreaCourseText.getText());
-        course.setCCSupportiveCourse(supportiveCourseText.getText());
-        course.setCCComAndManagementSkillsCourse(communicationandManagementSkillsCourseText.getText());
-        course.setCCTransferableSkillCourse(transferableSkillCourseText.getText());
-        //Tab3
-        course.setWeek1Subjects(subject1.getText());
-        course.setWeek1ReqMat(reqMaterial1.getText());
-        course.setWeek2Subjects(subject11.getText());
-        course.setWeek2ReqMat(reqMaterial11.getText());
-        course.setWeek3Subjects(subject21.getText());
-        course.setWeek3ReqMat(reqMaterial21.getText());
-        course.setWeek4Subjects(subject31.getText());
-        course.setWeek4ReqMat(reqMaterial31.getText());
-        course.setWeek5Subjects(subject41.getText());
-        course.setWeek5ReqMat(reqMaterial41.getText());
-        course.setWeek6Subjects(subject51.getText());
-        course.setWeek6ReqMat(reqMaterial51.getText());
-        course.setWeek7Subjects(subject61.getText());
-        course.setWeek7ReqMat(reqMaterial61.getText());
-        course.setWeek8Subjects(subject71.getText());
-        course.setWeek8ReqMat(reqMaterial71.getText());
-        course.setWeek9Subjects(subject81.getText());
-        course.setWeek9ReqMat(reqMaterial81.getText());
-        course.setWeek10Subjects(subject91.getText());
-        course.setWeek10ReqMat(reqMaterial91.getText());
-        course.setWeek11Subjects(subject101.getText());
-        course.setWeek11ReqMat(reqMaterial101.getText());
-        course.setWeek12Subjects(subject111.getText());
-        course.setWeek12ReqMat(reqMaterial111.getText());
-        course.setWeek13Subjects(subject121.getText());
-        course.setWeek13ReqMat(reqMaterial121.getText());
-        course.setWeek14Subjects(subject131.getText());
-        course.setWeek14ReqMat(reqMaterial131.getText());
-        course.setWeek15Subjects(subject141.getText());
-        course.setWeek15ReqMat(reqMaterial141.getText());
-        course.setCourseNotesAndTextBooks(courseNotesText.getText());
-        course.setSuggestedReadingsAndMaterials(suggestedReadingsText.getText());
-        //Tab4
-        course.setNoOfParticipation(participateNumText.getText());
-        course.setWeightOfParticipation(participateWText.getText());
-        course.setLO1OfParticipation(participateo1Text.getText());
-        course.setLO2OfParticipation(participateo2Text.getText());
-        course.setLO3OfParticipation(participateo3Text.getText());
-        course.setLO4OfParticipation(participateo4Text.getText());
-        course.setLO5OfParticipation(participateo5Text.getText());
-        course.setLO6OfParticipation(participateo6Text.getText());
-        course.setLO7OfParticipation(participateo7Text.getText());
-        course.setNoOfLabOrApplication(labNumText.getText());
-        course.setWeightOfLabOrApplication(labWText.getText());
-        course.setLO1OfLabOrApplication(labo1Text.getText());
-        course.setLO2OfLabOrApplication(labo2Text.getText());
-        course.setLO3OfLabOrApplication(labo3Text.getText());
-        course.setLO4OfLabOrApplication(labo4Text.getText());
-        course.setLO5OfLabOrApplication(labo5Text.getText());
-        course.setLO6OfLabOrApplication(labo6Text.getText());
-        course.setLO7OfLabOrApplication(labo7Text.getText());
-        course.setNoOfFieldWork(fieldNumText.getText());
-        course.setWeightOfFieldWork(fieldWText.getText());
-        course.setLO1OfFieldWork(fieldo1Text.getText());
-        course.setLO2OfFieldWork(fieldo2Text.getText());
-        course.setLO3OfLabOrApplication(fieldo3Text.getText());
-        course.setLO4OfLabOrApplication(fieldo4Text.getText());
-        course.setLO5OfLabOrApplication(fieldo3Text.getText());
-        course.setLO6OfLabOrApplication(fieldo6Text.getText());
-        course.setLO7OfLabOrApplication(fieldo7Text.getText());
-        course.setNoOfQuizOrStudioCritique(quizNumText.getText());
-        course.setWeightOfQuizOrStudioCritique(quizWText.getText());
-        course.setLO1OfQuizOrStudioCritique(quizo1Text.getText());
-        course.setLO2OfQuizOrStudioCritique(quizo2Text.getText());
-        course.setLO3OfQuizOrStudioCritique(quizo3Text.getText());
-        course.setLO4OfQuizOrStudioCritique(quizo4Text.getText());
-        course.setLO5OfQuizOrStudioCritique(quizo5Text.getText());
-        course.setLO6OfQuizOrStudioCritique(quizo6Text.getText());
-        course.setLO7OfQuizOrStudioCritique(quiz7Text.getText());
-        course.setNoOfHwOrAssignment(homeworkNumText.getText());
-        course.setWeightOfHwOrAssignment(homeworkWText.getText());
-        course.setLO1OfHwOrAssignment(homeworko1Text.getText());
-        course.setLO2OfHwOrAssignment(homeworko2Text.getText());
-        course.setLO3OfHwOrAssignment(homeworko3Text.getText());
-        course.setLO4OfHwOrAssignment(homeworko4Text.getText());
-        course.setLO5OfHwOrAssignment(homeworko5Text.getText());
-        course.setLO6OfHwOrAssignment(homeworko6Text.getText());
-        course.setLO7OfHwOrAssignment(homeworko7Text.getText());
-        course.setNoOfPresentationOrJury(juryNumText.getText());
-        course.setWeightOfPresentationOrJury(juryWText.getText());
-        course.setLO1OfPresentationOrJury(juryo1Text.getText());
-        course.setLO2OfPresentationOrJury(juryo2Text.getText());
-        course.setLO3OfPresentationOrJury(juryo3Text.getText());
-        course.setLO4OfPresentationOrJury(juryo4Text.getText());
-        course.setLO5OfPresentationOrJury(juryo5Text.getText());
-        course.setLO6OfPresentationOrJury(juryo6Text.getText());
-        course.setLO7OfPresentationOrJury(juryo6Text.getText());
-        course.setNoOfProject(ProjectNumText.getText());
-        course.setWeightOfProject(projectWText.getText());
-        course.setLO1OfProject(projecto1Text.getText());
-        course.setLO2OfProject(projecto2Text.getText());
-        course.setLO3OfProject(projecto3Text.getText());
-        course.setLO4OfProject(projecto4Text.getText());
-        course.setLO5OfProject(projecto5Text.getText());
-        course.setLO6OfProject(projecto6Text.getText());
-        course.setLO7OfProject(projecto7Text.getText());
-        course.setNoOfSeminarOrWorkshop(seminarNumText.getText());
-        course.setWeightOfSeminarOrWorkshop(seminarWText.getText());
-        course.setLO1OfSeminarOrWorkshop(seminaro1Text.getText());
-        course.setLO2OfSeminarOrWorkshop(seminaro2Text.getText());
-        course.setLO3OfSeminarOrWorkshop(seminaro3Text.getText());
-        course.setLO4OfSeminarOrWorkshop(seminaro4Text.getText());
-        course.setLO5OfSeminarOrWorkshop(seminaro5Text.getText());
-        course.setLO6OfSeminarOrWorkshop(seminaro6Text.getText());
-        course.setLO7OfSeminarOrWorkshop(seminaro7Text.getText());
-        course.setNoOfOralExam(oralNumText.getText());
-        course.setWeightOfOralExam(oralWText.getText());
-        course.setLO1OfOralExam(oralo1Text.getText());
-        course.setLO2OfOralExam(oralo2Text.getText());
-        course.setLO3OfOralExam(oralo3Text.getText());
-        course.setLO4OfOralExam(oralo4Text.getText());
-        course.setLO5OfOralExam(oralo5Text.getText());
-        course.setLO6OfOralExam(oralo6Text.getText());
-        course.setLO7OfOralExam(oralo7Text.getText());
-        course.setNoOfMidterm(midtermNum.getText());
-        course.setWeightOfMidterm(midtermW.getText());
-        course.setLO1OfMidterm(midtermo1Text.getText());
-        course.setLO2OfMidterm(midtermo2Text.getText());
-        course.setLO3OfMidterm(midtermo3Text.getText());
-        course.setLO4OfMidterm(midtermo4Text.getText());
-        course.setLO5OfMidterm(midtermo5Text.getText());
-        course.setLO6OfMidterm(midtermo6Text.getText());
-        course.setLO7OfMidterm(midtermo7Text.getText());
-        course.setNoOfFinalExam(finalNumText.getText());
-        course.setWeightOfFinalExam(finalWText.getText());
-        course.setLO1OfFinalExam(finalo1Text.getText());
-        course.setLO2OfFinalExam(finalo2Text.getText());
-        course.setLO3OfFinalExam(finalo3Text.getText());
-        course.setLO4OfFinalExam(finalo4Text.getText());
-        course.setLO5OfFinalExam(finalo5Text.getText());
-        course.setLO6OfFinalExam(finalo6Text.getText());
-        course.setLO7OfFinalExam(finalo7Text.getText());
-        course.setNoOfTotalWeight(totalNumText.getText());
-        course.setWeightOfTotalWeight(totalWWText.getText());
-        course.setLO1OfTotalWeight(totalo1Text.getText());
-        course.setLO2OfTotalWeight(totalo2Text.getText());
-        course.setLO3OfTotalWeight(totalo3Text.getText());
-        course.setLO4OfTotalWeight(totalo4Text.getText());
-        course.setLO5OfTotalWeight(totalo5Text.getText());
-        course.setLO6OfTotalWeight(totalo6Text.getText());
-        course.setLO7OfTotalWeight(totalo7Text.getText());
-        course.setWeightOfSemActivitiesOnFinalGrade1(finalgrade1.getText());
-        course.setWeightOfSemActivitiesOnFinalGrade2(finalgrade2.getText());
-        course.setWeightOfEndOfSemActivitiesOnFinalGrade1(finalEGrade1.getText());
-        course.setWeightOfEndOfSemActivitiesOnFinalGrade2(finalEGrade2.getText());
-        course.setEndOfTab4Total1(totalG1.getText());
-        course.setEndOfTab4Total2(totalG2.getText());
-        //Tab5
-        course.setCourseHoursDur(cdText.getText());
-        course.setCourseHoursWL(cwText.getText());
-        course.setLabOrApplicationHoursDur(ldText.getText());
-        course.setLabOrApplicationHourWL(lwText.getText());
-        course.setStudyHourseOutsideClass(snText.getText());
-        course.setStudyHourseOutsideClassDur(sdText.getText());
-        course.setStudyHourseOutsideClassWL(swText.getText());
-        course.setFieldWork(fnText.getText());
-        course.setFieldWorkDur(fdText.getText());
-        course.setFieldWorkWL(fwText.getText());
-        course.setQuizOrStudioCritique(qnText1.getText());
-        course.setQuizOrStudioCritiqueDur(qdText1.getText());
-        course.setStudyHourseOutsideClassWL(qwText.getText());
-        course.setHomeworkOrAssignment(hnText.getText());
-        course.setHomeworkOrAssignmentDur(hdText.getText());
-        course.setHomeworkOrAssignmentWL(hwText.getText());
-        course.setPresentationOrJury(prnText.getText());
-        course.setPresentationOrJuryDur(prdText.getText());
-        course.setPresentationOrJuryWL(prwText.getText());
-        course.setProject(pronText.getText());
-        course.setProjectDur(prodText.getText());
-        course.setProjectWL(prowText.getText());
-        course.setPortfolio(portnText.getText());
-        course.setPortfolioDur(portdText11.getText());
-        course.setPortfolioWL(portwText11.getText());
-        course.setSeminarOrWorkshop(semnText.getText());
-        course.setSeminarOrWorkshopDur(semdText.getText());
-        course.setSeminarOrWorkshopWL(semwText.getText());
-        course.setOralExam(ornText.getText());
-        course.setOralExamDur(ordText.getText());
-        course.setOralExamWL(orwText.getText());
-        course.setMidterm(midnText.getText());
-        course.setMidtermDur(middText.getText());
-        course.setMidtermWL(midwText.getText());
-        course.setFinal(fnText.getText());
-        course.setFinalDur(fdText.getText());
-        course.setFinalWL(fwText.getText());
-        course.setTotalWorkload(totalWWText.getText());
-        //Tab6
-        course.setProgramCompetenciesOutcome1(CoursePOMText1.getText());
-        course.setProgramCompetenciesOutcome1ContributionLevel1(CoursePOMText11.getText());
-        course.setProgramCompetenciesOutcome1ContributionLevel2(CoursePOMText12.getText());
-        course.setProgramCompetenciesOutcome1ContributionLevel3(CoursePOMText13.getText());
-        course.setProgramCompetenciesOutcome1ContributionLevel4(CoursePOMText14.getText());
-        course.setProgramCompetenciesOutcome1ContributionLevel5(CoursePOMText15.getText());
-        course.setProgramCompetenciesOutcome1LOno(CoursePOMText1LO.getText());
-        course.setProgramCompetenciesOutcome2(CoursePOMText2.getText());
-        course.setProgramCompetenciesOutcome2ContributionLevel1(CoursePOMText21.getText());
-        course.setProgramCompetenciesOutcome2ContributionLevel2(CoursePOMText22.getText());
-        course.setProgramCompetenciesOutcome2ContributionLevel3(CoursePOMText23.getText());
-        course.setProgramCompetenciesOutcome2ContributionLevel4(CoursePOMText24.getText());
-        course.setProgramCompetenciesOutcome2ContributionLevel5(CoursePOMText25.getText());
-        course.setProgramCompetenciesOutcome2LOno(CoursePOMText2LO.getText());
-        course.setProgramCompetenciesOutcome3(CoursePOMText3.getText());
-        course.setProgramCompetenciesOutcome3ContributionLevel1(CoursePOMText31.getText());
-        course.setProgramCompetenciesOutcome3ContributionLevel2(CoursePOMText32.getText());
-        course.setProgramCompetenciesOutcome3ContributionLevel3(CoursePOMText33.getText());
-        course.setProgramCompetenciesOutcome3ContributionLevel4(CoursePOMText34.getText());
-        course.setProgramCompetenciesOutcome3ContributionLevel5(CoursePOMText35.getText());
-        course.setProgramCompetenciesOutcome3LOno(CoursePOMText32LO.getText());
-        course.setProgramCompetenciesOutcome4(CoursePOMText4.getText());
-        course.setProgramCompetenciesOutcome4ContributionLevel1(CoursePOMText41.getText());
-        course.setProgramCompetenciesOutcome4ContributionLevel2(CoursePOMText42.getText());
-        course.setProgramCompetenciesOutcome4ContributionLevel3(CoursePOMText43.getText());
-        course.setProgramCompetenciesOutcome4ContributionLevel4(CoursePOMText44.getText());
-        course.setProgramCompetenciesOutcome4ContributionLevel5(CoursePOMText45.getText());
-        course.setProgramCompetenciesOutcome4LOno(CoursePOMText4LO.getText());
-        course.setProgramCompetenciesOutcome5(CoursePOMText5.getText());
-        course.setProgramCompetenciesOutcome5ContributionLevel1(CoursePOMText51.getText());
-        course.setProgramCompetenciesOutcome5ContributionLevel2(CoursePOMText52.getText());
-        course.setProgramCompetenciesOutcome5ContributionLevel3(CoursePOMText53.getText());
-        course.setProgramCompetenciesOutcome5ContributionLevel4(CoursePOMText54.getText());
-        course.setProgramCompetenciesOutcome5ContributionLevel5(CoursePOMText55.getText());
-        course.setProgramCompetenciesOutcome5LOno(CoursePOMText5LO.getText());
-        course.setProgramCompetenciesOutcome6(CoursePOMText6.getText());
-        course.setProgramCompetenciesOutcome6ContributionLevel1(CoursePOMText61.getText());
-        course.setProgramCompetenciesOutcome6ContributionLevel2(CoursePOMText62.getText());
-        course.setProgramCompetenciesOutcome6ContributionLevel3(CoursePOMText63.getText());
-        course.setProgramCompetenciesOutcome6ContributionLevel4(CoursePOMText64.getText());
-        course.setProgramCompetenciesOutcome6ContributionLevel5(CoursePOMText65.getText());
-        course.setProgramCompetenciesOutcome6LOno(CoursePOMText6LO.getText());
-        course.setProgramCompetenciesOutcome7(CoursePOMText7.getText());
-        course.setProgramCompetenciesOutcome7ContributionLevel1(CoursePOMText71.getText());
-        course.setProgramCompetenciesOutcome7ContributionLevel2(CoursePOMText72.getText());
-        course.setProgramCompetenciesOutcome7ContributionLevel3(CoursePOMText73.getText());
-        course.setProgramCompetenciesOutcome7ContributionLevel4(CoursePOMText74.getText());
-        course.setProgramCompetenciesOutcome7ContributionLevel5(CoursePOMText75.getText());
-        course.setProgramCompetenciesOutcome7LOno(CoursePOMText7LO.getText());
-        course.setProgramCompetenciesOutcome8(CoursePOMText8.getText());
-        course.setProgramCompetenciesOutcome8ContributionLevel1(CoursePOMText81.getText());
-        course.setProgramCompetenciesOutcome8ContributionLevel2(CoursePOMText82.getText());
-        course.setProgramCompetenciesOutcome8ContributionLevel3(CoursePOMText83.getText());
-        course.setProgramCompetenciesOutcome8ContributionLevel4(CoursePOMText84.getText());
-        course.setProgramCompetenciesOutcome8ContributionLevel5(CoursePOMText85.getText());
-        course.setProgramCompetenciesOutcome8LOno(CoursePOMText8LO.getText());
-        course.setProgramCompetenciesOutcome9(CoursePOMText9.getText());
-        course.setProgramCompetenciesOutcome9ContributionLevel1(CoursePOMText91.getText());
-        course.setProgramCompetenciesOutcome9ContributionLevel2(CoursePOMText92.getText());
-        course.setProgramCompetenciesOutcome9ContributionLevel3(CoursePOMText93.getText());
-        course.setProgramCompetenciesOutcome9ContributionLevel4(CoursePOMText94.getText());
-        course.setProgramCompetenciesOutcome9ContributionLevel5(CoursePOMText95.getText());
-        course.setProgramCompetenciesOutcome9LOno(CoursePOMText9LO.getText());
-        course.setProgramCompetenciesOutcome10(CoursePOMText10.getText());
-        course.setProgramCompetenciesOutcome10ContributionLevel1(CoursePOMText101.getText());
-        course.setProgramCompetenciesOutcome10ContributionLevel2(CoursePOMText102.getText());
-        course.setProgramCompetenciesOutcome10ContributionLevel3(CoursePOMText103.getText());
-        course.setProgramCompetenciesOutcome10ContributionLevel4(CoursePOMText104.getText());
-        course.setProgramCompetenciesOutcome10ContributionLevel5(CoursePOMText105.getText());
-        course.setProgramCompetenciesOutcome10LOno(CoursePOMText10LO.getText());
-        course.setProgramCompetenciesOutcome11(CoursePOMText11.getText());
-        course.setProgramCompetenciesOutcome11ContributionLevel1(CoursePOMText111.getText());
-        course.setProgramCompetenciesOutcome11ContributionLevel2(CoursePOMText112.getText());
-        course.setProgramCompetenciesOutcome11ContributionLevel3(CoursePOMText113.getText());
-        course.setProgramCompetenciesOutcome11ContributionLevel4(CoursePOMText114.getText());
-        course.setProgramCompetenciesOutcome11ContributionLevel5(CoursePOMText115.getText());
-        course.setProgramCompetenciesOutcome11LOno(CoursePOMText11LO.getText());
-        course.setProgramCompetenciesOutcome12(CoursePOMText12.getText());
-        course.setProgramCompetenciesOutcome12ContributionLevel1(CoursePOMText121.getText());
-        course.setProgramCompetenciesOutcome12ContributionLevel2(CoursePOMText122.getText());
-        course.setProgramCompetenciesOutcome12ContributionLevel3(CoursePOMText123.getText());
-        course.setProgramCompetenciesOutcome12ContributionLevel4(CoursePOMText124.getText());
-        course.setProgramCompetenciesOutcome12ContributionLevel5(CoursePOMText125.getText());
-        course.setProgramCompetenciesOutcome12LOno(CoursePOMText12LO.getText());
-        course.setProgramCompetenciesOutcome13(CoursePOMText13.getText());
-        course.setProgramCompetenciesOutcome13ContributionLevel1(CoursePOMText131.getText());
-        course.setProgramCompetenciesOutcome13ContributionLevel2(CoursePOMText132.getText());
-        course.setProgramCompetenciesOutcome13ContributionLevel3(CoursePOMText133.getText());
-        course.setProgramCompetenciesOutcome13ContributionLevel4(CoursePOMText134.getText());
-        course.setProgramCompetenciesOutcome13ContributionLevel5(CoursePOMText135.getText());
-        course.setProgramCompetenciesOutcome13LOno(CoursePOMText13LO.getText());
-        //Tab save
-        course.setReasonForUpdate(SaveAllText.getText());
-
     }
 
+        public void fillCourse (CourseInformationx course){
+            //Tab1
+            course.setCourseName(courseNameText2.getText());
+            course.setCode(codeTextt2.getText());
+            course.setSeason(seasontext.getText());
+            course.setTheory(theoryText2.getText());
+            course.setLab(applicationText2.getText());
+            course.setLocalCredits(localCreditsText2.getText());
+            course.setEcts(ectsText2.getText());
+            course.setPrerequisities(prerequisitesText.getText());
+            course.setCourseLanguage(CourseLanguageText.getText());
+            course.setCourseType(CourseTypeText.getText());
+            course.setCourseLevel(CourseLevelText.getText());
+            course.setModeOfDelivery(ModeOfDeleveryText.getText());
+            course.setTeachingMethodsAndTechniques(teachingMethodsText.getText());
+            course.setCourseCoordinator(coursecoordinatorText.getText());
+            course.setCourseLecturers(courselecturerText.getText());
+            course.setCourseAssistants(assistantText.getText());
+            //Tab2
+            course.setCourseObjectives(courseobjectivesText.getText());
+            course.setLearningOutcomes(learningoutcomesText.getText());
+            course.setCourseDescription(coursedescriptionText.getText());
+            course.setCCCoreCourse(coreCourseText.getText());
+            course.setCCMajorAreaCourse(majorAreaCourseText.getText());
+            course.setCCSupportiveCourse(supportiveCourseText.getText());
+            course.setCCComAndManagementSkillsCourse(communicationandManagementSkillsCourseText.getText());
+            course.setCCTransferableSkillCourse(transferableSkillCourseText.getText());
+            //Tab3
+            course.setWeek1Subjects(subject1.getText());
+            course.setWeek1ReqMat(reqMaterial1.getText());
+            course.setWeek2Subjects(subject11.getText());
+            course.setWeek2ReqMat(reqMaterial11.getText());
+            course.setWeek3Subjects(subject21.getText());
+            course.setWeek3ReqMat(reqMaterial21.getText());
+            course.setWeek4Subjects(subject31.getText());
+            course.setWeek4ReqMat(reqMaterial31.getText());
+            course.setWeek5Subjects(subject41.getText());
+            course.setWeek5ReqMat(reqMaterial41.getText());
+            course.setWeek6Subjects(subject51.getText());
+            course.setWeek6ReqMat(reqMaterial51.getText());
+            course.setWeek7Subjects(subject61.getText());
+            course.setWeek7ReqMat(reqMaterial61.getText());
+            course.setWeek8Subjects(subject71.getText());
+            course.setWeek8ReqMat(reqMaterial71.getText());
+            course.setWeek9Subjects(subject81.getText());
+            course.setWeek9ReqMat(reqMaterial81.getText());
+            course.setWeek10Subjects(subject91.getText());
+            course.setWeek10ReqMat(reqMaterial91.getText());
+            course.setWeek11Subjects(subject101.getText());
+            course.setWeek11ReqMat(reqMaterial101.getText());
+            course.setWeek12Subjects(subject111.getText());
+            course.setWeek12ReqMat(reqMaterial111.getText());
+            course.setWeek13Subjects(subject121.getText());
+            course.setWeek13ReqMat(reqMaterial121.getText());
+            course.setWeek14Subjects(subject131.getText());
+            course.setWeek14ReqMat(reqMaterial131.getText());
+            course.setWeek15Subjects(subject141.getText());
+            course.setWeek15ReqMat(reqMaterial141.getText());
+            course.setCourseNotesAndTextBooks(courseNotesText.getText());
+            course.setSuggestedReadingsAndMaterials(suggestedReadingsText.getText());
+            //Tab4
+            course.setNoOfParticipation(participateNumText.getText());
+            course.setWeightOfParticipation(participateWText.getText());
+            course.setLO1OfParticipation(participateo1Text.getText());
+            course.setLO2OfParticipation(participateo2Text.getText());
+            course.setLO3OfParticipation(participateo3Text.getText());
+            course.setLO4OfParticipation(participateo4Text.getText());
+            course.setLO5OfParticipation(participateo5Text.getText());
+            course.setLO6OfParticipation(participateo6Text.getText());
+            course.setLO7OfParticipation(participateo7Text.getText());
+            course.setNoOfLabOrApplication(labNumText.getText());
+            course.setWeightOfLabOrApplication(labWText.getText());
+            course.setLO1OfLabOrApplication(labo1Text.getText());
+            course.setLO2OfLabOrApplication(labo2Text.getText());
+            course.setLO3OfLabOrApplication(labo3Text.getText());
+            course.setLO4OfLabOrApplication(labo4Text.getText());
+            course.setLO5OfLabOrApplication(labo5Text.getText());
+            course.setLO6OfLabOrApplication(labo6Text.getText());
+            course.setLO7OfLabOrApplication(labo7Text.getText());
+            course.setNoOfFieldWork(fieldNumText.getText());
+            course.setWeightOfFieldWork(fieldWText.getText());
+            course.setLO1OfFieldWork(fieldo1Text.getText());
+            course.setLO2OfFieldWork(fieldo2Text.getText());
+            course.setLO3OfLabOrApplication(fieldo3Text.getText());
+            course.setLO4OfLabOrApplication(fieldo4Text.getText());
+            course.setLO5OfLabOrApplication(fieldo3Text.getText());
+            course.setLO6OfLabOrApplication(fieldo6Text.getText());
+            course.setLO7OfLabOrApplication(fieldo7Text.getText());
+            course.setNoOfQuizOrStudioCritique(quizNumText.getText());
+            course.setWeightOfQuizOrStudioCritique(quizWText.getText());
+            course.setLO1OfQuizOrStudioCritique(quizo1Text.getText());
+            course.setLO2OfQuizOrStudioCritique(quizo2Text.getText());
+            course.setLO3OfQuizOrStudioCritique(quizo3Text.getText());
+            course.setLO4OfQuizOrStudioCritique(quizo4Text.getText());
+            course.setLO5OfQuizOrStudioCritique(quizo5Text.getText());
+            course.setLO6OfQuizOrStudioCritique(quizo6Text.getText());
+            course.setLO7OfQuizOrStudioCritique(quiz7Text.getText());
+            course.setNoOfHwOrAssignment(homeworkNumText.getText());
+            course.setWeightOfHwOrAssignment(homeworkWText.getText());
+            course.setLO1OfHwOrAssignment(homeworko1Text.getText());
+            course.setLO2OfHwOrAssignment(homeworko2Text.getText());
+            course.setLO3OfHwOrAssignment(homeworko3Text.getText());
+            course.setLO4OfHwOrAssignment(homeworko4Text.getText());
+            course.setLO5OfHwOrAssignment(homeworko5Text.getText());
+            course.setLO6OfHwOrAssignment(homeworko6Text.getText());
+            course.setLO7OfHwOrAssignment(homeworko7Text.getText());
+            course.setNoOfPresentationOrJury(juryNumText.getText());
+            course.setWeightOfPresentationOrJury(juryWText.getText());
+            course.setLO1OfPresentationOrJury(juryo1Text.getText());
+            course.setLO2OfPresentationOrJury(juryo2Text.getText());
+            course.setLO3OfPresentationOrJury(juryo3Text.getText());
+            course.setLO4OfPresentationOrJury(juryo4Text.getText());
+            course.setLO5OfPresentationOrJury(juryo5Text.getText());
+            course.setLO6OfPresentationOrJury(juryo6Text.getText());
+            course.setLO7OfPresentationOrJury(juryo6Text.getText());
+            course.setNoOfProject(ProjectNumText.getText());
+            course.setWeightOfProject(projectWText.getText());
+            course.setLO1OfProject(projecto1Text.getText());
+            course.setLO2OfProject(projecto2Text.getText());
+            course.setLO3OfProject(projecto3Text.getText());
+            course.setLO4OfProject(projecto4Text.getText());
+            course.setLO5OfProject(projecto5Text.getText());
+            course.setLO6OfProject(projecto6Text.getText());
+            course.setLO7OfProject(projecto7Text.getText());
+            course.setNoOfSeminarOrWorkshop(seminarNumText.getText());
+            course.setWeightOfSeminarOrWorkshop(seminarWText.getText());
+            course.setLO1OfSeminarOrWorkshop(seminaro1Text.getText());
+            course.setLO2OfSeminarOrWorkshop(seminaro2Text.getText());
+            course.setLO3OfSeminarOrWorkshop(seminaro3Text.getText());
+            course.setLO4OfSeminarOrWorkshop(seminaro4Text.getText());
+            course.setLO5OfSeminarOrWorkshop(seminaro5Text.getText());
+            course.setLO6OfSeminarOrWorkshop(seminaro6Text.getText());
+            course.setLO7OfSeminarOrWorkshop(seminaro7Text.getText());
+            course.setNoOfOralExam(oralNumText.getText());
+            course.setWeightOfOralExam(oralWText.getText());
+            course.setLO1OfOralExam(oralo1Text.getText());
+            course.setLO2OfOralExam(oralo2Text.getText());
+            course.setLO3OfOralExam(oralo3Text.getText());
+            course.setLO4OfOralExam(oralo4Text.getText());
+            course.setLO5OfOralExam(oralo5Text.getText());
+            course.setLO6OfOralExam(oralo6Text.getText());
+            course.setLO7OfOralExam(oralo7Text.getText());
+            course.setNoOfMidterm(midtermNum.getText());
+            course.setWeightOfMidterm(midtermW.getText());
+            course.setLO1OfMidterm(midtermo1Text.getText());
+            course.setLO2OfMidterm(midtermo2Text.getText());
+            course.setLO3OfMidterm(midtermo3Text.getText());
+            course.setLO4OfMidterm(midtermo4Text.getText());
+            course.setLO5OfMidterm(midtermo5Text.getText());
+            course.setLO6OfMidterm(midtermo6Text.getText());
+            course.setLO7OfMidterm(midtermo7Text.getText());
+            course.setNoOfFinalExam(finalNumText.getText());
+            course.setWeightOfFinalExam(finalWText.getText());
+            course.setLO1OfFinalExam(finalo1Text.getText());
+            course.setLO2OfFinalExam(finalo2Text.getText());
+            course.setLO3OfFinalExam(finalo3Text.getText());
+            course.setLO4OfFinalExam(finalo4Text.getText());
+            course.setLO5OfFinalExam(finalo5Text.getText());
+            course.setLO6OfFinalExam(finalo6Text.getText());
+            course.setLO7OfFinalExam(finalo7Text.getText());
+            course.setNoOfTotalWeight(totalNumText.getText());
+            course.setWeightOfTotalWeight(totalWWText.getText());
+            course.setLO1OfTotalWeight(totalo1Text.getText());
+            course.setLO2OfTotalWeight(totalo2Text.getText());
+            course.setLO3OfTotalWeight(totalo3Text.getText());
+            course.setLO4OfTotalWeight(totalo4Text.getText());
+            course.setLO5OfTotalWeight(totalo5Text.getText());
+            course.setLO6OfTotalWeight(totalo6Text.getText());
+            course.setLO7OfTotalWeight(totalo7Text.getText());
+            course.setWeightOfSemActivitiesOnFinalGrade1(finalgrade1.getText());
+            course.setWeightOfSemActivitiesOnFinalGrade2(finalgrade2.getText());
+            course.setWeightOfEndOfSemActivitiesOnFinalGrade1(finalEGrade1.getText());
+            course.setWeightOfEndOfSemActivitiesOnFinalGrade2(finalEGrade2.getText());
+            course.setEndOfTab4Total1(totalG1.getText());
+            course.setEndOfTab4Total2(totalG2.getText());
+            //Tab5
+            course.setCourseHoursDur(cdText.getText());
+            course.setCourseHoursWL(cwText.getText());
+            course.setLabOrApplicationHoursDur(ldText.getText());
+            course.setLabOrApplicationHourWL(lwText.getText());
+            course.setStudyHourseOutsideClass(snText.getText());
+            course.setStudyHourseOutsideClassDur(sdText.getText());
+            course.setStudyHourseOutsideClassWL(swText.getText());
+            course.setFieldWork(fnText.getText());
+            course.setFieldWorkDur(fdText.getText());
+            course.setFieldWorkWL(fwText.getText());
+            course.setQuizOrStudioCritique(qnText1.getText());
+            course.setQuizOrStudioCritiqueDur(qdText1.getText());
+            course.setStudyHourseOutsideClassWL(qwText.getText());
+            course.setHomeworkOrAssignment(hnText.getText());
+            course.setHomeworkOrAssignmentDur(hdText.getText());
+            course.setHomeworkOrAssignmentWL(hwText.getText());
+            course.setPresentationOrJury(prnText.getText());
+            course.setPresentationOrJuryDur(prdText.getText());
+            course.setPresentationOrJuryWL(prwText.getText());
+            course.setProject(pronText.getText());
+            course.setProjectDur(prodText.getText());
+            course.setProjectWL(prowText.getText());
+            course.setPortfolio(portnText.getText());
+            course.setPortfolioDur(portdText11.getText());
+            course.setPortfolioWL(portwText11.getText());
+            course.setSeminarOrWorkshop(semnText.getText());
+            course.setSeminarOrWorkshopDur(semdText.getText());
+            course.setSeminarOrWorkshopWL(semwText.getText());
+            course.setOralExam(ornText.getText());
+            course.setOralExamDur(ordText.getText());
+            course.setOralExamWL(orwText.getText());
+            course.setMidterm(midnText.getText());
+            course.setMidtermDur(middText.getText());
+            course.setMidtermWL(midwText.getText());
+            course.setFinal(fnText.getText());
+            course.setFinalDur(fdText.getText());
+            course.setFinalWL(fwText.getText());
+            course.setTotalWorkload(totalWWText.getText());
+            //Tab6
+            course.setProgramCompetenciesOutcome1(CoursePOMText1.getText());
+            course.setProgramCompetenciesOutcome1ContributionLevel1(CoursePOMText11.getText());
+            course.setProgramCompetenciesOutcome1ContributionLevel2(CoursePOMText12.getText());
+            course.setProgramCompetenciesOutcome1ContributionLevel3(CoursePOMText13.getText());
+            course.setProgramCompetenciesOutcome1ContributionLevel4(CoursePOMText14.getText());
+            course.setProgramCompetenciesOutcome1ContributionLevel5(CoursePOMText15.getText());
+            course.setProgramCompetenciesOutcome1LOno(CoursePOMText1LO.getText());
+            course.setProgramCompetenciesOutcome2(CoursePOMText2.getText());
+            course.setProgramCompetenciesOutcome2ContributionLevel1(CoursePOMText21.getText());
+            course.setProgramCompetenciesOutcome2ContributionLevel2(CoursePOMText22.getText());
+            course.setProgramCompetenciesOutcome2ContributionLevel3(CoursePOMText23.getText());
+            course.setProgramCompetenciesOutcome2ContributionLevel4(CoursePOMText24.getText());
+            course.setProgramCompetenciesOutcome2ContributionLevel5(CoursePOMText25.getText());
+            course.setProgramCompetenciesOutcome2LOno(CoursePOMText2LO.getText());
+            course.setProgramCompetenciesOutcome3(CoursePOMText3.getText());
+            course.setProgramCompetenciesOutcome3ContributionLevel1(CoursePOMText31.getText());
+            course.setProgramCompetenciesOutcome3ContributionLevel2(CoursePOMText32.getText());
+            course.setProgramCompetenciesOutcome3ContributionLevel3(CoursePOMText33.getText());
+            course.setProgramCompetenciesOutcome3ContributionLevel4(CoursePOMText34.getText());
+            course.setProgramCompetenciesOutcome3ContributionLevel5(CoursePOMText35.getText());
+            course.setProgramCompetenciesOutcome3LOno(CoursePOMText32LO.getText());
+            course.setProgramCompetenciesOutcome4(CoursePOMText4.getText());
+            course.setProgramCompetenciesOutcome4ContributionLevel1(CoursePOMText41.getText());
+            course.setProgramCompetenciesOutcome4ContributionLevel2(CoursePOMText42.getText());
+            course.setProgramCompetenciesOutcome4ContributionLevel3(CoursePOMText43.getText());
+            course.setProgramCompetenciesOutcome4ContributionLevel4(CoursePOMText44.getText());
+            course.setProgramCompetenciesOutcome4ContributionLevel5(CoursePOMText45.getText());
+            course.setProgramCompetenciesOutcome4LOno(CoursePOMText4LO.getText());
+            course.setProgramCompetenciesOutcome5(CoursePOMText5.getText());
+            course.setProgramCompetenciesOutcome5ContributionLevel1(CoursePOMText51.getText());
+            course.setProgramCompetenciesOutcome5ContributionLevel2(CoursePOMText52.getText());
+            course.setProgramCompetenciesOutcome5ContributionLevel3(CoursePOMText53.getText());
+            course.setProgramCompetenciesOutcome5ContributionLevel4(CoursePOMText54.getText());
+            course.setProgramCompetenciesOutcome5ContributionLevel5(CoursePOMText55.getText());
+            course.setProgramCompetenciesOutcome5LOno(CoursePOMText5LO.getText());
+            course.setProgramCompetenciesOutcome6(CoursePOMText6.getText());
+            course.setProgramCompetenciesOutcome6ContributionLevel1(CoursePOMText61.getText());
+            course.setProgramCompetenciesOutcome6ContributionLevel2(CoursePOMText62.getText());
+            course.setProgramCompetenciesOutcome6ContributionLevel3(CoursePOMText63.getText());
+            course.setProgramCompetenciesOutcome6ContributionLevel4(CoursePOMText64.getText());
+            course.setProgramCompetenciesOutcome6ContributionLevel5(CoursePOMText65.getText());
+            course.setProgramCompetenciesOutcome6LOno(CoursePOMText6LO.getText());
+            course.setProgramCompetenciesOutcome7(CoursePOMText7.getText());
+            course.setProgramCompetenciesOutcome7ContributionLevel1(CoursePOMText71.getText());
+            course.setProgramCompetenciesOutcome7ContributionLevel2(CoursePOMText72.getText());
+            course.setProgramCompetenciesOutcome7ContributionLevel3(CoursePOMText73.getText());
+            course.setProgramCompetenciesOutcome7ContributionLevel4(CoursePOMText74.getText());
+            course.setProgramCompetenciesOutcome7ContributionLevel5(CoursePOMText75.getText());
+            course.setProgramCompetenciesOutcome7LOno(CoursePOMText7LO.getText());
+            course.setProgramCompetenciesOutcome8(CoursePOMText8.getText());
+            course.setProgramCompetenciesOutcome8ContributionLevel1(CoursePOMText81.getText());
+            course.setProgramCompetenciesOutcome8ContributionLevel2(CoursePOMText82.getText());
+            course.setProgramCompetenciesOutcome8ContributionLevel3(CoursePOMText83.getText());
+            course.setProgramCompetenciesOutcome8ContributionLevel4(CoursePOMText84.getText());
+            course.setProgramCompetenciesOutcome8ContributionLevel5(CoursePOMText85.getText());
+            course.setProgramCompetenciesOutcome8LOno(CoursePOMText8LO.getText());
+            course.setProgramCompetenciesOutcome9(CoursePOMText9.getText());
+            course.setProgramCompetenciesOutcome9ContributionLevel1(CoursePOMText91.getText());
+            course.setProgramCompetenciesOutcome9ContributionLevel2(CoursePOMText92.getText());
+            course.setProgramCompetenciesOutcome9ContributionLevel3(CoursePOMText93.getText());
+            course.setProgramCompetenciesOutcome9ContributionLevel4(CoursePOMText94.getText());
+            course.setProgramCompetenciesOutcome9ContributionLevel5(CoursePOMText95.getText());
+            course.setProgramCompetenciesOutcome9LOno(CoursePOMText9LO.getText());
+            course.setProgramCompetenciesOutcome10(CoursePOMText10.getText());
+            course.setProgramCompetenciesOutcome10ContributionLevel1(CoursePOMText101.getText());
+            course.setProgramCompetenciesOutcome10ContributionLevel2(CoursePOMText102.getText());
+            course.setProgramCompetenciesOutcome10ContributionLevel3(CoursePOMText103.getText());
+            course.setProgramCompetenciesOutcome10ContributionLevel4(CoursePOMText104.getText());
+            course.setProgramCompetenciesOutcome10ContributionLevel5(CoursePOMText105.getText());
+            course.setProgramCompetenciesOutcome10LOno(CoursePOMText10LO.getText());
+            course.setProgramCompetenciesOutcome11(CoursePOMText11.getText());
+            course.setProgramCompetenciesOutcome11ContributionLevel1(CoursePOMText111.getText());
+            course.setProgramCompetenciesOutcome11ContributionLevel2(CoursePOMText112.getText());
+            course.setProgramCompetenciesOutcome11ContributionLevel3(CoursePOMText113.getText());
+            course.setProgramCompetenciesOutcome11ContributionLevel4(CoursePOMText114.getText());
+            course.setProgramCompetenciesOutcome11ContributionLevel5(CoursePOMText115.getText());
+            course.setProgramCompetenciesOutcome11LOno(CoursePOMText11LO.getText());
+            course.setProgramCompetenciesOutcome12(CoursePOMText12.getText());
+            course.setProgramCompetenciesOutcome12ContributionLevel1(CoursePOMText121.getText());
+            course.setProgramCompetenciesOutcome12ContributionLevel2(CoursePOMText122.getText());
+            course.setProgramCompetenciesOutcome12ContributionLevel3(CoursePOMText123.getText());
+            course.setProgramCompetenciesOutcome12ContributionLevel4(CoursePOMText124.getText());
+            course.setProgramCompetenciesOutcome12ContributionLevel5(CoursePOMText125.getText());
+            course.setProgramCompetenciesOutcome12LOno(CoursePOMText12LO.getText());
+            course.setProgramCompetenciesOutcome13(CoursePOMText13.getText());
+            course.setProgramCompetenciesOutcome13ContributionLevel1(CoursePOMText131.getText());
+            course.setProgramCompetenciesOutcome13ContributionLevel2(CoursePOMText132.getText());
+            course.setProgramCompetenciesOutcome13ContributionLevel3(CoursePOMText133.getText());
+            course.setProgramCompetenciesOutcome13ContributionLevel4(CoursePOMText134.getText());
+            course.setProgramCompetenciesOutcome13ContributionLevel5(CoursePOMText135.getText());
+            course.setProgramCompetenciesOutcome13LOno(CoursePOMText13LO.getText());
+            //Tab save
+            course.setReasonForUpdate(SaveAllText.getText());
+
+        }
+
 
     }
-}
 
 
