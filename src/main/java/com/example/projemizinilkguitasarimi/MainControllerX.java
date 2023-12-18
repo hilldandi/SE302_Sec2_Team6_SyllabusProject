@@ -1196,31 +1196,20 @@ public class MainControllerX {
                         //LAST TAB
             */
     }
-    public void CreateNewCourse() throws IOException {//Ezgi versiyon kontrolu için burayı doldur
-
-        //versiyon kotnrol son
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter Course Name: ");
-        String courseName = scanner.nextLine();
-
-        System.out.print("Enter Version: ");
-        String version = scanner.nextLine();
+    public void CreateNewCourse() throws IOException {
 
         // Create a new CourseInformationx object
         CourseInformationx newCourse = new CourseInformationx();
-        newCourse.setCourseName(courseName);
-        newCourse.setVersion(String.valueOf(version));
+        newCourse.setCode(codeTextt2.getText());
+        //newCourse.setVersion(String.valueOf(version));
 
-        // Populate other properties
-        addNewCourse(newCourse);
 
         //String code =codeTextt2.getText();
         CourseInformationx course = new CourseInformationx();
         fillCourse(course);
         String newJson = gson.toJson(course);
         CourseInformationx updatedCourse = new CourseInformationx();
-        String newFilePath = updatedCourse.getCourseName() + "-v" + updatedCourse.getVersion() + ".json";
+        String newFilePath = updatedCourse.getCode() + "-v" + updatedCourse.getVersion() + ".json";
 
         //Create new directory according to course code
         File dir = new File("SE302_Sec2_Team6_SyllabusProject-course_information/" + code);
