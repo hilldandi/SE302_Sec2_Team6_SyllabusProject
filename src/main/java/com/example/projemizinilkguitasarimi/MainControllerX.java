@@ -253,8 +253,6 @@ public class MainControllerX {
     }*/
     public void CreateNewCourse() throws IOException {
         Gson gson=new Gson();
-
-
         String code =codeTextt2.getText();
         CourseInformationx course = new CourseInformationx();
         fillCourse(course);
@@ -293,6 +291,14 @@ public class MainControllerX {
             course.setCourseCoordinator(coursecoordinatorText.getText());
             course.setCourseLecturers(courselecturerText.getText());
             course.setCourseAssistants(assistantText.getText());
+        String[] TAB1 = {
+                courseNameText2.getText(),codeTextt2.getText(),seasontext.getText(),theoryText2.getText(),
+                applicationText2.getText(),localCreditsText2.getText(),ectsText2.getText(),prerequisitesText.getText(),
+                CourseLanguageText.getText(),CourseTypeText.getText(),CourseLevelText.getText(),
+                ModeOfDeleveryText.getText(),teachingMethodsText.getText(),coursecoordinatorText.getText(),
+                courselecturerText.getText(), assistantText.getText()
+        };
+            course.setTAB1(TAB1);
             //Tab2
             course.setCourseObjectives(courseobjectivesText.getText());
             course.setLearningOutcomes(learningoutcomesText.getText());
@@ -302,6 +308,11 @@ public class MainControllerX {
             course.setCCSupportiveCourse(supportiveCourseText.getText());
             course.setCCComAndManagementSkillsCourse(communicationandManagementSkillsCourseText.getText());
             course.setCCTransferableSkillCourse(transferableSkillCourseText.getText());
+            String[] TAB2 = {courseobjectivesText.getText(),learningoutcomesText.getText(),
+                    coursedescriptionText.getText(),coreCourseText.getText(),majorAreaCourseText.getText(),
+                    supportiveCourseText.getText(),communicationandManagementSkillsCourseText.getText(),
+                    transferableSkillCourseText.getText()};
+            course.setTAB2(TAB2);
             //Tab3
             course.setWeek1Subjects(subject1.getText());
             course.setWeek1ReqMat(reqMaterial1.getText());
@@ -335,7 +346,18 @@ public class MainControllerX {
             course.setWeek15ReqMat(reqMaterial141.getText());
             course.setCourseNotesAndTextBooks(courseNotesText.getText());
             course.setSuggestedReadingsAndMaterials(suggestedReadingsText.getText());
-            //Tab4
+        String[] TAB3 = {
+                subject1.getText(), reqMaterial1.getText(),subject11.getText(), reqMaterial11.getText(),
+                subject21.getText(), reqMaterial21.getText(),subject31.getText(), reqMaterial31.getText(),
+                subject41.getText(), reqMaterial41.getText(),subject51.getText(), reqMaterial51.getText(),
+                subject61.getText(), reqMaterial61.getText(),subject71.getText(), reqMaterial71.getText(),
+                subject81.getText(), reqMaterial81.getText(),subject91.getText(), reqMaterial91.getText(),
+                subject101.getText(), reqMaterial101.getText(),subject111.getText(), reqMaterial111.getText(),
+                subject121.getText(), reqMaterial121.getText(),subject131.getText(), reqMaterial131.getText(),
+                subject141.getText(), reqMaterial141.getText(),
+        };
+            course.setTAB3(TAB3);
+        //Tab4
             course.setNoOfParticipation(participateNumText.getText());
             course.setWeightOfParticipation(participateWText.getText());
             course.setLO1OfParticipation(participateo1Text.getText());
@@ -450,6 +472,37 @@ public class MainControllerX {
             course.setWeightOfEndOfSemActivitiesOnFinalGrade2(finalEGrade2.getText());
             course.setEndOfTab4Total1(totalG1.getText());
             course.setEndOfTab4Total2(totalG2.getText());
+        String[] TAB4 = {
+                participateNumText.getText(),participateWText.getText(),participateo1Text.getText(),
+                participateo2Text.getText(),participateo3Text.getText(),participateo4Text.getText(),
+                participateo5Text.getText(),participateo6Text.getText(),participateo7Text.getText(),labNumText.getText(),
+                labWText.getText(),labo1Text.getText(),labo2Text.getText(),labo3Text.getText(),labo4Text.getText(),
+                labo5Text.getText(),labo6Text.getText(),labo7Text.getText(),fieldNumText.getText(),fieldWText.getText(),
+                fieldo1Text.getText(),fieldo2Text.getText(),fieldo3Text.getText(),fieldo4Text.getText(),
+                fieldo3Text.getText(),fieldo6Text.getText(),fieldo7Text.getText(),quizNumText.getText(),
+                quizWText.getText(),quizo1Text.getText(),quizo2Text.getText(),quizo3Text.getText(),quizo4Text.getText(),
+                quizo5Text.getText(),quizo6Text.getText(),quiz7Text.getText(),homeworkNumText.getText(),
+                homeworkWText.getText(),homeworko1Text.getText(),homeworko2Text.getText(),homeworko3Text.getText(),
+                homeworko4Text.getText(),homeworko5Text.getText(),homeworko6Text.getText(),homeworko7Text.getText(),
+                juryNumText.getText(),juryWText.getText(),juryo1Text.getText(),juryo2Text.getText(),juryo3Text.getText(),
+                juryo4Text.getText(),juryo5Text.getText(),juryo6Text.getText(),juryo6Text.getText(),
+                ProjectNumText.getText(),projectWText.getText(),projecto1Text.getText(),projecto2Text.getText(),
+                projecto3Text.getText(),projecto4Text.getText(),projecto5Text.getText(),projecto6Text.getText(),
+                projecto7Text.getText(),seminarNumText.getText(),seminarWText.getText(),seminaro1Text.getText(),
+                seminaro2Text.getText(),seminaro3Text.getText(),seminaro4Text.getText(),seminaro5Text.getText(),
+                seminaro6Text.getText(),seminaro7Text.getText(),oralNumText.getText(),oralWText.getText(),
+                oralo1Text.getText(),oralo2Text.getText(),oralo3Text.getText(),oralo4Text.getText(),oralo5Text.getText(),
+                oralo6Text.getText(),oralo7Text.getText(),midtermNum.getText(),
+                midtermW.getText(),midtermo1Text.getText(),midtermo2Text.getText(),midtermo3Text.getText(),
+                midtermo4Text.getText(),midtermo5Text.getText(),midtermo6Text.getText(),midtermo7Text.getText(),
+                finalNumText.getText(),finalWText.getText(),finalo1Text.getText(),finalo2Text.getText(),
+                finalo3Text.getText(),finalo4Text.getText(),finalo5Text.getText(),finalo6Text.getText(),
+                finalo7Text.getText(),totalNumText.getText(),totalWWText.getText(),totalo1Text.getText(),
+                totalo2Text.getText(),totalo3Text.getText(),totalo4Text.getText(),totalo5Text.getText(),
+                totalo6Text.getText(),totalo7Text.getText(),finalgrade1.getText(),finalgrade2.getText(),
+                finalEGrade1.getText(),finalEGrade2.getText(),totalG1.getText(),totalG2.getText()
+        };
+            course.setTAB4(TAB4);
             //Tab5
             course.setCourseHoursDur(cdText.getText());
             course.setCourseHoursWL(cwText.getText());
@@ -489,6 +542,17 @@ public class MainControllerX {
             course.setFinalDur(fdText.getText());
             course.setFinalWL(fwText.getText());
             course.setTotalWorkload(totalWWText.getText());
+
+        String[] TAB5 = {cdText.getText(),cwText.getText(),ldText.getText(),lwText.getText(),snText.getText(),
+                sdText.getText(),swText.getText(),fnText.getText(),fdText.getText(),fwText.getText(),qnText1.getText(),
+                qdText1.getText(),qwText.getText(),hnText.getText(),hdText.getText(),hwText.getText(),
+                prnText.getText(),prdText.getText(),prwText.getText(),pronText.getText(),prodText.getText(),
+                prowText.getText(),portnText.getText(),portdText11.getText(),portwText11.getText(),semnText.getText(),
+                semdText.getText(), semwText.getText(),ornText.getText(),ordText.getText(),orwText.getText(),
+                midnText.getText(),middText.getText(),midwText.getText(),fnText.getText(),fdText.getText(),
+                fwText.getText(), totalWWText.getText()
+        };
+            course.setTAB5(TAB5);
             //Tab6
             course.setProgramCompetenciesOutcome1(CoursePOMText1.getText());
             course.setProgramCompetenciesOutcome1ContributionLevel1(CoursePOMText11.getText());
@@ -581,6 +645,34 @@ public class MainControllerX {
             course.setProgramCompetenciesOutcome13ContributionLevel4(CoursePOMText134.getText());
             course.setProgramCompetenciesOutcome13ContributionLevel5(CoursePOMText135.getText());
             course.setProgramCompetenciesOutcome13LOno(CoursePOMText13LO.getText());
+        String[] TAB6 = {
+                CoursePOMText1.getText(),CoursePOMText11.getText(),CoursePOMText12.getText(),CoursePOMText13.getText(),
+                CoursePOMText14.getText(),CoursePOMText15.getText(),CoursePOMText1LO.getText(),CoursePOMText2.getText(),
+                CoursePOMText21.getText(),CoursePOMText22.getText(),CoursePOMText23.getText(),CoursePOMText24.getText(),
+                CoursePOMText25.getText(),CoursePOMText2LO.getText(),CoursePOMText3.getText(),CoursePOMText31.getText(),
+                CoursePOMText32.getText(),CoursePOMText33.getText(),CoursePOMText34.getText(),CoursePOMText35.getText(),
+                CoursePOMText32LO.getText(),CoursePOMText4.getText(),CoursePOMText41.getText(),CoursePOMText42.getText(),
+                CoursePOMText43.getText(),CoursePOMText44.getText(),CoursePOMText45.getText(),CoursePOMText4LO.getText(),
+                CoursePOMText5.getText(),CoursePOMText51.getText(),CoursePOMText52.getText(),CoursePOMText53.getText(),
+                CoursePOMText54.getText(),CoursePOMText55.getText(),CoursePOMText5LO.getText(),CoursePOMText6.getText(),
+                CoursePOMText61.getText(),CoursePOMText62.getText(),CoursePOMText63.getText(),CoursePOMText64.getText(),
+                CoursePOMText65.getText(),CoursePOMText6LO.getText(),CoursePOMText7.getText(),CoursePOMText71.getText(),
+                CoursePOMText72.getText(),CoursePOMText73.getText(),CoursePOMText74.getText(),CoursePOMText75.getText(),
+                CoursePOMText7LO.getText(),CoursePOMText8.getText(),CoursePOMText81.getText(),CoursePOMText82.getText(),
+                CoursePOMText83.getText(),CoursePOMText84.getText(),CoursePOMText85.getText(),CoursePOMText8LO.getText(),
+                CoursePOMText9.getText(),CoursePOMText91.getText(),CoursePOMText92.getText(),CoursePOMText93.getText(),
+                CoursePOMText94.getText(),CoursePOMText95.getText(),CoursePOMText9LO.getText(),CoursePOMText10.getText(),
+                CoursePOMText101.getText(),CoursePOMText102.getText(), CoursePOMText103.getText(),
+                CoursePOMText104.getText(),CoursePOMText105.getText(),CoursePOMText10LO.getText(),
+                CoursePOMText110.getText(),CoursePOMText111.getText(),CoursePOMText112.getText(),
+                CoursePOMText113.getText(),CoursePOMText114.getText(),CoursePOMText115.getText(),
+                CoursePOMText11LO.getText(),CoursePOMText120.getText(), CoursePOMText121.getText(),
+                CoursePOMText122.getText(),CoursePOMText123.getText(),CoursePOMText124.getText(),
+                CoursePOMText125.getText(),CoursePOMText12LO.getText(),CoursePOMText130.getText(),
+                CoursePOMText131.getText(),CoursePOMText132.getText(),CoursePOMText133.getText(),
+                CoursePOMText134.getText(),CoursePOMText135.getText(),CoursePOMText13LO.getText()
+        };
+        course.setTAB6(TAB6);
             //Tab save
             course.setReasonForUpdate(SaveAllText.getText());
 

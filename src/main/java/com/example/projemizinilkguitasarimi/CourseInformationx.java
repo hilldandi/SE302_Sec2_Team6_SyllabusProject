@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CourseInformationx {
-	public String version;
+	public int version;
     // The data on TAB1
 
     public String courseName;
@@ -516,11 +516,11 @@ public class CourseInformationx {
     //the data on the SAVE TAB
 
 
-    public String getVersion() {
+    public int getVersion() {
         return version;
     }
 
-    public void setVersion(String version) {
+    public void setVersion(int version) {
         this.version = version;
     }
 
@@ -3041,8 +3041,32 @@ public class CourseInformationx {
         return TAB6;
     }
 
+    public void setTAB1(String[] TAB1) {
+        this.TAB1 = TAB1;
+    }
+
+    public void setTAB2(String[] TAB2) {
+        this.TAB2 = TAB2;
+    }
+
+    public void setTAB3(String[] TAB3) {
+        this.TAB3 = TAB3;
+    }
+
+    public void setTAB4(String[] TAB4) {
+        this.TAB4 = TAB4;
+    }
+
+    public void setTAB5(String[] TAB5) {
+        this.TAB5 = TAB5;
+    }
+
+    public void setTAB6(String[] TAB6) {
+        this.TAB6 = TAB6;
+    }
+
     public CourseInformationx() {
-        this.version = " ";
+        this.version = 0;
         this.courseName = " ";
         this.code = " ";
         this.season = " ";
