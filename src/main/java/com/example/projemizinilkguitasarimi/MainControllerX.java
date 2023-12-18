@@ -17,6 +17,25 @@ import java.util.Scanner;
 
 public class MainControllerX {
     @FXML
+    private Button OldVerMainButton;
+
+    @FXML
+    void CompareButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void EditButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HelpButton(ActionEvent event) {
+
+    }
+
+   
+    @FXML
     private TextField CourseLanguageText;
 
     @FXML
