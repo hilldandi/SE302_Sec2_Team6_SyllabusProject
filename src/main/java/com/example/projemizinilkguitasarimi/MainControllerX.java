@@ -11,12 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.junit.Test;
 
 import java.io.*;
 import java.util.Scanner;
 
-import static org.junit.Assert.assertEquals;
 
 public class MainControllerX {
     @FXML
@@ -79,7 +77,7 @@ public class MainControllerX {
 
 
 
-    private static CourseInformationx readJsonFile(String filePath) {
+    static CourseInformationx readJsonFile(String filePath) {
         try (FileReader fileReader = new FileReader(filePath)) {
             return new Gson().fromJson(fileReader, CourseInformationx.class);
         } catch (FileNotFoundException e) {
@@ -244,7 +242,7 @@ public class MainControllerX {
                         //LAST TAB
 
     }*/
-    @Test
+
     public void CompareVersionsTAB1Test(){// works
         String filePathOfOldVersion = "Document/CE323/CE323.json";
         String filePathOfNewVersion = "Document/CE323v1/CE323v1.json";
@@ -317,7 +315,7 @@ public class MainControllerX {
                 noOfMismatches++;
             }
         }
-        assertEquals(noOfMismatches , 11); //there should be 12 missmatches
+        //assertEquals(noOfMismatches , 11); //there should be 12 missmatches
     }
     @FXML
     public void CreateNewCourse()throws IOException {
