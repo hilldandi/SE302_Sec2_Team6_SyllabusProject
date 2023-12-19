@@ -78,23 +78,6 @@ public class MainControllerX {
     }
 
 
-    /* they add i main
-        public static void main(String[] args) {
-        Gson gson = new Gson();
-
-        // Add a new object with user input
-        CourseInformationx updatedCourse = createNewCourse();
-        String newJson = gson.toJson(updatedCourse);
-
-        // Write the updated JSON to a new file
-        String newFilePath = updatedCourse.getCode() + ".json";
-        writeJsonToFile(newJson, newFilePath);
-
-        // Read and print the updated JSON
-        CourseInformationx updatedFromJson = readJsonFile(newFilePath);
-        System.out.println("Updated data:\n" + updatedFromJson);
-    }
-     */
 
     private static CourseInformationx readJsonFile(String filePath) {
         try (FileReader fileReader = new FileReader(filePath)) {
@@ -336,18 +319,31 @@ public class MainControllerX {
         }
         assertEquals(noOfMismatches , 11); //there should be 12 missmatches
     }
-    public void CreateNewCourse() throws IOException {
-        Gson gson=new Gson();
+    @FXML
+    public void CreateNewCourse()throws IOException {
+        Gson gson = new Gson();
+        String path = "Document/";
         String code =codeTextt2.getText();
-        CourseInformationx course = new CourseInformationx();
+        String combinedPath = path + code.toUpperCase();
+        String newFilePath;
+
+        File directory=new File(combinedPath);
+        if (directory.exists()){
+
+            int lastVersion=versionCheck(combinedPath)+1;
+            newFilePath = code +"-V"+lastVersion+ ".json";
+        }
+        else{
+            newFilePath= code+"-V0.json";
+        }
+        CourseInformationx course=new CourseInformationx();
         fillCourse(course);
         String newJson = gson.toJson(course);
-        String newFilePath = code + ".json";
-        //CourseInformationx updatedCourse = new CourseInformationx();
-        //String newFilePath = updatedCourse.getCode() + "-v" + updatedCourse.getVersion() + ".json";
+
+
 
         //Create new directory according to course code
-        File dir = new File("Document/" + code);
+        File dir = new File(combinedPath);
         dir.mkdirs();
         File file = new File(dir, newFilePath);
 
@@ -355,6 +351,28 @@ public class MainControllerX {
             fileWriter.write(newJson);
             System.out.println("JSON written to file successfully.");
         }
+    }
+    public int versionCheck(String path){
+
+        File directory = new File(path);
+        String[] list = directory.list();
+        String[] versions = new String[0];
+        for (String member : list) {
+            versions =member.split("-V");
+        }
+        String lastVersion=versions[1];
+        int lastChar=0;
+        if (lastVersion.length()==6){
+            lastChar = Integer.parseInt(lastVersion.substring(lastVersion.length() -6,lastVersion.length()-5));
+        } else if (lastVersion.length()==7) {
+            lastChar = Integer.parseInt(lastVersion.substring(lastVersion.length() -7,lastVersion.length()-5));
+        } else if (lastVersion.length()==8) {
+            lastChar = Integer.parseInt(lastVersion.substring(lastVersion.length() -8,lastVersion.length()-5));
+        }
+
+        System.out.println(lastChar);
+        System.out.println(lastVersion);
+        return lastChar;
     }
     @FXML
     public void read() {
