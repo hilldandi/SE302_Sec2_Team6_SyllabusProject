@@ -9,31 +9,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ComboBox?>
 <AnchorPane prefHeight="800.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
    <children>
       <Label layoutX="500.0" layoutY="60.0" prefHeight="31.0" prefWidth="567.0" text="OLD VERSIONS">
          <font>
             <Font name="System Bold" size="25.0" />
          </font></Label>
-       <ScrollPane layoutX="22.0" layoutY="132.0" prefHeight="550.0" prefWidth="1282.0">
-           <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <TableView fx:id="MainTable" prefHeight="200.0" prefWidth="719.0">
-                    <columns>
-                      <TableColumn fx:id="CourseCode" prefWidth="264.80004197359085" text="Course Code" />
-                      <TableColumn fx:id="version" prefWidth="239.20001220703125" text="Version" />
-                    </columns>
-                  </TableView>
-               </children>
-               </AnchorPane>
-           </content>
-       </ScrollPane>
-
-       <Button layoutX="855.0" layoutY="721.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Open" />
-      <Button layoutX="1008.0" layoutY="721.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Delete" />
-      <TextField layoutX="911.0" layoutY="23.0" />
-      <Button layoutX="1099.0" layoutY="23.0" mnemonicParsing="false" text="Search" />
-      <Button layoutX="22.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="100.0" text="Back" />
+       <Button fx:id="open" layoutX="855.0" layoutY="721.0" mnemonicParsing="false" onAction="#open" prefHeight="31.0" prefWidth="130.0" text="Open"  />
+       <Button fx:id="delete" layoutX="1008.0" layoutY="721.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="130.0" text="Delete" />
+       <TextField fx:id="searchText" layoutX="911.0" layoutY="23.0" />
+       <Button fx:id="search" layoutX="1099.0" layoutY="23.0" mnemonicParsing="false" text="Search" onAction="#search"/>
+       <Button fx:id="back" layoutX="22.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="105.0" text="Back" />
+       <ListView fx:id="ListView" layoutX="409.0" layoutY="124.0" prefHeight="524.0" prefWidth="361.0" />
+       <ComboBox fx:id="comboBox" layoutX="52.0" layoutY="134.0" prefHeight="25.0" prefWidth="178.0" promptText="Lecture" />
+       <Button fx:id="look" layoutX="280.0" layoutY="134.0" mnemonicParsing="false" onAction="#look" prefHeight="25.0" prefWidth="95.0" text="Look For" />
    </children>
 </AnchorPane>

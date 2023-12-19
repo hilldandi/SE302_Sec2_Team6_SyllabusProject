@@ -17,7 +17,6 @@
          <children>
             <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="38.0" prefWidth="571.0" text="CREATE A NEW VERSION " />
             <Button fx:id="OldVerMainButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="43.0" prefWidth="571.0" text="OLD VERSIONS" />
-            <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#switchToScene4" prefHeight="38.0" prefWidth="572.0" text="EDIT SYLLABUS" />
             <Button layoutX="10.0" layoutY="103.0" mnemonicParsing="false" onAction="#CompareButton" prefHeight="38.0" prefWidth="572.0" text="COMPARE" />
             <Button layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#HelpButton" prefHeight="38.0" prefWidth="572.0" text="HELP" />
          </children>
