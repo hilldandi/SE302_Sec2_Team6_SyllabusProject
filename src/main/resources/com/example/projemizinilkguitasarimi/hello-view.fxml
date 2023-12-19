@@ -19,22 +19,25 @@
     <children>
         <TabPane layoutX="14.0" layoutY="103.0" prefHeight="834.0" prefWidth="1294.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab text="tab1">
+                <Tab text="TAB1">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <VBox layoutY="7.0" prefHeight="562.0" prefWidth="1294.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
                                     <children>
-                                        <Label fx:id="generalInfoLabel2" prefHeight="40.0" prefWidth="1294.0" text="1. GENERAL INFORMATION" />
+                                        <Label fx:id="generalInfoLabel2" prefHeight="40.0" prefWidth="1294.0" text="1. GENERAL INFORMATION">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
                                         <HBox prefHeight="36.0" prefWidth="1294.0">
                                             <children>
-                                                <Label fx:id="courseNameLabel2" prefHeight="54.0" prefWidth="119.0" text="Course Name" />
-                                                <TextField fx:id="courseNameText2" prefHeight="61.0" prefWidth="187.0" />
+                                                <Label fx:id="courseNameLabel2" prefHeight="54.0" prefWidth="119.0" text="  Course Name" />
+                                                <TextField fx:id="courseNameText2" prefHeight="36.0" prefWidth="438.0" />
                                             </children>
                                         </HBox>
                                         <HBox prefHeight="84.0" prefWidth="1294.0">
                                             <children>
-                                                <VBox prefHeight="15.0" prefWidth="139.0">
+                                                <VBox prefHeight="20.0" prefWidth="145.0">
                                                     <children>
                                                         <Label fx:id="codeLabel2" alignment="CENTER" prefHeight="40.0" prefWidth="157.0" text="Code " />
                                                         <TextField fx:id="codeTextt2" prefHeight="40.0" prefWidth="139.0" />
@@ -49,14 +52,14 @@
                                                 <VBox layoutX="288.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
                                                     <children>
                                                         <Label fx:id="theoryLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="Theory" />
-                                                        <Label fx:id="hourLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="(hour/week)" />
+                                                        <Label fx:id="hourLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="(Hour/Week)" />
                                                         <TextField fx:id="theoryText2" prefHeight="40.0" prefWidth="139.0" />
                                                     </children>
                                                 </VBox>
                                                 <VBox layoutX="427.0" layoutY="10.0" prefHeight="15.0" prefWidth="139.0">
                                                     <children>
                                                         <Label fx:id="labLabel2" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="Application/Lab" />
-                                                        <Label fx:id="hourLabel3" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="(hour/week)" />
+                                                        <Label fx:id="hourLabel3" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="139.0" text="(Hour/Week)" />
                                                         <TextField fx:id="applicationText2" prefHeight="40.0" prefWidth="139.0" />
                                                     </children>
                                                 </VBox>
@@ -78,38 +81,38 @@
                                             <children>
                                                 <HBox prefHeight="29.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="prerequisitesLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="207.0" text="Prerequisites" />
-                                                        <TextField fx:id="prerequisitesText" prefHeight="31.0" prefWidth="1032.0" />
+                                                        <Label fx:id="prerequisitesLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="202.0" text="Prerequisites" textAlignment="RIGHT" />
+                                                        <TextField fx:id="prerequisitesText" prefHeight="41.0" prefWidth="1046.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="34.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="courseLanguageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="202.0" text="Course Language" />
-                                          <TextField fx:id="CourseLanguageText" />
+                                                        <Label fx:id="courseLanguageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="202.0" text="Course Language" />
+                                          <TextField fx:id="CourseLanguageText" prefHeight="15.0" prefWidth="218.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="23.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="courseTypeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="203.0" text="Course Type" />
-                                          <TextField fx:id="CourseTypeText" />
+                                                        <Label fx:id="courseTypeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="202.0" text="Course Type" />
+                                          <TextField fx:id="CourseTypeText" prefHeight="26.0" prefWidth="218.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="44.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="courseLevelLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="203.0" text="Course Level" />
-                                          <TextField fx:id="CourseLevelText" />
+                                                        <Label fx:id="courseLevelLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="202.0" text="Course Level" />
+                                          <TextField fx:id="CourseLevelText" prefHeight="26.0" prefWidth="218.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="46.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="modelDeleveryLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="198.0" text="Mode of Delivery" />
-                                          <TextField fx:id="ModeOfDeleveryText" />
+                                                        <Label fx:id="modelDeleveryLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="203.0" text="Mode of Delivery" />
+                                          <TextField fx:id="ModeOfDeleveryText" prefHeight="26.0" prefWidth="217.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
                                                     <children>
-                                                        <Label fx:id="teachingMethodsLabel" prefHeight="83.0" prefWidth="259.0" text="Teaching Methods andTechniques" />
-                                                        <TextArea fx:id="teachingMethodsText" prefHeight="83.0" prefWidth="995.0" />
+                                                        <Label fx:id="teachingMethodsLabel" prefHeight="82.0" prefWidth="203.0" text="   Teaching Methods andTechniques" />
+                                                        <TextArea fx:id="teachingMethodsText" prefHeight="82.0" prefWidth="1041.0" />
                                                     </children>
                                                 </HBox>
                                             </children>
@@ -118,20 +121,20 @@
                                             <children>
                                                 <HBox prefHeight="51.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="coursecoordinatorLabel" prefHeight="51.0" prefWidth="170.0" text="Course Coordinator" />
-                                                        <TextField fx:id="coursecoordinatorText" prefHeight="31.0" prefWidth="545.0" />
+                                                        <Label fx:id="coursecoordinatorLabel" prefHeight="51.0" prefWidth="203.0" text="   Course Coordinator" />
+                                                        <TextField fx:id="coursecoordinatorText" prefHeight="35.0" prefWidth="638.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="51.0" prefWidth="1294.0">
                                                     <children>
-                                                        <Label fx:id="courselecturerLabel" prefHeight="51.0" prefWidth="170.0" text="Course Lecturer(s)" />
-                                                        <TextField fx:id="courselecturerText" prefHeight="31.0" prefWidth="545.0" />
+                                                        <Label fx:id="courselecturerLabel" prefHeight="51.0" prefWidth="202.0" text="   Course Lecturer(s)" />
+                                                        <TextField fx:id="courselecturerText" prefHeight="31.0" prefWidth="641.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox prefHeight="51.0" prefWidth="200.0">
                                                     <children>
-                                                        <Label fx:id="assistantLabel" prefHeight="51.0" prefWidth="170.0" text="Assistant(s)" />
-                                                        <TextField fx:id="assistantText" prefHeight="31.0" prefWidth="545.0" />
+                                                        <Label fx:id="assistantLabel" prefHeight="51.0" prefWidth="203.0" text="   Assistant(s)" />
+                                                        <TextField fx:id="assistantText" prefHeight="38.0" prefWidth="640.0" />
                                                     </children>
                                                 </HBox>
                                             </children>
@@ -142,7 +145,7 @@
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="tab 2">
+                <Tab text="TAB 2">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -194,7 +197,7 @@
                             </children></AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="tab3">
+                <Tab text="TAB3">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -339,7 +342,7 @@
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="tab 4">
+                <Tab text="TAB4">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -568,7 +571,7 @@
                             </children></AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="tab 5">
+                <Tab text="TAB5">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -698,7 +701,7 @@
                             </children></AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="tab 6">
+                <Tab text="TAB6">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -891,7 +894,7 @@
                             </children></AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="Save Tab">
+                <Tab text="SAVE TAB">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -917,14 +920,14 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <Button fx:id="trButton" layoutX="1156.0" layoutY="38.0" mnemonicParsing="false" text="TR" />
-        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" text="ENG" />
+        <Button fx:id="trButton" layoutX="1144.0" layoutY="38.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" text="TR" />
+        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" text="ENG" />
         <ImageView fitHeight="75.0" fitWidth="190.0" layoutX="593.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@logo.png" />
             </image>
         </ImageView>
-        <Button layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToScene3" text="Old Versions" />
-        <Button layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToScene2" text="Back To Main Menu" />
+        <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="26.0" prefWidth="122.0" text="Old Version" />
+        <Button layoutX="14.0" layoutY="63.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="122.0" text="Back To Main Menu" />
     </children>
 </AnchorPane>

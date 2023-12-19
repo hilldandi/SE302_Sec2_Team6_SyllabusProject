@@ -47,6 +47,13 @@ public class MainControllerX {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToScene4(ActionEvent event) throws IOException {
+        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("Version.fxml"));
+        this.stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        this.scene = new Scene(root);
+        this.stage.setScene(this.scene);
+        this.stage.show();
+    }
 
 
     @FXML
