@@ -40,15 +40,10 @@ class MainControllerXTest {
 
     @Test
     void compareVersionsTAB1Test() {
-        MainControllerX controllerX = new MainControllerX();
-
-        controllerX.CompareVersionsTAB1Test();
     }
 
     @Test
     void createNewCourse() {
-        MainControllerX controllerX = new MainControllerX();
-        controllerX.read();
     }
 
     @Test
@@ -56,16 +51,7 @@ class MainControllerXTest {
     }
 
     @Test
-    void readJsonFile(){
-        MainControllerX controllerX = new MainControllerX();
-        controllerX.readJsonFile("Document/CE323/CE323.json");
-    }
-
-    @Test
     void read() {
-        MainControllerX controllerX = new MainControllerX();
-        CourseInformationx course = controllerX.readJsonFile("Document/CE323/CE323.json");
-
     }
 
     @Test

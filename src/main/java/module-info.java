@@ -3,6 +3,7 @@ module com.example.projemizinilkguitasarimi {
     requires javafx.fxml;
     requires com.google.gson;
     requires junit;
+    requires org.junit.jupiter.api;
 
 
     opens com.example.projemizinilkguitasarimi to javafx.fxml;
