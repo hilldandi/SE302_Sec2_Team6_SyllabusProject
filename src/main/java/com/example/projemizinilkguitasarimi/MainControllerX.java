@@ -53,6 +53,10 @@ public class MainControllerX implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    public void open(ActionEvent event) throws IOException {
+
+    }
 
 
     @FXML
@@ -101,16 +105,7 @@ public class MainControllerX implements Initializable {
         ListView.setItems(value);
 
     }
-    @FXML
-    void open(ActionEvent event) throws IOException {
-        String selectedItem=ListView.getSelectionModel().getSelectedItem();
-        String selectedkey=comboBox.getValue();
-        String path="Document/";
-        String combinedPath=path+selectedkey+"/"+selectedItem;
-        CourseInformationx course=readJsonFile(combinedPath);
-        switchToScene1(event);
-        read(course);
-    }
+
     @FXML
     void delete(ActionEvent event)throws  IOException{
         String path="Document/";
