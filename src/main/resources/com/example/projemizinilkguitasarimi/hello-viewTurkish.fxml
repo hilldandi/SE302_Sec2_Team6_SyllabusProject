@@ -460,6 +460,20 @@
                                                         <TextArea fx:id="projecto7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
                                                     </children>
                                                 </HBox>
+                                    <HBox layoutX="10.0" layoutY="233.0" prefHeight="30.0" prefWidth="1271.0">
+                                       <children>
+                                          <Label fx:id="portfolioLabel" prefHeight="21.0" prefWidth="229.0" text="Portfolio" />
+                                          <TextArea fx:id="porfolioNumText" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioWText" layoutX="239.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO1Text" layoutX="350.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO2Tex" layoutX="461.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO3Text" layoutX="572.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO4Text" layoutX="683.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO5Text" layoutX="794.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO6Text" layoutX="905.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                          <TextArea fx:id="portfolioO7Text" layoutX="1016.0" layoutY="10.0" prefHeight="45.0" prefWidth="111.0" />
+                                       </children>
+                                    </HBox>
                                                 <HBox layoutX="10.0" layoutY="233.0" prefHeight="30.0" prefWidth="1271.0">
                                                     <children>
                                                         <Label fx:id="seminarLabel" prefHeight="21.0" prefWidth="229.0" text="Seminer/Çalıştay" />
