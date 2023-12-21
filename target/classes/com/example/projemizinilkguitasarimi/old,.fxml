@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ComboBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
+<AnchorPane prefHeight="800.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
    <children>
       <Label layoutX="500.0" layoutY="60.0" prefHeight="31.0" prefWidth="567.0" text="OLD VERSIONS">
          <font>
@@ -23,15 +16,16 @@
          </font></Label>
        <Button fx:id="open" layoutX="855.0" layoutY="721.0" mnemonicParsing="false" onAction="#open" prefHeight="31.0" prefWidth="130.0" text="Open" />
        <Button fx:id="delete" layoutX="1008.0" layoutY="721.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="130.0" text="Delete" />
-       <TextField fx:id="searchText" layoutX="911.0" layoutY="23.0" />
-       <Button fx:id="search" layoutX="1099.0" layoutY="23.0" mnemonicParsing="false" onAction="#search" text="Search" />
-       <Button fx:id="back" layoutX="22.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="105.0" text="Back" />
+       <TextField fx:id="searchText" layoutX="919.0" layoutY="25.0" prefHeight="36.0" prefWidth="159.0" />
+       <Button fx:id="search" layoutX="1108.0" layoutY="23.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="195.0" text="Search" />
+       <Button fx:id="back" layoutX="52.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="25.0" prefWidth="178.0" text="Back" />
        <ListView fx:id="ListView" layoutX="409.0" layoutY="124.0" prefHeight="524.0" prefWidth="361.0" />
        <ComboBox fx:id="comboBox" layoutX="52.0" layoutY="134.0" prefHeight="25.0" prefWidth="178.0" promptText="Lecture" />
        <Button fx:id="look" layoutX="280.0" layoutY="134.0" mnemonicParsing="false" onAction="#look" prefHeight="25.0" prefWidth="95.0" text="Look For" />
-      <Button layoutX="807.0" layoutY="131.0" mnemonicParsing="false" onAction="#SelectButton" prefHeight="31.0" prefWidth="74.0" text="Select" />
-      <Label layoutX="896.0" layoutY="124.0" prefHeight="21.0" prefWidth="195.0" text="Compared File 1" />
-      <Label layoutX="896.0" layoutY="149.0" prefHeight="21.0" prefWidth="195.0" text="Compared File 2" />
-      <Button layoutX="1117.0" layoutY="129.0" mnemonicParsing="false" onAction="#CompareButtonA" prefHeight="36.0" prefWidth="95.0" text="Compare" />
+      <Button layoutX="784.0" layoutY="130.0" mnemonicParsing="false" onAction="#SelectButton" prefHeight="31.0" prefWidth="105.0" text="Select Courses" />
+      <Label fx:id="file1" alignment="CENTER" layoutX="896.0" layoutY="124.0" prefHeight="21.0" prefWidth="195.0" text="" />
+      <Label fx:id="file2" alignment="CENTER" layoutX="896.0" layoutY="149.0" prefHeight="21.0" prefWidth="195.0" text="" />
+      <Button layoutX="1108.0" layoutY="118.0" mnemonicParsing="false" onAction="#CompareButtonA" prefHeight="57.0" prefWidth="195.0" text="Compare" />
+      <Label fx:id="warning" alignment="CENTER" layoutX="896.0" layoutY="185.0" prefHeight="57.0" prefWidth="408.0" />
    </children>
 </AnchorPane>
