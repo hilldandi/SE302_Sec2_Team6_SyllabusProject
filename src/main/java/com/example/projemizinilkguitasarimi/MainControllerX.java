@@ -17,10 +17,7 @@ import org.junit.Test;
 
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.ResourceBundle;
-import java.util.Scanner;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -46,20 +43,72 @@ public class MainControllerX implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void switchToScene3(ActionEvent event ) throws IOException {
-        Parent root=FXMLLoader.load(getClass().getResource("old,.fxml"));
-        stage=((Stage) ( (Node)event.getSource()).getScene().getWindow());
-        scene=new Scene(root);
+
+    public void switchToScene3(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("old,.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-    @FXML
-    void SelectButton(ActionEvent event) {
-
+    public void switchToScene4(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("CompareSection.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    void CompareButtonA(ActionEvent event) {
+    void SelectButton(ActionEvent event) {
+        if (file1.getText().isBlank()){
+            file1.setText(ListView.getSelectionModel().getSelectedItem());
+        }
+        else {
+            file2.setText(ListView.getSelectionModel().getSelectedItem());
+        }
+
+    }
+    @FXML
+    public String findMyPath(String fileName){
+        String selectedItem=fileName;
+        String [] lookforlecture=new String[0];
+        String selectedkey;
+        if (comboBox.getValue()==null){
+            lookforlecture=selectedItem.split("-");
+            selectedkey=lookforlecture[0];
+        }
+        else {
+            selectedkey=comboBox.getValue();
+        }
+        String path="Document/";
+        String combinedPath=path+selectedkey+"/"+selectedItem;
+
+        return combinedPath;
+    }
+
+    @FXML
+    void CompareButtonA(ActionEvent event) throws IOException {
+        if (file1.getText()=="File 1"||file2.getText()=="File 2"){
+            warning.setText("You have to select 2 courses");
+        }
+        String firstFilePath=findMyPath(file1.getText());
+        String secondFilePath=findMyPath(file2.getText());
+        ArrayList<ObservableList>listOfList=CompareVersions(firstFilePath,secondFilePath);
+        switchToScene4(event);
+        ObservableList<String> tab1=FXCollections.observableArrayList(listOfList.get(0));
+        Tab1list.setItems(tab1);
+        ObservableList<String> tab2=FXCollections.observableArrayList(listOfList.get(1));
+        Tab2list.setItems(tab2);
+        ObservableList<String> tab3=FXCollections.observableArrayList(listOfList.get(2));
+        Tab3list.setItems(tab3);
+        ObservableList<String> tab4=FXCollections.observableArrayList(listOfList.get(3));
+        Tab4list.setItems(tab4);
+        ObservableList<String> tab5=FXCollections.observableArrayList(listOfList.get(4));
+        Tab5list.setItems(tab5);
+        ObservableList<String> tab6=FXCollections.observableArrayList(listOfList.get(5));
+        Tab6list.setItems(tab6);
+
 
     }
 
@@ -70,20 +119,10 @@ public class MainControllerX implements Initializable {
 
 
     @FXML
-    void CompareButton(ActionEvent event) {
-
-
-    }
-
-    @FXML
-    void EditButton(ActionEvent event) {
-
-    }
-
-    @FXML
     void HelpButton(ActionEvent event) {
 
     }
+
     @FXML
     void trButtonA(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("hello-viewTurkish.fxml"));
@@ -107,18 +146,22 @@ public class MainControllerX implements Initializable {
         CreateNewCourse();
         switchToScene2(event);
     }
+
     @FXML
     public void search(ActionEvent event){
+        comboBox.setValue(null);
         String path="Document/";
         fileMap=GetFiles();
         String wordToFind=searchText.getText().toUpperCase();
-        String[]searchVal=fileMap.values().toString().split(",");
+        String vals;
         ArrayList<String> searched_Val=new ArrayList<>();
-        for (int i=0;i<searchVal.length;i++){
-            if (searchVal[i].toUpperCase().contains(wordToFind)){
-                searched_Val.add(searchVal[i].toUpperCase());
+        for (int i=0;i<Keys.length;i++) {
+            if (Keys[i].toUpperCase().contains(wordToFind)) {
+                vals = (String) fileMap.get(Keys[i]);
+                searched_Val.addAll(List.of(vals.split(",")));
             }
         }
+
         ObservableList<String> searchedval = FXCollections.observableArrayList(searched_Val);
         ListView.setItems(searchedval);
 
@@ -127,28 +170,44 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void look(ActionEvent event)throws IOException{
-        String vals = (String) fileMap.get(comboBox.getValue());
-        values = vals.split(",");
-        ObservableList<String> value = FXCollections.observableArrayList(values);
-        ListView.setItems(value);
+        fileMap=GetFiles();
+        String vals;
+        ArrayList<String> Valuesx = new ArrayList<>();
+
+        if (comboBox.getValue()==null){
+            for (int i=0;i<Keys.length;i++){
+                vals=(String) fileMap.get(Keys[i]);
+                Valuesx.addAll(List.of(vals.split(","))) ;
+            }
+            ObservableList<String> value = FXCollections.observableArrayList(Valuesx);
+            ListView.setItems(value);
+
+        }else {
+            vals = (String) fileMap.get(comboBox.getValue());
+            values = vals.split(",");
+            ObservableList<String> value = FXCollections.observableArrayList(values);
+            ListView.setItems(value);
+        }
+
 
     }
 
     @FXML
-    void delete(ActionEvent event)throws  IOException{
-        String path="Document/";
-        String selectedDeletingLecture=comboBox.getValue();
-        String selectedDeletingFile=ListView.getSelectionModel().getSelectedItem();
-        String combinedPath=path+selectedDeletingLecture+"/"+selectedDeletingFile;
-        File deleteFile=new File(combinedPath);
-        File parentFile=deleteFile.getParentFile();
+    void delete(ActionEvent event) throws IOException {
+        String path = "Document/";
+        String selectedDeletingLecture = comboBox.getValue();
+        String selectedDeletingFile = ListView.getSelectionModel().getSelectedItem();
+        String combinedPath = path + selectedDeletingLecture + "/" + selectedDeletingFile;
+        File deleteFile = new File(combinedPath);
+        File parentFile = deleteFile.getParentFile();
         deleteFile.delete();
-        if (parentFile.list().length==0){
+        if (parentFile.list().length == 0) {
             parentFile.delete();
         }
 
 
     }
+
     public HashMap<String, String> GetFiles() {
         String path = "Document/";
         String combinedPath = path;
@@ -159,36 +218,42 @@ public class MainControllerX implements Initializable {
             File dir = new File(path + member);
             String[] innerList = dir.list();
             String innerObject = "";
-            for (int i=0;i<innerList.length;i++) {
-                if (i==innerList.length-1){
-                    innerObject = innerObject + innerList[i] ;
-                }
-                else {
-                    innerObject = innerObject +  innerList[i] + ",";
+            for (int i = 0; i < innerList.length; i++) {
+                if (i == innerList.length - 1) {
+                    innerObject = innerObject + innerList[i];
+                } else {
+                    innerObject = innerObject + innerList[i] + ",";
                 }
             }
             jsonMap.put(member, innerObject);
         }
         return jsonMap;
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        comboBox.setOnMouseClicked(e-> onZoom());
+        comboBox.setOnMouseClicked(e -> onAction());
+
     }
-    public void  onZoom(){
+
+    @FXML
+    public void onAction()  {
         fileMap=GetFiles();
         ObservableList<String> key= FXCollections.observableArrayList(Keys);
         comboBox.setItems(key);
-        String selectedCourse=comboBox.getValue();
-        if (selectedCourse==null){
-            values=fileMap.values().toString().split(",");
-            ObservableList<String> value=FXCollections.observableArrayList(values);
+        String vals;
+        ArrayList<String> Valuesx = new ArrayList<>();
+        if (comboBox.getValue()==null){
+            for (int i=0;i<Keys.length;i++){
+                vals=(String) fileMap.get(Keys[i]);
+                Valuesx.addAll(List.of(vals.split(","))) ;
+            }
+            ObservableList<String> value = FXCollections.observableArrayList(Valuesx);
             ListView.setItems(value);
         }
 
 
     }
-
 
 
     private static CourseInformationx readJsonFile(String filePath) {
@@ -203,72 +268,83 @@ public class MainControllerX implements Initializable {
         }
     }
 
-   /* public void CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
+    public ArrayList<ObservableList> CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
 
         CourseInformationx oldVersion, newVersion;
         oldVersion = readJsonFile(filePathOfOldVersion);
         newVersion = readJsonFile(filePathOfNewVersion);
+        ArrayList<ObservableList> listOfList=new ArrayList<>();
 
         //declaring String arrays of tabs to compare
         String[] oldtab1 = oldVersion.getTAB1();
         String[] newtab1 = newVersion.getTAB1();
-        String[] vChanges1 = new String[oldtab1.length]; // not sure if this works
+        ArrayList<String> vChanges1=new ArrayList<>();
 
         String[] oldtab2 = oldVersion.getTAB2();
         String[] newtab2 = newVersion.getTAB2();
-        String[] vChanges2 = new String[oldtab2.length];
+        ArrayList<String> vChanges2=new ArrayList<>();
 
         String[] oldtab3 = oldVersion.getTAB3();
         String[] newtab3 = newVersion.getTAB3();
-        String[] vChanges3 = new String[oldtab3.length];
+        ArrayList<String> vChanges3=new ArrayList<>();
 
         String[] oldtab4 = oldVersion.getTAB4();
         String[] newtab4 = newVersion.getTAB4();
-        String[] vChanges4 = new String[oldtab4.length];
+        ArrayList<String> vChanges4=new ArrayList<>();
 
         String[] oldtab5 = oldVersion.getTAB5();
         String[] newtab5 = newVersion.getTAB5();
-        String[] vChanges5 = new String[oldtab5.length];
+        ArrayList<String> vChanges5=new ArrayList<>();
 
         String[] oldtab6 = oldVersion.getTAB6();
         String[] newtab6 = newVersion.getTAB6();
-        String[] vChanges6 = new String[oldtab6.length];
+        ArrayList<String> vChanges6=new ArrayList<>();
 
         //comparing tabs. might implement Threads to make this process faster :)
         //has some unused variables inside.
         for (int i = 0; i < oldtab1.length; i++) {
             if (!newtab1[i].equals(oldtab1[i])) {
-                vChanges1[i] = newtab1[i];
+                vChanges1.add(newtab1[i]);
             }
         }
         for (int i = 0; i < oldtab2.length; i++) {
             if (!newtab2[i].equals(oldtab2[i])) {
-                vChanges2[i] = newtab2[i];
+                vChanges1.add(newtab1[i]);
             }
         }
         for (int i = 0; i < oldtab3.length; i++) {
             if (!newtab3[i].equals(oldtab3[i])) {
-                vChanges3[i] = newtab3[i];
+                vChanges3.add(newtab3[i]);
             }
         }
         for (int i = 0; i < oldtab4.length; i++) {
             if (!newtab4[i].equals(oldtab4[i])) {
-                vChanges4[i] = newtab4[i];
+                vChanges4.add(newtab3[i]);
             }
         }
         for (int i = 0; i < oldtab5.length; i++) {
             if (!newtab5[i].equals(oldtab5[i])) {
-                vChanges5[i] = newtab5[i];
+                vChanges5.add(newtab3[i]);
             }
         }
         for (int i = 0; i < oldtab6.length; i++) {
             if (!newtab6[i].equals(oldtab6[i])) {
-                vChanges6[i] = newtab6[i];
+                vChanges6.add(newtab3[i]);
             }
         }
-        System.out.println("\nDifferences on tab1: " + vChanges1 + "\nDifferences on tab2: " + vChanges2 +
-                "\nDifferences on tab3: " + vChanges3 + "\nDifferences on tab4: " + vChanges4 +
-                "\nDifferences on tab5: " + vChanges5 + "\nDifferences on tab6: " + vChanges6);
+        ObservableList<String> tab1= FXCollections.observableArrayList(vChanges1);
+        listOfList.add(tab1);
+        ObservableList<String> tab2= FXCollections.observableArrayList(vChanges2);
+        listOfList.add(tab2);
+        ObservableList<String> tab3= FXCollections.observableArrayList(vChanges3);
+        listOfList.add(tab3);
+        ObservableList<String> tab4= FXCollections.observableArrayList(vChanges4);
+        listOfList.add(tab4);
+        ObservableList<String> tab5= FXCollections.observableArrayList(vChanges5);
+        listOfList.add(tab5);
+        ObservableList<String> tab6= FXCollections.observableArrayList(vChanges6);
+        listOfList.add(tab6);
+        return listOfList;
         /* if all else fails
                                     // comparing new version to old version's TAB1
         if (!newVersion.getCourseName().equals(oldVersion.getCourseName())) {
@@ -354,8 +430,9 @@ public class MainControllerX implements Initializable {
                         //TAB6
 
                         //LAST TAB
+    */
+}
 
-    }*/
     /*@Test
     public void CompareVersionsTAB1Test(){// works
         String filePathOfOldVersion = "Document/CE323/CE323.json";
@@ -485,317 +562,6 @@ public class MainControllerX implements Initializable {
         System.out.println(lastChar);
         System.out.println(lastVersion);
         return lastChar;
-    }
-    @FXML
-    public void read(CourseInformationx course) {
-        //TAB1
-        courseNameText2.setText(course.getCourseName());
-        codeTextt2.setText(course.getCode());
-        seasontext.setText(course.getSeason());
-        theoryText2.setText(course.getTheory());
-        applicationText2.setText(course.getLab());
-        localCreditsText2.setText(course.getLocalCredits());
-        ectsText2.setText(course.getEcts());
-        prerequisitesText.setText(course.getPrerequisities());
-        CourseLanguageText.setText(course.getCourseLanguage());
-        CourseTypeText.setText(course.getCourseType());
-        CourseLevelText.setText(course.getCourseLevel());
-        ModeOfDeleveryText.setText(course.getModeOfDelivery());
-        teachingMethodsText.setText(course.getTeachingMethodsAndTechniques());
-        coursecoordinatorText.setText(course.getCourseCoordinator());
-        courselecturerText.setText(course.getCourseLecturers());
-        assistantText.setText(course.getCourseAssistants());
-        //Tab2
-        courseobjectivesText.setText(course.getCourseObjectives());
-        learningoutcomesText.setText(course.getLearningOutcomes());
-        coursedescriptionText.setText(course.getCourseDescription());
-        coreCourseText.setText(course.getCCCoreCourse());
-        majorAreaCourseText.setText(course.getCCMajorAreaCourse());
-        supportiveCourseText.setText(course.getCCSupportiveCourse());
-        communicationandManagementSkillsCourseText.setText(course.getCCComAndManagementSkillsCourse());
-        transferableSkillCourseText.setText(course.getCCTransferableSkillCourse());
-
-        //Tab3
-        subject1.setText(course.getWeek1Subjects());
-        reqMaterial1.setText(course.getWeek1ReqMat());
-        subject11.setText(course.getWeek2Subjects());
-        reqMaterial11.setText(course.getWeek2ReqMat());
-        subject21.setText(course.getWeek3Subjects());
-        reqMaterial21.setText(course.getWeek3ReqMat());
-        subject31.setText(course.getWeek4Subjects());
-        reqMaterial31.setText(course.getWeek4ReqMat());
-        subject41.setText(course.getWeek5Subjects());
-        reqMaterial41.setText(course.getWeek5ReqMat());
-        subject51.setText(course.getWeek6Subjects());
-        reqMaterial51.setText(course.getWeek6ReqMat());
-        subject71.setText(course.getWeek8Subjects());
-        reqMaterial71.setText(course.getWeek8ReqMat());
-        subject81.setText(course.getWeek9Subjects());
-        reqMaterial81.setText(course.getWeek9ReqMat());
-        subject91.setText(course.getWeek10Subjects());
-        reqMaterial91.setText(course.getWeek10ReqMat());
-        subject101.setText(course.getWeek11Subjects());
-        reqMaterial101.setText(course.getWeek11ReqMat());
-        subject111.setText(course.getWeek12Subjects());
-        reqMaterial111.setText(course.getWeek12ReqMat());
-        subject121.setText(course.getWeek13Subjects());
-        reqMaterial121.setText(course.getWeek13ReqMat());
-        subject131.setText(course.getWeek14Subjects());
-        reqMaterial131.setText(course.getWeek14ReqMat());
-        subject141.setText(course.getWeek15Subjects());
-        reqMaterial141.setText(course.getWeek15ReqMat());
-        courseNotesText.setText(course.getCourseNotesAndTextBooks());
-        suggestedReadingsText.setText(course.getSuggestedReadingsAndMaterials());
-
-        //Tab4
-        participateNumText.setText(course.getNoOfParticipation());
-        participateWText.setText(course.getWeightOfParticipation());
-        participateo1Text.setText(course.getLO1OfParticipation());
-        participateo2Text.setText(course.getLO2OfParticipation());
-        participateo3Text.setText(course.getLO3OfParticipation());
-        participateo4Text.setText(course.getLO4OfParticipation());
-        participateo5Text.setText(course.getLO5OfParticipation());
-        participateo6Text.setText(course.getLO6OfParticipation());
-        participateo7Text.setText(course.getLO7OfParticipation());
-        labNumText.setText(course.getNoOfLabOrApplication());
-        labWText.setText(course.getWeightOfLabOrApplication());
-        labo1Text.setText(course.getLO1OfLabOrApplication());
-        labo2Text.setText(course.getLO2OfLabOrApplication());
-        labo3Text.setText(course.getLO3OfLabOrApplication());
-        labo4Text.setText(course.getLO4OfLabOrApplication());
-        labo5Text.setText(course.getLO5OfLabOrApplication());
-        labo6Text.setText(course.getLO6OfLabOrApplication());
-        labo7Text.setText(course.getLO7OfLabOrApplication());
-        fieldNumText.setText(course.getNoOfFieldWork());
-        fieldWText.setText(course.getWeightOfFieldWork());
-        fieldo1Text.setText(course.getLO1OfFieldWork());
-        fieldo2Text.setText(course.getLO2OfFieldWork());
-        fieldo3Text.setText(course.getLO3OfFieldWork());
-        fieldo4Text.setText(course.getLO4OfFieldWork());
-        fieldo5Text.setText(course.getLO5OfFieldWork());
-        fieldo6Text.setText(course.getLO6OfFieldWork());
-        fieldo7Text.setText(course.getLO7OfFieldWork());
-        quizNumText.setText(course.getNoOfQuizOrStudioCritique());
-        quizWText.setText(course.getWeightOfQuizOrStudioCritique());
-        quizo1Text.setText(course.getLO1OfQuizOrStudioCritique());
-        quizo2Text.setText(course.getLO2OfQuizOrStudioCritique());
-        quizo3Text.setText(course.getLO3OfQuizOrStudioCritique());
-        quizo4Text.setText(course.getLO4OfQuizOrStudioCritique());
-        quizo5Text.setText(course.getLO5OfQuizOrStudioCritique());
-        quizo6Text.setText(course.getLO6OfQuizOrStudioCritique());
-        quiz7Text.setText(course.getLO7OfQuizOrStudioCritique());
-        homeworkNumText.setText(course.getNoOfHwOrAssignment());
-        homeworkWText.setText(course.getWeightOfHwOrAssignment());
-        homeworko1Text.setText(course.getLO1OfHwOrAssignment());
-        homeworko2Text.setText(course.getLO2OfHwOrAssignment());
-        homeworko3Text.setText(course.getLO3OfHwOrAssignment());
-        homeworko4Text.setText(course.getLO4OfHwOrAssignment());
-        homeworko5Text.setText(course.getLO5OfHwOrAssignment());
-        homeworko6Text.setText(course.getLO6OfHwOrAssignment());
-        homeworko7Text.setText(course.getLO7OfHwOrAssignment());
-        juryNumText.setText(course.getNoOfPresentationOrJury());
-        juryWText.setText(course.getWeightOfPresentationOrJury());
-        juryo1Text.setText(course.getLO1OfPresentationOrJury());
-        juryo2Text.setText(course.getLO2OfPresentationOrJury());
-        juryo3Text.setText(course.getLO3OfPresentationOrJury());
-        juryo4Text.setText(course.getLO4OfPresentationOrJury());
-        juryo5Text.setText(course.getLO5OfPresentationOrJury());
-        juryo6Text.setText(course.getLO6OfPresentationOrJury());
-        juryo7Text.setText(course.getLO7OfPresentationOrJury());
-        ProjectNumText.setText(course.getNoOfProject());
-        ProjectNumText.setText(course.getNoOfProject());
-        projectWText.setText(course.getWeightOfProject());
-        projecto1Text.setText(course.getLO1OfProject());
-        projecto2Text.setText(course.getLO2OfProject());
-        projecto3Text.setText(course.getLO3OfProject());
-        projecto4Text.setText(course.getLO4OfProject());
-        projecto5Text.setText(course.getLO5OfProject());
-        projecto6Text.setText(course.getLO6OfProject());
-        projecto7Text.setText(course.getLO7OfProject());
-        seminarNumText.setText(course.getNoOfSeminarOrWorkshop());
-        seminarWText.setText(course.getWeightOfSeminarOrWorkshop());
-        seminaro1Text.setText(course.getLO1OfSeminarOrWorkshop());
-        seminaro2Text.setText(course.getLO2OfSeminarOrWorkshop());
-        seminaro3Text.setText(course.getLO3OfSeminarOrWorkshop());
-        seminaro4Text.setText(course.getLO4OfSeminarOrWorkshop());
-        seminaro5Text.setText(course.getLO5OfSeminarOrWorkshop());
-        seminaro6Text.setText(course.getLO6OfSeminarOrWorkshop());
-        seminaro7Text.setText(course.getLO7OfSeminarOrWorkshop());
-        oralNumText.setText(course.getNoOfOralExam());
-        oralWText.setText(course.getWeightOfOralExam());
-        oralo1Text.setText(course.getLO1OfOralExam());
-        oralo2Text.setText(course.getLO2OfOralExam());
-        oralo3Text.setText(course.getLO3OfOralExam());
-        oralo4Text.setText(course.getLO4OfOralExam());
-        oralo5Text.setText(course.getLO5OfOralExam());
-        oralo6Text.setText(course.getLO6OfOralExam());
-        oralo7Text.setText(course.getLO7OfOralExam());
-        midtermNum.setText(course.getNoOfMidterm());
-        midtermW.setText(course.getWeightOfMidterm());
-        midtermo1Text.setText(course.getLO1OfMidterm());
-        midtermo2Text.setText(course.getLO2OfMidterm());
-        midtermo3Text.setText(course.getLO3OfMidterm());
-        midtermo4Text.setText(course.getLO4OfMidterm());
-        midtermo5Text.setText(course.getLO5OfMidterm());
-        midtermo6Text.setText(course.getLO6OfMidterm());
-        midtermo7Text.setText(course.getLO7OfMidterm());
-        finalNumText.setText(course.getNoOfFinalExam());
-        finalWText.setText(course.getWeightOfFinalExam());
-        finalo1Text.setText(course.getLO1OfFinalExam());
-        finalo2Text.setText(course.getLO2OfFinalExam());
-        finalo3Text.setText(course.getLO3OfFinalExam());
-        finalo4Text.setText(course.getLO4OfFinalExam());
-        finalo5Text.setText(course.getLO5OfFinalExam());
-        finalo6Text.setText(course.getLO6OfFinalExam());
-        finalo7Text.setText(course.getLO7OfFinalExam());
-        totalNumText.setText(course.getNoOfTotalWeight());
-        totalWWText.setText(course.getWeightOfTotalWeight());
-        totalo1Text.setText(course.getLO1OfTotalWeight());
-        totalo2Text.setText(course.getLO2OfTotalWeight());
-        totalo3Text.setText(course.getLO3OfTotalWeight());
-        totalo4Text.setText(course.getLO4OfTotalWeight());
-        totalo5Text.setText(course.getLO5OfTotalWeight());
-        totalo6Text.setText(course.getLO6OfTotalWeight());
-        totalo7Text.setText(course.getLO7OfTotalWeight());
-        finalgrade1.setText(course.getWeightOfSemActivitiesOnFinalGrade1());
-        finalgrade2.setText(course.getWeightOfSemActivitiesOnFinalGrade2());
-        finalEGrade1.setText(course.getWeightOfEndOfSemActivitiesOnFinalGrade1());
-        finalEGrade2.setText(course.getWeightOfEndOfSemActivitiesOnFinalGrade2());
-        totalG1.setText(course.getEndOfTab4Total1());
-        totalG2.setText(course.getEndOfTab4Total2());
-        // TAB5
-        cdText.setText(course.getCourseHoursDur());
-        cwText.setText(course.getCourseHoursWL());
-        ldText.setText(course.getLabOrApplicationHoursDur());
-        lwText.setText(course.getLabOrApplicationHourWL());
-        snText.setText(course.getStudyHourseOutsideClass());
-        sdText.setText(course.getStudyHourseOutsideClassDur());
-        swText.setText(course.getStudyHourseOutsideClassWL());
-        fnText.setText(course.getFieldWork());
-        fdText.setText(course.getFieldWorkDur());
-        fwText.setText(course.getFieldWorkWL());
-        qnText1.setText(course.getQuizOrStudioCritique());
-        qdText1.setText(course.getQuizOrStudioCritiqueDur());
-        qwText.setText(course.getStudyHourseOutsideClassWL());
-        hnText.setText(course.getHomeworkOrAssignment());
-        hdText.setText(course.getHomeworkOrAssignmentDur());
-        hwText.setText(course.getHomeworkOrAssignmentWL());
-        prnText.setText(course.getPresentationOrJury());
-        prdText.setText(course.getPresentationOrJuryDur());
-        prwText.setText(course.getPresentationOrJuryWL());
-        pronText.setText(course.getProject());
-        prodText.setText(course.getProjectDur());
-        prowText.setText(course.getProjectWL());
-        portnText.setText(course.getPortfolio());
-        portdText11.setText(course.getPortfolioDur());
-        portwText11.setText(course.getPortfolioWL());
-        semnText.setText(course.getSeminarOrWorkshop());
-        semdText.setText(course.getSeminarOrWorkshopDur());
-        semwText.setText(course.getSeminarOrWorkshopWL());
-        ornText.setText(course.getOralExam());
-        ordText.setText(course.getOralExamDur());
-        orwText.setText(course.getOralExamWL());
-        midnText.setText(course.getMidterm());
-        middText.setText(course.getMidtermDur());
-        midwText.setText(course.getMidtermWL());
-        fnText.setText(course.getFinal());
-        fdText.setText(course.getFinalDur());
-        fwText.setText(course.getFinalWL());
-        totalWWText.setText(course.getTotalWorkload());
-        //Tab6
-        CoursePOMText1.setText(course.getProgramCompetenciesOutcome1());
-        CoursePOMText11.setText(course.getProgramCompetenciesOutcome1ContributionLevel1());
-        CoursePOMText12.setText(course.getProgramCompetenciesOutcome1ContributionLevel2());
-        CoursePOMText13.setText(course.getProgramCompetenciesOutcome1ContributionLevel3());
-        CoursePOMText14.setText(course.getProgramCompetenciesOutcome1ContributionLevel4());
-        CoursePOMText15.setText(course.getProgramCompetenciesOutcome1ContributionLevel5());
-        CoursePOMText1LO.setText(course.getProgramCompetenciesOutcome1LOno());
-        CoursePOMText2.setText(course.getProgramCompetenciesOutcome2());
-        CoursePOMText21.setText(course.getProgramCompetenciesOutcome2ContributionLevel1());
-        CoursePOMText22.setText(course.getProgramCompetenciesOutcome2ContributionLevel2());
-        CoursePOMText23.setText(course.getProgramCompetenciesOutcome2ContributionLevel3());
-        CoursePOMText24.setText(course.getProgramCompetenciesOutcome2ContributionLevel4());
-        CoursePOMText25.setText(course.getProgramCompetenciesOutcome2ContributionLevel5());
-        CoursePOMText2LO.setText(course.getProgramCompetenciesOutcome2LOno());
-        CoursePOMText3.setText(course.getProgramCompetenciesOutcome3());
-        CoursePOMText31.setText(course.getProgramCompetenciesOutcome3ContributionLevel1());
-        CoursePOMText32.setText(course.getProgramCompetenciesOutcome3ContributionLevel2());
-        CoursePOMText33.setText(course.getProgramCompetenciesOutcome3ContributionLevel3());
-        CoursePOMText34.setText(course.getProgramCompetenciesOutcome3ContributionLevel4());
-        CoursePOMText35.setText(course.getProgramCompetenciesOutcome3ContributionLevel5());
-        CoursePOMText32LO.setText(course.getProgramCompetenciesOutcome3LOno());
-        CoursePOMText4.setText(course.getProgramCompetenciesOutcome4());
-        CoursePOMText41.setText(course.getProgramCompetenciesOutcome4ContributionLevel1());
-        CoursePOMText42.setText(course.getProgramCompetenciesOutcome4ContributionLevel2());
-        CoursePOMText43.setText(course.getProgramCompetenciesOutcome4ContributionLevel3());
-        CoursePOMText44.setText(course.getProgramCompetenciesOutcome4ContributionLevel4());
-        CoursePOMText45.setText(course.getProgramCompetenciesOutcome4ContributionLevel5());
-        CoursePOMText4LO.setText(course.getProgramCompetenciesOutcome4LOno());
-        CoursePOMText5.setText(course.getProgramCompetenciesOutcome5());
-        CoursePOMText51.setText(course.getProgramCompetenciesOutcome5ContributionLevel1());
-        CoursePOMText52.setText(course.getProgramCompetenciesOutcome5ContributionLevel2());
-        CoursePOMText53.setText(course.getProgramCompetenciesOutcome5ContributionLevel3());
-        CoursePOMText54.setText(course.getProgramCompetenciesOutcome5ContributionLevel4());
-        CoursePOMText55.setText(course.getProgramCompetenciesOutcome5ContributionLevel5());
-        CoursePOMText5LO.setText(course.getProgramCompetenciesOutcome5LOno());
-        CoursePOMText6.setText(course.getProgramCompetenciesOutcome6());
-        CoursePOMText61.setText(course.getProgramCompetenciesOutcome6ContributionLevel1());
-        CoursePOMText62.setText(course.getProgramCompetenciesOutcome6ContributionLevel2());
-        CoursePOMText63.setText(course.getProgramCompetenciesOutcome6ContributionLevel3());
-        CoursePOMText64.setText(course.getProgramCompetenciesOutcome6ContributionLevel4());
-        CoursePOMText65.setText(course.getProgramCompetenciesOutcome6ContributionLevel5());
-        CoursePOMText6LO.setText(course.getProgramCompetenciesOutcome6LOno());
-        CoursePOMText7.setText(course.getProgramCompetenciesOutcome7());
-        CoursePOMText71.setText(course.getProgramCompetenciesOutcome7ContributionLevel1());
-        CoursePOMText72.setText(course.getProgramCompetenciesOutcome7ContributionLevel2());
-        CoursePOMText73.setText(course.getProgramCompetenciesOutcome7ContributionLevel3());
-        CoursePOMText74.setText(course.getProgramCompetenciesOutcome7ContributionLevel4());
-        CoursePOMText75.setText(course.getProgramCompetenciesOutcome7ContributionLevel5());
-        CoursePOMText7LO.setText(course.getProgramCompetenciesOutcome7LOno());
-        CoursePOMText8.setText(course.getProgramCompetenciesOutcome8());
-        CoursePOMText81.setText(course.getProgramCompetenciesOutcome8ContributionLevel1());
-        CoursePOMText82.setText(course.getProgramCompetenciesOutcome8ContributionLevel2());
-        CoursePOMText83.setText(course.getProgramCompetenciesOutcome8ContributionLevel3());
-        CoursePOMText84.setText(course.getProgramCompetenciesOutcome8ContributionLevel4());
-        CoursePOMText85.setText(course.getProgramCompetenciesOutcome8ContributionLevel5());
-        CoursePOMText8LO.setText(course.getProgramCompetenciesOutcome8LOno());
-        CoursePOMText9.setText(course.getProgramCompetenciesOutcome9());
-        CoursePOMText91.setText(course.getProgramCompetenciesOutcome9ContributionLevel1());
-        CoursePOMText92.setText(course.getProgramCompetenciesOutcome9ContributionLevel2());
-        CoursePOMText93.setText(course.getProgramCompetenciesOutcome9ContributionLevel3());
-        CoursePOMText94.setText(course.getProgramCompetenciesOutcome9ContributionLevel4());
-        CoursePOMText95.setText(course.getProgramCompetenciesOutcome9ContributionLevel5());
-        CoursePOMText9LO.setText(course.getProgramCompetenciesOutcome9LOno());
-        CoursePOMText10.setText(course.getProgramCompetenciesOutcome10());
-        CoursePOMText101.setText(course.getProgramCompetenciesOutcome10ContributionLevel1());
-        CoursePOMText102.setText(course.getProgramCompetenciesOutcome10ContributionLevel2());
-        CoursePOMText103.setText(course.getProgramCompetenciesOutcome10ContributionLevel3());
-        CoursePOMText104.setText(course.getProgramCompetenciesOutcome10ContributionLevel4());
-        CoursePOMText105.setText(course.getProgramCompetenciesOutcome10ContributionLevel5());
-        CoursePOMText10LO.setText(course.getProgramCompetenciesOutcome10LOno());
-        CoursePOMText110.setText(course.getProgramCompetenciesOutcome11());
-        CoursePOMText111.setText(course.getProgramCompetenciesOutcome11ContributionLevel1());
-        CoursePOMText112.setText(course.getProgramCompetenciesOutcome11ContributionLevel2());
-        CoursePOMText113.setText(course.getProgramCompetenciesOutcome11ContributionLevel3());
-        CoursePOMText114.setText(course.getProgramCompetenciesOutcome11ContributionLevel4());
-        CoursePOMText115.setText(course.getProgramCompetenciesOutcome11ContributionLevel5());
-        CoursePOMText11LO.setText(course.getProgramCompetenciesOutcome11LOno());
-        CoursePOMText120.setText(course.getProgramCompetenciesOutcome12());
-        CoursePOMText121.setText(course.getProgramCompetenciesOutcome12ContributionLevel1());
-        CoursePOMText122.setText(course.getProgramCompetenciesOutcome12ContributionLevel2());
-        CoursePOMText123.setText(course.getProgramCompetenciesOutcome12ContributionLevel3());
-        CoursePOMText124.setText(course.getProgramCompetenciesOutcome12ContributionLevel4());
-        CoursePOMText125.setText(course.getProgramCompetenciesOutcome12ContributionLevel5());
-        CoursePOMText12LO.setText(course.getProgramCompetenciesOutcome12LOno());
-        CoursePOMText130.setText(course.getProgramCompetenciesOutcome13());
-        CoursePOMText131.setText(course.getProgramCompetenciesOutcome13ContributionLevel1());
-        CoursePOMText132.setText(course.getProgramCompetenciesOutcome13ContributionLevel2());
-        CoursePOMText133.setText(course.getProgramCompetenciesOutcome13ContributionLevel3());
-        CoursePOMText134.setText(course.getProgramCompetenciesOutcome13ContributionLevel4());
-        CoursePOMText135.setText(course.getProgramCompetenciesOutcome13ContributionLevel5());
-        CoursePOMText13LO.setText(course.getProgramCompetenciesOutcome13LOno());
-        //TAB SAVE
-        SaveAllText.setText(course.getReasonForUpdate());
     }
 
     @FXML
@@ -1205,6 +971,37 @@ public class MainControllerX implements Initializable {
         }
 
 
+
+    @FXML
+    private Label file1;
+    @FXML
+    private Label file2;
+
+    @FXML
+    private Label warning;
+
+
+    @FXML
+    private javafx.scene.control.ListView<String> SaveTab;
+
+    @FXML
+    private javafx.scene.control.ListView<String> Tab1list = new ListView<>();
+
+    @FXML
+    private javafx.scene.control.ListView<String> Tab2list = new ListView<>();
+
+    @FXML
+    private javafx.scene.control.ListView<String> Tab3list= new ListView<>();
+
+    @FXML
+    private javafx.scene.control.ListView<String> Tab4list= new ListView<>();
+
+    @FXML
+    private javafx.scene.control.ListView<String> Tab5list= new ListView<>();
+
+    @FXML
+    private javafx.scene.control.ListView<String> Tab6list= new ListView<>();
+
     @FXML
     private javafx.scene.control.ListView<String> ListView = new ListView<>();
     @FXML
@@ -1212,6 +1009,8 @@ public class MainControllerX implements Initializable {
     static String[] Keys = new String[100];
     static String[] values = new String[100];
     static HashMap fileMap;
+
+
 
     @FXML
     private TextField searchText;
