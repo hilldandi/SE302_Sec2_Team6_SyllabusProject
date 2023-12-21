@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
+   <children>
+      <Label layoutX="552.0" layoutY="51.0" prefHeight="36.0" prefWidth="212.0" text="COMPARED FILE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+       <Button fx:id="back" layoutX="22.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="105.0" text="Back" />
+       <ListView fx:id="ListViewCompare" layoutX="326.0" layoutY="138.0" prefHeight="524.0" prefWidth="664.0" />
+   </children>
+</AnchorPane>

@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
     <children>
@@ -36,7 +24,7 @@
                                  </font></Label>
                                         <HBox prefHeight="36.0" prefWidth="1294.0">
                                             <children>
-                                                <Label fx:id="courseNameLabel2" prefHeight="54.0" prefWidth="119.0" text="  Course Name" />
+                                                <Label fx:id="courseNameLabel2" prefHeight="54.0" prefWidth="119.0" text="Ders Adı" />
                                                 <TextField fx:id="courseNameText2" prefHeight="36.0" prefWidth="438.0" />
                                             </children>
                                         </HBox>
@@ -926,7 +914,7 @@
             </tabs>
         </TabPane>
         <Button fx:id="trButton" layoutX="1144.0" layoutY="38.0" mnemonicParsing="false" onAction="#trButtonA" prefHeight="26.0" prefWidth="42.0" text="TR" />
-        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" onAction="#engButtonA" prefHeight="31.0" prefWidth="55.0" text="ENG" />
+        <Button fx:id="engButton" layoutX="1190.0" layoutY="38.0" mnemonicParsing="false" onAction="#engButtonA" prefHeight="31.0" prefWidth="56.0" text="ENG" />
         <ImageView fitHeight="75.0" fitWidth="190.0" layoutX="593.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@logo.png" />

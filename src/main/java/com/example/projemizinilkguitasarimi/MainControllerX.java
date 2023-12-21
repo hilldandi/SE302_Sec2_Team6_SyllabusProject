@@ -54,6 +54,16 @@ public class MainControllerX implements Initializable {
         stage.show();
     }
     @FXML
+    void SelectButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void CompareButtonA(ActionEvent event) {
+
+    }
+
+    @FXML
     public void open(ActionEvent event) throws IOException {
 
     }
@@ -74,6 +84,24 @@ public class MainControllerX implements Initializable {
     void HelpButton(ActionEvent event) {
 
     }
+    @FXML
+    void trButtonA(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-viewTurkish.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void engButtonA(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     @FXML
     public void SaveAll(ActionEvent event) throws IOException {
         CreateNewCourse();
