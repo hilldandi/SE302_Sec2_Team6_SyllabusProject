@@ -1088,4 +1088,63 @@ public class MainControllerX {
     @FXML
     private TextField transferableSkillCourseText;
 
+
+    @FXML
+    public void CreateNewCourse()throws IOException {
+        Gson gson = new Gson();
+        String path = "Document/";
+        String code =codeTextt2.getText().toUpperCase();
+        String combinedPath = path + code.toUpperCase();
+        String newFilePath;
+
+        File directory=new File(combinedPath);
+        if (directory.exists()){
+
+            int lastVersion=versionCheck(combinedPath)+1;
+            newFilePath = code +"-V"+lastVersion+ ".json";
+        }
+        else{
+            newFilePath= code+"-V0.json";
+        }
+        CourseInformationx course=new CourseInformationx();
+        fillCourse(course);
+        String newJson = gson.toJson(course);
+
+
+
+        //Create new directory according to course code
+        File dir = new File(combinedPath);
+        dir.mkdirs();
+        File file = new File(dir, newFilePath);
+
+        try (FileWriter fileWriter = new FileWriter(file)) {
+            fileWriter.write(newJson);
+            System.out.println("JSON written to file successfully.");
+        }
+    }
+    public int versionCheck(String path){
+
+        File directory = new File(path);
+        String[] list = directory.list();
+        String[] versions = new String[0];
+        for (String member : list) {
+            versions =member.split("-V");
+        }
+        String lastVersion=versions[1];
+        int lastChar=0;
+        if (lastVersion.length()==6){
+            lastChar = Integer.parseInt(lastVersion.substring(lastVersion.length() -6,lastVersion.length()-5));
+        } else if (lastVersion.length()==7) {
+            lastChar = Integer.parseInt(lastVersion.substring(lastVersion.length() -7,lastVersion.length()-5));
+        } else if (lastVersion.length()==8) {
+            lastChar = Integer.parseInt(lastVersion.substring(lastVersion.length() -8,lastVersion.length()-5));
+        }
+
+        System.out.println(lastChar);
+        System.out.println(lastVersion);
+        return lastChar;
+    }
+
+
+
 }

@@ -45,10 +45,41 @@ public class CourseInformationx {
     public String CCTransferableSkillCourse;
 
 
-    //tab4
+    //the data on TAB3
+    public String week1Subjects;
+    public String week2Subjects;
+    public String week3Subjects;
+    public String week4Subjects;
+    public String week5Subjects;
+    public String week6Subjects;
+    public String week7Subjects;
+    public String week8Subjects;
+    public String week9Subjects;
+    public String week10Subjects;
+    public String week11Subjects;
+    public String week12Subjects;
+    public String week13Subjects;
+    public String week14Subjects;
+    public String week15Subjects;
 
+    public String week1ReqMat;
+    public String week2ReqMat;
+    public String week3ReqMat;
+    public String week4ReqMat;
+    public String week5ReqMat;
+    public String week6ReqMat;
+    public String week7ReqMat;
+    public String week8ReqMat;
+    public String week9ReqMat;
+    public String week10ReqMat;
+    public String week11ReqMat;
+    public String week12ReqMat;
+    public String week13ReqMat;
+    public String week14ReqMat;
+    public String week15ReqMat;
 
-
+    public String courseNotesAndTextBooks;
+    public String suggestedReadingsAndMaterials;
 
     //the data on TAB4 Assessment
 
@@ -200,6 +231,173 @@ public class CourseInformationx {
 
     public String endOfTab4Total1;
     public String endOfTab4Total2;
+
+
+
+    //the data on TAB5 ECTS / Workload Table
+
+    public String courseHours;
+    public String labOrApplicationHours;
+    public String studyHourseOutsideClass;
+    public String fieldWork;
+    public String quizOrStudioCritique;
+    public String homeworkOrAssignment;
+    public String presentationOrJury;
+    public String project;
+    public String portfolio;
+    public String seminarOrWorkshop;
+    public String oralExam;
+    public String midterm;
+    public String Final;
+    public String TotalWorkload;
+
+    public String courseHoursDur;
+    public String labOrApplicationHoursDur;
+    public String studyHourseOutsideClassDur;
+    public String fieldWorkDur;
+    public String quizOrStudioCritiqueDur;
+    public String homeworkOrAssignmentDur;
+    public String presentationOrJuryDur;
+    public String projectDur;
+    public String portfolioDur;
+    public String seminarOrWorkshopDur;
+    public String oralExamDur;
+    public String midtermDur;
+    public String FinalDur;
+
+    public String courseHoursWL;
+    public String labOrApplicationHourWL;
+    public String studyHourseOutsideClassWL;
+    public String fieldWorkWL;
+    public String quizOrStudioCritiqueWL;
+    public String homeworkOrAssignmentWL;
+    public String presentationOrJuryWL;
+    public String projectWL;
+    public String portfolioWL;
+    public String seminarOrWorkshopWL;
+    public String oralExamWL;
+    public String midtermWL;
+    public String FinalWL;
+
+
+
+    public String TotalWorkloadWL;
+
+
+
+
+    //the data on TAB6 Course outcome matrix
+
+    public String programCompetenciesOutcome1;
+    public String programCompetenciesOutcome1ContributionLevel1;
+    public String programCompetenciesOutcome1ContributionLevel2;
+    public String programCompetenciesOutcome1ContributionLevel3;
+    public String programCompetenciesOutcome1ContributionLevel4;
+    public String programCompetenciesOutcome1ContributionLevel5;
+    public String programCompetenciesOutcome1LOno;
+
+    public String programCompetenciesOutcome2;
+    public String programCompetenciesOutcome2ContributionLevel1;
+    public String programCompetenciesOutcome2ContributionLevel2;
+    public String programCompetenciesOutcome2ContributionLevel3;
+    public String programCompetenciesOutcome2ContributionLevel4;
+    public String programCompetenciesOutcome2ContributionLevel5;
+    public String programCompetenciesOutcome2LOno;
+
+    public String programCompetenciesOutcome3;
+    public String programCompetenciesOutcome3ContributionLevel1;
+    public String programCompetenciesOutcome3ContributionLevel2;
+    public String programCompetenciesOutcome3ContributionLevel3;
+    public String programCompetenciesOutcome3ContributionLevel4;
+    public String programCompetenciesOutcome3ContributionLevel5;
+    public String programCompetenciesOutcome3LOno;
+
+    public String programCompetenciesOutcome4;
+    public String programCompetenciesOutcome4ContributionLevel1;
+    public String programCompetenciesOutcome4ContributionLevel2;
+    public String programCompetenciesOutcome4ContributionLevel3;
+    public String programCompetenciesOutcome4ContributionLevel4;
+    public String programCompetenciesOutcome4ContributionLevel5;
+    public String programCompetenciesOutcome4LOno;
+
+    public String programCompetenciesOutcome5;
+    public String programCompetenciesOutcome5ContributionLevel1;
+    public String programCompetenciesOutcome5ContributionLevel2;
+    public String programCompetenciesOutcome5ContributionLevel3;
+    public String programCompetenciesOutcome5ContributionLevel4;
+    public String programCompetenciesOutcome5ContributionLevel5;
+    public String programCompetenciesOutcome5LOno;
+
+    public String programCompetenciesOutcome6;
+    public String programCompetenciesOutcome6ContributionLevel1;
+    public String programCompetenciesOutcome6ContributionLevel2;
+    public String programCompetenciesOutcome6ContributionLevel3;
+    public String programCompetenciesOutcome6ContributionLevel4;
+    public String programCompetenciesOutcome6ContributionLevel5;
+    public String programCompetenciesOutcome6LOno;
+
+
+    public String programCompetenciesOutcome7;
+    public String programCompetenciesOutcome7ContributionLevel1;
+    public String programCompetenciesOutcome7ContributionLevel2;
+    public String programCompetenciesOutcome7ContributionLevel3;
+    public String programCompetenciesOutcome7ContributionLevel4;
+    public String programCompetenciesOutcome7ContributionLevel5;
+    public String programCompetenciesOutcome7LOno;
+
+    public String programCompetenciesOutcome8;
+    public String programCompetenciesOutcome8ContributionLevel1;
+    public String programCompetenciesOutcome8ContributionLevel2;
+    public String programCompetenciesOutcome8ContributionLevel3;
+    public String programCompetenciesOutcome8ContributionLevel4;
+    public String programCompetenciesOutcome8ContributionLevel5;
+    public String programCompetenciesOutcome8LOno;
+
+    public String programCompetenciesOutcome9;
+    public String programCompetenciesOutcome9ContributionLevel1;
+    public String programCompetenciesOutcome9ContributionLevel2;
+    public String programCompetenciesOutcome9ContributionLevel3;
+    public String programCompetenciesOutcome9ContributionLevel4;
+    public String programCompetenciesOutcome9ContributionLevel5;
+    public String programCompetenciesOutcome9LOno;
+
+    public String programCompetenciesOutcome10;
+    public String programCompetenciesOutcome10ContributionLevel1;
+    public String programCompetenciesOutcome10ContributionLevel2;
+    public String programCompetenciesOutcome10ContributionLevel3;
+    public String programCompetenciesOutcome10ContributionLevel4;
+    public String programCompetenciesOutcome10ContributionLevel5;
+    public String programCompetenciesOutcome10LOno;
+
+    public String programCompetenciesOutcome11;
+    public String programCompetenciesOutcome11ContributionLevel1;
+    public String programCompetenciesOutcome11ContributionLevel2;
+    public String programCompetenciesOutcome11ContributionLevel3;
+    public String programCompetenciesOutcome11ContributionLevel4;
+    public String programCompetenciesOutcome11ContributionLevel5;
+    public String programCompetenciesOutcome11LOno;
+    public String programCompetenciesOutcome12;
+    public String programCompetenciesOutcome12ContributionLevel1;
+    public String programCompetenciesOutcome12ContributionLevel2;
+    public String programCompetenciesOutcome12ContributionLevel3;
+    public String programCompetenciesOutcome12ContributionLevel4;
+    public String programCompetenciesOutcome12ContributionLevel5;
+    public String programCompetenciesOutcome12LOno;
+
+
+    public String programCompetenciesOutcome13;
+    public String programCompetenciesOutcome13ContributionLevel1;
+    public String programCompetenciesOutcome13ContributionLevel2;
+    public String programCompetenciesOutcome13ContributionLevel3;
+    public String programCompetenciesOutcome13ContributionLevel4;
+    public String programCompetenciesOutcome13ContributionLevel5;
+    public String programCompetenciesOutcome13LOno;
+
+
+    //the data on the SAVE TAB
+    public String reasonForUpdate;
+
+
 
     public void setVersion(int version) {
         this.version = version;
@@ -1453,4 +1651,1962 @@ public class CourseInformationx {
         this.endOfTab4Total2 = endOfTab4Total2;
     }
 
+    public String getWeek1Subjects() {
+        return week1Subjects;
+    }
+
+    public void setWeek1Subjects(String week1Subjects) {
+        this.week1Subjects = week1Subjects;
+    }
+
+    public String getWeek2Subjects() {
+        return week2Subjects;
+    }
+
+    public void setWeek2Subjects(String week2Subjects) {
+        this.week2Subjects = week2Subjects;
+    }
+
+    public String getWeek3Subjects() {
+        return week3Subjects;
+    }
+
+    public void setWeek3Subjects(String week3Subjects) {
+        this.week3Subjects = week3Subjects;
+    }
+
+    public String getWeek4Subjects() {
+        return week4Subjects;
+    }
+
+    public void setWeek4Subjects(String week4Subjects) {
+        this.week4Subjects = week4Subjects;
+    }
+
+    public String getWeek5Subjects() {
+        return week5Subjects;
+    }
+
+    public void setWeek5Subjects(String week5Subjects) {
+        this.week5Subjects = week5Subjects;
+    }
+
+    public String getWeek6Subjects() {
+        return week6Subjects;
+    }
+
+    public void setWeek6Subjects(String week6Subjects) {
+        this.week6Subjects = week6Subjects;
+    }
+
+    public String getWeek7Subjects() {
+        return week7Subjects;
+    }
+
+    public void setWeek7Subjects(String week7Subjects) {
+        this.week7Subjects = week7Subjects;
+    }
+
+    public String getWeek8Subjects() {
+        return week8Subjects;
+    }
+
+    public void setWeek8Subjects(String week8Subjects) {
+        this.week8Subjects = week8Subjects;
+    }
+
+    public String getWeek9Subjects() {
+        return week9Subjects;
+    }
+
+    public void setWeek9Subjects(String week9Subjects) {
+        this.week9Subjects = week9Subjects;
+    }
+
+    public String getWeek10Subjects() {
+        return week10Subjects;
+    }
+
+    public void setWeek10Subjects(String week10Subjects) {
+        this.week10Subjects = week10Subjects;
+    }
+
+    public String getWeek11Subjects() {
+        return week11Subjects;
+    }
+
+    public void setWeek11Subjects(String week11Subjects) {
+        this.week11Subjects = week11Subjects;
+    }
+
+    public String getWeek12Subjects() {
+        return week12Subjects;
+    }
+
+    public void setWeek12Subjects(String week12Subjects) {
+        this.week12Subjects = week12Subjects;
+    }
+
+    public String getWeek13Subjects() {
+        return week13Subjects;
+    }
+
+    public void setWeek13Subjects(String week13Subjects) {
+        this.week13Subjects = week13Subjects;
+    }
+
+    public String getWeek14Subjects() {
+        return week14Subjects;
+    }
+
+    public void setWeek14Subjects(String week14Subjects) {
+        this.week14Subjects = week14Subjects;
+    }
+
+    public String getWeek15Subjects() {
+        return week15Subjects;
+    }
+
+    public void setWeek15Subjects(String week15Subjects) {
+        this.week15Subjects = week15Subjects;
+    }
+
+    public String getWeek1ReqMat() {
+        return week1ReqMat;
+    }
+
+    public void setWeek1ReqMat(String week1ReqMat) {
+        this.week1ReqMat = week1ReqMat;
+    }
+
+    public String getWeek2ReqMat() {
+        return week2ReqMat;
+    }
+
+    public void setWeek2ReqMat(String week2ReqMat) {
+        this.week2ReqMat = week2ReqMat;
+    }
+
+    public String getWeek3ReqMat() {
+        return week3ReqMat;
+    }
+
+    public void setWeek3ReqMat(String week3ReqMat) {
+        this.week3ReqMat = week3ReqMat;
+    }
+
+    public String getWeek4ReqMat() {
+        return week4ReqMat;
+    }
+
+    public void setWeek4ReqMat(String week4ReqMat) {
+        this.week4ReqMat = week4ReqMat;
+    }
+
+    public String getWeek5ReqMat() {
+        return week5ReqMat;
+    }
+
+    public void setWeek5ReqMat(String week5ReqMat) {
+        this.week5ReqMat = week5ReqMat;
+    }
+
+    public String getWeek6ReqMat() {
+        return week6ReqMat;
+    }
+
+    public void setWeek6ReqMat(String week6ReqMat) {
+        this.week6ReqMat = week6ReqMat;
+    }
+
+    public String getWeek7ReqMat() {
+        return week7ReqMat;
+    }
+
+    public void setWeek7ReqMat(String week7ReqMat) {
+        this.week7ReqMat = week7ReqMat;
+    }
+
+    public String getWeek8ReqMat() {
+        return week8ReqMat;
+    }
+
+    public void setWeek8ReqMat(String week8ReqMat) {
+        this.week8ReqMat = week8ReqMat;
+    }
+
+    public String getWeek9ReqMat() {
+        return week9ReqMat;
+    }
+
+    public void setWeek9ReqMat(String week9ReqMat) {
+        this.week9ReqMat = week9ReqMat;
+    }
+
+    public String getWeek10ReqMat() {
+        return week10ReqMat;
+    }
+
+    public void setWeek10ReqMat(String week10ReqMat) {
+        this.week10ReqMat = week10ReqMat;
+    }
+
+    public String getWeek11ReqMat() {
+        return week11ReqMat;
+    }
+
+    public void setWeek11ReqMat(String week11ReqMat) {
+        this.week11ReqMat = week11ReqMat;
+    }
+
+    public String getWeek12ReqMat() {
+        return week12ReqMat;
+    }
+
+    public void setWeek12ReqMat(String week12ReqMat) {
+        this.week12ReqMat = week12ReqMat;
+    }
+
+    public String getWeek13ReqMat() {
+        return week13ReqMat;
+    }
+
+    public void setWeek13ReqMat(String week13ReqMat) {
+        this.week13ReqMat = week13ReqMat;
+    }
+
+    public String getWeek14ReqMat() {
+        return week14ReqMat;
+    }
+
+    public void setWeek14ReqMat(String week14ReqMat) {
+        this.week14ReqMat = week14ReqMat;
+    }
+
+    public String getWeek15ReqMat() {
+        return week15ReqMat;
+    }
+
+    public void setWeek15ReqMat(String week15ReqMat) {
+        this.week15ReqMat = week15ReqMat;
+    }
+
+    public String getCourseNotesAndTextBooks() {
+        return courseNotesAndTextBooks;
+    }
+
+    public void setCourseNotesAndTextBooks(String courseNotesAndTextBooks) {
+        this.courseNotesAndTextBooks = courseNotesAndTextBooks;
+    }
+
+    public String getSuggestedReadingsAndMaterials() {
+        return suggestedReadingsAndMaterials;
+    }
+
+    public void setSuggestedReadingsAndMaterials(String suggestedReadingsAndMaterials) {
+        this.suggestedReadingsAndMaterials = suggestedReadingsAndMaterials;
+    }
+
+    public String getCourseHours() {
+        return courseHours;
+    }
+
+    public void setCourseHours(String courseHours) {
+        this.courseHours = courseHours;
+    }
+
+    public String getLabOrApplicationHours() {
+        return labOrApplicationHours;
+    }
+
+    public void setLabOrApplicationHours(String labOrApplicationHours) {
+        this.labOrApplicationHours = labOrApplicationHours;
+    }
+
+    public String getStudyHourseOutsideClass() {
+        return studyHourseOutsideClass;
+    }
+
+    public void setStudyHourseOutsideClass(String studyHourseOutsideClass) {
+        this.studyHourseOutsideClass = studyHourseOutsideClass;
+    }
+
+    public String getFieldWork() {
+        return fieldWork;
+    }
+
+    public void setFieldWork(String fieldWork) {
+        this.fieldWork = fieldWork;
+    }
+
+    public String getQuizOrStudioCritique() {
+        return quizOrStudioCritique;
+    }
+
+    public void setQuizOrStudioCritique(String quizOrStudioCritique) {
+        this.quizOrStudioCritique = quizOrStudioCritique;
+    }
+
+    public String getHomeworkOrAssignment() {
+        return homeworkOrAssignment;
+    }
+
+    public void setHomeworkOrAssignment(String homeworkOrAssignment) {
+        this.homeworkOrAssignment = homeworkOrAssignment;
+    }
+
+    public String getPresentationOrJury() {
+        return presentationOrJury;
+    }
+
+    public void setPresentationOrJury(String presentationOrJury) {
+        this.presentationOrJury = presentationOrJury;
+    }
+
+    public String getProject() {
+        return project;
+    }
+
+    public void setProject(String project) {
+        this.project = project;
+    }
+
+    public String getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(String portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    public String getSeminarOrWorkshop() {
+        return seminarOrWorkshop;
+    }
+
+    public void setSeminarOrWorkshop(String seminarOrWorkshop) {
+        this.seminarOrWorkshop = seminarOrWorkshop;
+    }
+
+    public String getOralExam() {
+        return oralExam;
+    }
+
+    public void setOralExam(String oralExam) {
+        this.oralExam = oralExam;
+    }
+
+    public String getMidterm() {
+        return midterm;
+    }
+
+    public void setMidterm(String midterm) {
+        this.midterm = midterm;
+    }
+
+    public String getFinal() {
+        return Final;
+    }
+
+    public void setFinal(String aFinal) {
+        Final = aFinal;
+    }
+
+    public String getTotalWorkload() {
+        return TotalWorkload;
+    }
+
+    public void setTotalWorkload(String totalWorkload) {
+        TotalWorkload = totalWorkload;
+    }
+
+    public String getCourseHoursDur() {
+        return courseHoursDur;
+    }
+
+    public void setCourseHoursDur(String courseHoursDur) {
+        this.courseHoursDur = courseHoursDur;
+    }
+
+    public String getLabOrApplicationHoursDur() {
+        return labOrApplicationHoursDur;
+    }
+
+    public void setLabOrApplicationHoursDur(String labOrApplicationHoursDur) {
+        this.labOrApplicationHoursDur = labOrApplicationHoursDur;
+    }
+
+    public String getStudyHourseOutsideClassDur() {
+        return studyHourseOutsideClassDur;
+    }
+
+    public void setStudyHourseOutsideClassDur(String studyHourseOutsideClassDur) {
+        this.studyHourseOutsideClassDur = studyHourseOutsideClassDur;
+    }
+
+    public String getFieldWorkDur() {
+        return fieldWorkDur;
+    }
+
+    public void setFieldWorkDur(String fieldWorkDur) {
+        this.fieldWorkDur = fieldWorkDur;
+    }
+
+    public String getQuizOrStudioCritiqueDur() {
+        return quizOrStudioCritiqueDur;
+    }
+
+    public void setQuizOrStudioCritiqueDur(String quizOrStudioCritiqueDur) {
+        this.quizOrStudioCritiqueDur = quizOrStudioCritiqueDur;
+    }
+
+    public String getHomeworkOrAssignmentDur() {
+        return homeworkOrAssignmentDur;
+    }
+
+    public void setHomeworkOrAssignmentDur(String homeworkOrAssignmentDur) {
+        this.homeworkOrAssignmentDur = homeworkOrAssignmentDur;
+    }
+
+    public String getPresentationOrJuryDur() {
+        return presentationOrJuryDur;
+    }
+
+    public void setPresentationOrJuryDur(String presentationOrJuryDur) {
+        this.presentationOrJuryDur = presentationOrJuryDur;
+    }
+
+    public String getProjectDur() {
+        return projectDur;
+    }
+
+    public void setProjectDur(String projectDur) {
+        this.projectDur = projectDur;
+    }
+
+    public String getPortfolioDur() {
+        return portfolioDur;
+    }
+
+    public void setPortfolioDur(String portfolioDur) {
+        this.portfolioDur = portfolioDur;
+    }
+
+    public String getSeminarOrWorkshopDur() {
+        return seminarOrWorkshopDur;
+    }
+
+    public void setSeminarOrWorkshopDur(String seminarOrWorkshopDur) {
+        this.seminarOrWorkshopDur = seminarOrWorkshopDur;
+    }
+
+    public String getOralExamDur() {
+        return oralExamDur;
+    }
+
+    public void setOralExamDur(String oralExamDur) {
+        this.oralExamDur = oralExamDur;
+    }
+
+    public String getMidtermDur() {
+        return midtermDur;
+    }
+
+    public void setMidtermDur(String midtermDur) {
+        this.midtermDur = midtermDur;
+    }
+
+    public String getFinalDur() {
+        return FinalDur;
+    }
+
+    public void setFinalDur(String finalDur) {
+        FinalDur = finalDur;
+    }
+
+    public String getCourseHoursWL() {
+        return courseHoursWL;
+    }
+
+    public void setCourseHoursWL(String courseHoursWL) {
+        this.courseHoursWL = courseHoursWL;
+    }
+
+    public String getLabOrApplicationHourWL() {
+        return labOrApplicationHourWL;
+    }
+
+    public void setLabOrApplicationHourWL(String labOrApplicationHourWL) {
+        this.labOrApplicationHourWL = labOrApplicationHourWL;
+    }
+
+    public String getStudyHourseOutsideClassWL() {
+        return studyHourseOutsideClassWL;
+    }
+
+    public void setStudyHourseOutsideClassWL(String studyHourseOutsideClassWL) {
+        this.studyHourseOutsideClassWL = studyHourseOutsideClassWL;
+    }
+
+    public String getFieldWorkWL() {
+        return fieldWorkWL;
+    }
+
+    public void setFieldWorkWL(String fieldWorkWL) {
+        this.fieldWorkWL = fieldWorkWL;
+    }
+
+    public String getQuizOrStudioCritiqueWL() {
+        return quizOrStudioCritiqueWL;
+    }
+
+    public void setQuizOrStudioCritiqueWL(String quizOrStudioCritiqueWL) {
+        this.quizOrStudioCritiqueWL = quizOrStudioCritiqueWL;
+    }
+
+    public String getHomeworkOrAssignmentWL() {
+        return homeworkOrAssignmentWL;
+    }
+
+    public void setHomeworkOrAssignmentWL(String homeworkOrAssignmentWL) {
+        this.homeworkOrAssignmentWL = homeworkOrAssignmentWL;
+    }
+
+    public String getPresentationOrJuryWL() {
+        return presentationOrJuryWL;
+    }
+
+    public void setPresentationOrJuryWL(String presentationOrJuryWL) {
+        this.presentationOrJuryWL = presentationOrJuryWL;
+    }
+
+    public String getProjectWL() {
+        return projectWL;
+    }
+
+    public void setProjectWL(String projectWL) {
+        this.projectWL = projectWL;
+    }
+
+    public String getPortfolioWL() {
+        return portfolioWL;
+    }
+
+    public void setPortfolioWL(String portfolioWL) {
+        this.portfolioWL = portfolioWL;
+    }
+
+    public String getSeminarOrWorkshopWL() {
+        return seminarOrWorkshopWL;
+    }
+
+    public void setSeminarOrWorkshopWL(String seminarOrWorkshopWL) {
+        this.seminarOrWorkshopWL = seminarOrWorkshopWL;
+    }
+
+    public String getOralExamWL() {
+        return oralExamWL;
+    }
+
+    public void setOralExamWL(String oralExamWL) {
+        this.oralExamWL = oralExamWL;
+    }
+
+    public String getMidtermWL() {
+        return midtermWL;
+    }
+
+    public void setMidtermWL(String midtermWL) {
+        this.midtermWL = midtermWL;
+    }
+
+    public String getFinalWL() {
+        return FinalWL;
+    }
+
+    public void setFinalWL(String finalWL) {
+        FinalWL = finalWL;
+    }
+
+    public String getTotalWorkloadWL() {
+        return TotalWorkloadWL;
+    }
+
+    public void setTotalWorkloadWL(String totalWorkloadWL) {
+        TotalWorkloadWL = totalWorkloadWL;
+    }
+
+    public String getProgramCompetenciesOutcome1() {
+        return programCompetenciesOutcome1;
+    }
+
+    public void setProgramCompetenciesOutcome1(String programCompetenciesOutcome1) {
+        this.programCompetenciesOutcome1 = programCompetenciesOutcome1;
+    }
+
+    public String getProgramCompetenciesOutcome1ContributionLevel1() {
+        return programCompetenciesOutcome1ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome1ContributionLevel1(String programCompetenciesOutcome1ContributionLevel1) {
+        this.programCompetenciesOutcome1ContributionLevel1 = programCompetenciesOutcome1ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome1ContributionLevel2() {
+        return programCompetenciesOutcome1ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome1ContributionLevel2(String programCompetenciesOutcome1ContributionLevel2) {
+        this.programCompetenciesOutcome1ContributionLevel2 = programCompetenciesOutcome1ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome1ContributionLevel3() {
+        return programCompetenciesOutcome1ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome1ContributionLevel3(String programCompetenciesOutcome1ContributionLevel3) {
+        this.programCompetenciesOutcome1ContributionLevel3 = programCompetenciesOutcome1ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome1ContributionLevel4() {
+        return programCompetenciesOutcome1ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome1ContributionLevel4(String programCompetenciesOutcome1ContributionLevel4) {
+        this.programCompetenciesOutcome1ContributionLevel4 = programCompetenciesOutcome1ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome1ContributionLevel5() {
+        return programCompetenciesOutcome1ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome1ContributionLevel5(String programCompetenciesOutcome1ContributionLevel5) {
+        this.programCompetenciesOutcome1ContributionLevel5 = programCompetenciesOutcome1ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome1LOno() {
+        return programCompetenciesOutcome1LOno;
+    }
+
+    public void setProgramCompetenciesOutcome1LOno(String programCompetenciesOutcome1LOno) {
+        this.programCompetenciesOutcome1LOno = programCompetenciesOutcome1LOno;
+    }
+
+    public String getProgramCompetenciesOutcome2() {
+        return programCompetenciesOutcome2;
+    }
+
+    public void setProgramCompetenciesOutcome2(String programCompetenciesOutcome2) {
+        this.programCompetenciesOutcome2 = programCompetenciesOutcome2;
+    }
+
+    public String getProgramCompetenciesOutcome2ContributionLevel1() {
+        return programCompetenciesOutcome2ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome2ContributionLevel1(String programCompetenciesOutcome2ContributionLevel1) {
+        this.programCompetenciesOutcome2ContributionLevel1 = programCompetenciesOutcome2ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome2ContributionLevel2() {
+        return programCompetenciesOutcome2ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome2ContributionLevel2(String programCompetenciesOutcome2ContributionLevel2) {
+        this.programCompetenciesOutcome2ContributionLevel2 = programCompetenciesOutcome2ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome2ContributionLevel3() {
+        return programCompetenciesOutcome2ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome2ContributionLevel3(String programCompetenciesOutcome2ContributionLevel3) {
+        this.programCompetenciesOutcome2ContributionLevel3 = programCompetenciesOutcome2ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome2ContributionLevel4() {
+        return programCompetenciesOutcome2ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome2ContributionLevel4(String programCompetenciesOutcome2ContributionLevel4) {
+        this.programCompetenciesOutcome2ContributionLevel4 = programCompetenciesOutcome2ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome2ContributionLevel5() {
+        return programCompetenciesOutcome2ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome2ContributionLevel5(String programCompetenciesOutcome2ContributionLevel5) {
+        this.programCompetenciesOutcome2ContributionLevel5 = programCompetenciesOutcome2ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome2LOno() {
+        return programCompetenciesOutcome2LOno;
+    }
+
+    public void setProgramCompetenciesOutcome2LOno(String programCompetenciesOutcome2LOno) {
+        this.programCompetenciesOutcome2LOno = programCompetenciesOutcome2LOno;
+    }
+
+    public String getProgramCompetenciesOutcome3() {
+        return programCompetenciesOutcome3;
+    }
+
+    public void setProgramCompetenciesOutcome3(String programCompetenciesOutcome3) {
+        this.programCompetenciesOutcome3 = programCompetenciesOutcome3;
+    }
+
+    public String getProgramCompetenciesOutcome3ContributionLevel1() {
+        return programCompetenciesOutcome3ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome3ContributionLevel1(String programCompetenciesOutcome3ContributionLevel1) {
+        this.programCompetenciesOutcome3ContributionLevel1 = programCompetenciesOutcome3ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome3ContributionLevel2() {
+        return programCompetenciesOutcome3ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome3ContributionLevel2(String programCompetenciesOutcome3ContributionLevel2) {
+        this.programCompetenciesOutcome3ContributionLevel2 = programCompetenciesOutcome3ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome3ContributionLevel3() {
+        return programCompetenciesOutcome3ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome3ContributionLevel3(String programCompetenciesOutcome3ContributionLevel3) {
+        this.programCompetenciesOutcome3ContributionLevel3 = programCompetenciesOutcome3ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome3ContributionLevel4() {
+        return programCompetenciesOutcome3ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome3ContributionLevel4(String programCompetenciesOutcome3ContributionLevel4) {
+        this.programCompetenciesOutcome3ContributionLevel4 = programCompetenciesOutcome3ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome3ContributionLevel5() {
+        return programCompetenciesOutcome3ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome3ContributionLevel5(String programCompetenciesOutcome3ContributionLevel5) {
+        this.programCompetenciesOutcome3ContributionLevel5 = programCompetenciesOutcome3ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome3LOno() {
+        return programCompetenciesOutcome3LOno;
+    }
+
+    public void setProgramCompetenciesOutcome3LOno(String programCompetenciesOutcome3LOno) {
+        this.programCompetenciesOutcome3LOno = programCompetenciesOutcome3LOno;
+    }
+
+    public String getProgramCompetenciesOutcome4() {
+        return programCompetenciesOutcome4;
+    }
+
+    public void setProgramCompetenciesOutcome4(String programCompetenciesOutcome4) {
+        this.programCompetenciesOutcome4 = programCompetenciesOutcome4;
+    }
+
+    public String getProgramCompetenciesOutcome4ContributionLevel1() {
+        return programCompetenciesOutcome4ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome4ContributionLevel1(String programCompetenciesOutcome4ContributionLevel1) {
+        this.programCompetenciesOutcome4ContributionLevel1 = programCompetenciesOutcome4ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome4ContributionLevel2() {
+        return programCompetenciesOutcome4ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome4ContributionLevel2(String programCompetenciesOutcome4ContributionLevel2) {
+        this.programCompetenciesOutcome4ContributionLevel2 = programCompetenciesOutcome4ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome4ContributionLevel3() {
+        return programCompetenciesOutcome4ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome4ContributionLevel3(String programCompetenciesOutcome4ContributionLevel3) {
+        this.programCompetenciesOutcome4ContributionLevel3 = programCompetenciesOutcome4ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome4ContributionLevel4() {
+        return programCompetenciesOutcome4ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome4ContributionLevel4(String programCompetenciesOutcome4ContributionLevel4) {
+        this.programCompetenciesOutcome4ContributionLevel4 = programCompetenciesOutcome4ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome4ContributionLevel5() {
+        return programCompetenciesOutcome4ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome4ContributionLevel5(String programCompetenciesOutcome4ContributionLevel5) {
+        this.programCompetenciesOutcome4ContributionLevel5 = programCompetenciesOutcome4ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome4LOno() {
+        return programCompetenciesOutcome4LOno;
+    }
+
+    public void setProgramCompetenciesOutcome4LOno(String programCompetenciesOutcome4LOno) {
+        this.programCompetenciesOutcome4LOno = programCompetenciesOutcome4LOno;
+    }
+
+    public String getProgramCompetenciesOutcome5() {
+        return programCompetenciesOutcome5;
+    }
+
+    public void setProgramCompetenciesOutcome5(String programCompetenciesOutcome5) {
+        this.programCompetenciesOutcome5 = programCompetenciesOutcome5;
+    }
+
+    public String getProgramCompetenciesOutcome5ContributionLevel1() {
+        return programCompetenciesOutcome5ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome5ContributionLevel1(String programCompetenciesOutcome5ContributionLevel1) {
+        this.programCompetenciesOutcome5ContributionLevel1 = programCompetenciesOutcome5ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome5ContributionLevel2() {
+        return programCompetenciesOutcome5ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome5ContributionLevel2(String programCompetenciesOutcome5ContributionLevel2) {
+        this.programCompetenciesOutcome5ContributionLevel2 = programCompetenciesOutcome5ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome5ContributionLevel3() {
+        return programCompetenciesOutcome5ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome5ContributionLevel3(String programCompetenciesOutcome5ContributionLevel3) {
+        this.programCompetenciesOutcome5ContributionLevel3 = programCompetenciesOutcome5ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome5ContributionLevel4() {
+        return programCompetenciesOutcome5ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome5ContributionLevel4(String programCompetenciesOutcome5ContributionLevel4) {
+        this.programCompetenciesOutcome5ContributionLevel4 = programCompetenciesOutcome5ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome5ContributionLevel5() {
+        return programCompetenciesOutcome5ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome5ContributionLevel5(String programCompetenciesOutcome5ContributionLevel5) {
+        this.programCompetenciesOutcome5ContributionLevel5 = programCompetenciesOutcome5ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome5LOno() {
+        return programCompetenciesOutcome5LOno;
+    }
+
+    public void setProgramCompetenciesOutcome5LOno(String programCompetenciesOutcome5LOno) {
+        this.programCompetenciesOutcome5LOno = programCompetenciesOutcome5LOno;
+    }
+
+    public String getProgramCompetenciesOutcome6() {
+        return programCompetenciesOutcome6;
+    }
+
+    public void setProgramCompetenciesOutcome6(String programCompetenciesOutcome6) {
+        this.programCompetenciesOutcome6 = programCompetenciesOutcome6;
+    }
+
+    public String getProgramCompetenciesOutcome6ContributionLevel1() {
+        return programCompetenciesOutcome6ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome6ContributionLevel1(String programCompetenciesOutcome6ContributionLevel1) {
+        this.programCompetenciesOutcome6ContributionLevel1 = programCompetenciesOutcome6ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome6ContributionLevel2() {
+        return programCompetenciesOutcome6ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome6ContributionLevel2(String programCompetenciesOutcome6ContributionLevel2) {
+        this.programCompetenciesOutcome6ContributionLevel2 = programCompetenciesOutcome6ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome6ContributionLevel3() {
+        return programCompetenciesOutcome6ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome6ContributionLevel3(String programCompetenciesOutcome6ContributionLevel3) {
+        this.programCompetenciesOutcome6ContributionLevel3 = programCompetenciesOutcome6ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome6ContributionLevel4() {
+        return programCompetenciesOutcome6ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome6ContributionLevel4(String programCompetenciesOutcome6ContributionLevel4) {
+        this.programCompetenciesOutcome6ContributionLevel4 = programCompetenciesOutcome6ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome6ContributionLevel5() {
+        return programCompetenciesOutcome6ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome6ContributionLevel5(String programCompetenciesOutcome6ContributionLevel5) {
+        this.programCompetenciesOutcome6ContributionLevel5 = programCompetenciesOutcome6ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome6LOno() {
+        return programCompetenciesOutcome6LOno;
+    }
+
+    public void setProgramCompetenciesOutcome6LOno(String programCompetenciesOutcome6LOno) {
+        this.programCompetenciesOutcome6LOno = programCompetenciesOutcome6LOno;
+    }
+
+    public String getProgramCompetenciesOutcome7() {
+        return programCompetenciesOutcome7;
+    }
+
+    public void setProgramCompetenciesOutcome7(String programCompetenciesOutcome7) {
+        this.programCompetenciesOutcome7 = programCompetenciesOutcome7;
+    }
+
+    public String getProgramCompetenciesOutcome7ContributionLevel1() {
+        return programCompetenciesOutcome7ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome7ContributionLevel1(String programCompetenciesOutcome7ContributionLevel1) {
+        this.programCompetenciesOutcome7ContributionLevel1 = programCompetenciesOutcome7ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome7ContributionLevel2() {
+        return programCompetenciesOutcome7ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome7ContributionLevel2(String programCompetenciesOutcome7ContributionLevel2) {
+        this.programCompetenciesOutcome7ContributionLevel2 = programCompetenciesOutcome7ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome7ContributionLevel3() {
+        return programCompetenciesOutcome7ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome7ContributionLevel3(String programCompetenciesOutcome7ContributionLevel3) {
+        this.programCompetenciesOutcome7ContributionLevel3 = programCompetenciesOutcome7ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome7ContributionLevel4() {
+        return programCompetenciesOutcome7ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome7ContributionLevel4(String programCompetenciesOutcome7ContributionLevel4) {
+        this.programCompetenciesOutcome7ContributionLevel4 = programCompetenciesOutcome7ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome7ContributionLevel5() {
+        return programCompetenciesOutcome7ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome7ContributionLevel5(String programCompetenciesOutcome7ContributionLevel5) {
+        this.programCompetenciesOutcome7ContributionLevel5 = programCompetenciesOutcome7ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome7LOno() {
+        return programCompetenciesOutcome7LOno;
+    }
+
+    public void setProgramCompetenciesOutcome7LOno(String programCompetenciesOutcome7LOno) {
+        this.programCompetenciesOutcome7LOno = programCompetenciesOutcome7LOno;
+    }
+
+    public String getProgramCompetenciesOutcome8() {
+        return programCompetenciesOutcome8;
+    }
+
+    public void setProgramCompetenciesOutcome8(String programCompetenciesOutcome8) {
+        this.programCompetenciesOutcome8 = programCompetenciesOutcome8;
+    }
+
+    public String getProgramCompetenciesOutcome8ContributionLevel1() {
+        return programCompetenciesOutcome8ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome8ContributionLevel1(String programCompetenciesOutcome8ContributionLevel1) {
+        this.programCompetenciesOutcome8ContributionLevel1 = programCompetenciesOutcome8ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome8ContributionLevel2() {
+        return programCompetenciesOutcome8ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome8ContributionLevel2(String programCompetenciesOutcome8ContributionLevel2) {
+        this.programCompetenciesOutcome8ContributionLevel2 = programCompetenciesOutcome8ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome8ContributionLevel3() {
+        return programCompetenciesOutcome8ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome8ContributionLevel3(String programCompetenciesOutcome8ContributionLevel3) {
+        this.programCompetenciesOutcome8ContributionLevel3 = programCompetenciesOutcome8ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome8ContributionLevel4() {
+        return programCompetenciesOutcome8ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome8ContributionLevel4(String programCompetenciesOutcome8ContributionLevel4) {
+        this.programCompetenciesOutcome8ContributionLevel4 = programCompetenciesOutcome8ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome8ContributionLevel5() {
+        return programCompetenciesOutcome8ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome8ContributionLevel5(String programCompetenciesOutcome8ContributionLevel5) {
+        this.programCompetenciesOutcome8ContributionLevel5 = programCompetenciesOutcome8ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome8LOno() {
+        return programCompetenciesOutcome8LOno;
+    }
+
+    public void setProgramCompetenciesOutcome8LOno(String programCompetenciesOutcome8LOno) {
+        this.programCompetenciesOutcome8LOno = programCompetenciesOutcome8LOno;
+    }
+
+    public String getProgramCompetenciesOutcome9() {
+        return programCompetenciesOutcome9;
+    }
+
+    public void setProgramCompetenciesOutcome9(String programCompetenciesOutcome9) {
+        this.programCompetenciesOutcome9 = programCompetenciesOutcome9;
+    }
+
+    public String getProgramCompetenciesOutcome9ContributionLevel1() {
+        return programCompetenciesOutcome9ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome9ContributionLevel1(String programCompetenciesOutcome9ContributionLevel1) {
+        this.programCompetenciesOutcome9ContributionLevel1 = programCompetenciesOutcome9ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome9ContributionLevel2() {
+        return programCompetenciesOutcome9ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome9ContributionLevel2(String programCompetenciesOutcome9ContributionLevel2) {
+        this.programCompetenciesOutcome9ContributionLevel2 = programCompetenciesOutcome9ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome9ContributionLevel3() {
+        return programCompetenciesOutcome9ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome9ContributionLevel3(String programCompetenciesOutcome9ContributionLevel3) {
+        this.programCompetenciesOutcome9ContributionLevel3 = programCompetenciesOutcome9ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome9ContributionLevel4() {
+        return programCompetenciesOutcome9ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome9ContributionLevel4(String programCompetenciesOutcome9ContributionLevel4) {
+        this.programCompetenciesOutcome9ContributionLevel4 = programCompetenciesOutcome9ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome9ContributionLevel5() {
+        return programCompetenciesOutcome9ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome9ContributionLevel5(String programCompetenciesOutcome9ContributionLevel5) {
+        this.programCompetenciesOutcome9ContributionLevel5 = programCompetenciesOutcome9ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome9LOno() {
+        return programCompetenciesOutcome9LOno;
+    }
+
+    public void setProgramCompetenciesOutcome9LOno(String programCompetenciesOutcome9LOno) {
+        this.programCompetenciesOutcome9LOno = programCompetenciesOutcome9LOno;
+    }
+
+    public String getProgramCompetenciesOutcome10() {
+        return programCompetenciesOutcome10;
+    }
+
+    public void setProgramCompetenciesOutcome10(String programCompetenciesOutcome10) {
+        this.programCompetenciesOutcome10 = programCompetenciesOutcome10;
+    }
+
+    public String getProgramCompetenciesOutcome10ContributionLevel1() {
+        return programCompetenciesOutcome10ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome10ContributionLevel1(String programCompetenciesOutcome10ContributionLevel1) {
+        this.programCompetenciesOutcome10ContributionLevel1 = programCompetenciesOutcome10ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome10ContributionLevel2() {
+        return programCompetenciesOutcome10ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome10ContributionLevel2(String programCompetenciesOutcome10ContributionLevel2) {
+        this.programCompetenciesOutcome10ContributionLevel2 = programCompetenciesOutcome10ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome10ContributionLevel3() {
+        return programCompetenciesOutcome10ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome10ContributionLevel3(String programCompetenciesOutcome10ContributionLevel3) {
+        this.programCompetenciesOutcome10ContributionLevel3 = programCompetenciesOutcome10ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome10ContributionLevel4() {
+        return programCompetenciesOutcome10ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome10ContributionLevel4(String programCompetenciesOutcome10ContributionLevel4) {
+        this.programCompetenciesOutcome10ContributionLevel4 = programCompetenciesOutcome10ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome10ContributionLevel5() {
+        return programCompetenciesOutcome10ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome10ContributionLevel5(String programCompetenciesOutcome10ContributionLevel5) {
+        this.programCompetenciesOutcome10ContributionLevel5 = programCompetenciesOutcome10ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome10LOno() {
+        return programCompetenciesOutcome10LOno;
+    }
+
+    public void setProgramCompetenciesOutcome10LOno(String programCompetenciesOutcome10LOno) {
+        this.programCompetenciesOutcome10LOno = programCompetenciesOutcome10LOno;
+    }
+
+    public String getProgramCompetenciesOutcome11() {
+        return programCompetenciesOutcome11;
+    }
+
+    public void setProgramCompetenciesOutcome11(String programCompetenciesOutcome11) {
+        this.programCompetenciesOutcome11 = programCompetenciesOutcome11;
+    }
+
+    public String getProgramCompetenciesOutcome11ContributionLevel1() {
+        return programCompetenciesOutcome11ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome11ContributionLevel1(String programCompetenciesOutcome11ContributionLevel1) {
+        this.programCompetenciesOutcome11ContributionLevel1 = programCompetenciesOutcome11ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome11ContributionLevel2() {
+        return programCompetenciesOutcome11ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome11ContributionLevel2(String programCompetenciesOutcome11ContributionLevel2) {
+        this.programCompetenciesOutcome11ContributionLevel2 = programCompetenciesOutcome11ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome11ContributionLevel3() {
+        return programCompetenciesOutcome11ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome11ContributionLevel3(String programCompetenciesOutcome11ContributionLevel3) {
+        this.programCompetenciesOutcome11ContributionLevel3 = programCompetenciesOutcome11ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome11ContributionLevel4() {
+        return programCompetenciesOutcome11ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome11ContributionLevel4(String programCompetenciesOutcome11ContributionLevel4) {
+        this.programCompetenciesOutcome11ContributionLevel4 = programCompetenciesOutcome11ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome11ContributionLevel5() {
+        return programCompetenciesOutcome11ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome11ContributionLevel5(String programCompetenciesOutcome11ContributionLevel5) {
+        this.programCompetenciesOutcome11ContributionLevel5 = programCompetenciesOutcome11ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome11LOno() {
+        return programCompetenciesOutcome11LOno;
+    }
+
+    public void setProgramCompetenciesOutcome11LOno(String programCompetenciesOutcome11LOno) {
+        this.programCompetenciesOutcome11LOno = programCompetenciesOutcome11LOno;
+    }
+
+    public String getProgramCompetenciesOutcome12() {
+        return programCompetenciesOutcome12;
+    }
+
+    public void setProgramCompetenciesOutcome12(String programCompetenciesOutcome12) {
+        this.programCompetenciesOutcome12 = programCompetenciesOutcome12;
+    }
+
+    public String getProgramCompetenciesOutcome12ContributionLevel1() {
+        return programCompetenciesOutcome12ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome12ContributionLevel1(String programCompetenciesOutcome12ContributionLevel1) {
+        this.programCompetenciesOutcome12ContributionLevel1 = programCompetenciesOutcome12ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome12ContributionLevel2() {
+        return programCompetenciesOutcome12ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome12ContributionLevel2(String programCompetenciesOutcome12ContributionLevel2) {
+        this.programCompetenciesOutcome12ContributionLevel2 = programCompetenciesOutcome12ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome12ContributionLevel3() {
+        return programCompetenciesOutcome12ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome12ContributionLevel3(String programCompetenciesOutcome12ContributionLevel3) {
+        this.programCompetenciesOutcome12ContributionLevel3 = programCompetenciesOutcome12ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome12ContributionLevel4() {
+        return programCompetenciesOutcome12ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome12ContributionLevel4(String programCompetenciesOutcome12ContributionLevel4) {
+        this.programCompetenciesOutcome12ContributionLevel4 = programCompetenciesOutcome12ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome12ContributionLevel5() {
+        return programCompetenciesOutcome12ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome12ContributionLevel5(String programCompetenciesOutcome12ContributionLevel5) {
+        this.programCompetenciesOutcome12ContributionLevel5 = programCompetenciesOutcome12ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome12LOno() {
+        return programCompetenciesOutcome12LOno;
+    }
+
+    public void setProgramCompetenciesOutcome12LOno(String programCompetenciesOutcome12LOno) {
+        this.programCompetenciesOutcome12LOno = programCompetenciesOutcome12LOno;
+    }
+
+    public String getProgramCompetenciesOutcome13() {
+        return programCompetenciesOutcome13;
+    }
+
+    public void setProgramCompetenciesOutcome13(String programCompetenciesOutcome13) {
+        this.programCompetenciesOutcome13 = programCompetenciesOutcome13;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel1() {
+        return programCompetenciesOutcome13ContributionLevel1;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel1(String programCompetenciesOutcome13ContributionLevel1) {
+        this.programCompetenciesOutcome13ContributionLevel1 = programCompetenciesOutcome13ContributionLevel1;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel2() {
+        return programCompetenciesOutcome13ContributionLevel2;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel2(String programCompetenciesOutcome13ContributionLevel2) {
+        this.programCompetenciesOutcome13ContributionLevel2 = programCompetenciesOutcome13ContributionLevel2;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel3() {
+        return programCompetenciesOutcome13ContributionLevel3;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel3(String programCompetenciesOutcome13ContributionLevel3) {
+        this.programCompetenciesOutcome13ContributionLevel3 = programCompetenciesOutcome13ContributionLevel3;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel4() {
+        return programCompetenciesOutcome13ContributionLevel4;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel4(String programCompetenciesOutcome13ContributionLevel4) {
+        this.programCompetenciesOutcome13ContributionLevel4 = programCompetenciesOutcome13ContributionLevel4;
+    }
+
+    public String getProgramCompetenciesOutcome13ContributionLevel5() {
+        return programCompetenciesOutcome13ContributionLevel5;
+    }
+
+    public void setProgramCompetenciesOutcome13ContributionLevel5(String programCompetenciesOutcome13ContributionLevel5) {
+        this.programCompetenciesOutcome13ContributionLevel5 = programCompetenciesOutcome13ContributionLevel5;
+    }
+
+    public String getProgramCompetenciesOutcome13LOno() {
+        return programCompetenciesOutcome13LOno;
+    }
+
+    public void setProgramCompetenciesOutcome13LOno(String programCompetenciesOutcome13LOno) {
+        this.programCompetenciesOutcome13LOno = programCompetenciesOutcome13LOno;
+    }
+
+    public String getReasonForUpdate() {
+        return reasonForUpdate;
+    }
+
+    public void setReasonForUpdate(String reasonForUpdate) {
+        this.reasonForUpdate = reasonForUpdate;
+    }
+
+
+
+    public CourseInformationx() {
+        this.version = 0;
+        this.courseName = " ";
+        this.code = " ";
+        this.season = " ";
+        this.theory = " ";
+        this.lab = " ";
+        this.localCredits = " ";
+        this.ects = " ";
+        this.prerequisities = " ";
+        this.courseLanguage = " ";
+        this.courseType = " ";
+        this.courseLevel = " ";
+        this.modeOfDelivery = " ";
+        this.teachingMethodsAndTechniques = " ";
+        this.courseCoordinator = " ";
+        this.courseLecturers = " ";
+        this.courseAssistants = " ";
+        this.courseObjectives = " ";
+        this.learningOutcomes = " ";
+        this.courseDescription = " ";
+        this.CCCoreCourse = " ";
+        this.CCMajorAreaCourse = " ";
+        this.CCSupportiveCourse = " ";
+        this.CCComAndManagementSkillsCourse = " ";
+        this.CCTransferableSkillCourse = " ";
+        this.week1Subjects = " ";
+        this.week2Subjects = " ";
+        this.week3Subjects = " ";
+        this.week4Subjects = " ";
+        this.week5Subjects = " ";
+        this.week6Subjects = " ";
+        this.week7Subjects = " ";
+        this.week8Subjects = " ";
+        this.week9Subjects = " ";
+        this.week10Subjects = " ";
+        this.week11Subjects = " ";
+        this.week12Subjects = " ";
+        this.week13Subjects = " ";
+        this.week14Subjects = " ";
+        this.week15Subjects = " ";
+        this.week1ReqMat = " ";
+        this.week2ReqMat = " ";
+        this.week3ReqMat = " ";
+        this.week4ReqMat = " ";
+        this.week5ReqMat = " ";
+        this.week6ReqMat = " ";
+        this.week7ReqMat = " ";
+        this.week8ReqMat = " ";
+        this.week9ReqMat = " ";
+        this.week10ReqMat = " ";
+        this.week11ReqMat = " ";
+        this.week12ReqMat = " ";
+        this.week13ReqMat = " ";
+        this.week14ReqMat = " ";
+        this.week15ReqMat = " ";
+        this.courseNotesAndTextBooks = " ";
+        this.suggestedReadingsAndMaterials = " ";
+        this.noOfParticipation = " ";
+        this.noOfLabOrApplication = " ";
+        this.noOfFieldWork = " ";
+        this.noOfQuizOrStudioCritique = " ";
+        this.noOfHwOrAssignment = " ";
+        this.noOfPresentationOrJury = " ";
+        this.noOfProject = " ";
+        this.noOfPortfolio = " ";
+        this.noOfSeminarOrWorkshop = " ";
+        this.noOfOralExam = " ";
+        this.noOfMidterm = " ";
+        this.noOfFinalExam = " ";
+        this.noOfPresentationJury = " ";
+        this.noOfTotalWeight = " ";
+        this.weightOfParticipation = " ";
+        this.weightOfLabOrApplication = " ";
+        this.weightOfFieldWork = " ";
+        this.weightOfQuizOrStudioCritique = " ";
+        this.weightOfHwOrAssignment = " ";
+        this.weightOfPresentationOrJury = " ";
+        this.weightOfProject = " ";
+        this.weightOfPortfolio = " ";
+        this.weightOfSeminarOrWorkshop = " ";
+        this.weightOfOralExam = " ";
+        this.weightOfMidterm = " ";
+        this.weightOfFinalExam = " ";
+        this.weightOfPresentationJury = " ";
+        this.weightOfTotalWeight = " ";
+        this.LO1OfParticipation = " ";
+        this.LO1OfLabOrApplication = " ";
+        this.LO1OfFieldWork = " ";
+        this.LO1OfQuizOrStudioCritique = " ";
+        this.LO1OfHwOrAssignment = " ";
+        this.LO1OfPresentationOrJury = " ";
+        this.LO1OfProject = " ";
+        this.L01OfPortfolio=" ";
+        this.LO1OfSeminarOrWorkshop = " ";
+        this.LO1OfOralExam = " ";
+        this.LO1OfMidterm = " ";
+        this.LO1OfFinalExam = " ";
+        this.LO1OfPresentationJury = " ";
+        this.LO1OfTotalWeight = " ";
+        this.LO2OfParticipation = " ";
+        this.LO2OfLabOrApplication = " ";
+        this.LO2OfFieldWork = " ";
+        this.LO2OfQuizOrStudioCritique = " ";
+        this.LO2OfHwOrAssignment = " ";
+        this.LO2OfPresentationOrJury = " ";
+        this.LO2OfProject = " ";
+        this.L02OfPortfolio=" ";
+        this.LO2OfSeminarOrWorkshop = " ";
+        this.LO2OfOralExam = " ";
+        this.LO2OfMidterm = " ";
+        this.LO2OfFinalExam = " ";
+        this.LO2OfPresentationJury = " ";
+        this.LO2OfTotalWeight = " ";
+        this.LO3OfParticipation = " ";
+        this.LO3OfLabOrApplication = " ";
+        this.LO3OfFieldWork = " ";
+        this.LO3OfQuizOrStudioCritique = " ";
+        this.LO3OfHwOrAssignment = " ";
+        this.LO3OfPresentationOrJury = " ";
+        this.LO3OfProject = " ";
+        this.L03OfPortfolio=" ";
+        this.LO3OfSeminarOrWorkshop = " ";
+        this.LO3OfOralExam = " ";
+        this.LO3OfMidterm = " ";
+        this.LO3OfFinalExam = " ";
+        this.LO3OfPresentationJury = " ";
+        this.LO3OfTotalWeight = " ";
+        this.LO4OfParticipation = " ";
+        this.LO4OfLabOrApplication = " ";
+        this.LO4OfFieldWork = " ";
+        this.LO4OfQuizOrStudioCritique = " ";
+        this.LO4OfHwOrAssignment = " ";
+        this.LO4OfPresentationOrJury = " ";
+        this.LO4OfProject = " ";
+        this.L04OfPortfolio=" ";
+        this.LO4OfSeminarOrWorkshop = " ";
+        this.LO4OfOralExam = " ";
+        this.LO4OfMidterm = " ";
+        this.LO4OfFinalExam = " ";
+        this.LO4OfPresentationJury = " ";
+        this.LO4OfTotalWeight = " ";
+        this.LO5OfParticipation = " ";
+        this.LO5OfLabOrApplication = " ";
+        this.LO5OfFieldWork = " ";
+        this.LO5OfQuizOrStudioCritique = " ";
+        this.LO5OfHwOrAssignment = " ";
+        this.LO5OfPresentationOrJury = " ";
+        this.LO5OfProject = " ";
+        this.L05OfPortfolio=" ";
+        this.LO5OfSeminarOrWorkshop = " ";
+        this.LO5OfOralExam = " ";
+        this.LO5OfMidterm = " ";
+        this.LO5OfFinalExam = " ";
+        this.LO5OfPresentationJury = " ";
+        this.LO5OfTotalWeight = " ";
+        this.LO6OfParticipation = " ";
+        this.LO6OfLabOrApplication = " ";
+        this.LO6OfFieldWork = " ";
+        this.LO6OfQuizOrStudioCritique = " ";
+        this.LO6OfHwOrAssignment = " ";
+        this.LO6OfPresentationOrJury = " ";
+        this.LO6OfProject = " ";
+        this.L06OfPortfolio=" ";
+        this.LO6OfSeminarOrWorkshop = " ";
+        this.LO6OfOralExam = " ";
+        this.LO6OfMidterm = " ";
+        this.LO6OfFinalExam = " ";
+        this.LO6OfPresentationJury = " ";
+        this.LO6OfTotalWeight = " ";
+        this.LO7OfParticipation = " ";
+        this.LO7OfLabOrApplication = " ";
+        this.LO7OfFieldWork = " ";
+        this.LO7OfQuizOrStudioCritique = " ";
+        this.LO7OfHwOrAssignment = " ";
+        this.LO7OfPresentationOrJury = " ";
+        this.LO7OfProject = " ";
+        this.L07OfPortfolio=" ";
+        this.LO7OfSeminarOrWorkshop = " ";
+        this.LO7OfOralExam = " ";
+        this.LO7OfMidterm = " ";
+        this.LO7OfFinalExam = " ";
+        this.LO7OfPresentationJury = " ";
+        this.LO7OfTotalWeight = " ";
+        this.weightOfSemActivitiesOnFinalGrade1 = " ";
+        this.weightOfSemActivitiesOnFinalGrade2 = " ";
+        this.weightOfEndOfSemActivitiesOnFinalGrade1 = " ";
+        this.weightOfEndOfSemActivitiesOnFinalGrade2 = " ";
+        this.endOfTab4Total1 = " ";
+        this.endOfTab4Total2 = " ";
+        this.courseHoursDur = " ";
+        this.labOrApplicationHoursDur = " ";
+        this.studyHourseOutsideClass = " ";
+        this.fieldWork = " ";
+        this.quizOrStudioCritique = " ";
+        this.homeworkOrAssignment = " ";
+        this.presentationOrJury = " ";
+        this.project = " ";
+        this.portfolio = " ";
+        this.seminarOrWorkshop = " ";
+        this.oralExam = " ";
+        this.midterm = " ";
+        this.Final = " ";
+        this.TotalWorkload = " ";
+        this.courseHoursDur = " ";
+        this.labOrApplicationHoursDur = " ";
+        this.studyHourseOutsideClassDur =  " ";
+        this.fieldWorkDur =  " ";
+        this.quizOrStudioCritiqueDur =  " ";
+        this.homeworkOrAssignmentDur =  " ";
+        this.presentationOrJuryDur =  " ";
+        this.projectDur =  " ";
+        this.portfolioDur =  " ";
+        this.seminarOrWorkshopDur =  " ";
+        this.oralExamDur =  " ";
+        this.midtermDur =  " ";
+        this.FinalDur =  " ";
+        this.courseHoursWL =  " ";
+        this.labOrApplicationHourWL =  " ";
+        this.studyHourseOutsideClassWL =  " ";
+        this.fieldWorkWL =  " ";
+        this.quizOrStudioCritiqueWL =  " ";
+        this.homeworkOrAssignmentWL =  " ";
+        this.presentationOrJuryWL =  " ";
+        this.projectWL =  " ";
+        this.portfolioWL =  " ";
+        this.seminarOrWorkshopWL =  " ";
+        this.oralExamWL =  " ";
+        this.midtermWL =  " ";
+        this.FinalWL = " ";
+        this.programCompetenciesOutcome1 =  " ";
+        this.programCompetenciesOutcome1ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome1ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome1ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome1ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome1ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome1LOno =  " ";
+        this.programCompetenciesOutcome2 =  " ";
+        this.programCompetenciesOutcome2ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome2ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome2ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome2ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome2ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome2LOno =  " ";
+        this.programCompetenciesOutcome3 =  " ";
+        this.programCompetenciesOutcome3ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome3ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome3ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome3ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome3ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome3LOno =  " ";
+        this.programCompetenciesOutcome4 =  " ";
+        this.programCompetenciesOutcome4ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome4ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome4ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome4ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome4ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome4LOno =  " ";
+        this.programCompetenciesOutcome5 =  " ";
+        this.programCompetenciesOutcome5ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome5ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome5ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome5ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome5ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome5LOno =  " ";
+        this.programCompetenciesOutcome6 =  " ";
+        this.programCompetenciesOutcome6ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome6ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome6ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome6ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome6ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome6LOno =  " ";
+        this.programCompetenciesOutcome7 =  " ";
+        this.programCompetenciesOutcome7ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome7ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome7ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome7ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome7ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome7LOno =  " ";
+        this.programCompetenciesOutcome8 =  " ";
+        this.programCompetenciesOutcome8ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome8ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome8ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome8ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome8ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome8LOno =  " ";
+        this.programCompetenciesOutcome9 =  " ";
+        this.programCompetenciesOutcome9ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome9ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome9ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome9ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome9ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome9LOno =  " ";
+        this.programCompetenciesOutcome10 =  " ";
+        this.programCompetenciesOutcome10ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome10ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome10ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome10ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome10ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome10LOno =  " ";
+        this.programCompetenciesOutcome11 =  " ";
+        this.programCompetenciesOutcome11ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome11ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome11ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome11ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome11ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome11LOno =  " ";
+        this.programCompetenciesOutcome12 =  " ";
+        this.programCompetenciesOutcome12ContributionLevel1 =  " ";
+        this.programCompetenciesOutcome12ContributionLevel2 =  " ";
+        this.programCompetenciesOutcome12ContributionLevel3 =  " ";
+        this.programCompetenciesOutcome12ContributionLevel4 =  " ";
+        this.programCompetenciesOutcome12ContributionLevel5 =  " ";
+        this.programCompetenciesOutcome12LOno =  " ";
+        this.reasonForUpdate =  " ";
+    }
+    @Override
+    public String toString() {
+        return "CourseInformationx{" +
+                "version='" + version + '\'' + // now we made version an int it gives an error when reading.
+                ", courseName='" + courseName + '\'' +
+                ", code='" + code + '\'' +
+                ", season='" + season + '\'' +
+                ", theory='" + theory + '\'' +
+                ", lab='" + lab + '\'' +
+                ", localCredits='" + localCredits + '\'' +
+                ", ects='" + ects + '\'' +
+                ", prerequisities='" + prerequisities + '\'' +
+                ", courseLanguage='" + courseLanguage + '\'' +
+                ", courseType='" + courseType + '\'' +
+                ", courseLevel='" + courseLevel + '\'' +
+                ", modeOfDelivery='" + modeOfDelivery + '\'' +
+                ", teachingMethodsAndTechniques='" + teachingMethodsAndTechniques + '\'' +
+                ", courseCoordinator='" + courseCoordinator + '\'' +
+                ", courseLecturers='" + courseLecturers + '\'' +
+                ", courseAssistants='" + courseAssistants + '\'' +"\n" +
+                ", courseObjectives='" + courseObjectives + '\'' +
+                ", learningOutcomes='" + learningOutcomes + '\'' +
+                ", courseDescription='" + courseDescription + '\'' +
+                ", CCCoreCourse='" + CCCoreCourse + '\'' +
+                ", CCMajorAreaCourse='" + CCMajorAreaCourse + '\'' +
+                ", CCSupportiveCourse='" + CCSupportiveCourse + '\'' +
+                ", CCComAndManagementSkillsCourse='" + CCComAndManagementSkillsCourse + '\'' +
+                ", CCTransferableSkillCourse='" + CCTransferableSkillCourse + '\''+"\n" +
+                ", week1Subjects='" + week1Subjects + '\'' +
+                ", week2Subjects='" + week2Subjects + '\'' +
+                ", week3Subjects='" + week3Subjects + '\'' +
+                ", week4Subjects='" + week4Subjects + '\'' +
+                ", week5Subjects='" + week5Subjects + '\'' +
+                ", week6Subjects='" + week6Subjects + '\'' +
+                ", week7Subjects='" + week7Subjects + '\'' +
+                ", week8Subjects='" + week8Subjects + '\'' +
+                ", week9Subjects='" + week9Subjects + '\'' +
+                ", week10Subjects='" + week10Subjects + '\'' +
+                ", week11Subjects='" + week11Subjects + '\'' +
+                ", week12Subjects='" + week12Subjects + '\'' +
+                ", week13Subjects='" + week13Subjects + '\'' +
+                ", week14Subjects='" + week14Subjects + '\'' +
+                ", week15Subjects='" + week15Subjects + '\'' +
+                ", week1ReqMat='" + week1ReqMat + '\'' +
+                ", week2ReqMat='" + week2ReqMat + '\'' +
+                ", week3ReqMat='" + week3ReqMat + '\'' +
+                ", week4ReqMat='" + week4ReqMat + '\'' +
+                ", week5ReqMat='" + week5ReqMat + '\'' +
+                ", week6ReqMat='" + week6ReqMat + '\'' +
+                ", week7ReqMat='" + week7ReqMat + '\'' +
+                ", week8ReqMat='" + week8ReqMat + '\'' +
+                ", week9ReqMat='" + week9ReqMat + '\'' +
+                ", week10ReqMat='" + week10ReqMat + '\'' +
+                ", week11ReqMat='" + week11ReqMat + '\'' +
+                ", week12ReqMat='" + week12ReqMat + '\'' +
+                ", week13ReqMat='" + week13ReqMat + '\'' +
+                ", week14ReqMat='" + week14ReqMat + '\'' +
+                ", week15ReqMat='" + week15ReqMat + '\'' +"\n "+
+                ", courseNotesAndTextBooks='" + courseNotesAndTextBooks + '\'' +
+                ", suggestedReadingsAndMaterials='" + suggestedReadingsAndMaterials + '\'' +
+                ", noOfParticipation='" + noOfParticipation + '\'' +
+                ", noOfLabOrApplication='" + noOfLabOrApplication + '\'' +
+                ", noOfFieldWork='" + noOfFieldWork + '\'' +
+                ", noOfQuizOrStudioCritique='" + noOfQuizOrStudioCritique + '\'' +
+                ", noOfHwOrAssignment='" + noOfHwOrAssignment + '\'' +
+                ", noOfPresentationOrJury='" + noOfPresentationOrJury + '\'' +
+                ", noOfProject='" + noOfProject + '\'' +
+                ", noOfPortfolio='" + noOfPortfolio + '\'' +
+                ", noOfSeminarOrWorkshop='" + noOfSeminarOrWorkshop + '\'' +
+                ", noOfOralExam='" + noOfOralExam + '\'' +
+                ", noOfMidterm='" + noOfMidterm + '\'' +
+                ", noOfFinalExam='" + noOfFinalExam + '\'' +
+                ", noOfPresentationJury='" + noOfPresentationJury + '\'' +
+                ", noOfTotalWeight='" + noOfTotalWeight + '\'' +
+                ", weightOfParticipation='" + weightOfParticipation + '\'' +
+                ", weightOfLabOrApplication='" + weightOfLabOrApplication + '\'' +
+                ", weightOfFieldWork='" + weightOfFieldWork + '\'' +
+                ", weightOfQuizOrStudioCritique='" + weightOfQuizOrStudioCritique + '\'' +
+                ", weightOfHwOrAssignment='" + weightOfHwOrAssignment + '\'' +
+                ", weightOfPresentationOrJury='" + weightOfPresentationOrJury + '\'' +
+                ", weightOfProject='" + weightOfProject + '\'' +
+                ", weightOfPortfolio='" + weightOfPortfolio + '\'' +
+                ", weightOfSeminarOrWorkshop='" + weightOfSeminarOrWorkshop + '\'' +
+                ", weightOfOralExam='" + weightOfOralExam + '\'' +
+                ", weightOfMidterm='" + weightOfMidterm + '\'' +
+                ", weightOfFinalExam='" + weightOfFinalExam + '\'' +
+                ", weightOfPresentationJury='" + weightOfPresentationJury + '\'' +
+                ", weightOfTotalWeight='" + weightOfTotalWeight + '\'' +
+                ", LO1OfParticipation='" + LO1OfParticipation + '\'' +
+                ", LO1OfLabOrApplication='" + LO1OfLabOrApplication + '\'' +
+                ", LO1OfFieldWork='" + LO1OfFieldWork + '\'' +
+                ", LO1OfQuizOrStudioCritique='" + LO1OfQuizOrStudioCritique + '\'' +
+                ", LO1OfHwOrAssignment='" + LO1OfHwOrAssignment + '\'' +
+                ", LO1OfPresentationOrJury='" + LO1OfPresentationOrJury + '\'' +
+                ", LO1OfProject='" + LO1OfProject + '\'' +
+                ", LO1OfPortfolio='" + L01OfPortfolio + '\'' +
+                ", LO1OfSeminarOrWorkshop='" + LO1OfSeminarOrWorkshop + '\'' +
+                ", LO1OfOralExam='" + LO1OfOralExam + '\'' +
+                ", LO1OfMidterm='" + LO1OfMidterm + '\'' +
+                ", LO1OfFinalExam='" + LO1OfFinalExam + '\'' +
+                ", LO1OfPresentationJury='" + LO1OfPresentationJury + '\'' +
+                ", LO1OfTotalWeight='" + LO1OfTotalWeight + '\'' +
+                ", LO2OfParticipation='" + LO2OfParticipation + '\'' +
+                ", LO2OfLabOrApplication='" + LO2OfLabOrApplication + '\'' +
+                ", LO2OfFieldWork='" + LO2OfFieldWork + '\'' +
+                ", LO2OfQuizOrStudioCritique='" + LO2OfQuizOrStudioCritique + '\'' +
+                ", LO2OfHwOrAssignment='" + LO2OfHwOrAssignment + '\'' +
+                ", LO2OfPresentationOrJury='" + LO2OfPresentationOrJury + '\'' +
+                ", LO2OfProject='" + LO2OfProject + '\'' +
+                ", LO2OfPortfolio='" + L02OfPortfolio + '\'' +
+                ", LO2OfSeminarOrWorkshop='" + LO2OfSeminarOrWorkshop + '\'' +
+                ", LO2OfOralExam='" + LO2OfOralExam + '\'' +
+                ", LO2OfMidterm='" + LO2OfMidterm + '\'' +
+                ", LO2OfFinalExam='" + LO2OfFinalExam + '\'' +
+                ", LO2OfPresentationJury='" + LO2OfPresentationJury + '\'' +
+                ", LO2OfTotalWeight='" + LO2OfTotalWeight + '\'' +
+                ", LO3OfParticipation='" + LO3OfParticipation + '\'' +
+                ", LO3OfLabOrApplication='" + LO3OfLabOrApplication + '\'' +
+                ", LO3OfFieldWork='" + LO3OfFieldWork + '\'' +
+                ", LO3OfQuizOrStudioCritique='" + LO3OfQuizOrStudioCritique + '\'' +
+                ", LO3OfHwOrAssignment='" + LO3OfHwOrAssignment + '\'' +
+                ", LO3OfPresentationOrJury='" + LO3OfPresentationOrJury + '\'' +
+                ", LO3OfProject='" + LO3OfProject + '\'' +
+                ", LO3OfPortfolio='" + L03OfPortfolio + '\'' +
+                ", LO3OfSeminarOrWorkshop='" + LO3OfSeminarOrWorkshop + '\'' +
+                ", LO3OfOralExam='" + LO3OfOralExam + '\'' +
+                ", LO3OfMidterm='" + LO3OfMidterm + '\'' +
+                ", LO3OfFinalExam='" + LO3OfFinalExam + '\'' +
+                ", LO3OfPresentationJury='" + LO3OfPresentationJury + '\'' +
+                ", LO3OfTotalWeight='" + LO3OfTotalWeight + '\'' +
+                ", LO4OfParticipation='" + LO4OfParticipation + '\'' +
+                ", LO4OfLabOrApplication='" + LO4OfLabOrApplication + '\'' +
+                ", LO4OfFieldWork='" + LO4OfFieldWork + '\'' +
+                ", LO4OfQuizOrStudioCritique='" + LO4OfQuizOrStudioCritique + '\'' +
+                ", LO4OfHwOrAssignment='" + LO4OfHwOrAssignment + '\'' +
+                ", LO4OfPresentationOrJury='" + LO4OfPresentationOrJury + '\'' +
+                ", LO4OfProject='" + LO4OfProject + '\'' +
+                ", LO4OfPortfolio='" + L04OfPortfolio + '\'' +
+                ", LO4OfSeminarOrWorkshop='" + LO4OfSeminarOrWorkshop + '\'' +
+                ", LO4OfOralExam='" + LO4OfOralExam + '\'' +
+                ", LO4OfMidterm='" + LO4OfMidterm + '\'' +
+                ", LO4OfFinalExam='" + LO4OfFinalExam + '\'' +
+                ", LO4OfPresentationJury='" + LO4OfPresentationJury + '\'' +
+                ", LO4OfTotalWeight='" + LO4OfTotalWeight + '\'' +
+                ", LO5OfParticipation='" + LO5OfParticipation + '\'' +
+                ", LO5OfLabOrApplication='" + LO5OfLabOrApplication + '\'' +
+                ", LO5OfFieldWork='" + LO5OfFieldWork + '\'' +
+                ", LO5OfQuizOrStudioCritique='" + LO5OfQuizOrStudioCritique + '\'' +
+                ", LO5OfHwOrAssignment='" + LO5OfHwOrAssignment + '\'' +
+                ", LO5OfPresentationOrJury='" + LO5OfPresentationOrJury + '\'' +
+                ", LO5OfProject='" + LO5OfProject + '\'' +
+                ", LO5OfPortfolio='" + L05OfPortfolio + '\'' +
+                ", LO5OfSeminarOrWorkshop='" + LO5OfSeminarOrWorkshop + '\'' +
+                ", LO5OfOralExam='" + LO5OfOralExam + '\'' +
+                ", LO5OfMidterm='" + LO5OfMidterm + '\'' +
+                ", LO5OfFinalExam='" + LO5OfFinalExam + '\'' +
+                ", LO5OfPresentationJury='" + LO5OfPresentationJury + '\'' +
+                ", LO5OfTotalWeight='" + LO5OfTotalWeight + '\'' +
+                ", LO6OfParticipation='" + LO6OfParticipation + '\'' +
+                ", LO6OfLabOrApplication='" + LO6OfLabOrApplication + '\'' +
+                ", LO6OfFieldWork='" + LO6OfFieldWork + '\'' +
+                ", LO6OfQuizOrStudioCritique='" + LO6OfQuizOrStudioCritique + '\'' +
+                ", LO6OfHwOrAssignment='" + LO6OfHwOrAssignment + '\'' +
+                ", LO6OfPresentationOrJury='" + LO6OfPresentationOrJury + '\'' +
+                ", LO6OfProject='" + LO6OfProject + '\'' +
+                ", LO6OfPortfolio='" + L06OfPortfolio + '\'' +
+                ", LO6OfSeminarOrWorkshop='" + LO6OfSeminarOrWorkshop + '\'' +
+                ", LO6OfOralExam='" + LO6OfOralExam + '\'' +
+                ", LO6OfMidterm='" + LO6OfMidterm + '\'' +
+                ", LO6OfFinalExam='" + LO6OfFinalExam + '\'' +
+                ", LO6OfPresentationJury='" + LO6OfPresentationJury + '\'' +
+                ", LO6OfTotalWeight='" + LO6OfTotalWeight + '\'' +
+                ", LO7OfParticipation='" + LO7OfParticipation + '\'' +
+                ", LO7OfLabOrApplication='" + LO7OfLabOrApplication + '\'' +
+                ", LO7OfFieldWork='" + LO7OfFieldWork + '\'' +
+                ", LO7OfQuizOrStudioCritique='" + LO7OfQuizOrStudioCritique + '\'' +
+                ", LO7OfHwOrAssignment='" + LO7OfHwOrAssignment + '\'' +
+                ", LO7OfPresentationOrJury='" + LO7OfPresentationOrJury + '\'' +
+                ", LO7OfProject='" + LO7OfProject + '\'' +
+                ", LO7OfPortfolio='" + L07OfPortfolio + '\'' +
+                ", LO7OfSeminarOrWorkshop='" + LO7OfSeminarOrWorkshop + '\'' +
+                ", LO7OfOralExam='" + LO7OfOralExam + '\'' +
+                ", LO7OfMidterm='" + LO7OfMidterm + '\'' +
+                ", LO7OfFinalExam='" + LO7OfFinalExam + '\'' +
+                ", LO7OfPresentationJury='" + LO7OfPresentationJury + '\'' +
+                ", LO7OfTotalWeight='" + LO7OfTotalWeight + '\'' +
+                ", weightOfSemActivitiesOnFinalGrade1='" + weightOfSemActivitiesOnFinalGrade1 + '\'' +
+                ", weightOfSemActivitiesOnFinalGrade2='" + weightOfSemActivitiesOnFinalGrade2 + '\'' +
+                ", weightOfEndOfSemActivitiesOnFinalGrade1='" + weightOfEndOfSemActivitiesOnFinalGrade1 + '\'' +
+                ", weightOfEndOfSemActivitiesOnFinalGrade2='" + weightOfEndOfSemActivitiesOnFinalGrade2 + '\'' +
+                ", endOfTab4Total1='" + endOfTab4Total1 + '\'' +
+                ", endOfTab4Total2='" + endOfTab4Total2 + '\''+"\n" +
+                ", courseHours='" + courseHours + '\'' +
+                ", labOrApplicationHours='" + labOrApplicationHours + '\'' +
+                ", studyHourseOutsideClass='" + studyHourseOutsideClass + '\'' +
+                ", fieldWork='" + fieldWork + '\'' +
+                ", quizOrStudioCritique='" + quizOrStudioCritique + '\'' +
+                ", homeworkOrAssignment='" + homeworkOrAssignment + '\'' +
+                ", presentationOrJury='" + presentationOrJury + '\'' +
+                ", project='" + project + '\'' +
+                ", portfolio='" + portfolio + '\'' +
+                ", seminarOrWorkshop='" + seminarOrWorkshop + '\'' +
+                ", oralExam='" + oralExam + '\'' +
+                ", midterm='" + midterm + '\'' +
+                ", Final='" + Final + '\'' +
+                ", TotalWorkload='" + TotalWorkload + '\'' +
+                ", courseHoursDur='" + courseHoursDur + '\'' +
+                ", labOrApplicationHoursDur='" + labOrApplicationHoursDur + '\'' +
+                ", studyHourseOutsideClassDur='" + studyHourseOutsideClassDur + '\'' +
+                ", fieldWorkDur='" + fieldWorkDur + '\'' +
+                ", quizOrStudioCritiqueDur='" + quizOrStudioCritiqueDur + '\'' +
+                ", homeworkOrAssignmentDur='" + homeworkOrAssignmentDur + '\'' +
+                ", presentationOrJuryDur='" + presentationOrJuryDur + '\'' +
+                ", projectDur='" + projectDur + '\'' +
+                ", portfolioDur='" + portfolioDur + '\'' +
+                ", seminarOrWorkshopDur='" + seminarOrWorkshopDur + '\'' +
+                ", oralExamDur='" + oralExamDur + '\'' +
+                ", midtermDur='" + midtermDur + '\'' +
+                ", FinalDur='" + FinalDur + '\'' +
+                ", courseHoursWL='" + courseHoursWL + '\'' +
+                ", labOrApplicationHourWL='" + labOrApplicationHourWL + '\'' +
+                ", studyHourseOutsideClassWL='" + studyHourseOutsideClassWL + '\'' +
+                ", fieldWorkWL='" + fieldWorkWL + '\'' +
+                ", quizOrStudioCritiqueWL='" + quizOrStudioCritiqueWL + '\'' +
+                ", homeworkOrAssignmentWL='" + homeworkOrAssignmentWL + '\'' +
+                ", presentationOrJuryWL='" + presentationOrJuryWL + '\'' +
+                ", projectWL='" + projectWL + '\'' +
+                ", portfolioWL='" + portfolioWL + '\'' +
+                ", seminarOrWorkshopWL='" + seminarOrWorkshopWL + '\'' +
+                ", oralExamWL='" + oralExamWL + '\'' +
+                ", midtermWL='" + midtermWL + '\'' +
+                ", FinalWL='" + FinalWL + '\'' +
+                ", TotalWorkloadWL='" + TotalWorkloadWL + '\''+"\n" +
+                ", programCompetenciesOutcome1='" + programCompetenciesOutcome1 + '\'' +
+                ", programCompetenciesOutcome1ContributionLevel1='" + programCompetenciesOutcome1ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome1ContributionLevel2='" + programCompetenciesOutcome1ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome1ContributionLevel3='" + programCompetenciesOutcome1ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome1ContributionLevel4='" + programCompetenciesOutcome1ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome1ContributionLevel5='" + programCompetenciesOutcome1ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome1LOno='" + programCompetenciesOutcome1LOno + '\'' +
+                ", programCompetenciesOutcome2='" + programCompetenciesOutcome2 + '\'' +
+                ", programCompetenciesOutcome2ContributionLevel1='" + programCompetenciesOutcome2ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome2ContributionLevel2='" + programCompetenciesOutcome2ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome2ContributionLevel3='" + programCompetenciesOutcome2ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome2ContributionLevel4='" + programCompetenciesOutcome2ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome2ContributionLevel5='" + programCompetenciesOutcome2ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome2LOno='" + programCompetenciesOutcome2LOno + '\'' +
+                ", programCompetenciesOutcome3='" + programCompetenciesOutcome3 + '\'' +
+                ", programCompetenciesOutcome3ContributionLevel1='" + programCompetenciesOutcome3ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome3ContributionLevel2='" + programCompetenciesOutcome3ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome3ContributionLevel3='" + programCompetenciesOutcome3ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome3ContributionLevel4='" + programCompetenciesOutcome3ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome3ContributionLevel5='" + programCompetenciesOutcome3ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome3LOno='" + programCompetenciesOutcome3LOno + '\'' +
+                ", programCompetenciesOutcome4='" + programCompetenciesOutcome4 + '\'' +
+                ", programCompetenciesOutcome4ContributionLevel1='" + programCompetenciesOutcome4ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome4ContributionLevel2='" + programCompetenciesOutcome4ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome4ContributionLevel3='" + programCompetenciesOutcome4ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome4ContributionLevel4='" + programCompetenciesOutcome4ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome4ContributionLevel5='" + programCompetenciesOutcome4ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome4LOno='" + programCompetenciesOutcome4LOno + '\'' +
+                ", programCompetenciesOutcome5='" + programCompetenciesOutcome5 + '\'' +
+                ", programCompetenciesOutcome5ContributionLevel1='" + programCompetenciesOutcome5ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome5ContributionLevel2='" + programCompetenciesOutcome5ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome5ContributionLevel3='" + programCompetenciesOutcome5ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome5ContributionLevel4='" + programCompetenciesOutcome5ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome5ContributionLevel5='" + programCompetenciesOutcome5ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome5LOno='" + programCompetenciesOutcome5LOno + '\'' +
+                ", programCompetenciesOutcome6='" + programCompetenciesOutcome6 + '\'' +
+                ", programCompetenciesOutcome6ContributionLevel1='" + programCompetenciesOutcome6ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome6ContributionLevel2='" + programCompetenciesOutcome6ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome6ContributionLevel3='" + programCompetenciesOutcome6ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome6ContributionLevel4='" + programCompetenciesOutcome6ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome6ContributionLevel5='" + programCompetenciesOutcome6ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome6LOno='" + programCompetenciesOutcome6LOno + '\'' +
+                ", programCompetenciesOutcome7='" + programCompetenciesOutcome7 + '\'' +
+                ", programCompetenciesOutcome7ContributionLevel1='" + programCompetenciesOutcome7ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome7ContributionLevel2='" + programCompetenciesOutcome7ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome7ContributionLevel3='" + programCompetenciesOutcome7ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome7ContributionLevel4='" + programCompetenciesOutcome7ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome7ContributionLevel5='" + programCompetenciesOutcome7ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome7LOno='" + programCompetenciesOutcome7LOno + '\'' +
+                ", programCompetenciesOutcome8='" + programCompetenciesOutcome8 + '\'' +
+                ", programCompetenciesOutcome8ContributionLevel1='" + programCompetenciesOutcome8ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome8ContributionLevel2='" + programCompetenciesOutcome8ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome8ContributionLevel3='" + programCompetenciesOutcome8ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome8ContributionLevel4='" + programCompetenciesOutcome8ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome8ContributionLevel5='" + programCompetenciesOutcome8ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome8LOno='" + programCompetenciesOutcome8LOno + '\'' +
+                ", programCompetenciesOutcome9='" + programCompetenciesOutcome9 + '\'' +
+                ", programCompetenciesOutcome9ContributionLevel1='" + programCompetenciesOutcome9ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome9ContributionLevel2='" + programCompetenciesOutcome9ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome9ContributionLevel3='" + programCompetenciesOutcome9ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome9ContributionLevel4='" + programCompetenciesOutcome9ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome9ContributionLevel5='" + programCompetenciesOutcome9ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome9LOno='" + programCompetenciesOutcome9LOno + '\'' +
+                ", programCompetenciesOutcome10='" + programCompetenciesOutcome10 + '\'' +
+                ", programCompetenciesOutcome10ContributionLevel1='" + programCompetenciesOutcome10ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome10ContributionLevel2='" + programCompetenciesOutcome10ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome10ContributionLevel3='" + programCompetenciesOutcome10ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome10ContributionLevel4='" + programCompetenciesOutcome10ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome10ContributionLevel5='" + programCompetenciesOutcome10ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome10LOno='" + programCompetenciesOutcome10LOno + '\'' +
+                ", programCompetenciesOutcome11='" + programCompetenciesOutcome11 + '\'' +
+                ", programCompetenciesOutcome11ContributionLevel1='" + programCompetenciesOutcome11ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome11ContributionLevel2='" + programCompetenciesOutcome11ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome11ContributionLevel3='" + programCompetenciesOutcome11ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome11ContributionLevel4='" + programCompetenciesOutcome11ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome11ContributionLevel5='" + programCompetenciesOutcome11ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome11LOno='" + programCompetenciesOutcome11LOno + '\'' +
+                ", programCompetenciesOutcome12='" + programCompetenciesOutcome12 + '\'' +
+                ", programCompetenciesOutcome12ContributionLevel1='" + programCompetenciesOutcome12ContributionLevel1 + '\'' +
+                ", programCompetenciesOutcome12ContributionLevel2='" + programCompetenciesOutcome12ContributionLevel2 + '\'' +
+                ", programCompetenciesOutcome12ContributionLevel3='" + programCompetenciesOutcome12ContributionLevel3 + '\'' +
+                ", programCompetenciesOutcome12ContributionLevel4='" + programCompetenciesOutcome12ContributionLevel4 + '\'' +
+                ", programCompetenciesOutcome12ContributionLevel5='" + programCompetenciesOutcome12ContributionLevel5 + '\'' +
+                ", programCompetenciesOutcome12LOno='" + programCompetenciesOutcome12LOno + '\''+"\n" +
+                ", reasonForUpdate='" + reasonForUpdate + '\'' +
+                '}';
+    }
 }
