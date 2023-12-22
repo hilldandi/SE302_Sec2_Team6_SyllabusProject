@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class CourseInformationx {
 
@@ -396,6 +397,7 @@ public class CourseInformationx {
 
     //the data on the SAVE TAB
     public String reasonForUpdate;
+
 
 
 
@@ -3163,8 +3165,8 @@ public class CourseInformationx {
         this.weightOfEndOfSemActivitiesOnFinalGrade2 = " ";
         this.endOfTab4Total1 = " ";
         this.endOfTab4Total2 = " ";
-        this.courseHoursDur = " ";
-        this.labOrApplicationHoursDur = " ";
+        this.courseHours = " ";
+        this.labOrApplicationHours = " ";
         this.studyHourseOutsideClass = " ";
         this.fieldWork = " ";
         this.quizOrStudioCritique = " ";
@@ -3605,7 +3607,7 @@ public class CourseInformationx {
                 ", programCompetenciesOutcome12ContributionLevel3='" + programCompetenciesOutcome12ContributionLevel3 + '\'' +
                 ", programCompetenciesOutcome12ContributionLevel4='" + programCompetenciesOutcome12ContributionLevel4 + '\'' +
                 ", programCompetenciesOutcome12ContributionLevel5='" + programCompetenciesOutcome12ContributionLevel5 + '\'' +
-                ", programCompetenciesOutcome12LOno='" + programCompetenciesOutcome12LOno + '\''+"\n" +
+                ", programCompetenciesOutcome12LOno='" + programCompetenciesOutcome12LOno + '\'' +
                 ", reasonForUpdate='" + reasonForUpdate + '\'' +
                 '}';
     }
