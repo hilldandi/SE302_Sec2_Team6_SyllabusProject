@@ -23,6 +23,58 @@ import java.util.*;
 
 public class MainControllerX {
     @FXML
+    private Button OldVerMainButton;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    public void switchToScene1(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToScene2(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void trButtonA(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-viewTurkishVer2.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void engButtonA(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = ((Stage) ((Node) event.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void HelpButton(ActionEvent event) {
+
+        File file = new File("src/main/resources/com/example/projemizinilkguitasarimi/SE302 Design Document TeamNo_6.docx (1) (1).pdf");
+        if (file.exists()){
+            try{
+                new ProcessBuilder("cmd","/c",file.getAbsolutePath()).start();
+            }
+            catch (IOException e ){
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+    @FXML
     private Label file1;
     @FXML
     private Label file2;
