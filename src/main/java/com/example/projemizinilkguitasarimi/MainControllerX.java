@@ -22,6 +22,19 @@ import java.util.*;
 
 
 public class MainControllerX {
+
+    private static CourseInformationx readJsonFile(String filePath) {
+        try (FileReader fileReader = new FileReader(filePath)) {
+            return new Gson().fromJson(fileReader, CourseInformationx.class);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found. Creating a new object.");
+            return new CourseInformationx();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     @FXML
     private Button OldVerMainButton;
     private Stage stage;
