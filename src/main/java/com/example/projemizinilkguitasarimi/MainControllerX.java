@@ -62,10 +62,24 @@ public class MainControllerX implements Initializable {
     @FXML
     void SelectButton(ActionEvent event) {
         if (file1.getText().isBlank()){
-            file1.setText(ListView.getSelectionModel().getSelectedItem());
+            if (ListView.getSelectionModel().getSelectedItem()==null){
+                warning.setText("You have to select a course from the list");
+
+            }
+            else {
+                file1.setText(ListView.getSelectionModel().getSelectedItem());
+                warning.setText("");
+            }
         }
         else {
-            file2.setText(ListView.getSelectionModel().getSelectedItem());
+            if (ListView.getSelectionModel().getSelectedItem()==null){
+                warning.setText("You have to select a course from the list");
+
+            }
+            else {
+                file2.setText(ListView.getSelectionModel().getSelectedItem());
+                warning.setText("");
+            }
         }
 
     }
@@ -89,28 +103,28 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void CompareButtonA(ActionEvent event) throws IOException {
-        if (file1.getText()=="File 1"||file2.getText()=="File 2"){
+
+
+        if (file1.getText()==""||file2.getText()=="") {
             warning.setText("You have to select 2 courses");
+
         }
-        String firstFilePath=findMyPath(file1.getText());
-        String secondFilePath=findMyPath(file2.getText());
-        ArrayList<ObservableList>listOfList=CompareVersions(firstFilePath,secondFilePath);
-        switchToScene4(event);
-        ObservableList<String> tab1=FXCollections.observableArrayList(listOfList.get(0));
-        Tab1list.setItems(tab1);
-        ObservableList<String> tab2=FXCollections.observableArrayList(listOfList.get(1));
-        Tab2list.setItems(tab2);
-        ObservableList<String> tab3=FXCollections.observableArrayList(listOfList.get(2));
-        Tab3list.setItems(tab3);
-        ObservableList<String> tab4=FXCollections.observableArrayList(listOfList.get(3));
-        Tab4list.setItems(tab4);
-        ObservableList<String> tab5=FXCollections.observableArrayList(listOfList.get(4));
-        Tab5list.setItems(tab5);
-        ObservableList<String> tab6=FXCollections.observableArrayList(listOfList.get(5));
-        Tab6list.setItems(tab6);
+        else {
+
+            String firstFilePath=findMyPath(file1.getText());
+            String secondFilePath=findMyPath(file2.getText());
+            CompareVersions(firstFilePath,secondFilePath);
+            switchToScene4(event);
+
+
+        }
+
+
+
 
 
     }
+
 
     @FXML
     public void open(ActionEvent event) throws IOException {
@@ -257,6 +271,15 @@ public class MainControllerX implements Initializable {
         mainController.projecto5Text.setText(course.getLO5OfProject());
         mainController.projecto6Text.setText(course.getLO6OfProject());
         mainController.projecto7Text.setText(course.getLO7OfProject());
+        mainController.porfolioNumText.setText(course.getNoOfPortfolio());
+        mainController.portfolioWText.setText(course.getWeightOfPortfolio());
+        mainController.portfolioO1Text.setText(course.getL01OfPortfolio());
+        mainController.portfolioO2Tex.setText(course.getL02OfPortfolio());
+        mainController.portfolioO3Text.setText(course.getL03OfPortfolio());
+        mainController.portfolioO4Text.setText(course.getL04OfPortfolio());
+        mainController.portfolioO5Text.setText(course.getL05OfPortfolio());
+        mainController.portfolioO6Text.setText(course.getL06OfPortfolio());
+        mainController.portfolioO7Text.setText(course.getL07OfPortfolio());
         mainController.seminarNumText.setText(course.getNoOfSeminarOrWorkshop());
         mainController.seminarWText.setText(course.getWeightOfSeminarOrWorkshop());
         mainController.seminaro1Text.setText(course.getLO1OfSeminarOrWorkshop());
@@ -309,8 +332,10 @@ public class MainControllerX implements Initializable {
         mainController.totalG1.setText(course.getEndOfTab4Total1());
         mainController.totalG2.setText(course.getEndOfTab4Total2());
         // TAB5
+        mainController.cdNumText.setText(course.getCourseHours());
         mainController.cdText.setText(course.getCourseHoursDur());
         mainController.cwText.setText(course.getCourseHoursWL());
+        mainController.lNumText.setText(course.getLabOrApplicationHours());
         mainController.ldText.setText(course.getLabOrApplicationHoursDur());
         mainController.lwText.setText(course.getLabOrApplicationHourWL());
         mainController.snText.setText(course.getStudyHourseOutsideClass());
@@ -442,6 +467,7 @@ public class MainControllerX implements Initializable {
         //TAB SAVE
         mainController.SaveAllText.setText(course.getReasonForUpdate());
 
+
         stage.setScene(scene);
         stage.show();
 
@@ -450,6 +476,17 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void HelpButton(ActionEvent event) {
+
+        File file = new File("src/main/resources/com/example/projemizinilkguitasarimi/SE302 Design Document TeamNo_6.docx (1) (1).pdf");
+        if (file.exists()){
+            try{
+                new ProcessBuilder("cmd","/c",file.getAbsolutePath()).start();
+            }
+            catch (IOException e ){
+                e.printStackTrace();
+            }
+        }
+
 
     }
 
@@ -598,37 +635,37 @@ public class MainControllerX implements Initializable {
         }
     }
 
-    public ArrayList<ObservableList> CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
+    public void CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException {
 
         CourseInformationx oldVersion, newVersion;
         oldVersion = readJsonFile(filePathOfOldVersion);
         newVersion = readJsonFile(filePathOfNewVersion);
-        ArrayList<ObservableList> listOfList=new ArrayList<>();
+        ArrayList<ObservableList> listOfList = new ArrayList<>();
 
         //declaring String arrays of tabs to compare
         String[] oldtab1 = oldVersion.getTAB1();
         String[] newtab1 = newVersion.getTAB1();
-        ArrayList<String> vChanges1=new ArrayList<>();
+        ArrayList<String> vChanges1 = new ArrayList<>();
 
         String[] oldtab2 = oldVersion.getTAB2();
         String[] newtab2 = newVersion.getTAB2();
-        ArrayList<String> vChanges2=new ArrayList<>();
+        ArrayList<String> vChanges2 = new ArrayList<>();
 
         String[] oldtab3 = oldVersion.getTAB3();
         String[] newtab3 = newVersion.getTAB3();
-        ArrayList<String> vChanges3=new ArrayList<>();
+        ArrayList<String> vChanges3 = new ArrayList<>();
 
         String[] oldtab4 = oldVersion.getTAB4();
         String[] newtab4 = newVersion.getTAB4();
-        ArrayList<String> vChanges4=new ArrayList<>();
+        ArrayList<String> vChanges4 = new ArrayList<>();
 
         String[] oldtab5 = oldVersion.getTAB5();
         String[] newtab5 = newVersion.getTAB5();
-        ArrayList<String> vChanges5=new ArrayList<>();
+        ArrayList<String> vChanges5 = new ArrayList<>();
 
         String[] oldtab6 = oldVersion.getTAB6();
         String[] newtab6 = newVersion.getTAB6();
-        ArrayList<String> vChanges6=new ArrayList<>();
+        ArrayList<String> vChanges6 = new ArrayList<>();
 
         //comparing tabs. might implement Threads to make this process faster :)
         //has some unused variables inside.
@@ -639,7 +676,7 @@ public class MainControllerX implements Initializable {
         }
         for (int i = 0; i < oldtab2.length; i++) {
             if (!newtab2[i].equals(oldtab2[i])) {
-                vChanges1.add(newtab1[i]);
+                vChanges1.add(newtab2[i]);
             }
         }
         for (int i = 0; i < oldtab3.length; i++) {
@@ -649,195 +686,34 @@ public class MainControllerX implements Initializable {
         }
         for (int i = 0; i < oldtab4.length; i++) {
             if (!newtab4[i].equals(oldtab4[i])) {
-                vChanges4.add(newtab3[i]);
+                vChanges4.add(newtab4[i]);
             }
         }
         for (int i = 0; i < oldtab5.length; i++) {
             if (!newtab5[i].equals(oldtab5[i])) {
-                vChanges5.add(newtab3[i]);
+                vChanges5.add(newtab5[i]);
             }
         }
         for (int i = 0; i < oldtab6.length; i++) {
             if (!newtab6[i].equals(oldtab6[i])) {
-                vChanges6.add(newtab3[i]);
+                vChanges6.add(newtab6[i]);
             }
         }
-        ObservableList<String> tab1= FXCollections.observableArrayList(vChanges1);
+        ObservableList<String> tab1=FXCollections.observableArrayList(vChanges1);
         listOfList.add(tab1);
-        ObservableList<String> tab2= FXCollections.observableArrayList(vChanges2);
+        ObservableList<String> tab2=FXCollections.observableArrayList(vChanges2);
         listOfList.add(tab2);
-        ObservableList<String> tab3= FXCollections.observableArrayList(vChanges3);
+        ObservableList<String> tab3=FXCollections.observableArrayList(vChanges3);
         listOfList.add(tab3);
-        ObservableList<String> tab4= FXCollections.observableArrayList(vChanges4);
+        ObservableList<String> tab4=FXCollections.observableArrayList(vChanges4);
         listOfList.add(tab4);
-        ObservableList<String> tab5= FXCollections.observableArrayList(vChanges5);
+        ObservableList<String> tab5=FXCollections.observableArrayList(vChanges5);
         listOfList.add(tab5);
-        ObservableList<String> tab6= FXCollections.observableArrayList(vChanges6);
+        ObservableList<String> tab6=FXCollections.observableArrayList(vChanges6);
         listOfList.add(tab6);
-        return listOfList;
-        /* if all else fails
-                                    // comparing new version to old version's TAB1
-        if (!newVersion.getCourseName().equals(oldVersion.getCourseName())) {
 
-        }
 
-        if (!newVersion.getCode().equals(oldVersion.getCode())) {
-
-        }
-
-        if (!newVersion.getSeason().equals(oldVersion.getSeason())) {
-
-        }
-
-        if (!newVersion.getSeasonFall().equals(oldVersion.getSeasonFall())) {
-
-        }
-
-        if (!newVersion.getSeasonSpring().equals(oldVersion.getSeasonSpring())) {
-
-        }
-
-        if (!newVersion.getTheory().equals(oldVersion.getTheory())) {
-
-        }
-
-        if (!newVersion.getLab().equals(oldVersion.getLab())) {
-
-        }
-
-        if (!newVersion.getLocalCredits().equals(oldVersion.getLocalCredits())) {
-
-        }
-
-        if (!newVersion.getEcts().equals(oldVersion.getEcts())) {
-
-        }
-
-        if (!newVersion.getPrerequisities().equals(oldVersion.getPrerequisities())) {
-
-        }
-
-        if (!newVersion.getCourseLanguage().equals(oldVersion.getCourseLanguage())) {
-
-        }
-
-        if (!newVersion.getCourseType().equals(oldVersion.getCourseType())) {
-
-        }
-
-        if (!newVersion.getCourseLevel().equals(oldVersion.getCourseLevel())) {
-
-        }
-
-        if (!newVersion.getModeOfDelivery().equals(oldVersion.getModeOfDelivery())) {
-
-        }
-
-        if (!newVersion.getTeachingMethodsAndTechniques().equals(oldVersion.getTeachingMethodsAndTechniques())) {
-
-        }
-
-        if (!newVersion.getCourseCoordinator().equals(oldVersion.getCourseCoordinator())) {
-
-        }
-
-        if (!newVersion.getCourseLecturers().equals(oldVersion.getCourseLecturers())) {
-
-        }
-
-        if (!newVersion.getCourseAssistants().equals(oldVersion.getCourseAssistants())) {
-
-        }
-
-                        //TAB2
-
-                        //TAB3
-
-                        //TAB4
-
-                        //TAB5
-
-                        //TAB6
-
-                        //LAST TAB
-    */
-}
-
-    /*@Test
-    public void CompareVersionsTAB1Test(){// works
-        String filePathOfOldVersion = "Document/CE323/CE323.json";
-        String filePathOfNewVersion = "Document/CE323v1/CE323v1.json";
-        int noOfMismatches = 0;
-
-        CourseInformationx oldVersion, newVersion;
-        oldVersion = readJsonFile(filePathOfOldVersion);
-        newVersion = readJsonFile(filePathOfNewVersion);
-
-        //declaring String arrays of tabs to compare
-        String[] oldtab1 = oldVersion.getTAB1();
-        String[] newtab1 = newVersion.getTAB1();
-        String[] vChanges1 = new String[oldtab1.length]; // not sure if this works
-
-        String[] oldtab2 = oldVersion.getTAB2();
-        String[] newtab2 = newVersion.getTAB2();
-        String[] vChanges2 = new String[oldtab2.length];
-
-        String[] oldtab3 = oldVersion.getTAB3();
-        String[] newtab3 = newVersion.getTAB3();
-        String[] vChanges3 = new String[oldtab3.length];
-
-        String[] oldtab4 = oldVersion.getTAB4();
-        String[] newtab4 = newVersion.getTAB4();
-        String[] vChanges4 = new String[oldtab4.length];
-
-        String[] oldtab5 = oldVersion.getTAB5();
-        String[] newtab5 = newVersion.getTAB5();
-        String[] vChanges5 = new String[oldtab5.length];
-
-        String[] oldtab6 = oldVersion.getTAB6();
-        String[] newtab6 = newVersion.getTAB6();
-        String[] vChanges6 = new String[oldtab6.length];
-
-        //comparing tabs. might implement Threads to make this process faster :)
-        //has some unused variables inside.
-        for (int i = 0; i < oldtab1.length; i++) {
-            if (!newtab1[i].equals(oldtab1[i])) {
-                vChanges1[i] = newtab1[i];
-                noOfMismatches++;
-            }
-        }
-        for (int i = 0; i < oldtab2.length; i++) {
-            if (!newtab2[i].equals(oldtab2[i])) {
-                vChanges2[i] = newtab2[i];
-                noOfMismatches++;
-            }
-        }
-        for (int i = 0; i < oldtab3.length; i++) {
-            if (!newtab3[i].equals(oldtab3[i])) {
-                vChanges3[i] = newtab3[i];
-                noOfMismatches++;
-            }
-        }
-        for (int i = 0; i < oldtab4.length; i++) {
-            if (!newtab4[i].equals(oldtab4[i])) {
-                vChanges4[i] = newtab4[i];
-                noOfMismatches++;
-            }
-        }
-        for (int i = 0; i < oldtab5.length; i++) {
-            if (!newtab5[i].equals(oldtab5[i])) {
-                vChanges5[i] = newtab5[i];
-                noOfMismatches++;
-            }
-        }
-        for (int i = 0; i < oldtab6.length; i++) {
-            if (!newtab6[i].equals(oldtab6[i])) {
-                vChanges6[i] = newtab6[i];
-                noOfMismatches++;
-            }
-        }
-        assertEquals(noOfMismatches , 11); //there should be 12 missmatches
-    }*/
+    }
     @FXML
     public void CreateNewCourse()throws IOException {
         Gson gson = new Gson();
@@ -1043,6 +919,15 @@ public class MainControllerX implements Initializable {
             course.setLO5OfProject(projecto5Text.getText());
             course.setLO6OfProject(projecto6Text.getText());
             course.setLO7OfProject(projecto7Text.getText());
+            course.setNoOfPortfolio(porfolioNumText.getText());
+            course.setWeightOfPortfolio(portfolioWText.getText());
+            course.setL01OfPortfolio(portfolioO1Text.getText());
+            course.setL02OfPortfolio(portfolioO2Tex.getText());
+            course.setL03OfPortfolio(portfolioO3Text.getText());
+            course.setL04OfPortfolio(portfolioO4Text.getText());
+            course.setL05OfPortfolio(portfolioO5Text.getText());
+            course.setL06OfPortfolio(portfolioO6Text.getText());
+            course.setL07OfPortfolio(portfolioO7Text.getText());
             course.setNoOfSeminarOrWorkshop(seminarNumText.getText());
             course.setWeightOfSeminarOrWorkshop(seminarWText.getText());
             course.setLO1OfSeminarOrWorkshop(seminaro1Text.getText());
@@ -1126,8 +1011,10 @@ public class MainControllerX implements Initializable {
         };
             course.setTAB4(TAB4);
             //Tab5
+            course.setCourseHours(cdNumText.getText());
             course.setCourseHoursDur(cdText.getText());
             course.setCourseHoursWL(cwText.getText());
+            course.setLabOrApplicationHours(lNumText.getText());
             course.setLabOrApplicationHoursDur(ldText.getText());
             course.setLabOrApplicationHourWL(lwText.getText());
             course.setStudyHourseOutsideClass(snText.getText());
@@ -1301,7 +1188,6 @@ public class MainControllerX implements Initializable {
         }
 
 
-
     @FXML
     private Label file1;
     @FXML
@@ -1310,28 +1196,6 @@ public class MainControllerX implements Initializable {
     @FXML
     private Label warning;
 
-
-    @FXML
-    private javafx.scene.control.ListView<String> SaveTab;
-
-    @FXML
-    private javafx.scene.control.ListView<String> Tab1list = new ListView<>();
-
-    @FXML
-    private javafx.scene.control.ListView<String> Tab2list = new ListView<>();
-
-    @FXML
-    private javafx.scene.control.ListView<String> Tab3list= new ListView<>();
-
-    @FXML
-    private javafx.scene.control.ListView<String> Tab4list= new ListView<>();
-
-    @FXML
-    private javafx.scene.control.ListView<String> Tab5list= new ListView<>();
-
-    @FXML
-    private javafx.scene.control.ListView<String> Tab6list= new ListView<>();
-
     @FXML
     private javafx.scene.control.ListView<String> ListView = new ListView<>();
     @FXML
@@ -1339,9 +1203,6 @@ public class MainControllerX implements Initializable {
     static String[] Keys = new String[100];
     static String[] values = new String[100];
     static HashMap fileMap;
-
-
-
     @FXML
     private TextField searchText;
 
@@ -1627,10 +1488,32 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField CourseTypeText;
 
+    @FXML
+    private Label LO1Label;
+
+    @FXML
+    private Label LO2Label;
+
+    @FXML
+    private Label LO3Label;
+
+    @FXML
+    private Label LO4Label;
+
+    @FXML
+    private Label LO5Label;
+
+    @FXML
+    private Label LO6Label;
+
+    @FXML
+    private Label LO7Label;
 
     @FXML
     private TextField ModeOfDeleveryText;
 
+    @FXML
+    private Label ProjectLabel;
 
     @FXML
     private TextArea ProjectNumText;
@@ -1638,49 +1521,98 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextArea SaveAllText;
 
+    @FXML
+    private Label SubjectsLabel1;
+
+    @FXML
+    private Label WeekLabel1;
 
     @FXML
     private TextField applicationText2;
 
+    @FXML
+    private Label assesmentsLabel;
+
+    @FXML
+    private Label assistantLabel;
 
     @FXML
     private TextField assistantText;
 
     @FXML
+    private TextField cdNumText;
+
+    @FXML
     private TextField cdText;
 
+    @FXML
+    private Label codeLabel2;
 
     @FXML
     private TextField codeTextt2;
 
+    @FXML
+    private Label communicationandManagementSkillsCourseLabel;
 
     @FXML
     private TextField communicationandManagementSkillsCourseText;
 
+    @FXML
+    private Label coreCourseLabel;
 
     @FXML
     private TextField coreCourseText;
 
+    @FXML
+    private Label course5Label;
+
+    @FXML
+    private Label courseCategoryLabel;
+
+    @FXML
+    private Label courseLanguageLabel;
+
+    @FXML
+    private Label courseLevelLabel;
+
+    @FXML
+    private Label courseNameLabel2;
 
     @FXML
     private TextField courseNameText2;
 
+    @FXML
+    private Label courseNotesLabel;
 
     @FXML
     private TextArea courseNotesText;
 
+    @FXML
+    private Label courseTypeLabel;
+
+    @FXML
+    private Label courseWLabel;
+
+    @FXML
+    private Label coursecoordinatorLabel;
 
     @FXML
     private TextField coursecoordinatorText;
 
+    @FXML
+    private Label coursedescriptionLabel;
 
     @FXML
     private TextArea coursedescriptionText;
 
+    @FXML
+    private Label courselecturerLabel;
 
     @FXML
     private TextField courselecturerText;
 
+    @FXML
+    private Label courseobjectivesLabel;
 
     @FXML
     private TextArea courseobjectivesText;
@@ -1688,14 +1620,23 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField cwText;
 
+    @FXML
+    private Label durationWLabel;
+
+    @FXML
+    private Label ectsLabel2;
 
     @FXML
     private TextField ectsText2;
 
+    @FXML
+    private Label ectsWorkloadLabel;
 
     @FXML
     private Button engButton;
 
+    @FXML
+    private Label examWLabel;
 
     @FXML
     private TextField exdText;
@@ -1709,10 +1650,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField fdText;
 
+    @FXML
+    private Label fieldLabel;
 
     @FXML
     private TextArea fieldNumText;
 
+    @FXML
+    private Label fieldWLabel;
 
     @FXML
     private TextArea fieldWText;
@@ -1744,6 +1689,11 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField finalEGrade2;
 
+    @FXML
+    private Label finalEndGradeLabel;
+
+    @FXML
+    private Label finalLabel;
 
     @FXML
     private TextArea finalNumText;
@@ -1757,6 +1707,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField finalgrade2;
 
+    @FXML
+    private Label finalgradeLabel;
 
     @FXML
     private TextArea finalo1Text;
@@ -1785,6 +1737,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField fwText;
 
+    @FXML
+    private Label generalInfoLabel2;
 
     @FXML
     private TextField hdText;
@@ -1792,10 +1746,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField hnText;
 
+    @FXML
+    private Label homeworkLabel1;
 
     @FXML
     private TextArea homeworkNumText;
 
+    @FXML
+    private Label homeworkWLabel1;
 
     @FXML
     private TextArea homeworkWText;
@@ -1821,10 +1779,17 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextArea homeworko7Text;
 
+    @FXML
+    private Label hourLabel2;
+
+    @FXML
+    private Label hourLabel3;
 
     @FXML
     private TextField hwText;
 
+    @FXML
+    private Label juryLabel11;
 
     @FXML
     private TextArea juryNumText;
@@ -1853,10 +1818,20 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextArea juryo7Text;
 
+    @FXML
+    private TextField lNumText;
+
+    @FXML
+    private Label labLabel;
+
+    @FXML
+    private Label labLabel2;
 
     @FXML
     private TextArea labNumText;
 
+    @FXML
+    private Label labWLabel;
 
     @FXML
     private TextArea labWText;
@@ -1885,10 +1860,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField ldText;
 
+    @FXML
+    private Label learningoutcomesLabel;
 
     @FXML
     private TextArea learningoutcomesText;
 
+    @FXML
+    private Label localCredits;
 
     @FXML
     private TextField localCreditsText2;
@@ -1896,10 +1875,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField lwText;
 
+    @FXML
+    private Label majorAreaCourseLabel;
 
     @FXML
     private TextField majorAreaCourseText;
 
+    @FXML
+    private Label midWLabel1;
 
     @FXML
     private TextField middText;
@@ -1907,6 +1890,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField midnText;
 
+    @FXML
+    private Label midtermLabel;
 
     @FXML
     private TextArea midtermNum;
@@ -1938,10 +1923,23 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField midwText;
 
+    @FXML
+    private Label modelDeleveryLabel;
+
+    @FXML
+    private Label numberLabel;
+
+    @FXML
+    private Label numberWLabel;
+
+    @FXML
+    private Label oralLabel;
 
     @FXML
     private TextArea oralNumText;
 
+    @FXML
+    private Label oralWLabel;
 
     @FXML
     private TextArea oralWText;
@@ -1976,6 +1974,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField orwText;
 
+    @FXML
+    private Label outcomesLabel;
 
     @FXML
     private TextArea participateNumText;
@@ -2004,9 +2004,41 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextArea participateo7Text;
 
+    @FXML
+    private Label participationLabel;
+
+    @FXML
+    private TextArea porfolioNumText;
 
     @FXML
     private TextField portdText11;
+
+    @FXML
+    private Label portfolioLabel;
+
+    @FXML
+    private TextArea portfolioO1Text;
+
+    @FXML
+    private TextArea portfolioO2Tex;
+
+    @FXML
+    private TextArea portfolioO3Text;
+
+    @FXML
+    private TextArea portfolioO4Text;
+
+    @FXML
+    private TextArea portfolioO5Text;
+
+    @FXML
+    private TextArea portfolioO6Text;
+
+    @FXML
+    private TextArea portfolioO7Text;
+
+    @FXML
+    private TextArea portfolioWText;
 
     @FXML
     private TextField portnText;
@@ -2017,10 +2049,17 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField prdText;
 
+    @FXML
+    private Label prerequisitesLabel;
 
     @FXML
     private TextField prerequisitesText;
 
+    @FXML
+    private Label presentWLabel11;
+
+    @FXML
+    private Label presentWLabel1111;
 
     @FXML
     private TextField prnText;
@@ -2028,6 +2067,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField prodText;
 
+    @FXML
+    private Label projectWLabel;
 
     @FXML
     private TextArea projectWText;
@@ -2071,10 +2112,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextArea quiz7Text;
 
+    @FXML
+    private Label quizLabel;
 
     @FXML
     private TextArea quizNumText;
 
+    @FXML
+    private Label quizWLabel;
 
     @FXML
     private TextArea quizWText;
@@ -2148,6 +2193,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField sdText;
 
+    @FXML
+    private Label seasonLabel;
 
     @FXML
     private TextField seasontext;
@@ -2155,10 +2202,20 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField semdText;
 
+    @FXML
+    private Label semesterALabel;
+
+    @FXML
+    private Label semesterActivitiesLabel;
+
+    @FXML
+    private Label seminarLabel;
 
     @FXML
     private TextArea seminarNumText;
 
+    @FXML
+    private Label seminarWLabel;
 
     @FXML
     private TextArea seminarWText;
@@ -2193,6 +2250,8 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField snText;
 
+    @FXML
+    private Label studyWLabel;
 
     @FXML
     private TextArea subject1;
@@ -2239,10 +2298,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextArea subject91;
 
+    @FXML
+    private Label suggestedReadingsLabel;
 
     @FXML
     private TextArea suggestedReadingsText;
 
+    @FXML
+    private Label supportiveCourseLabel;
 
     @FXML
     private TextField supportiveCourseText;
@@ -2250,10 +2313,14 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField swText;
 
+    @FXML
+    private Label teachingMethodsLabel;
 
     @FXML
     private TextArea teachingMethodsText;
 
+    @FXML
+    private Label theoryLabel2;
 
     @FXML
     private TextField theoryText2;
@@ -2264,10 +2331,17 @@ public class MainControllerX implements Initializable {
     @FXML
     private TextField totalG2;
 
+    @FXML
+    private Label totalGLabel;
+
+    @FXML
+    private Label totalLabel;
 
     @FXML
     private TextArea totalNumText;
 
+    @FXML
+    private Label totalWLabel;
 
     @FXML
     private TextArea totalWWText;
@@ -2299,9 +2373,21 @@ public class MainControllerX implements Initializable {
     @FXML
     private Button trButton;
 
+    @FXML
+    private Label transferableSkillCourseLabel;
 
     @FXML
     private TextField transferableSkillCourseText;
-        }
+
+    @FXML
+    private Label weeklySubjectsLabel1;
+
+    @FXML
+    private Label weigthingLabel;
+
+    @FXML
+    private Label workloadWLabel;
+
+}
 
 

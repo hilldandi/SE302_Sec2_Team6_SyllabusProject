@@ -88,6 +88,7 @@ public class CourseInformationx {
     public String noOfHwOrAssignment;
     public String noOfPresentationOrJury;
     public String noOfProject;
+    public String noOfPortfolio;
     public String noOfSeminarOrWorkshop;
     public String noOfOralExam;
     public String noOfMidterm;
@@ -101,6 +102,8 @@ public class CourseInformationx {
     public String weightOfHwOrAssignment;
     public String weightOfPresentationOrJury;
     public String weightOfProject;
+    public String weightOfPortfolio;
+
     public String weightOfSeminarOrWorkshop;
     public String weightOfOralExam;
     public String weightOfMidterm;
@@ -115,6 +118,7 @@ public class CourseInformationx {
     public String LO1OfHwOrAssignment;
     public String LO1OfPresentationOrJury;
     public String LO1OfProject;
+    public String L01OfPortfolio;
     public String LO1OfSeminarOrWorkshop;
     public String LO1OfOralExam;
     public String LO1OfMidterm;
@@ -129,6 +133,7 @@ public class CourseInformationx {
     public String LO2OfHwOrAssignment;
     public String LO2OfPresentationOrJury;
     public String LO2OfProject;
+    public String L02OfPortfolio;
     public String LO2OfSeminarOrWorkshop;
     public String LO2OfOralExam;
     public String LO2OfMidterm;
@@ -143,6 +148,7 @@ public class CourseInformationx {
     public String LO3OfHwOrAssignment;
     public String LO3OfPresentationOrJury;
     public String LO3OfProject;
+    public String L03OfPortfolio;
     public String LO3OfSeminarOrWorkshop;
     public String LO3OfOralExam;
     public String LO3OfMidterm;
@@ -157,6 +163,7 @@ public class CourseInformationx {
     public String LO4OfHwOrAssignment;
     public String LO4OfPresentationOrJury;
     public String LO4OfProject;
+    public String L04OfPortfolio;
     public String LO4OfSeminarOrWorkshop;
     public String LO4OfOralExam;
     public String LO4OfMidterm;
@@ -171,6 +178,7 @@ public class CourseInformationx {
     public String LO5OfHwOrAssignment;
     public String LO5OfPresentationOrJury;
     public String LO5OfProject;
+    public String L05OfPortfolio;
     public String LO5OfSeminarOrWorkshop;
     public String LO5OfOralExam;
     public String LO5OfMidterm;
@@ -185,6 +193,7 @@ public class CourseInformationx {
     public String LO6OfHwOrAssignment;
     public String LO6OfPresentationOrJury;
     public String LO6OfProject;
+    public String L06OfPortfolio;
     public String LO6OfSeminarOrWorkshop;
     public String LO6OfOralExam;
     public String LO6OfMidterm;
@@ -199,6 +208,7 @@ public class CourseInformationx {
     public String LO7OfHwOrAssignment;
     public String LO7OfPresentationOrJury;
     public String LO7OfProject;
+    public String L07OfPortfolio;
     public String LO7OfSeminarOrWorkshop;
     public String LO7OfOralExam;
     public String LO7OfMidterm;
@@ -218,6 +228,9 @@ public class CourseInformationx {
 
 
     //the data on TAB5 ECTS / Workload Table
+
+    public String courseHours;
+    public String labOrApplicationHours;
     public String studyHourseOutsideClass;
     public String fieldWork;
     public String quizOrStudioCritique;
@@ -397,39 +410,39 @@ public class CourseInformationx {
     //list of data on tab4
     public String[] TAB4 = {
             noOfParticipation,noOfLabOrApplication,noOfFieldWork,noOfQuizOrStudioCritique,noOfHwOrAssignment,
-            noOfPresentationOrJury,noOfProject,noOfSeminarOrWorkshop,noOfOralExam,noOfMidterm,noOfFinalExam,
+            noOfPresentationOrJury,noOfProject,noOfPortfolio,noOfSeminarOrWorkshop,noOfOralExam,noOfMidterm,noOfFinalExam,
             noOfPresentationJury,noOfTotalWeight,
 
             weightOfParticipation,weightOfLabOrApplication,weightOfFieldWork,weightOfQuizOrStudioCritique,
-            weightOfHwOrAssignment,weightOfPresentationOrJury,weightOfProject,weightOfSeminarOrWorkshop,
+            weightOfHwOrAssignment,weightOfPresentationOrJury,weightOfProject,weightOfPortfolio,weightOfSeminarOrWorkshop,
             weightOfOralExam, weightOfMidterm,weightOfFinalExam,weightOfPresentationJury,weightOfTotalWeight,
 
             LO1OfParticipation,LO1OfLabOrApplication,LO1OfFieldWork,LO1OfQuizOrStudioCritique,LO1OfHwOrAssignment,
-            LO1OfPresentationOrJury,LO1OfProject,LO1OfSeminarOrWorkshop,LO1OfOralExam,LO1OfMidterm,LO1OfFinalExam,
+            LO1OfPresentationOrJury,LO1OfProject,L01OfPortfolio,LO1OfSeminarOrWorkshop,LO1OfOralExam,LO1OfMidterm,LO1OfFinalExam,
             LO1OfPresentationJury,LO1OfTotalWeight,
 
             LO2OfParticipation,LO2OfLabOrApplication,LO2OfFieldWork,LO2OfQuizOrStudioCritique,LO2OfHwOrAssignment,
-            LO2OfPresentationOrJury,LO2OfProject,LO2OfSeminarOrWorkshop,LO2OfOralExam,LO2OfMidterm,LO2OfFinalExam,
+            LO2OfPresentationOrJury,LO2OfProject,L02OfPortfolio,LO2OfSeminarOrWorkshop,LO2OfOralExam,LO2OfMidterm,LO2OfFinalExam,
             LO2OfPresentationJury,LO2OfTotalWeight,
 
             LO3OfParticipation,LO3OfLabOrApplication,LO3OfFieldWork,LO3OfQuizOrStudioCritique,LO3OfHwOrAssignment,
-            LO3OfPresentationOrJury,LO3OfProject,LO3OfSeminarOrWorkshop, LO3OfOralExam,LO3OfMidterm,LO3OfFinalExam,
+            LO3OfPresentationOrJury,LO3OfProject,L03OfPortfolio,LO3OfSeminarOrWorkshop, LO3OfOralExam,LO3OfMidterm,LO3OfFinalExam,
             LO3OfPresentationJury,LO3OfTotalWeight,
 
             LO4OfParticipation,LO4OfLabOrApplication,LO4OfFieldWork,LO4OfQuizOrStudioCritique,LO4OfHwOrAssignment,
-            LO4OfPresentationOrJury,LO4OfProject,LO4OfSeminarOrWorkshop,LO4OfOralExam,LO4OfMidterm,LO4OfFinalExam,
+            LO4OfPresentationOrJury,LO4OfProject,L04OfPortfolio,LO4OfSeminarOrWorkshop,LO4OfOralExam,LO4OfMidterm,LO4OfFinalExam,
             LO4OfPresentationJury,LO4OfTotalWeight,
 
             LO5OfParticipation,LO5OfLabOrApplication,LO5OfFieldWork,LO5OfQuizOrStudioCritique,LO5OfHwOrAssignment,
-            LO5OfPresentationOrJury,LO5OfProject,LO5OfSeminarOrWorkshop,LO5OfOralExam,LO5OfMidterm,LO5OfFinalExam,
+            LO5OfPresentationOrJury,LO5OfProject,L05OfPortfolio,LO5OfSeminarOrWorkshop,LO5OfOralExam,LO5OfMidterm,LO5OfFinalExam,
             LO5OfPresentationJury,LO5OfTotalWeight,
 
             LO6OfParticipation,LO6OfLabOrApplication,LO6OfFieldWork,LO6OfQuizOrStudioCritique,LO6OfHwOrAssignment,
-            LO6OfPresentationOrJury,LO6OfProject,LO6OfSeminarOrWorkshop,LO6OfOralExam,LO6OfMidterm,LO6OfFinalExam,
+            LO6OfPresentationOrJury,LO6OfProject,L06OfPortfolio,LO6OfSeminarOrWorkshop,LO6OfOralExam,LO6OfMidterm,LO6OfFinalExam,
             LO6OfPresentationJury,LO6OfTotalWeight,
 
             LO7OfParticipation,LO7OfLabOrApplication,LO7OfFieldWork,LO7OfQuizOrStudioCritique,LO7OfHwOrAssignment,
-            LO7OfPresentationOrJury,LO7OfProject,LO7OfSeminarOrWorkshop,LO7OfOralExam,LO7OfMidterm,LO7OfFinalExam,
+            LO7OfPresentationOrJury,LO7OfProject,L07OfPortfolio,LO7OfSeminarOrWorkshop,LO7OfOralExam,LO7OfMidterm,LO7OfFinalExam,
             LO7OfPresentationJury,LO7OfTotalWeight,
 
             weightOfSemActivitiesOnFinalGrade1,weightOfSemActivitiesOnFinalGrade2,
@@ -438,7 +451,7 @@ public class CourseInformationx {
     };
 
     //list of data on tab5
-    public String[] TAB5 = {studyHourseOutsideClass,fieldWork,quizOrStudioCritique,
+    public String[] TAB5 = {courseHours,labOrApplicationHours,studyHourseOutsideClass,fieldWork,quizOrStudioCritique,
             homeworkOrAssignment,presentationOrJury,project,portfolio,seminarOrWorkshop,oralExam,midterm,Final,
             TotalWorkload,courseHoursDur,labOrApplicationHoursDur,studyHourseOutsideClassDur,fieldWorkDur,
             quizOrStudioCritiqueDur,homeworkOrAssignmentDur,presentationOrJuryDur,projectDur,portfolioDur,
@@ -3065,6 +3078,94 @@ public class CourseInformationx {
         this.TAB6 = TAB6;
     }
 
+    public String getNoOfPortfolio() {
+        return noOfPortfolio;
+    }
+
+    public void setNoOfPortfolio(String noOfPortfolio) {
+        this.noOfPortfolio = noOfPortfolio;
+    }
+
+    public String getWeightOfPortfolio() {
+        return weightOfPortfolio;
+    }
+
+    public void setWeightOfPortfolio(String weightOfPortfolio) {
+        this.weightOfPortfolio = weightOfPortfolio;
+    }
+
+    public String getL01OfPortfolio() {
+        return L01OfPortfolio;
+    }
+
+    public void setL01OfPortfolio(String l01OfPortfolio) {
+        L01OfPortfolio = l01OfPortfolio;
+    }
+
+    public String getL02OfPortfolio() {
+        return L02OfPortfolio;
+    }
+
+    public void setL02OfPortfolio(String l02OfPortfolio) {
+        L02OfPortfolio = l02OfPortfolio;
+    }
+
+    public String getL03OfPortfolio() {
+        return L03OfPortfolio;
+    }
+
+    public void setL03OfPortfolio(String l03OfPortfolio) {
+        L03OfPortfolio = l03OfPortfolio;
+    }
+
+    public String getL04OfPortfolio() {
+        return L04OfPortfolio;
+    }
+
+    public void setL04OfPortfolio(String l04OfPortfolio) {
+        L04OfPortfolio = l04OfPortfolio;
+    }
+
+    public String getL05OfPortfolio() {
+        return L05OfPortfolio;
+    }
+
+    public void setL05OfPortfolio(String l05OfPortfolio) {
+        L05OfPortfolio = l05OfPortfolio;
+    }
+
+    public String getL06OfPortfolio() {
+        return L06OfPortfolio;
+    }
+
+    public void setL06OfPortfolio(String l06OfPortfolio) {
+        L06OfPortfolio = l06OfPortfolio;
+    }
+
+    public String getL07OfPortfolio() {
+        return L07OfPortfolio;
+    }
+
+    public void setL07OfPortfolio(String l07OfPortfolio) {
+        L07OfPortfolio = l07OfPortfolio;
+    }
+
+    public String getCourseHours() {
+        return courseHours;
+    }
+
+    public void setCourseHours(String courseHours) {
+        this.courseHours = courseHours;
+    }
+
+    public String getLabOrApplicationHours() {
+        return labOrApplicationHours;
+    }
+
+    public void setLabOrApplicationHours(String labOrApplicationHours) {
+        this.labOrApplicationHours = labOrApplicationHours;
+    }
+
     public CourseInformationx() {
         this.version = 0;
         this.courseName = " ";
@@ -3130,6 +3231,7 @@ public class CourseInformationx {
         this.noOfHwOrAssignment = " ";
         this.noOfPresentationOrJury = " ";
         this.noOfProject = " ";
+        this.noOfPortfolio = " ";
         this.noOfSeminarOrWorkshop = " ";
         this.noOfOralExam = " ";
         this.noOfMidterm = " ";
@@ -3143,6 +3245,7 @@ public class CourseInformationx {
         this.weightOfHwOrAssignment = " ";
         this.weightOfPresentationOrJury = " ";
         this.weightOfProject = " ";
+        this.weightOfPortfolio = " ";
         this.weightOfSeminarOrWorkshop = " ";
         this.weightOfOralExam = " ";
         this.weightOfMidterm = " ";
@@ -3156,6 +3259,7 @@ public class CourseInformationx {
         this.LO1OfHwOrAssignment = " ";
         this.LO1OfPresentationOrJury = " ";
         this.LO1OfProject = " ";
+        this.L01OfPortfolio=" ";
         this.LO1OfSeminarOrWorkshop = " ";
         this.LO1OfOralExam = " ";
         this.LO1OfMidterm = " ";
@@ -3169,6 +3273,7 @@ public class CourseInformationx {
         this.LO2OfHwOrAssignment = " ";
         this.LO2OfPresentationOrJury = " ";
         this.LO2OfProject = " ";
+        this.L02OfPortfolio=" ";
         this.LO2OfSeminarOrWorkshop = " ";
         this.LO2OfOralExam = " ";
         this.LO2OfMidterm = " ";
@@ -3182,6 +3287,7 @@ public class CourseInformationx {
         this.LO3OfHwOrAssignment = " ";
         this.LO3OfPresentationOrJury = " ";
         this.LO3OfProject = " ";
+        this.L03OfPortfolio=" ";
         this.LO3OfSeminarOrWorkshop = " ";
         this.LO3OfOralExam = " ";
         this.LO3OfMidterm = " ";
@@ -3195,6 +3301,7 @@ public class CourseInformationx {
         this.LO4OfHwOrAssignment = " ";
         this.LO4OfPresentationOrJury = " ";
         this.LO4OfProject = " ";
+        this.L04OfPortfolio=" ";
         this.LO4OfSeminarOrWorkshop = " ";
         this.LO4OfOralExam = " ";
         this.LO4OfMidterm = " ";
@@ -3208,6 +3315,7 @@ public class CourseInformationx {
         this.LO5OfHwOrAssignment = " ";
         this.LO5OfPresentationOrJury = " ";
         this.LO5OfProject = " ";
+        this.L05OfPortfolio=" ";
         this.LO5OfSeminarOrWorkshop = " ";
         this.LO5OfOralExam = " ";
         this.LO5OfMidterm = " ";
@@ -3221,6 +3329,7 @@ public class CourseInformationx {
         this.LO6OfHwOrAssignment = " ";
         this.LO6OfPresentationOrJury = " ";
         this.LO6OfProject = " ";
+        this.L06OfPortfolio=" ";
         this.LO6OfSeminarOrWorkshop = " ";
         this.LO6OfOralExam = " ";
         this.LO6OfMidterm = " ";
@@ -3234,6 +3343,7 @@ public class CourseInformationx {
         this.LO7OfHwOrAssignment = " ";
         this.LO7OfPresentationOrJury = " ";
         this.LO7OfProject = " ";
+        this.L07OfPortfolio=" ";
         this.LO7OfSeminarOrWorkshop = " ";
         this.LO7OfOralExam = " ";
         this.LO7OfMidterm = " ";
@@ -3246,6 +3356,8 @@ public class CourseInformationx {
         this.weightOfEndOfSemActivitiesOnFinalGrade2 = " ";
         this.endOfTab4Total1 = " ";
         this.endOfTab4Total2 = " ";
+        this.courseHoursDur = " ";
+        this.labOrApplicationHoursDur = " ";
         this.studyHourseOutsideClass = " ";
         this.fieldWork = " ";
         this.quizOrStudioCritique = " ";
@@ -3437,6 +3549,7 @@ public class CourseInformationx {
                 ", noOfHwOrAssignment='" + noOfHwOrAssignment + '\'' +
                 ", noOfPresentationOrJury='" + noOfPresentationOrJury + '\'' +
                 ", noOfProject='" + noOfProject + '\'' +
+                ", noOfPortfolio='" + noOfPortfolio + '\'' +
                 ", noOfSeminarOrWorkshop='" + noOfSeminarOrWorkshop + '\'' +
                 ", noOfOralExam='" + noOfOralExam + '\'' +
                 ", noOfMidterm='" + noOfMidterm + '\'' +
@@ -3450,6 +3563,7 @@ public class CourseInformationx {
                 ", weightOfHwOrAssignment='" + weightOfHwOrAssignment + '\'' +
                 ", weightOfPresentationOrJury='" + weightOfPresentationOrJury + '\'' +
                 ", weightOfProject='" + weightOfProject + '\'' +
+                ", weightOfPortfolio='" + weightOfPortfolio + '\'' +
                 ", weightOfSeminarOrWorkshop='" + weightOfSeminarOrWorkshop + '\'' +
                 ", weightOfOralExam='" + weightOfOralExam + '\'' +
                 ", weightOfMidterm='" + weightOfMidterm + '\'' +
@@ -3463,6 +3577,7 @@ public class CourseInformationx {
                 ", LO1OfHwOrAssignment='" + LO1OfHwOrAssignment + '\'' +
                 ", LO1OfPresentationOrJury='" + LO1OfPresentationOrJury + '\'' +
                 ", LO1OfProject='" + LO1OfProject + '\'' +
+                ", LO1OfPortfolio='" + L01OfPortfolio + '\'' +
                 ", LO1OfSeminarOrWorkshop='" + LO1OfSeminarOrWorkshop + '\'' +
                 ", LO1OfOralExam='" + LO1OfOralExam + '\'' +
                 ", LO1OfMidterm='" + LO1OfMidterm + '\'' +
@@ -3476,6 +3591,7 @@ public class CourseInformationx {
                 ", LO2OfHwOrAssignment='" + LO2OfHwOrAssignment + '\'' +
                 ", LO2OfPresentationOrJury='" + LO2OfPresentationOrJury + '\'' +
                 ", LO2OfProject='" + LO2OfProject + '\'' +
+                ", LO2OfPortfolio='" + L02OfPortfolio + '\'' +
                 ", LO2OfSeminarOrWorkshop='" + LO2OfSeminarOrWorkshop + '\'' +
                 ", LO2OfOralExam='" + LO2OfOralExam + '\'' +
                 ", LO2OfMidterm='" + LO2OfMidterm + '\'' +
@@ -3489,6 +3605,7 @@ public class CourseInformationx {
                 ", LO3OfHwOrAssignment='" + LO3OfHwOrAssignment + '\'' +
                 ", LO3OfPresentationOrJury='" + LO3OfPresentationOrJury + '\'' +
                 ", LO3OfProject='" + LO3OfProject + '\'' +
+                ", LO3OfPortfolio='" + L03OfPortfolio + '\'' +
                 ", LO3OfSeminarOrWorkshop='" + LO3OfSeminarOrWorkshop + '\'' +
                 ", LO3OfOralExam='" + LO3OfOralExam + '\'' +
                 ", LO3OfMidterm='" + LO3OfMidterm + '\'' +
@@ -3502,6 +3619,7 @@ public class CourseInformationx {
                 ", LO4OfHwOrAssignment='" + LO4OfHwOrAssignment + '\'' +
                 ", LO4OfPresentationOrJury='" + LO4OfPresentationOrJury + '\'' +
                 ", LO4OfProject='" + LO4OfProject + '\'' +
+                ", LO4OfPortfolio='" + L04OfPortfolio + '\'' +
                 ", LO4OfSeminarOrWorkshop='" + LO4OfSeminarOrWorkshop + '\'' +
                 ", LO4OfOralExam='" + LO4OfOralExam + '\'' +
                 ", LO4OfMidterm='" + LO4OfMidterm + '\'' +
@@ -3515,6 +3633,7 @@ public class CourseInformationx {
                 ", LO5OfHwOrAssignment='" + LO5OfHwOrAssignment + '\'' +
                 ", LO5OfPresentationOrJury='" + LO5OfPresentationOrJury + '\'' +
                 ", LO5OfProject='" + LO5OfProject + '\'' +
+                ", LO5OfPortfolio='" + L05OfPortfolio + '\'' +
                 ", LO5OfSeminarOrWorkshop='" + LO5OfSeminarOrWorkshop + '\'' +
                 ", LO5OfOralExam='" + LO5OfOralExam + '\'' +
                 ", LO5OfMidterm='" + LO5OfMidterm + '\'' +
@@ -3528,6 +3647,7 @@ public class CourseInformationx {
                 ", LO6OfHwOrAssignment='" + LO6OfHwOrAssignment + '\'' +
                 ", LO6OfPresentationOrJury='" + LO6OfPresentationOrJury + '\'' +
                 ", LO6OfProject='" + LO6OfProject + '\'' +
+                ", LO6OfPortfolio='" + L06OfPortfolio + '\'' +
                 ", LO6OfSeminarOrWorkshop='" + LO6OfSeminarOrWorkshop + '\'' +
                 ", LO6OfOralExam='" + LO6OfOralExam + '\'' +
                 ", LO6OfMidterm='" + LO6OfMidterm + '\'' +
@@ -3541,6 +3661,7 @@ public class CourseInformationx {
                 ", LO7OfHwOrAssignment='" + LO7OfHwOrAssignment + '\'' +
                 ", LO7OfPresentationOrJury='" + LO7OfPresentationOrJury + '\'' +
                 ", LO7OfProject='" + LO7OfProject + '\'' +
+                ", LO7OfPortfolio='" + L07OfPortfolio + '\'' +
                 ", LO7OfSeminarOrWorkshop='" + LO7OfSeminarOrWorkshop + '\'' +
                 ", LO7OfOralExam='" + LO7OfOralExam + '\'' +
                 ", LO7OfMidterm='" + LO7OfMidterm + '\'' +
@@ -3553,6 +3674,8 @@ public class CourseInformationx {
                 ", weightOfEndOfSemActivitiesOnFinalGrade2='" + weightOfEndOfSemActivitiesOnFinalGrade2 + '\'' +
                 ", endOfTab4Total1='" + endOfTab4Total1 + '\'' +
                 ", endOfTab4Total2='" + endOfTab4Total2 + '\''+"\n" +
+                ", courseHours='" + courseHours + '\'' +
+                ", labOrApplicationHours='" + labOrApplicationHours + '\'' +
                 ", studyHourseOutsideClass='" + studyHourseOutsideClass + '\'' +
                 ", fieldWork='" + fieldWork + '\'' +
                 ", quizOrStudioCritique='" + quizOrStudioCritique + '\'' +
