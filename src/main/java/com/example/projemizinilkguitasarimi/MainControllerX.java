@@ -440,7 +440,7 @@ public class MainControllerX implements Initializable {
     @FXML
     void HelpButton(ActionEvent event) {
 
-        File file = new File("src/main/resources/com/example/projemizinilkguitasarimi/Lab 4_2(1).pdf");
+        File file = new File("src/main/resources/com/example/projemizinilkguitasarimi/Help Document.pdf");
         if (file.exists()){
             try{
                 new ProcessBuilder("cmd","/c",file.getAbsolutePath()).start();
