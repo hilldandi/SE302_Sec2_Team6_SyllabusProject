@@ -888,38 +888,44 @@ public class MainControllerX implements Initializable {
             key1 = iterator1.next();
             System.out.println(newHashTab1.get(key1));
             System.out.println(oldHashTab1.get(key1));
-            if (!Objects.equals(newHashTab1.get(key1), oldHashTab1.get(key1))) {
+            if(newHashTab1.get(key1).equals("")){break;}
+            else if (!Objects.equals(newHashTab1.get(key1), oldHashTab1.get(key1))) {
                 vChanges1.add(key1 + ": " + newHashTab1.get(key1));
             }
         }
         while(iterator2.hasNext()){
             key2 = iterator2.next();
-            if (!Objects.equals(newHashTab2.get(key2), oldHashTab2.get(key2))) {
+            if(newHashTab2.get(key2).equals("")){break;}
+            else if (!Objects.equals(newHashTab2.get(key2), oldHashTab2.get(key2))) {
                 vChanges2.add(key2 + ": " + newHashTab2.get(key2));
             }
         }
         while(iterator3.hasNext()){
             key3 = iterator3.next();
-            if (!Objects.equals(newHashTab3.get(key3), oldHashTab3.get(key3))) {
+            if(newHashTab3.get(key3).equals("")){break;}
+            else if (!Objects.equals(newHashTab3.get(key3), oldHashTab3.get(key3))) {
                 vChanges3.add(key3 + ": " + newHashTab3.get(key3));
             }
         }
 
         while(iterator4.hasNext()){
             key4 = iterator4.next();
-            if (!Objects.equals(newHashTab4.get(key4), oldHashTab4.get(key4))) {
+            if(newHashTab4.get(key4).equals("")){break;}
+            else if (!Objects.equals(newHashTab4.get(key4), oldHashTab4.get(key4))) {
                 vChanges4.add(key4 + ": " + newHashTab4.get(key4));
             }
         }
         while(iterator5.hasNext()){
             key5 = iterator5.next();
-            if (!Objects.equals(newHashTab5.get(key5), oldHashTab5.get(key5))) {
+            if(newHashTab5.get(key5).equals("")){break;}
+            else if (!Objects.equals(newHashTab5.get(key5), oldHashTab5.get(key5))) {
                 vChanges5.add(key5 + ": " + newHashTab5.get(key5));
             }
         }
         while(iterator6.hasNext()){
             key6 = iterator6.next();
-            if (!Objects.equals(newHashTab6.get(key6), oldHashTab6.get(key6))) {
+            if(newHashTab6.get(key6).equals("")){break;}
+            else if (!Objects.equals(newHashTab6.get(key6), oldHashTab6.get(key6))) {
                 vChanges6.add(key6 + ": " + newHashTab6.get(key6));
             }
         }
