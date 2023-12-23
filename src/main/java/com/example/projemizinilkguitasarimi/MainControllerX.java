@@ -849,31 +849,19 @@ public class MainControllerX implements Initializable {
 
         //filling old versions hashmap --- use threads
         oldHashTab1 = filloldTab1Hash(oldVersion);
-        //TAB1Hash.clear();
         oldHashTab2 = filloldTab2Hash(oldVersion);
-        //TAB2Hash.clear();
         oldHashTab3 = filloldTab3Hash(oldVersion);
-        //TAB3Hash.clear();
         oldHashTab4 = filloldTab4Hash(oldVersion);
-        //TAB4Hash.clear();
         oldHashTab5 = filloldTab5Hash(oldVersion);
-        //TAB5Hash.clear();
         oldHashTab6 = filloldTab6Hash(oldVersion);
-        //TAB6Hash.clear();
 
         //filling new versions hashmap
         newHashTab1 = fillnewTab1Hash(newVersion);
-        //TAB1Hash.clear();
         newHashTab2 = fillnewTab2Hash(newVersion);
-        //TAB2Hash.clear();
         newHashTab3 = fillnewTab3Hash(newVersion);
-        //TAB3Hash.clear();
         newHashTab4 = fillnewTab4Hash(newVersion);
-        //TAB4Hash.clear();
-        newHashTab5 = fillnewTab5Hash(newVersion);
-        //TAB5Hash.clear();
+        newHashTab5 = fillnewTab5Hash(newVersion);;
         newHashTab6 = fillnewTab6Hash(newVersion);
-        //TAB6Hash.clear();
 
         //iterators & keys for their respective hashmaps
         Iterator<String> iterator1 = newHashTab1.keySet().iterator();
@@ -900,39 +888,39 @@ public class MainControllerX implements Initializable {
             key1 = iterator1.next();
             System.out.println(newHashTab1.get(key1));
             System.out.println(oldHashTab1.get(key1));
-            if(newHashTab1.get(key1)!= oldHashTab1.get(key1)){
-                vChanges1.add((key1+": "+newHashTab1.get(key1)));
+            if (!Objects.equals(newHashTab1.get(key1), oldHashTab1.get(key1))) {
+                vChanges1.add(key1 + ": " + newHashTab1.get(key1));
             }
         }
         while(iterator2.hasNext()){
             key2 = iterator2.next();
-            if(newHashTab2.get(key2) != oldHashTab2.get(key2)){
-                vChanges2.add((key2+": "+newHashTab2.get(key2)));
+            if (!Objects.equals(newHashTab2.get(key2), oldHashTab2.get(key2))) {
+                vChanges2.add(key2 + ": " + newHashTab2.get(key2));
             }
         }
         while(iterator3.hasNext()){
             key3 = iterator3.next();
-            if(newHashTab3.get(key3) != oldHashTab3.get(key3)){
-                vChanges3.add((key3+": "+newHashTab3.get(key3)));
+            if (!Objects.equals(newHashTab3.get(key3), oldHashTab3.get(key3))) {
+                vChanges3.add(key3 + ": " + newHashTab3.get(key3));
             }
         }
 
         while(iterator4.hasNext()){
             key4 = iterator4.next();
-            if(newHashTab4.get(key4) != oldHashTab4.get(key4)){
-                vChanges4.add((key4+": "+newHashTab4.get(key4)));
+            if (!Objects.equals(newHashTab4.get(key4), oldHashTab4.get(key4))) {
+                vChanges4.add(key4 + ": " + newHashTab4.get(key4));
             }
         }
         while(iterator5.hasNext()){
             key5 = iterator5.next();
-            if(newHashTab5.get(key5) != oldHashTab5.get(key5)){
-                vChanges5.add((key5+": "+newHashTab5.get(key5)));
+            if (!Objects.equals(newHashTab5.get(key5), oldHashTab5.get(key5))) {
+                vChanges5.add(key5 + ": " + newHashTab5.get(key5));
             }
         }
         while(iterator6.hasNext()){
             key6 = iterator6.next();
-            if(newHashTab6.get(key6) != oldHashTab6.get(key6)){
-                vChanges6.add((key6+": "+newHashTab6.get(key6)));
+            if (!Objects.equals(newHashTab6.get(key6), oldHashTab6.get(key6))) {
+                vChanges6.add(key6 + ": " + newHashTab6.get(key6));
             }
         }
         System.out.println(vChanges1);
@@ -1181,162 +1169,109 @@ public class MainControllerX implements Initializable {
         return oldTAB5Hash;
     }
     public HashMap filloldTab6Hash(CourseInformationx course){
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1(), "ProgramCompetenciesOutcome1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel1(),
-                "ProgramCompetenciesOutcome1ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel2(),
-                "ProgramCompetenciesOutcome1ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel3(),
-                "ProgramCompetenciesOutcome1ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel4(),
-                "ProgramCompetenciesOutcome1ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel5(),
-                "ProgramCompetenciesOutcome1ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1LOno(), "ProgramCompetenciesOutcome1LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2(), "ProgramCompetenciesOutcome2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel1(),
-                "ProgramCompetenciesOutcome2ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel2(),
-                "ProgramCompetenciesOutcome2ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel3(),
-                "ProgramCompetenciesOutcome2ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel4(),
-                "ProgramCompetenciesOutcome2ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel5(),
-                "ProgramCompetenciesOutcome2ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2LOno(), "ProgramCompetenciesOutcome2LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3(), "ProgramCompetenciesOutcome3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel1(),
-                "ProgramCompetenciesOutcome3ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel2(),
-                "ProgramCompetenciesOutcome3ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel3(),
-                "ProgramCompetenciesOutcome3ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel4(),
-                "ProgramCompetenciesOutcome3ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel5(),
-                "ProgramCompetenciesOutcome3ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3LOno(), "ProgramCompetenciesOutcome3LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4(), "ProgramCompetenciesOutcome4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel1(),
-                "ProgramCompetenciesOutcome4ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel2(),
-                "ProgramCompetenciesOutcome4ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel3(),
-                "ProgramCompetenciesOutcome4ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel4(),
-                "ProgramCompetenciesOutcome4ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel5(),
-                "ProgramCompetenciesOutcome4ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4LOno(), "ProgramCompetenciesOutcome4LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5(), "ProgramCompetenciesOutcome5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel1(),
-                "ProgramCompetenciesOutcome5ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel2(),
-                "ProgramCompetenciesOutcome5ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel3(),
-                "ProgramCompetenciesOutcome5ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel4(),
-                "ProgramCompetenciesOutcome5ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel5(),
-                "ProgramCompetenciesOutcome5ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5LOno(), "ProgramCompetenciesOutcome5LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6(), "ProgramCompetenciesOutcome6");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel1(),
-                "ProgramCompetenciesOutcome6ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel2(),
-                "ProgramCompetenciesOutcome6ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel3(),
-                "ProgramCompetenciesOutcome6ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel4(),
-                "ProgramCompetenciesOutcome6ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel5(),
-                "ProgramCompetenciesOutcome6ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6LOno(), "ProgramCompetenciesOutcome6LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7(), "ProgramCompetenciesOutcome7");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel1(),
-                "ProgramCompetenciesOutcome7ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel2(),
-                "ProgramCompetenciesOutcome7ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel3(),
-                "ProgramCompetenciesOutcome7ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel4(),
-                "ProgramCompetenciesOutcome7ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel5(),
-                "ProgramCompetenciesOutcome7ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7LOno(), "ProgramCompetenciesOutcome7LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8(), "ProgramCompetenciesOutcome8");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel1(),
-                "ProgramCompetenciesOutcome8ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel2(),
-                "ProgramCompetenciesOutcome8ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel3(),
-                "ProgramCompetenciesOutcome8ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel4(),
-                "ProgramCompetenciesOutcome8ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel5(),
-                "ProgramCompetenciesOutcome8ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8LOno(), "ProgramCompetenciesOutcome8LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9(), "ProgramCompetenciesOutcome9");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel1(),
-                "ProgramCompetenciesOutcome9ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel2(),
-                "ProgramCompetenciesOutcome9ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel3(),
-                "ProgramCompetenciesOutcome9ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel4(),
-                "ProgramCompetenciesOutcome9ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel5(),
-                "ProgramCompetenciesOutcome9ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9LOno(), "ProgramCompetenciesOutcome9LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10(), "ProgramCompetenciesOutcome10");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel1(),
-                "ProgramCompetenciesOutcome10ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel2(),
-                "ProgramCompetenciesOutcome10ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel3(),
-                "ProgramCompetenciesOutcome10ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel4(),
-                "ProgramCompetenciesOutcome10ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel5(),
-                "ProgramCompetenciesOutcome10ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10LOno(), "ProgramCompetenciesOutcome10LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11(), "ProgramCompetenciesOutcome11");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel1(),
-                "ProgramCompetenciesOutcome11ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel2(),
-                "ProgramCompetenciesOutcome11ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel3(),
-                "ProgramCompetenciesOutcome11ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel4(),
-                "ProgramCompetenciesOutcome11ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel5(),
-                "ProgramCompetenciesOutcome11ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11LOno(), "ProgramCompetenciesOutcome11LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12(), "ProgramCompetenciesOutcome12");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel1(),
-                "ProgramCompetenciesOutcome12ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel2(),
-                "ProgramCompetenciesOutcome12ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel3(),
-                "ProgramCompetenciesOutcome12ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel4(),
-                "ProgramCompetenciesOutcome12ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel5(),
-                "ProgramCompetenciesOutcome12ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12LOno(), "ProgramCompetenciesOutcome12LOno");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13(), "ProgramCompetenciesOutcome13");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel1(),
-                "ProgramCompetenciesOutcome13ContributionLevel1");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel2(),
-                "ProgramCompetenciesOutcome13ContributionLevel2");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel3(),
-                "ProgramCompetenciesOutcome13ContributionLevel3");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel4(),
-                "ProgramCompetenciesOutcome13ContributionLevel4");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel5(),
-                "ProgramCompetenciesOutcome13ContributionLevel5");
-        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13LOno(), "ProgramCompetenciesOutcome13LOno");
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1", course.getProgramCompetenciesOutcome1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel1", course.getProgramCompetenciesOutcome1ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel2", course.getProgramCompetenciesOutcome1ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel3", course.getProgramCompetenciesOutcome1ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel4", course.getProgramCompetenciesOutcome1ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel5", course.getProgramCompetenciesOutcome1ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome1LOno", course.getProgramCompetenciesOutcome1LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2", course.getProgramCompetenciesOutcome2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel1", course.getProgramCompetenciesOutcome2ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel2", course.getProgramCompetenciesOutcome2ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel3", course.getProgramCompetenciesOutcome2ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel4", course.getProgramCompetenciesOutcome2ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel5", course.getProgramCompetenciesOutcome2ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome2LOno", course.getProgramCompetenciesOutcome2LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3", course.getProgramCompetenciesOutcome3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel1", course.getProgramCompetenciesOutcome3ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel2", course.getProgramCompetenciesOutcome3ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel3", course.getProgramCompetenciesOutcome3ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel4", course.getProgramCompetenciesOutcome3ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel5", course.getProgramCompetenciesOutcome3ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome3LOno", course.getProgramCompetenciesOutcome3LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4", course.getProgramCompetenciesOutcome4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel1", course.getProgramCompetenciesOutcome4ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel2", course.getProgramCompetenciesOutcome4ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel3", course.getProgramCompetenciesOutcome4ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel4", course.getProgramCompetenciesOutcome4ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel5", course.getProgramCompetenciesOutcome4ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome4LOno", course.getProgramCompetenciesOutcome4LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5", course.getProgramCompetenciesOutcome5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel1", course.getProgramCompetenciesOutcome5ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel2", course.getProgramCompetenciesOutcome5ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel3", course.getProgramCompetenciesOutcome5ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel4", course.getProgramCompetenciesOutcome5ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel5", course.getProgramCompetenciesOutcome5ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome5LOno", course.getProgramCompetenciesOutcome5LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6", course.getProgramCompetenciesOutcome6());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel1", course.getProgramCompetenciesOutcome6ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel2", course.getProgramCompetenciesOutcome6ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel3", course.getProgramCompetenciesOutcome6ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel4", course.getProgramCompetenciesOutcome6ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel5", course.getProgramCompetenciesOutcome6ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome6LOno", course.getProgramCompetenciesOutcome6LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7", course.getProgramCompetenciesOutcome7());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel1", course.getProgramCompetenciesOutcome7ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel2", course.getProgramCompetenciesOutcome7ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel3", course.getProgramCompetenciesOutcome7ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel4", course.getProgramCompetenciesOutcome7ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel5", course.getProgramCompetenciesOutcome7ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome7LOno", course.getProgramCompetenciesOutcome7LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8", course.getProgramCompetenciesOutcome8());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel1", course.getProgramCompetenciesOutcome8ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel2", course.getProgramCompetenciesOutcome8ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel3", course.getProgramCompetenciesOutcome8ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel4", course.getProgramCompetenciesOutcome8ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel5", course.getProgramCompetenciesOutcome8ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome8LOno", course.getProgramCompetenciesOutcome8LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9", course.getProgramCompetenciesOutcome9());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel1", course.getProgramCompetenciesOutcome9ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel2", course.getProgramCompetenciesOutcome9ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel3", course.getProgramCompetenciesOutcome9ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel4", course.getProgramCompetenciesOutcome9ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel5", course.getProgramCompetenciesOutcome9ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome9LOno", course.getProgramCompetenciesOutcome9LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10", course.getProgramCompetenciesOutcome10());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel1", course.getProgramCompetenciesOutcome10ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel2", course.getProgramCompetenciesOutcome10ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel3", course.getProgramCompetenciesOutcome10ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel4", course.getProgramCompetenciesOutcome10ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel5", course.getProgramCompetenciesOutcome10ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome10LOno", course.getProgramCompetenciesOutcome10LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11", course.getProgramCompetenciesOutcome11());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel1", course.getProgramCompetenciesOutcome11ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel2", course.getProgramCompetenciesOutcome11ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel3", course.getProgramCompetenciesOutcome11ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel4", course.getProgramCompetenciesOutcome11ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel5", course.getProgramCompetenciesOutcome11ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome11LOno", course.getProgramCompetenciesOutcome11LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12", course.getProgramCompetenciesOutcome12());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel1", course.getProgramCompetenciesOutcome12ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel2", course.getProgramCompetenciesOutcome12ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel3", course.getProgramCompetenciesOutcome12ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel4", course.getProgramCompetenciesOutcome12ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel5", course.getProgramCompetenciesOutcome12ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome12LOno", course.getProgramCompetenciesOutcome12LOno());
+
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13", course.getProgramCompetenciesOutcome13());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel1", course.getProgramCompetenciesOutcome13ContributionLevel1());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel2", course.getProgramCompetenciesOutcome13ContributionLevel2());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel3", course.getProgramCompetenciesOutcome13ContributionLevel3());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel4", course.getProgramCompetenciesOutcome13ContributionLevel4());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel5", course.getProgramCompetenciesOutcome13ContributionLevel5());
+        oldTAB6Hash.put("ProgramCompetenciesOutcome13LOno", course.getProgramCompetenciesOutcome13LOno());
         return oldTAB6Hash;
     }
 
@@ -1564,162 +1499,120 @@ public class MainControllerX implements Initializable {
         return newTAB5Hash;
     }
     public HashMap fillnewTab6Hash(CourseInformationx course){
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1(), "ProgramCompetenciesOutcome1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel1(),
-                "ProgramCompetenciesOutcome1ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel2(),
-                "ProgramCompetenciesOutcome1ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel3(),
-                "ProgramCompetenciesOutcome1ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel4(),
-                "ProgramCompetenciesOutcome1ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel5(),
-                "ProgramCompetenciesOutcome1ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome1LOno(), "ProgramCompetenciesOutcome1LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2(), "ProgramCompetenciesOutcome2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel1(),
-                "ProgramCompetenciesOutcome2ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel2(),
-                "ProgramCompetenciesOutcome2ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel3(),
-                "ProgramCompetenciesOutcome2ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel4(),
-                "ProgramCompetenciesOutcome2ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel5(),
-                "ProgramCompetenciesOutcome2ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome2LOno(), "ProgramCompetenciesOutcome2LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3(), "ProgramCompetenciesOutcome3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel1(),
-                "ProgramCompetenciesOutcome3ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel2(),
-                "ProgramCompetenciesOutcome3ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel3(),
-                "ProgramCompetenciesOutcome3ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel4(),
-                "ProgramCompetenciesOutcome3ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel5(),
-                "ProgramCompetenciesOutcome3ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome3LOno(), "ProgramCompetenciesOutcome3LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4(), "ProgramCompetenciesOutcome4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel1(),
-                "ProgramCompetenciesOutcome4ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel2(),
-                "ProgramCompetenciesOutcome4ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel3(),
-                "ProgramCompetenciesOutcome4ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel4(),
-                "ProgramCompetenciesOutcome4ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel5(),
-                "ProgramCompetenciesOutcome4ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome4LOno(), "ProgramCompetenciesOutcome4LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5(), "ProgramCompetenciesOutcome5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel1(),
-                "ProgramCompetenciesOutcome5ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel2(),
-                "ProgramCompetenciesOutcome5ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel3(),
-                "ProgramCompetenciesOutcome5ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel4(),
-                "ProgramCompetenciesOutcome5ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel5(),
-                "ProgramCompetenciesOutcome5ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome5LOno(), "ProgramCompetenciesOutcome5LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6(), "ProgramCompetenciesOutcome6");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel1(),
-                "ProgramCompetenciesOutcome6ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel2(),
-                "ProgramCompetenciesOutcome6ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel3(),
-                "ProgramCompetenciesOutcome6ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel4(),
-                "ProgramCompetenciesOutcome6ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel5(),
-                "ProgramCompetenciesOutcome6ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome6LOno(), "ProgramCompetenciesOutcome6LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7(), "ProgramCompetenciesOutcome7");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel1(),
-                "ProgramCompetenciesOutcome7ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel2(),
-                "ProgramCompetenciesOutcome7ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel3(),
-                "ProgramCompetenciesOutcome7ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel4(),
-                "ProgramCompetenciesOutcome7ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel5(),
-                "ProgramCompetenciesOutcome7ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome7LOno(), "ProgramCompetenciesOutcome7LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8(), "ProgramCompetenciesOutcome8");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel1(),
-                "ProgramCompetenciesOutcome8ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel2(),
-                "ProgramCompetenciesOutcome8ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel3(),
-                "ProgramCompetenciesOutcome8ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel4(),
-                "ProgramCompetenciesOutcome8ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel5(),
-                "ProgramCompetenciesOutcome8ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome8LOno(), "ProgramCompetenciesOutcome8LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9(), "ProgramCompetenciesOutcome9");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel1(),
-                "ProgramCompetenciesOutcome9ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel2(),
-                "ProgramCompetenciesOutcome9ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel3(),
-                "ProgramCompetenciesOutcome9ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel4(),
-                "ProgramCompetenciesOutcome9ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel5(),
-                "ProgramCompetenciesOutcome9ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome9LOno(), "ProgramCompetenciesOutcome9LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10(), "ProgramCompetenciesOutcome10");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel1(),
-                "ProgramCompetenciesOutcome10ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel2(),
-                "ProgramCompetenciesOutcome10ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel3(),
-                "ProgramCompetenciesOutcome10ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel4(),
-                "ProgramCompetenciesOutcome10ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel5(),
-                "ProgramCompetenciesOutcome10ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome10LOno(), "ProgramCompetenciesOutcome10LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11(), "ProgramCompetenciesOutcome11");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel1(),
-                "ProgramCompetenciesOutcome11ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel2(),
-                "ProgramCompetenciesOutcome11ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel3(),
-                "ProgramCompetenciesOutcome11ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel4(),
-                "ProgramCompetenciesOutcome11ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel5(),
-                "ProgramCompetenciesOutcome11ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome11LOno(), "ProgramCompetenciesOutcome11LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12(), "ProgramCompetenciesOutcome12");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel1(),
-                "ProgramCompetenciesOutcome12ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel2(),
-                "ProgramCompetenciesOutcome12ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel3(),
-                "ProgramCompetenciesOutcome12ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel4(),
-                "ProgramCompetenciesOutcome12ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel5(),
-                "ProgramCompetenciesOutcome12ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome12LOno(), "ProgramCompetenciesOutcome12LOno");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13(), "ProgramCompetenciesOutcome13");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel1(),
-                "ProgramCompetenciesOutcome13ContributionLevel1");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel2(),
-                "ProgramCompetenciesOutcome13ContributionLevel2");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel3(),
-                "ProgramCompetenciesOutcome13ContributionLevel3");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel4(),
-                "ProgramCompetenciesOutcome13ContributionLevel4");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel5(),
-                "ProgramCompetenciesOutcome13ContributionLevel5");
-        newTAB6Hash.put(course.getProgramCompetenciesOutcome13LOno(), "ProgramCompetenciesOutcome13LOno");
+        newTAB6Hash.put("ProgramCompetenciesOutcome1", course.getProgramCompetenciesOutcome1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel1", course.getProgramCompetenciesOutcome1ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel2", course.getProgramCompetenciesOutcome1ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel3", course.getProgramCompetenciesOutcome1ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel4", course.getProgramCompetenciesOutcome1ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome1ContributionLevel5", course.getProgramCompetenciesOutcome1ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome1LOno", course.getProgramCompetenciesOutcome1LOno());
+
+        newTAB6Hash.put("ProgramCompetenciesOutcome2", course.getProgramCompetenciesOutcome2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel1", course.getProgramCompetenciesOutcome2ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel2", course.getProgramCompetenciesOutcome2ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel3", course.getProgramCompetenciesOutcome2ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel4", course.getProgramCompetenciesOutcome2ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome2ContributionLevel5", course.getProgramCompetenciesOutcome2ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome2LOno", course.getProgramCompetenciesOutcome2LOno());
+
+        // For ProgramCompetenciesOutcome3
+        newTAB6Hash.put("ProgramCompetenciesOutcome3", course.getProgramCompetenciesOutcome3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel1", course.getProgramCompetenciesOutcome3ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel2", course.getProgramCompetenciesOutcome3ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel3", course.getProgramCompetenciesOutcome3ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel4", course.getProgramCompetenciesOutcome3ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome3ContributionLevel5", course.getProgramCompetenciesOutcome3ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome3LOno", course.getProgramCompetenciesOutcome3LOno());
+
+// For ProgramCompetenciesOutcome4
+        newTAB6Hash.put("ProgramCompetenciesOutcome4", course.getProgramCompetenciesOutcome4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel1", course.getProgramCompetenciesOutcome4ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel2", course.getProgramCompetenciesOutcome4ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel3", course.getProgramCompetenciesOutcome4ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel4", course.getProgramCompetenciesOutcome4ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome4ContributionLevel5", course.getProgramCompetenciesOutcome4ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome4LOno", course.getProgramCompetenciesOutcome4LOno());
+
+        // For ProgramCompetenciesOutcome5
+        newTAB6Hash.put("ProgramCompetenciesOutcome5", course.getProgramCompetenciesOutcome5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel1", course.getProgramCompetenciesOutcome5ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel2", course.getProgramCompetenciesOutcome5ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel3", course.getProgramCompetenciesOutcome5ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel4", course.getProgramCompetenciesOutcome5ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome5ContributionLevel5", course.getProgramCompetenciesOutcome5ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome5LOno", course.getProgramCompetenciesOutcome5LOno());
+
+// For ProgramCompetenciesOutcome6
+        newTAB6Hash.put("ProgramCompetenciesOutcome6", course.getProgramCompetenciesOutcome6());
+        newTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel1", course.getProgramCompetenciesOutcome6ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel2", course.getProgramCompetenciesOutcome6ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel3", course.getProgramCompetenciesOutcome6ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel4", course.getProgramCompetenciesOutcome6ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome6ContributionLevel5", course.getProgramCompetenciesOutcome6ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome6LOno", course.getProgramCompetenciesOutcome6LOno());
+
+        // For ProgramCompetenciesOutcome7
+        newTAB6Hash.put("ProgramCompetenciesOutcome7", course.getProgramCompetenciesOutcome7());
+        newTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel1", course.getProgramCompetenciesOutcome7ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel2", course.getProgramCompetenciesOutcome7ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel3", course.getProgramCompetenciesOutcome7ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel4", course.getProgramCompetenciesOutcome7ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome7ContributionLevel5", course.getProgramCompetenciesOutcome7ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome7LOno", course.getProgramCompetenciesOutcome7LOno());
+
+// For ProgramCompetenciesOutcome8
+        newTAB6Hash.put("ProgramCompetenciesOutcome8", course.getProgramCompetenciesOutcome8());
+        newTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel1", course.getProgramCompetenciesOutcome8ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel2", course.getProgramCompetenciesOutcome8ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel3", course.getProgramCompetenciesOutcome8ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel4", course.getProgramCompetenciesOutcome8ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome8ContributionLevel5", course.getProgramCompetenciesOutcome8ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome8LOno", course.getProgramCompetenciesOutcome8LOno());
+
+        // For ProgramCompetenciesOutcome9
+        newTAB6Hash.put("ProgramCompetenciesOutcome9", course.getProgramCompetenciesOutcome9());
+        newTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel1", course.getProgramCompetenciesOutcome9ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel2", course.getProgramCompetenciesOutcome9ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel3", course.getProgramCompetenciesOutcome9ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel4", course.getProgramCompetenciesOutcome9ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome9ContributionLevel5", course.getProgramCompetenciesOutcome9ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome9LOno", course.getProgramCompetenciesOutcome9LOno());
+
+// For ProgramCompetenciesOutcome10
+        newTAB6Hash.put("ProgramCompetenciesOutcome10", course.getProgramCompetenciesOutcome10());
+        newTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel1", course.getProgramCompetenciesOutcome10ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel2", course.getProgramCompetenciesOutcome10ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel3", course.getProgramCompetenciesOutcome10ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel4", course.getProgramCompetenciesOutcome10ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome10ContributionLevel5", course.getProgramCompetenciesOutcome10ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome10LOno", course.getProgramCompetenciesOutcome10LOno());
+
+        // For ProgramCompetenciesOutcome11
+        newTAB6Hash.put("ProgramCompetenciesOutcome11", course.getProgramCompetenciesOutcome11());
+        newTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel1", course.getProgramCompetenciesOutcome11ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel2", course.getProgramCompetenciesOutcome11ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel3", course.getProgramCompetenciesOutcome11ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel4", course.getProgramCompetenciesOutcome11ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome11ContributionLevel5", course.getProgramCompetenciesOutcome11ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome11LOno", course.getProgramCompetenciesOutcome11LOno());
+
+// For ProgramCompetenciesOutcome12
+        newTAB6Hash.put("ProgramCompetenciesOutcome12", course.getProgramCompetenciesOutcome12());
+        newTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel1", course.getProgramCompetenciesOutcome12ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel2", course.getProgramCompetenciesOutcome12ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel3", course.getProgramCompetenciesOutcome12ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel4", course.getProgramCompetenciesOutcome12ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome12ContributionLevel5", course.getProgramCompetenciesOutcome12ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome12LOno", course.getProgramCompetenciesOutcome12LOno());
+
+        // For ProgramCompetenciesOutcome13
+        newTAB6Hash.put("ProgramCompetenciesOutcome13", course.getProgramCompetenciesOutcome13());
+        newTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel1", course.getProgramCompetenciesOutcome13ContributionLevel1());
+        newTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel2", course.getProgramCompetenciesOutcome13ContributionLevel2());
+        newTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel3", course.getProgramCompetenciesOutcome13ContributionLevel3());
+        newTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel4", course.getProgramCompetenciesOutcome13ContributionLevel4());
+        newTAB6Hash.put("ProgramCompetenciesOutcome13ContributionLevel5", course.getProgramCompetenciesOutcome13ContributionLevel5());
+        newTAB6Hash.put("ProgramCompetenciesOutcome13LOno", course.getProgramCompetenciesOutcome13LOno());
         return newTAB6Hash;
     }
 
