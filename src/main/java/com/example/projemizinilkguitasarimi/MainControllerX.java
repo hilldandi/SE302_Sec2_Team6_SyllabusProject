@@ -24,12 +24,18 @@ public class MainControllerX implements Initializable {
     private Scene scene;
     private Parent root;
 
-    HashMap<String, String> TAB1Hash = new HashMap<>();
-    HashMap<String, String> TAB2Hash = new HashMap<>();
-    HashMap<String, String> TAB3Hash = new HashMap<>();
-    HashMap<String, String> TAB4Hash = new HashMap<>();
-    HashMap<String, String> TAB5Hash = new HashMap<>();
-    HashMap<String, String> TAB6Hash = new HashMap<>();
+    HashMap<String, String> oldTAB1Hash = new HashMap<>();
+    HashMap<String, String> oldTAB2Hash = new HashMap<>();
+    HashMap<String, String> oldTAB3Hash = new HashMap<>();
+    HashMap<String, String> oldTAB4Hash = new HashMap<>();
+    HashMap<String, String> oldTAB5Hash = new HashMap<>();
+    HashMap<String, String> oldTAB6Hash = new HashMap<>();
+    HashMap<String, String> newTAB1Hash = new HashMap<>();
+    HashMap<String, String> newTAB2Hash = new HashMap<>();
+    HashMap<String, String> newTAB3Hash = new HashMap<>();
+    HashMap<String, String> newTAB4Hash = new HashMap<>();
+    HashMap<String, String> newTAB5Hash = new HashMap<>();
+    HashMap<String, String> newTAB6Hash = new HashMap<>();
 
 
     public void switchToScene1(ActionEvent event) throws IOException {
@@ -832,7 +838,7 @@ public class MainControllerX implements Initializable {
 
     }
 
-    public void CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
+    public ArrayList<ObservableList> CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
 
         CourseInformationx oldVersion, newVersion;
         oldVersion = readJsonFile(filePathOfOldVersion);
@@ -842,32 +848,32 @@ public class MainControllerX implements Initializable {
         HashMap<String , String> newHashTab1,newHashTab2,newHashTab3,newHashTab4,newHashTab5,newHashTab6;
 
         //filling old versions hashmap --- use threads
-        oldHashTab1 = fillTab1Hash(oldVersion);
-        TAB1Hash.clear();
-        oldHashTab2 = fillTab2Hash(oldVersion);
-        TAB2Hash.clear();
-        oldHashTab3 = fillTab3Hash(oldVersion);
-        TAB3Hash.clear();
-        oldHashTab4 = fillTab4Hash(oldVersion);
-        TAB4Hash.clear();
-        oldHashTab5 = fillTab5Hash(oldVersion);
-        TAB5Hash.clear();
-        oldHashTab6 = fillTab6Hash(oldVersion);
-        TAB6Hash.clear();
+        oldHashTab1 = filloldTab1Hash(oldVersion);
+        //TAB1Hash.clear();
+        oldHashTab2 = filloldTab2Hash(oldVersion);
+        //TAB2Hash.clear();
+        oldHashTab3 = filloldTab3Hash(oldVersion);
+        //TAB3Hash.clear();
+        oldHashTab4 = filloldTab4Hash(oldVersion);
+        //TAB4Hash.clear();
+        oldHashTab5 = filloldTab5Hash(oldVersion);
+        //TAB5Hash.clear();
+        oldHashTab6 = filloldTab6Hash(oldVersion);
+        //TAB6Hash.clear();
 
         //filling new versions hashmap
-        newHashTab1 = fillTab1Hash(newVersion);
-        TAB1Hash.clear();
-        newHashTab2 = fillTab2Hash(newVersion);
-        TAB2Hash.clear();
-        newHashTab3 = fillTab3Hash(newVersion);
-        TAB3Hash.clear();
-        newHashTab4 = fillTab4Hash(newVersion);
-        TAB4Hash.clear();
-        newHashTab5 = fillTab5Hash(newVersion);
-        TAB5Hash.clear();
-        newHashTab6 = fillTab6Hash(newVersion);
-        TAB6Hash.clear();
+        newHashTab1 = fillnewTab1Hash(newVersion);
+        //TAB1Hash.clear();
+        newHashTab2 = fillnewTab2Hash(newVersion);
+        //TAB2Hash.clear();
+        newHashTab3 = fillnewTab3Hash(newVersion);
+        //TAB3Hash.clear();
+        newHashTab4 = fillnewTab4Hash(newVersion);
+        //TAB4Hash.clear();
+        newHashTab5 = fillnewTab5Hash(newVersion);
+        //TAB5Hash.clear();
+        newHashTab6 = fillnewTab6Hash(newVersion);
+        //TAB6Hash.clear();
 
         //iterators & keys for their respective hashmaps
         Iterator<String> iterator1 = newHashTab1.keySet().iterator();
@@ -892,41 +898,49 @@ public class MainControllerX implements Initializable {
 
         while(iterator1.hasNext()){
             key1 = iterator1.next();
-            if(newHashTab1.get(key1) != oldHashTab1.get(key1)){
+            System.out.println(newHashTab1.get(key1));
+            System.out.println(oldHashTab1.get(key1));
+            if(newHashTab1.get(key1)!= oldHashTab1.get(key1)){
                 vChanges1.add((key1+": "+newHashTab1.get(key1)));
             }
         }
-        while(iterator1.hasNext()){
+        while(iterator2.hasNext()){
             key2 = iterator2.next();
             if(newHashTab2.get(key2) != oldHashTab2.get(key2)){
                 vChanges2.add((key2+": "+newHashTab2.get(key2)));
             }
         }
-        while(iterator1.hasNext()){
+        while(iterator3.hasNext()){
             key3 = iterator3.next();
             if(newHashTab3.get(key3) != oldHashTab3.get(key3)){
                 vChanges3.add((key3+": "+newHashTab3.get(key3)));
             }
         }
 
-        while(iterator1.hasNext()){
+        while(iterator4.hasNext()){
             key4 = iterator4.next();
             if(newHashTab4.get(key4) != oldHashTab4.get(key4)){
                 vChanges4.add((key4+": "+newHashTab4.get(key4)));
             }
         }
-        while(iterator1.hasNext()){
+        while(iterator5.hasNext()){
             key5 = iterator5.next();
             if(newHashTab5.get(key5) != oldHashTab5.get(key5)){
                 vChanges5.add((key5+": "+newHashTab5.get(key5)));
             }
         }
-        while(iterator1.hasNext()){
+        while(iterator6.hasNext()){
             key6 = iterator6.next();
             if(newHashTab6.get(key6) != oldHashTab6.get(key6)){
                 vChanges6.add((key6+": "+newHashTab6.get(key6)));
             }
         }
+        System.out.println(vChanges1);
+        System.out.println(vChanges2);
+        System.out.println(vChanges3);
+        System.out.println(vChanges4);
+        System.out.println(vChanges5);
+        System.out.println(vChanges6);
 
         ObservableList<String> tab1= FXCollections.observableArrayList(vChanges1);
         listOfList.add(tab1);
@@ -941,388 +955,772 @@ public class MainControllerX implements Initializable {
         ObservableList<String> tab6= FXCollections.observableArrayList(vChanges6);
         listOfList.add(tab6);
 
+        return listOfList;
     }
-    public HashMap fillTab1Hash(CourseInformationx course){
-        TAB1Hash.put("courseName",course.getCourseName());
-        TAB1Hash.put("Code",course.getCode());
-        TAB1Hash.put("Season", course.getSeason());
-        TAB1Hash.put("Theory",course.getTheory());
-        TAB1Hash.put("Lab",course.getLab() );
-        TAB1Hash.put("LocalCredits",course.getLocalCredits() );
-        TAB1Hash.put("Ects",course.getEcts()) ;
-        TAB1Hash.put("Prerequisities", course.getPrerequisities());
-        TAB1Hash.put("CourseLanguage", course.getCourseLanguage());
-        TAB1Hash.put("CourseType", course.getCourseType());
-        TAB1Hash.put("CourseLevel",course.getCourseLevel() );
-        TAB1Hash.put("ModeOfDelevery", course.getModeOfDelivery());
-        TAB1Hash.put("teachingMethods",course.getTeachingMethodsAndTechniques() );
-        TAB1Hash.put("coursecoordinator",course.getCourseCoordinator() );
-        TAB1Hash.put("courselecturer",course.getCourseLecturers() );
-        TAB1Hash.put("assistant",course.getCourseAssistants() );
+    public HashMap filloldTab1Hash(CourseInformationx course){
+        oldTAB1Hash.put("courseName",course.getCourseName());
+        oldTAB1Hash.put("Code",course.getCode());
+        oldTAB1Hash.put("Season", course.getSeason());
+        oldTAB1Hash.put("Theory",course.getTheory());
+        oldTAB1Hash.put("Lab",course.getLab() );
+        oldTAB1Hash.put("LocalCredits",course.getLocalCredits() );
+        oldTAB1Hash.put("Ects",course.getEcts()) ;
+        oldTAB1Hash.put("Prerequisities", course.getPrerequisities());
+        oldTAB1Hash.put("CourseLanguage", course.getCourseLanguage());
+        oldTAB1Hash.put("CourseType", course.getCourseType());
+        oldTAB1Hash.put("CourseLevel",course.getCourseLevel() );
+        oldTAB1Hash.put("ModeOfDelevery", course.getModeOfDelivery());
+        oldTAB1Hash.put("teachingMethods",course.getTeachingMethodsAndTechniques() );
+        oldTAB1Hash.put("coursecoordinator",course.getCourseCoordinator() );
+        oldTAB1Hash.put("courselecturer",course.getCourseLecturers() );
+        oldTAB1Hash.put("assistant",course.getCourseAssistants() );
 
-        return TAB1Hash;
+        return oldTAB1Hash;
     }
-    public HashMap fillTab2Hash(CourseInformationx course){
-        TAB2Hash.put("CourseObjectives",course.getCourseObjectives() );
-        TAB2Hash.put("LearningOutcomes",course.getLearningOutcomes() );
-        TAB2Hash.put("CourseDescription", course.getCourseDescription());
-        TAB2Hash.put("CCCoreCourse", course.getCCCoreCourse());
-        TAB2Hash.put("CCMajorAreaCourse", course.getCCMajorAreaCourse());
-        TAB2Hash.put("CCSupportiveCourse",course.getCCSupportiveCourse() );
-        TAB2Hash.put("CCComAndManagementSkillsCourse", course.getCCComAndManagementSkillsCourse());
-        TAB2Hash.put("CCTransferableSkillCourse",course.getCCTransferableSkillCourse() );
-        return TAB2Hash;
+    public HashMap filloldTab2Hash(CourseInformationx course){
+        oldTAB2Hash.put("CourseObjectives",course.getCourseObjectives() );
+        oldTAB2Hash.put("LearningOutcomes",course.getLearningOutcomes() );
+        oldTAB2Hash.put("CourseDescription", course.getCourseDescription());
+        oldTAB2Hash.put("CCCoreCourse", course.getCCCoreCourse());
+        oldTAB2Hash.put("CCMajorAreaCourse", course.getCCMajorAreaCourse());
+        oldTAB2Hash.put("CCSupportiveCourse",course.getCCSupportiveCourse() );
+        oldTAB2Hash.put("CCComAndManagementSkillsCourse", course.getCCComAndManagementSkillsCourse());
+        oldTAB2Hash.put("CCTransferableSkillCourse",course.getCCTransferableSkillCourse() );
+        return oldTAB2Hash;
     }
-    public HashMap fillTab3Hash(CourseInformationx course){
-        TAB3Hash.put("Week1Subjects", course.getWeek1Subjects());
-        TAB3Hash.put("Week1ReqMat", course.getWeek1ReqMat());
-        TAB3Hash.put("Week2Subjects", course.getWeek2Subjects());
-        TAB3Hash.put("Week2ReqMat", course.getWeek2ReqMat());
-        TAB3Hash.put("Week3Subjects", course.getWeek3Subjects());
-        TAB3Hash.put("Week3ReqMat", course.getWeek3ReqMat());
-        TAB3Hash.put("Week4Subjects", course.getWeek4Subjects());
-        TAB3Hash.put("Week4ReqMat", course.getWeek4ReqMat());
-        TAB3Hash.put("Week5Subjects", course.getWeek5Subjects());
-        TAB3Hash.put("Week5ReqMat", course.getWeek5ReqMat());
-        TAB3Hash.put("Week6Subjects", course.getWeek6Subjects());
-        TAB3Hash.put("Week6ReqMat", course.getWeek6ReqMat());
-        TAB3Hash.put("Week7Subjects", course.getWeek7Subjects());
-        TAB3Hash.put("Week7ReqMat", course.getWeek7ReqMat());
-        TAB3Hash.put("Week8Subjects", course.getWeek8Subjects());
-        TAB3Hash.put("Week8ReqMat", course.getWeek8ReqMat());
-        TAB3Hash.put("Week9Subjects", course.getWeek9Subjects());
-        TAB3Hash.put("Week9ReqMat", course.getWeek9ReqMat());
-        TAB3Hash.put("Week10Subjects", course.getWeek10Subjects());
-        TAB3Hash.put("Week10ReqMat", course.getWeek10ReqMat());
-        TAB3Hash.put("Week11Subjects", course.getWeek11Subjects());
-        TAB3Hash.put("Week11ReqMat", course.getWeek11ReqMat());
-        TAB3Hash.put("Week12Subjects", course.getWeek12Subjects());
-        TAB3Hash.put("Week12ReqMat", course.getWeek12ReqMat());
-        TAB3Hash.put("Week13Subjects", course.getWeek13Subjects());
-        TAB3Hash.put("Week13ReqMat", course.getWeek13ReqMat());
-        TAB3Hash.put("Week14Subjects", course.getWeek14Subjects());
-        TAB3Hash.put("Week14ReqMat", course.getWeek14ReqMat());
-        TAB3Hash.put("Week15Subjects", course.getWeek15Subjects());
-        TAB3Hash.put("Week15ReqMat", course.getWeek15ReqMat());
-        TAB3Hash.put("SuggestedReadingsAndMaterials", course.getSuggestedReadingsAndMaterials());
-        return  TAB3Hash;
+    public HashMap filloldTab3Hash(CourseInformationx course){
+        oldTAB3Hash.put("Week1Subjects", course.getWeek1Subjects());
+        oldTAB3Hash.put("Week1ReqMat", course.getWeek1ReqMat());
+        oldTAB3Hash.put("Week2Subjects", course.getWeek2Subjects());
+        oldTAB3Hash.put("Week2ReqMat", course.getWeek2ReqMat());
+        oldTAB3Hash.put("Week3Subjects", course.getWeek3Subjects());
+        oldTAB3Hash.put("Week3ReqMat", course.getWeek3ReqMat());
+        oldTAB3Hash.put("Week4Subjects", course.getWeek4Subjects());
+        oldTAB3Hash.put("Week4ReqMat", course.getWeek4ReqMat());
+        oldTAB3Hash.put("Week5Subjects", course.getWeek5Subjects());
+        oldTAB3Hash.put("Week5ReqMat", course.getWeek5ReqMat());
+        oldTAB3Hash.put("Week6Subjects", course.getWeek6Subjects());
+        oldTAB3Hash.put("Week6ReqMat", course.getWeek6ReqMat());
+        oldTAB3Hash.put("Week7Subjects", course.getWeek7Subjects());
+        oldTAB3Hash.put("Week7ReqMat", course.getWeek7ReqMat());
+        oldTAB3Hash.put("Week8Subjects", course.getWeek8Subjects());
+        oldTAB3Hash.put("Week8ReqMat", course.getWeek8ReqMat());
+        oldTAB3Hash.put("Week9Subjects", course.getWeek9Subjects());
+        oldTAB3Hash.put("Week9ReqMat", course.getWeek9ReqMat());
+        oldTAB3Hash.put("Week10Subjects", course.getWeek10Subjects());
+        oldTAB3Hash.put("Week10ReqMat", course.getWeek10ReqMat());
+        oldTAB3Hash.put("Week11Subjects", course.getWeek11Subjects());
+        oldTAB3Hash.put("Week11ReqMat", course.getWeek11ReqMat());
+        oldTAB3Hash.put("Week12Subjects", course.getWeek12Subjects());
+        oldTAB3Hash.put("Week12ReqMat", course.getWeek12ReqMat());
+        oldTAB3Hash.put("Week13Subjects", course.getWeek13Subjects());
+        oldTAB3Hash.put("Week13ReqMat", course.getWeek13ReqMat());
+        oldTAB3Hash.put("Week14Subjects", course.getWeek14Subjects());
+        oldTAB3Hash.put("Week14ReqMat", course.getWeek14ReqMat());
+        oldTAB3Hash.put("Week15Subjects", course.getWeek15Subjects());
+        oldTAB3Hash.put("Week15ReqMat", course.getWeek15ReqMat());
+        oldTAB3Hash.put("SuggestedReadingsAndMaterials", course.getSuggestedReadingsAndMaterials());
+        return  oldTAB3Hash;
     }
-    public HashMap fillTab4Hash(CourseInformationx course){
-        TAB4Hash.put("NoOfParticipation", course.getNoOfParticipation());
-        TAB4Hash.put("WeightOfParticipation", course.getWeightOfParticipation());
-        TAB4Hash.put("LO1OfParticipation", course.getLO1OfParticipation());
-        TAB4Hash.put("LO2OfParticipation", course.getLO2OfParticipation());
-        TAB4Hash.put("LO3OfParticipation", course.getLO3OfParticipation());
-        TAB4Hash.put("LO4OfParticipation", course.getLO4OfParticipation());
-        TAB4Hash.put("LO5OfParticipation", course.getLO5OfParticipation());
-        TAB4Hash.put("LO6OfParticipation", course.getLO6OfParticipation());
-        TAB4Hash.put("LO7OfParticipation", course.getLO7OfParticipation());
-        TAB4Hash.put("NoOfLabOrApplication", course.getNoOfLabOrApplication());
-        TAB4Hash.put("WeightOfLabOrApplication", course.getWeightOfLabOrApplication());
-        TAB4Hash.put("LO1OfLabOrApplication", course.getLO1OfLabOrApplication());
-        TAB4Hash.put("LO2OfLabOrApplication", course.getLO2OfLabOrApplication());
-        TAB4Hash.put("LO3OfLabOrApplication", course.getLO3OfLabOrApplication());
-        TAB4Hash.put("LO4OfLabOrApplication", course.getLO4OfLabOrApplication());
-        TAB4Hash.put("LO5OfLabOrApplication", course.getLO5OfLabOrApplication());
-        TAB4Hash.put("LO6OfLabOrApplication", course.getLO6OfLabOrApplication());
-        TAB4Hash.put("LO7OfLabOrApplication", course.getLO7OfLabOrApplication());
-        TAB4Hash.put("NoOfFieldWork", course.getNoOfFieldWork());
-        TAB4Hash.put("WeightOfFieldWork", course.getWeightOfFieldWork());
-        TAB4Hash.put("LO1OfFieldWork", course.getLO1OfFieldWork());
-        TAB4Hash.put("LO2OfFieldWork", course.getLO2OfFieldWork());
-        TAB4Hash.put("LO3OfFieldWork", course.getLO3OfFieldWork());
-        TAB4Hash.put("LO4OfFieldWork", course.getLO4OfFieldWork());
-        TAB4Hash.put("LO5OfFieldWork", course.getLO5OfFieldWork());
-        TAB4Hash.put("LO6OfFieldWork", course.getLO6OfFieldWork());
-        TAB4Hash.put("LO7OfFieldWork", course.getLO7OfFieldWork());
-        TAB4Hash.put("NoOfQuizOrStudioCritique", course.getNoOfQuizOrStudioCritique());
-        TAB4Hash.put("WeightOfQuizOrStudioCritique", course.getWeightOfQuizOrStudioCritique());
-        TAB4Hash.put("LO1OfQuizOrStudioCritique", course.getLO1OfQuizOrStudioCritique());
-        TAB4Hash.put("LO2OfQuizOrStudioCritique", course.getLO2OfQuizOrStudioCritique());
-        TAB4Hash.put("LO3OfQuizOrStudioCritique", course.getLO3OfQuizOrStudioCritique());
-        TAB4Hash.put("LO4OfQuizOrStudioCritique", course.getLO4OfQuizOrStudioCritique());
-        TAB4Hash.put("LO5OfQuizOrStudioCritique", course.getLO5OfQuizOrStudioCritique());
-        TAB4Hash.put("LO6OfQuizOrStudioCritique", course.getLO6OfQuizOrStudioCritique());
-        TAB4Hash.put("LO7OfQuizOrStudioCritique", course.getLO7OfQuizOrStudioCritique());
-        TAB4Hash.put("NoOfHwOrAssignment", course.getNoOfHwOrAssignment());
-        TAB4Hash.put("WeightOfHwOrAssignment", course.getWeightOfHwOrAssignment());
-        TAB4Hash.put("LO1OfHwOrAssignment", course.getLO1OfHwOrAssignment());
-        TAB4Hash.put("LO2OfHwOrAssignment", course.getLO2OfHwOrAssignment());
-        TAB4Hash.put("LO3OfHwOrAssignment", course.getLO3OfHwOrAssignment());
-        TAB4Hash.put("LO4OfHwOrAssignment", course.getLO4OfHwOrAssignment());
-        TAB4Hash.put("LO5OfHwOrAssignment", course.getLO5OfHwOrAssignment());
-        TAB4Hash.put("LO6OfHwOrAssignment", course.getLO6OfHwOrAssignment());
-        TAB4Hash.put("LO7OfHwOrAssignment", course.getLO7OfHwOrAssignment());
-        TAB4Hash.put("NoOfPresentationOrJury", course.getNoOfPresentationOrJury());
-        TAB4Hash.put("WeightOfPresentationOrJury", course.getWeightOfPresentationOrJury());
-        TAB4Hash.put("LO1OfPresentationOrJury", course.getLO1OfPresentationOrJury());
-        TAB4Hash.put("LO2OfPresentationOrJury", course.getLO2OfPresentationOrJury());
-        TAB4Hash.put("LO3OfPresentationOrJury", course.getLO3OfPresentationOrJury());
-        TAB4Hash.put("LO4OfPresentationOrJury", course.getLO4OfPresentationOrJury());
-        TAB4Hash.put("LO5OfPresentationOrJury", course.getLO5OfPresentationOrJury());
-        TAB4Hash.put("LO6OfPresentationOrJury", course.getLO6OfPresentationOrJury());
-        TAB4Hash.put("LO7OfPresentationOrJury", course.getLO7OfPresentationOrJury());
-        TAB4Hash.put("NoOfProject", course.getNoOfProject());
-        TAB4Hash.put("WeightOfProject", course.getWeightOfProject());
-        TAB4Hash.put("LO1OfProject", course.getLO1OfProject());
-        TAB4Hash.put("LO2OfProject", course.getLO2OfProject());
-        TAB4Hash.put("LO3OfProject", course.getLO3OfProject());
-        TAB4Hash.put("LO4OfProject", course.getLO4OfProject());
-        TAB4Hash.put("LO5OfProject", course.getLO5OfProject());
-        TAB4Hash.put("LO6OfProject", course.getLO6OfProject());
-        TAB4Hash.put("LO7OfProject", course.getLO7OfProject());
-        TAB4Hash.put("NoOfSeminarOrWorkshop", course.getNoOfSeminarOrWorkshop());
-        TAB4Hash.put("WeightOfSeminarOrWorkshop", course.getWeightOfSeminarOrWorkshop());
-        TAB4Hash.put("LO1OfSeminarOrWorkshop", course.getLO1OfSeminarOrWorkshop());
-        TAB4Hash.put("LO2OfSeminarOrWorkshop", course.getLO2OfSeminarOrWorkshop());
-        TAB4Hash.put("LO3OfSeminarOrWorkshop", course.getLO3OfSeminarOrWorkshop());
-        TAB4Hash.put("LO4OfSeminarOrWorkshop", course.getLO4OfSeminarOrWorkshop());
-        TAB4Hash.put("LO5OfSeminarOrWorkshop", course.getLO5OfSeminarOrWorkshop());
-        TAB4Hash.put("LO6OfSeminarOrWorkshop", course.getLO6OfSeminarOrWorkshop());
-        TAB4Hash.put("LO7OfSeminarOrWorkshop", course.getLO7OfSeminarOrWorkshop());
-        TAB4Hash.put("NoOfOralExam", course.getNoOfOralExam());
-        TAB4Hash.put("WeightOfOralExam", course.getWeightOfOralExam());
-        TAB4Hash.put("LO1OfOralExam", course.getLO1OfOralExam());
-        TAB4Hash.put("LO2OfOralExam", course.getLO2OfOralExam());
-        TAB4Hash.put("LO3OfOralExam", course.getLO3OfOralExam());
-        TAB4Hash.put("LO4OfOralExam", course.getLO4OfOralExam());
-        TAB4Hash.put("LO5OfOralExam", course.getLO5OfOralExam());
-        TAB4Hash.put("LO6OfOralExam", course.getLO6OfOralExam());
-        TAB4Hash.put("LO7OfOralExam", course.getLO7OfOralExam());
-        TAB4Hash.put("NoOfMidterm", course.getNoOfMidterm());
-        TAB4Hash.put("WeightOfMidterm", course.getWeightOfMidterm());
-        TAB4Hash.put("LO1OfMidterm", course.getLO1OfMidterm());
-        TAB4Hash.put("LO2OfMidterm", course.getLO2OfMidterm());
-        TAB4Hash.put("LO3OfMidterm", course.getLO3OfMidterm());
-        TAB4Hash.put("LO4OfMidterm", course.getLO4OfMidterm());
-        TAB4Hash.put("LO5OfMidterm", course.getLO5OfMidterm());
-        TAB4Hash.put("LO6OfMidterm", course.getLO6OfMidterm());
-        TAB4Hash.put("LO7OfMidterm", course.getLO7OfMidterm());
-        TAB4Hash.put("NoOfFinalExam", course.getNoOfFinalExam());
-        TAB4Hash.put("WeightOfFinalExam", course.getWeightOfFinalExam());
-        TAB4Hash.put("LO1OfFinalExam", course.getLO1OfFinalExam());
-        TAB4Hash.put("LO2OfFinalExam", course.getLO2OfFinalExam());
-        TAB4Hash.put("LO3OfFinalExam", course.getLO3OfFinalExam());
-        TAB4Hash.put("LO4OfFinalExam", course.getLO4OfFinalExam());
-        TAB4Hash.put("LO5OfFinalExam", course.getLO5OfFinalExam());
-        TAB4Hash.put("LO6OfFinalExam", course.getLO6OfFinalExam());
-        TAB4Hash.put("LO7OfFinalExam", course.getLO7OfFinalExam());
-        TAB4Hash.put("NoOfTotalWeight", course.getNoOfTotalWeight());
-        TAB4Hash.put("WeightOfTotalWeight", course.getWeightOfTotalWeight());
-        TAB4Hash.put("LO1OfTotalWeight", course.getLO1OfTotalWeight());
-        TAB4Hash.put("LO2OfTotalWeight", course.getLO2OfTotalWeight());
-        TAB4Hash.put("LO3OfTotalWeight", course.getLO3OfTotalWeight());
-        TAB4Hash.put("LO4OfTotalWeight", course.getLO4OfTotalWeight());
-        TAB4Hash.put("LO5OfTotalWeight", course.getLO5OfTotalWeight());
-        TAB4Hash.put("LO6OfTotalWeight", course.getLO6OfTotalWeight());
-        TAB4Hash.put("LO7OfTotalWeight", course.getLO7OfTotalWeight());
-        TAB4Hash.put("WeightOfSemActivitiesOnFinalGrade1", course.getWeightOfSemActivitiesOnFinalGrade1());
-        TAB4Hash.put("WeightOfSemActivitiesOnFinalGrade2", course.getWeightOfSemActivitiesOnFinalGrade2());
-        TAB4Hash.put("WeightOfEndOfSemActivitiesOnFinalGrade1", course.getWeightOfEndOfSemActivitiesOnFinalGrade1());
-        TAB4Hash.put("WeightOfEndOfSemActivitiesOnFinalGrade2", course.getWeightOfEndOfSemActivitiesOnFinalGrade2());
-        TAB4Hash.put("EndOfTab4Total1", course.getEndOfTab4Total1());
-        TAB4Hash.put("EndOfTab4Total2", course.getEndOfTab4Total2());
-        return TAB4Hash;
+    public HashMap filloldTab4Hash(CourseInformationx course){
+        oldTAB4Hash.put("NoOfParticipation", course.getNoOfParticipation());
+        oldTAB4Hash.put("WeightOfParticipation", course.getWeightOfParticipation());
+        oldTAB4Hash.put("LO1OfParticipation", course.getLO1OfParticipation());
+        oldTAB4Hash.put("LO2OfParticipation", course.getLO2OfParticipation());
+        oldTAB4Hash.put("LO3OfParticipation", course.getLO3OfParticipation());
+        oldTAB4Hash.put("LO4OfParticipation", course.getLO4OfParticipation());
+        oldTAB4Hash.put("LO5OfParticipation", course.getLO5OfParticipation());
+        oldTAB4Hash.put("LO6OfParticipation", course.getLO6OfParticipation());
+        oldTAB4Hash.put("LO7OfParticipation", course.getLO7OfParticipation());
+        oldTAB4Hash.put("NoOfLabOrApplication", course.getNoOfLabOrApplication());
+        oldTAB4Hash.put("WeightOfLabOrApplication", course.getWeightOfLabOrApplication());
+        oldTAB4Hash.put("LO1OfLabOrApplication", course.getLO1OfLabOrApplication());
+        oldTAB4Hash.put("LO2OfLabOrApplication", course.getLO2OfLabOrApplication());
+        oldTAB4Hash.put("LO3OfLabOrApplication", course.getLO3OfLabOrApplication());
+        oldTAB4Hash.put("LO4OfLabOrApplication", course.getLO4OfLabOrApplication());
+        oldTAB4Hash.put("LO5OfLabOrApplication", course.getLO5OfLabOrApplication());
+        oldTAB4Hash.put("LO6OfLabOrApplication", course.getLO6OfLabOrApplication());
+        oldTAB4Hash.put("LO7OfLabOrApplication", course.getLO7OfLabOrApplication());
+        oldTAB4Hash.put("NoOfFieldWork", course.getNoOfFieldWork());
+        oldTAB4Hash.put("WeightOfFieldWork", course.getWeightOfFieldWork());
+        oldTAB4Hash.put("LO1OfFieldWork", course.getLO1OfFieldWork());
+        oldTAB4Hash.put("LO2OfFieldWork", course.getLO2OfFieldWork());
+        oldTAB4Hash.put("LO3OfFieldWork", course.getLO3OfFieldWork());
+        oldTAB4Hash.put("LO4OfFieldWork", course.getLO4OfFieldWork());
+        oldTAB4Hash.put("LO5OfFieldWork", course.getLO5OfFieldWork());
+        oldTAB4Hash.put("LO6OfFieldWork", course.getLO6OfFieldWork());
+        oldTAB4Hash.put("LO7OfFieldWork", course.getLO7OfFieldWork());
+        oldTAB4Hash.put("NoOfQuizOrStudioCritique", course.getNoOfQuizOrStudioCritique());
+        oldTAB4Hash.put("WeightOfQuizOrStudioCritique", course.getWeightOfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO1OfQuizOrStudioCritique", course.getLO1OfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO2OfQuizOrStudioCritique", course.getLO2OfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO3OfQuizOrStudioCritique", course.getLO3OfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO4OfQuizOrStudioCritique", course.getLO4OfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO5OfQuizOrStudioCritique", course.getLO5OfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO6OfQuizOrStudioCritique", course.getLO6OfQuizOrStudioCritique());
+        oldTAB4Hash.put("LO7OfQuizOrStudioCritique", course.getLO7OfQuizOrStudioCritique());
+        oldTAB4Hash.put("NoOfHwOrAssignment", course.getNoOfHwOrAssignment());
+        oldTAB4Hash.put("WeightOfHwOrAssignment", course.getWeightOfHwOrAssignment());
+        oldTAB4Hash.put("LO1OfHwOrAssignment", course.getLO1OfHwOrAssignment());
+        oldTAB4Hash.put("LO2OfHwOrAssignment", course.getLO2OfHwOrAssignment());
+        oldTAB4Hash.put("LO3OfHwOrAssignment", course.getLO3OfHwOrAssignment());
+        oldTAB4Hash.put("LO4OfHwOrAssignment", course.getLO4OfHwOrAssignment());
+        oldTAB4Hash.put("LO5OfHwOrAssignment", course.getLO5OfHwOrAssignment());
+        oldTAB4Hash.put("LO6OfHwOrAssignment", course.getLO6OfHwOrAssignment());
+        oldTAB4Hash.put("LO7OfHwOrAssignment", course.getLO7OfHwOrAssignment());
+        oldTAB4Hash.put("NoOfPresentationOrJury", course.getNoOfPresentationOrJury());
+        oldTAB4Hash.put("WeightOfPresentationOrJury", course.getWeightOfPresentationOrJury());
+        oldTAB4Hash.put("LO1OfPresentationOrJury", course.getLO1OfPresentationOrJury());
+        oldTAB4Hash.put("LO2OfPresentationOrJury", course.getLO2OfPresentationOrJury());
+        oldTAB4Hash.put("LO3OfPresentationOrJury", course.getLO3OfPresentationOrJury());
+        oldTAB4Hash.put("LO4OfPresentationOrJury", course.getLO4OfPresentationOrJury());
+        oldTAB4Hash.put("LO5OfPresentationOrJury", course.getLO5OfPresentationOrJury());
+        oldTAB4Hash.put("LO6OfPresentationOrJury", course.getLO6OfPresentationOrJury());
+        oldTAB4Hash.put("LO7OfPresentationOrJury", course.getLO7OfPresentationOrJury());
+        oldTAB4Hash.put("NoOfProject", course.getNoOfProject());
+        oldTAB4Hash.put("WeightOfProject", course.getWeightOfProject());
+        oldTAB4Hash.put("LO1OfProject", course.getLO1OfProject());
+        oldTAB4Hash.put("LO2OfProject", course.getLO2OfProject());
+        oldTAB4Hash.put("LO3OfProject", course.getLO3OfProject());
+        oldTAB4Hash.put("LO4OfProject", course.getLO4OfProject());
+        oldTAB4Hash.put("LO5OfProject", course.getLO5OfProject());
+        oldTAB4Hash.put("LO6OfProject", course.getLO6OfProject());
+        oldTAB4Hash.put("LO7OfProject", course.getLO7OfProject());
+        oldTAB4Hash.put("NoOfSeminarOrWorkshop", course.getNoOfSeminarOrWorkshop());
+        oldTAB4Hash.put("WeightOfSeminarOrWorkshop", course.getWeightOfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO1OfSeminarOrWorkshop", course.getLO1OfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO2OfSeminarOrWorkshop", course.getLO2OfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO3OfSeminarOrWorkshop", course.getLO3OfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO4OfSeminarOrWorkshop", course.getLO4OfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO5OfSeminarOrWorkshop", course.getLO5OfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO6OfSeminarOrWorkshop", course.getLO6OfSeminarOrWorkshop());
+        oldTAB4Hash.put("LO7OfSeminarOrWorkshop", course.getLO7OfSeminarOrWorkshop());
+        oldTAB4Hash.put("NoOfOralExam", course.getNoOfOralExam());
+        oldTAB4Hash.put("WeightOfOralExam", course.getWeightOfOralExam());
+        oldTAB4Hash.put("LO1OfOralExam", course.getLO1OfOralExam());
+        oldTAB4Hash.put("LO2OfOralExam", course.getLO2OfOralExam());
+        oldTAB4Hash.put("LO3OfOralExam", course.getLO3OfOralExam());
+        oldTAB4Hash.put("LO4OfOralExam", course.getLO4OfOralExam());
+        oldTAB4Hash.put("LO5OfOralExam", course.getLO5OfOralExam());
+        oldTAB4Hash.put("LO6OfOralExam", course.getLO6OfOralExam());
+        oldTAB4Hash.put("LO7OfOralExam", course.getLO7OfOralExam());
+        oldTAB4Hash.put("NoOfMidterm", course.getNoOfMidterm());
+        oldTAB4Hash.put("WeightOfMidterm", course.getWeightOfMidterm());
+        oldTAB4Hash.put("LO1OfMidterm", course.getLO1OfMidterm());
+        oldTAB4Hash.put("LO2OfMidterm", course.getLO2OfMidterm());
+        oldTAB4Hash.put("LO3OfMidterm", course.getLO3OfMidterm());
+        oldTAB4Hash.put("LO4OfMidterm", course.getLO4OfMidterm());
+        oldTAB4Hash.put("LO5OfMidterm", course.getLO5OfMidterm());
+        oldTAB4Hash.put("LO6OfMidterm", course.getLO6OfMidterm());
+        oldTAB4Hash.put("LO7OfMidterm", course.getLO7OfMidterm());
+        oldTAB4Hash.put("NoOfFinalExam", course.getNoOfFinalExam());
+        oldTAB4Hash.put("WeightOfFinalExam", course.getWeightOfFinalExam());
+        oldTAB4Hash.put("LO1OfFinalExam", course.getLO1OfFinalExam());
+        oldTAB4Hash.put("LO2OfFinalExam", course.getLO2OfFinalExam());
+        oldTAB4Hash.put("LO3OfFinalExam", course.getLO3OfFinalExam());
+        oldTAB4Hash.put("LO4OfFinalExam", course.getLO4OfFinalExam());
+        oldTAB4Hash.put("LO5OfFinalExam", course.getLO5OfFinalExam());
+        oldTAB4Hash.put("LO6OfFinalExam", course.getLO6OfFinalExam());
+        oldTAB4Hash.put("LO7OfFinalExam", course.getLO7OfFinalExam());
+        oldTAB4Hash.put("NoOfTotalWeight", course.getNoOfTotalWeight());
+        oldTAB4Hash.put("WeightOfTotalWeight", course.getWeightOfTotalWeight());
+        oldTAB4Hash.put("LO1OfTotalWeight", course.getLO1OfTotalWeight());
+        oldTAB4Hash.put("LO2OfTotalWeight", course.getLO2OfTotalWeight());
+        oldTAB4Hash.put("LO3OfTotalWeight", course.getLO3OfTotalWeight());
+        oldTAB4Hash.put("LO4OfTotalWeight", course.getLO4OfTotalWeight());
+        oldTAB4Hash.put("LO5OfTotalWeight", course.getLO5OfTotalWeight());
+        oldTAB4Hash.put("LO6OfTotalWeight", course.getLO6OfTotalWeight());
+        oldTAB4Hash.put("LO7OfTotalWeight", course.getLO7OfTotalWeight());
+        oldTAB4Hash.put("WeightOfSemActivitiesOnFinalGrade1", course.getWeightOfSemActivitiesOnFinalGrade1());
+        oldTAB4Hash.put("WeightOfSemActivitiesOnFinalGrade2", course.getWeightOfSemActivitiesOnFinalGrade2());
+        oldTAB4Hash.put("WeightOfEndOfSemActivitiesOnFinalGrade1", course.getWeightOfEndOfSemActivitiesOnFinalGrade1());
+        oldTAB4Hash.put("WeightOfEndOfSemActivitiesOnFinalGrade2", course.getWeightOfEndOfSemActivitiesOnFinalGrade2());
+        oldTAB4Hash.put("EndOfTab4Total1", course.getEndOfTab4Total1());
+        oldTAB4Hash.put("EndOfTab4Total2", course.getEndOfTab4Total2());
+        return oldTAB4Hash;
     }
-    public HashMap fillTab5Hash(CourseInformationx course){
-        TAB5Hash.put("CourseHoursDur", course.getCourseHoursDur());
-        TAB5Hash.put("CourseHoursWL", course.getCourseHoursWL());
-        TAB5Hash.put("LabOrApplicationHoursDur", course.getLabOrApplicationHoursDur());
-        TAB5Hash.put("LabOrApplicationHourWL", course.getLabOrApplicationHourWL());
-        TAB5Hash.put("StudyHourseOutsideClass", course.getStudyHourseOutsideClass());
-        TAB5Hash.put("StudyHourseOutsideClassDur", course.getStudyHourseOutsideClassDur());
-        TAB5Hash.put("StudyHourseOutsideClassWL", course.getStudyHourseOutsideClassWL());
-        TAB5Hash.put("FieldWork", course.getFieldWork());
-        TAB5Hash.put("FieldWorkDur", course.getFieldWorkDur());
-        TAB5Hash.put("FieldWorkWL", course.getFieldWorkWL());
-        TAB5Hash.put("QuizOrStudioCritique", course.getQuizOrStudioCritique());
-        TAB5Hash.put("QuizOrStudioCritiqueDur", course.getQuizOrStudioCritiqueDur());
-        TAB5Hash.put("QuizOrStudioCritiqueWL", course.getQuizOrStudioCritiqueWL());
-        TAB5Hash.put("HomeworkOrAssignment", course.getHomeworkOrAssignment());
-        TAB5Hash.put("HomeworkOrAssignmentDur", course.getHomeworkOrAssignmentDur());
-        TAB5Hash.put("HomeworkOrAssignmentWL", course.getHomeworkOrAssignmentWL());
-        TAB5Hash.put("PresentationOrJury", course.getPresentationOrJury());
-        TAB5Hash.put("PresentationOrJuryDur", course.getPresentationOrJuryDur());
-        TAB5Hash.put("PresentationOrJuryWL", course.getPresentationOrJuryWL());
-        TAB5Hash.put("Project", course.getProject());
-        TAB5Hash.put("ProjectDur", course.getProjectDur());
-        TAB5Hash.put("ProjectWL", course.getProjectWL());
-        TAB5Hash.put("Portfolio", course.getPortfolio());
-        TAB5Hash.put("PortfolioDur", course.getPortfolioDur());
-        TAB5Hash.put("PortfolioWL", course.getPortfolioWL());
-        TAB5Hash.put("SeminarOrWorkshop", course.getSeminarOrWorkshop());
-        TAB5Hash.put("SeminarOrWorkshopDur", course.getSeminarOrWorkshopDur());
-        TAB5Hash.put("SeminarOrWorkshopWL", course.getSeminarOrWorkshopWL());
-        TAB5Hash.put("OralExam", course.getOralExam());
-        TAB5Hash.put("OralExamDur", course.getOralExamDur());
-        TAB5Hash.put("OralExamWL", course.getOralExamWL());
-        TAB5Hash.put("Midterm", course.getMidterm());
-        TAB5Hash.put("MidtermDur", course.getMidtermDur());
-        TAB5Hash.put("MidtermWL", course.getMidtermWL());
-        TAB5Hash.put("FinalExam", course.getFinal());
-        TAB5Hash.put("FinalExamDur", course.getFinalDur());
-        TAB5Hash.put("FinalExamWL", course.getFinalWL());
-        TAB5Hash.put("TotalWorkload", course.getTotalWorkload());
-        return TAB5Hash;
+    public HashMap filloldTab5Hash(CourseInformationx course){
+        oldTAB5Hash.put("CourseHoursDur", course.getCourseHoursDur());
+        oldTAB5Hash.put("CourseHoursWL", course.getCourseHoursWL());
+        oldTAB5Hash.put("LabOrApplicationHoursDur", course.getLabOrApplicationHoursDur());
+        oldTAB5Hash.put("LabOrApplicationHourWL", course.getLabOrApplicationHourWL());
+        oldTAB5Hash.put("StudyHourseOutsideClass", course.getStudyHourseOutsideClass());
+        oldTAB5Hash.put("StudyHourseOutsideClassDur", course.getStudyHourseOutsideClassDur());
+        oldTAB5Hash.put("StudyHourseOutsideClassWL", course.getStudyHourseOutsideClassWL());
+        oldTAB5Hash.put("FieldWork", course.getFieldWork());
+        oldTAB5Hash.put("FieldWorkDur", course.getFieldWorkDur());
+        oldTAB5Hash.put("FieldWorkWL", course.getFieldWorkWL());
+        oldTAB5Hash.put("QuizOrStudioCritique", course.getQuizOrStudioCritique());
+        oldTAB5Hash.put("QuizOrStudioCritiqueDur", course.getQuizOrStudioCritiqueDur());
+        oldTAB5Hash.put("QuizOrStudioCritiqueWL", course.getQuizOrStudioCritiqueWL());
+        oldTAB5Hash.put("HomeworkOrAssignment", course.getHomeworkOrAssignment());
+        oldTAB5Hash.put("HomeworkOrAssignmentDur", course.getHomeworkOrAssignmentDur());
+        oldTAB5Hash.put("HomeworkOrAssignmentWL", course.getHomeworkOrAssignmentWL());
+        oldTAB5Hash.put("PresentationOrJury", course.getPresentationOrJury());
+        oldTAB5Hash.put("PresentationOrJuryDur", course.getPresentationOrJuryDur());
+        oldTAB5Hash.put("PresentationOrJuryWL", course.getPresentationOrJuryWL());
+        oldTAB5Hash.put("Project", course.getProject());
+        oldTAB5Hash.put("ProjectDur", course.getProjectDur());
+        oldTAB5Hash.put("ProjectWL", course.getProjectWL());
+        oldTAB5Hash.put("Portfolio", course.getPortfolio());
+        oldTAB5Hash.put("PortfolioDur", course.getPortfolioDur());
+        oldTAB5Hash.put("PortfolioWL", course.getPortfolioWL());
+        oldTAB5Hash.put("SeminarOrWorkshop", course.getSeminarOrWorkshop());
+        oldTAB5Hash.put("SeminarOrWorkshopDur", course.getSeminarOrWorkshopDur());
+        oldTAB5Hash.put("SeminarOrWorkshopWL", course.getSeminarOrWorkshopWL());
+        oldTAB5Hash.put("OralExam", course.getOralExam());
+        oldTAB5Hash.put("OralExamDur", course.getOralExamDur());
+        oldTAB5Hash.put("OralExamWL", course.getOralExamWL());
+        oldTAB5Hash.put("Midterm", course.getMidterm());
+        oldTAB5Hash.put("MidtermDur", course.getMidtermDur());
+        oldTAB5Hash.put("MidtermWL", course.getMidtermWL());
+        oldTAB5Hash.put("FinalExam", course.getFinal());
+        oldTAB5Hash.put("FinalExamDur", course.getFinalDur());
+        oldTAB5Hash.put("FinalExamWL", course.getFinalWL());
+        oldTAB5Hash.put("TotalWorkload", course.getTotalWorkload());
+        return oldTAB5Hash;
     }
-    public HashMap fillTab6Hash(CourseInformationx course){
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1(), "ProgramCompetenciesOutcome1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel1(),
+    public HashMap filloldTab6Hash(CourseInformationx course){
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1(), "ProgramCompetenciesOutcome1");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel1(),
                 "ProgramCompetenciesOutcome1ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel2(),
                 "ProgramCompetenciesOutcome1ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel3(),
                 "ProgramCompetenciesOutcome1ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel4(),
                 "ProgramCompetenciesOutcome1ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel5(),
                 "ProgramCompetenciesOutcome1ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome1LOno(), "ProgramCompetenciesOutcome1LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2(), "ProgramCompetenciesOutcome2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome1LOno(), "ProgramCompetenciesOutcome1LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2(), "ProgramCompetenciesOutcome2");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel1(),
                 "ProgramCompetenciesOutcome2ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel2(),
                 "ProgramCompetenciesOutcome2ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel3(),
                 "ProgramCompetenciesOutcome2ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel4(),
                 "ProgramCompetenciesOutcome2ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel5(),
                 "ProgramCompetenciesOutcome2ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome2LOno(), "ProgramCompetenciesOutcome2LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3(), "ProgramCompetenciesOutcome3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome2LOno(), "ProgramCompetenciesOutcome2LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3(), "ProgramCompetenciesOutcome3");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel1(),
                 "ProgramCompetenciesOutcome3ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel2(),
                 "ProgramCompetenciesOutcome3ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel3(),
                 "ProgramCompetenciesOutcome3ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel4(),
                 "ProgramCompetenciesOutcome3ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel5(),
                 "ProgramCompetenciesOutcome3ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome3LOno(), "ProgramCompetenciesOutcome3LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4(), "ProgramCompetenciesOutcome4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome3LOno(), "ProgramCompetenciesOutcome3LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4(), "ProgramCompetenciesOutcome4");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel1(),
                 "ProgramCompetenciesOutcome4ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel2(),
                 "ProgramCompetenciesOutcome4ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel3(),
                 "ProgramCompetenciesOutcome4ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel4(),
                 "ProgramCompetenciesOutcome4ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel5(),
                 "ProgramCompetenciesOutcome4ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome4LOno(), "ProgramCompetenciesOutcome4LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5(), "ProgramCompetenciesOutcome5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome4LOno(), "ProgramCompetenciesOutcome4LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5(), "ProgramCompetenciesOutcome5");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel1(),
                 "ProgramCompetenciesOutcome5ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel2(),
                 "ProgramCompetenciesOutcome5ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel3(),
                 "ProgramCompetenciesOutcome5ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel4(),
                 "ProgramCompetenciesOutcome5ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel5(),
                 "ProgramCompetenciesOutcome5ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome5LOno(), "ProgramCompetenciesOutcome5LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6(), "ProgramCompetenciesOutcome6");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome5LOno(), "ProgramCompetenciesOutcome5LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6(), "ProgramCompetenciesOutcome6");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel1(),
                 "ProgramCompetenciesOutcome6ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel2(),
                 "ProgramCompetenciesOutcome6ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel3(),
                 "ProgramCompetenciesOutcome6ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel4(),
                 "ProgramCompetenciesOutcome6ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel5(),
                 "ProgramCompetenciesOutcome6ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome6LOno(), "ProgramCompetenciesOutcome6LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7(), "ProgramCompetenciesOutcome7");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome6LOno(), "ProgramCompetenciesOutcome6LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7(), "ProgramCompetenciesOutcome7");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel1(),
                 "ProgramCompetenciesOutcome7ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel2(),
                 "ProgramCompetenciesOutcome7ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel3(),
                 "ProgramCompetenciesOutcome7ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel4(),
                 "ProgramCompetenciesOutcome7ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel5(),
                 "ProgramCompetenciesOutcome7ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome7LOno(), "ProgramCompetenciesOutcome7LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8(), "ProgramCompetenciesOutcome8");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome7LOno(), "ProgramCompetenciesOutcome7LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8(), "ProgramCompetenciesOutcome8");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel1(),
                 "ProgramCompetenciesOutcome8ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel2(),
                 "ProgramCompetenciesOutcome8ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel3(),
                 "ProgramCompetenciesOutcome8ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel4(),
                 "ProgramCompetenciesOutcome8ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel5(),
                 "ProgramCompetenciesOutcome8ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome8LOno(), "ProgramCompetenciesOutcome8LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9(), "ProgramCompetenciesOutcome9");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome8LOno(), "ProgramCompetenciesOutcome8LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9(), "ProgramCompetenciesOutcome9");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel1(),
                 "ProgramCompetenciesOutcome9ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel2(),
                 "ProgramCompetenciesOutcome9ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel3(),
                 "ProgramCompetenciesOutcome9ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel4(),
                 "ProgramCompetenciesOutcome9ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel5(),
                 "ProgramCompetenciesOutcome9ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome9LOno(), "ProgramCompetenciesOutcome9LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10(), "ProgramCompetenciesOutcome10");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome9LOno(), "ProgramCompetenciesOutcome9LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10(), "ProgramCompetenciesOutcome10");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel1(),
                 "ProgramCompetenciesOutcome10ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel2(),
                 "ProgramCompetenciesOutcome10ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel3(),
                 "ProgramCompetenciesOutcome10ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel4(),
                 "ProgramCompetenciesOutcome10ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel5(),
                 "ProgramCompetenciesOutcome10ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome10LOno(), "ProgramCompetenciesOutcome10LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11(), "ProgramCompetenciesOutcome11");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome10LOno(), "ProgramCompetenciesOutcome10LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11(), "ProgramCompetenciesOutcome11");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel1(),
                 "ProgramCompetenciesOutcome11ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel2(),
                 "ProgramCompetenciesOutcome11ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel3(),
                 "ProgramCompetenciesOutcome11ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel4(),
                 "ProgramCompetenciesOutcome11ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel5(),
                 "ProgramCompetenciesOutcome11ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome11LOno(), "ProgramCompetenciesOutcome11LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12(), "ProgramCompetenciesOutcome12");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome11LOno(), "ProgramCompetenciesOutcome11LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12(), "ProgramCompetenciesOutcome12");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel1(),
                 "ProgramCompetenciesOutcome12ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel2(),
                 "ProgramCompetenciesOutcome12ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel3(),
                 "ProgramCompetenciesOutcome12ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel4(),
                 "ProgramCompetenciesOutcome12ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel5(),
                 "ProgramCompetenciesOutcome12ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome12LOno(), "ProgramCompetenciesOutcome12LOno");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13(), "ProgramCompetenciesOutcome13");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel1(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome12LOno(), "ProgramCompetenciesOutcome12LOno");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13(), "ProgramCompetenciesOutcome13");
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel1(),
                 "ProgramCompetenciesOutcome13ContributionLevel1");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel2(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel2(),
                 "ProgramCompetenciesOutcome13ContributionLevel2");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel3(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel3(),
                 "ProgramCompetenciesOutcome13ContributionLevel3");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel4(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel4(),
                 "ProgramCompetenciesOutcome13ContributionLevel4");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel5(),
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel5(),
                 "ProgramCompetenciesOutcome13ContributionLevel5");
-        TAB6Hash.put(course.getProgramCompetenciesOutcome13LOno(), "ProgramCompetenciesOutcome13LOno");
-        return TAB6Hash;
+        oldTAB6Hash.put(course.getProgramCompetenciesOutcome13LOno(), "ProgramCompetenciesOutcome13LOno");
+        return oldTAB6Hash;
+    }
+
+    public HashMap fillnewTab1Hash(CourseInformationx course){
+        newTAB1Hash.put("courseName",course.getCourseName());
+        newTAB1Hash.put("Code",course.getCode());
+        newTAB1Hash.put("Season", course.getSeason());
+        newTAB1Hash.put("Theory",course.getTheory());
+        newTAB1Hash.put("Lab",course.getLab() );
+        newTAB1Hash.put("LocalCredits",course.getLocalCredits() );
+        newTAB1Hash.put("Ects",course.getEcts()) ;
+        newTAB1Hash.put("Prerequisities", course.getPrerequisities());
+        newTAB1Hash.put("CourseLanguage", course.getCourseLanguage());
+        newTAB1Hash.put("CourseType", course.getCourseType());
+        newTAB1Hash.put("CourseLevel",course.getCourseLevel() );
+        newTAB1Hash.put("ModeOfDelevery", course.getModeOfDelivery());
+        newTAB1Hash.put("teachingMethods",course.getTeachingMethodsAndTechniques() );
+        newTAB1Hash.put("coursecoordinator",course.getCourseCoordinator() );
+        newTAB1Hash.put("courselecturer",course.getCourseLecturers() );
+        newTAB1Hash.put("assistant",course.getCourseAssistants() );
+
+        return newTAB1Hash;
+    }
+    public HashMap fillnewTab2Hash(CourseInformationx course){
+        newTAB2Hash.put("CourseObjectives",course.getCourseObjectives() );
+        newTAB2Hash.put("LearningOutcomes",course.getLearningOutcomes() );
+        newTAB2Hash.put("CourseDescription", course.getCourseDescription());
+        newTAB2Hash.put("CCCoreCourse", course.getCCCoreCourse());
+        newTAB2Hash.put("CCMajorAreaCourse", course.getCCMajorAreaCourse());
+        newTAB2Hash.put("CCSupportiveCourse",course.getCCSupportiveCourse() );
+        newTAB2Hash.put("CCComAndManagementSkillsCourse", course.getCCComAndManagementSkillsCourse());
+        newTAB2Hash.put("CCTransferableSkillCourse",course.getCCTransferableSkillCourse() );
+        return newTAB2Hash;
+    }
+    public HashMap fillnewTab3Hash(CourseInformationx course){
+        newTAB3Hash.put("Week1Subjects", course.getWeek1Subjects());
+        newTAB3Hash.put("Week1ReqMat", course.getWeek1ReqMat());
+        newTAB3Hash.put("Week2Subjects", course.getWeek2Subjects());
+        newTAB3Hash.put("Week2ReqMat", course.getWeek2ReqMat());
+        newTAB3Hash.put("Week3Subjects", course.getWeek3Subjects());
+        newTAB3Hash.put("Week3ReqMat", course.getWeek3ReqMat());
+        newTAB3Hash.put("Week4Subjects", course.getWeek4Subjects());
+        newTAB3Hash.put("Week4ReqMat", course.getWeek4ReqMat());
+        newTAB3Hash.put("Week5Subjects", course.getWeek5Subjects());
+        newTAB3Hash.put("Week5ReqMat", course.getWeek5ReqMat());
+        newTAB3Hash.put("Week6Subjects", course.getWeek6Subjects());
+        newTAB3Hash.put("Week6ReqMat", course.getWeek6ReqMat());
+        newTAB3Hash.put("Week7Subjects", course.getWeek7Subjects());
+        newTAB3Hash.put("Week7ReqMat", course.getWeek7ReqMat());
+        newTAB3Hash.put("Week8Subjects", course.getWeek8Subjects());
+        newTAB3Hash.put("Week8ReqMat", course.getWeek8ReqMat());
+        newTAB3Hash.put("Week9Subjects", course.getWeek9Subjects());
+        newTAB3Hash.put("Week9ReqMat", course.getWeek9ReqMat());
+        newTAB3Hash.put("Week10Subjects", course.getWeek10Subjects());
+        newTAB3Hash.put("Week10ReqMat", course.getWeek10ReqMat());
+        newTAB3Hash.put("Week11Subjects", course.getWeek11Subjects());
+        newTAB3Hash.put("Week11ReqMat", course.getWeek11ReqMat());
+        newTAB3Hash.put("Week12Subjects", course.getWeek12Subjects());
+        newTAB3Hash.put("Week12ReqMat", course.getWeek12ReqMat());
+        newTAB3Hash.put("Week13Subjects", course.getWeek13Subjects());
+        newTAB3Hash.put("Week13ReqMat", course.getWeek13ReqMat());
+        newTAB3Hash.put("Week14Subjects", course.getWeek14Subjects());
+        newTAB3Hash.put("Week14ReqMat", course.getWeek14ReqMat());
+        newTAB3Hash.put("Week15Subjects", course.getWeek15Subjects());
+        newTAB3Hash.put("Week15ReqMat", course.getWeek15ReqMat());
+        newTAB3Hash.put("SuggestedReadingsAndMaterials", course.getSuggestedReadingsAndMaterials());
+        return  newTAB3Hash;
+    }
+    public HashMap fillnewTab4Hash(CourseInformationx course){
+        newTAB4Hash.put("NoOfParticipation", course.getNoOfParticipation());
+        newTAB4Hash.put("WeightOfParticipation", course.getWeightOfParticipation());
+        newTAB4Hash.put("LO1OfParticipation", course.getLO1OfParticipation());
+        newTAB4Hash.put("LO2OfParticipation", course.getLO2OfParticipation());
+        newTAB4Hash.put("LO3OfParticipation", course.getLO3OfParticipation());
+        newTAB4Hash.put("LO4OfParticipation", course.getLO4OfParticipation());
+        newTAB4Hash.put("LO5OfParticipation", course.getLO5OfParticipation());
+        newTAB4Hash.put("LO6OfParticipation", course.getLO6OfParticipation());
+        newTAB4Hash.put("LO7OfParticipation", course.getLO7OfParticipation());
+        newTAB4Hash.put("NoOfLabOrApplication", course.getNoOfLabOrApplication());
+        newTAB4Hash.put("WeightOfLabOrApplication", course.getWeightOfLabOrApplication());
+        newTAB4Hash.put("LO1OfLabOrApplication", course.getLO1OfLabOrApplication());
+        newTAB4Hash.put("LO2OfLabOrApplication", course.getLO2OfLabOrApplication());
+        newTAB4Hash.put("LO3OfLabOrApplication", course.getLO3OfLabOrApplication());
+        newTAB4Hash.put("LO4OfLabOrApplication", course.getLO4OfLabOrApplication());
+        newTAB4Hash.put("LO5OfLabOrApplication", course.getLO5OfLabOrApplication());
+        newTAB4Hash.put("LO6OfLabOrApplication", course.getLO6OfLabOrApplication());
+        newTAB4Hash.put("LO7OfLabOrApplication", course.getLO7OfLabOrApplication());
+        newTAB4Hash.put("NoOfFieldWork", course.getNoOfFieldWork());
+        newTAB4Hash.put("WeightOfFieldWork", course.getWeightOfFieldWork());
+        newTAB4Hash.put("LO1OfFieldWork", course.getLO1OfFieldWork());
+        newTAB4Hash.put("LO2OfFieldWork", course.getLO2OfFieldWork());
+        newTAB4Hash.put("LO3OfFieldWork", course.getLO3OfFieldWork());
+        newTAB4Hash.put("LO4OfFieldWork", course.getLO4OfFieldWork());
+        newTAB4Hash.put("LO5OfFieldWork", course.getLO5OfFieldWork());
+        newTAB4Hash.put("LO6OfFieldWork", course.getLO6OfFieldWork());
+        newTAB4Hash.put("LO7OfFieldWork", course.getLO7OfFieldWork());
+        newTAB4Hash.put("NoOfQuizOrStudioCritique", course.getNoOfQuizOrStudioCritique());
+        newTAB4Hash.put("WeightOfQuizOrStudioCritique", course.getWeightOfQuizOrStudioCritique());
+        newTAB4Hash.put("LO1OfQuizOrStudioCritique", course.getLO1OfQuizOrStudioCritique());
+        newTAB4Hash.put("LO2OfQuizOrStudioCritique", course.getLO2OfQuizOrStudioCritique());
+        newTAB4Hash.put("LO3OfQuizOrStudioCritique", course.getLO3OfQuizOrStudioCritique());
+        newTAB4Hash.put("LO4OfQuizOrStudioCritique", course.getLO4OfQuizOrStudioCritique());
+        newTAB4Hash.put("LO5OfQuizOrStudioCritique", course.getLO5OfQuizOrStudioCritique());
+        newTAB4Hash.put("LO6OfQuizOrStudioCritique", course.getLO6OfQuizOrStudioCritique());
+        newTAB4Hash.put("LO7OfQuizOrStudioCritique", course.getLO7OfQuizOrStudioCritique());
+        newTAB4Hash.put("NoOfHwOrAssignment", course.getNoOfHwOrAssignment());
+        newTAB4Hash.put("WeightOfHwOrAssignment", course.getWeightOfHwOrAssignment());
+        newTAB4Hash.put("LO1OfHwOrAssignment", course.getLO1OfHwOrAssignment());
+        newTAB4Hash.put("LO2OfHwOrAssignment", course.getLO2OfHwOrAssignment());
+        newTAB4Hash.put("LO3OfHwOrAssignment", course.getLO3OfHwOrAssignment());
+        newTAB4Hash.put("LO4OfHwOrAssignment", course.getLO4OfHwOrAssignment());
+        newTAB4Hash.put("LO5OfHwOrAssignment", course.getLO5OfHwOrAssignment());
+        newTAB4Hash.put("LO6OfHwOrAssignment", course.getLO6OfHwOrAssignment());
+        newTAB4Hash.put("LO7OfHwOrAssignment", course.getLO7OfHwOrAssignment());
+        newTAB4Hash.put("NoOfPresentationOrJury", course.getNoOfPresentationOrJury());
+        newTAB4Hash.put("WeightOfPresentationOrJury", course.getWeightOfPresentationOrJury());
+        newTAB4Hash.put("LO1OfPresentationOrJury", course.getLO1OfPresentationOrJury());
+        newTAB4Hash.put("LO2OfPresentationOrJury", course.getLO2OfPresentationOrJury());
+        newTAB4Hash.put("LO3OfPresentationOrJury", course.getLO3OfPresentationOrJury());
+        newTAB4Hash.put("LO4OfPresentationOrJury", course.getLO4OfPresentationOrJury());
+        newTAB4Hash.put("LO5OfPresentationOrJury", course.getLO5OfPresentationOrJury());
+        newTAB4Hash.put("LO6OfPresentationOrJury", course.getLO6OfPresentationOrJury());
+        newTAB4Hash.put("LO7OfPresentationOrJury", course.getLO7OfPresentationOrJury());
+        newTAB4Hash.put("NoOfProject", course.getNoOfProject());
+        newTAB4Hash.put("WeightOfProject", course.getWeightOfProject());
+        newTAB4Hash.put("LO1OfProject", course.getLO1OfProject());
+        newTAB4Hash.put("LO2OfProject", course.getLO2OfProject());
+        newTAB4Hash.put("LO3OfProject", course.getLO3OfProject());
+        newTAB4Hash.put("LO4OfProject", course.getLO4OfProject());
+        newTAB4Hash.put("LO5OfProject", course.getLO5OfProject());
+        newTAB4Hash.put("LO6OfProject", course.getLO6OfProject());
+        newTAB4Hash.put("LO7OfProject", course.getLO7OfProject());
+        newTAB4Hash.put("NoOfSeminarOrWorkshop", course.getNoOfSeminarOrWorkshop());
+        newTAB4Hash.put("WeightOfSeminarOrWorkshop", course.getWeightOfSeminarOrWorkshop());
+        newTAB4Hash.put("LO1OfSeminarOrWorkshop", course.getLO1OfSeminarOrWorkshop());
+        newTAB4Hash.put("LO2OfSeminarOrWorkshop", course.getLO2OfSeminarOrWorkshop());
+        newTAB4Hash.put("LO3OfSeminarOrWorkshop", course.getLO3OfSeminarOrWorkshop());
+        newTAB4Hash.put("LO4OfSeminarOrWorkshop", course.getLO4OfSeminarOrWorkshop());
+        newTAB4Hash.put("LO5OfSeminarOrWorkshop", course.getLO5OfSeminarOrWorkshop());
+        newTAB4Hash.put("LO6OfSeminarOrWorkshop", course.getLO6OfSeminarOrWorkshop());
+        newTAB4Hash.put("LO7OfSeminarOrWorkshop", course.getLO7OfSeminarOrWorkshop());
+        newTAB4Hash.put("NoOfOralExam", course.getNoOfOralExam());
+        newTAB4Hash.put("WeightOfOralExam", course.getWeightOfOralExam());
+        newTAB4Hash.put("LO1OfOralExam", course.getLO1OfOralExam());
+        newTAB4Hash.put("LO2OfOralExam", course.getLO2OfOralExam());
+        newTAB4Hash.put("LO3OfOralExam", course.getLO3OfOralExam());
+        newTAB4Hash.put("LO4OfOralExam", course.getLO4OfOralExam());
+        newTAB4Hash.put("LO5OfOralExam", course.getLO5OfOralExam());
+        newTAB4Hash.put("LO6OfOralExam", course.getLO6OfOralExam());
+        newTAB4Hash.put("LO7OfOralExam", course.getLO7OfOralExam());
+        newTAB4Hash.put("NoOfMidterm", course.getNoOfMidterm());
+        newTAB4Hash.put("WeightOfMidterm", course.getWeightOfMidterm());
+        newTAB4Hash.put("LO1OfMidterm", course.getLO1OfMidterm());
+        newTAB4Hash.put("LO2OfMidterm", course.getLO2OfMidterm());
+        newTAB4Hash.put("LO3OfMidterm", course.getLO3OfMidterm());
+        newTAB4Hash.put("LO4OfMidterm", course.getLO4OfMidterm());
+        newTAB4Hash.put("LO5OfMidterm", course.getLO5OfMidterm());
+        newTAB4Hash.put("LO6OfMidterm", course.getLO6OfMidterm());
+        newTAB4Hash.put("LO7OfMidterm", course.getLO7OfMidterm());
+        newTAB4Hash.put("NoOfFinalExam", course.getNoOfFinalExam());
+        newTAB4Hash.put("WeightOfFinalExam", course.getWeightOfFinalExam());
+        newTAB4Hash.put("LO1OfFinalExam", course.getLO1OfFinalExam());
+        newTAB4Hash.put("LO2OfFinalExam", course.getLO2OfFinalExam());
+        newTAB4Hash.put("LO3OfFinalExam", course.getLO3OfFinalExam());
+        newTAB4Hash.put("LO4OfFinalExam", course.getLO4OfFinalExam());
+        newTAB4Hash.put("LO5OfFinalExam", course.getLO5OfFinalExam());
+        newTAB4Hash.put("LO6OfFinalExam", course.getLO6OfFinalExam());
+        newTAB4Hash.put("LO7OfFinalExam", course.getLO7OfFinalExam());
+        newTAB4Hash.put("NoOfTotalWeight", course.getNoOfTotalWeight());
+        newTAB4Hash.put("WeightOfTotalWeight", course.getWeightOfTotalWeight());
+        newTAB4Hash.put("LO1OfTotalWeight", course.getLO1OfTotalWeight());
+        newTAB4Hash.put("LO2OfTotalWeight", course.getLO2OfTotalWeight());
+        newTAB4Hash.put("LO3OfTotalWeight", course.getLO3OfTotalWeight());
+        newTAB4Hash.put("LO4OfTotalWeight", course.getLO4OfTotalWeight());
+        newTAB4Hash.put("LO5OfTotalWeight", course.getLO5OfTotalWeight());
+        newTAB4Hash.put("LO6OfTotalWeight", course.getLO6OfTotalWeight());
+        newTAB4Hash.put("LO7OfTotalWeight", course.getLO7OfTotalWeight());
+        newTAB4Hash.put("WeightOfSemActivitiesOnFinalGrade1", course.getWeightOfSemActivitiesOnFinalGrade1());
+        newTAB4Hash.put("WeightOfSemActivitiesOnFinalGrade2", course.getWeightOfSemActivitiesOnFinalGrade2());
+        newTAB4Hash.put("WeightOfEndOfSemActivitiesOnFinalGrade1", course.getWeightOfEndOfSemActivitiesOnFinalGrade1());
+        newTAB4Hash.put("WeightOfEndOfSemActivitiesOnFinalGrade2", course.getWeightOfEndOfSemActivitiesOnFinalGrade2());
+        newTAB4Hash.put("EndOfTab4Total1", course.getEndOfTab4Total1());
+        newTAB4Hash.put("EndOfTab4Total2", course.getEndOfTab4Total2());
+        return newTAB4Hash;
+    }
+    public HashMap fillnewTab5Hash(CourseInformationx course){
+        newTAB5Hash.put("CourseHoursDur", course.getCourseHoursDur());
+        newTAB5Hash.put("CourseHoursWL", course.getCourseHoursWL());
+        newTAB5Hash.put("LabOrApplicationHoursDur", course.getLabOrApplicationHoursDur());
+        newTAB5Hash.put("LabOrApplicationHourWL", course.getLabOrApplicationHourWL());
+        newTAB5Hash.put("StudyHourseOutsideClass", course.getStudyHourseOutsideClass());
+        newTAB5Hash.put("StudyHourseOutsideClassDur", course.getStudyHourseOutsideClassDur());
+        newTAB5Hash.put("StudyHourseOutsideClassWL", course.getStudyHourseOutsideClassWL());
+        newTAB5Hash.put("FieldWork", course.getFieldWork());
+        newTAB5Hash.put("FieldWorkDur", course.getFieldWorkDur());
+        newTAB5Hash.put("FieldWorkWL", course.getFieldWorkWL());
+        newTAB5Hash.put("QuizOrStudioCritique", course.getQuizOrStudioCritique());
+        newTAB5Hash.put("QuizOrStudioCritiqueDur", course.getQuizOrStudioCritiqueDur());
+        newTAB5Hash.put("QuizOrStudioCritiqueWL", course.getQuizOrStudioCritiqueWL());
+        newTAB5Hash.put("HomeworkOrAssignment", course.getHomeworkOrAssignment());
+        newTAB5Hash.put("HomeworkOrAssignmentDur", course.getHomeworkOrAssignmentDur());
+        newTAB5Hash.put("HomeworkOrAssignmentWL", course.getHomeworkOrAssignmentWL());
+        newTAB5Hash.put("PresentationOrJury", course.getPresentationOrJury());
+        newTAB5Hash.put("PresentationOrJuryDur", course.getPresentationOrJuryDur());
+        newTAB5Hash.put("PresentationOrJuryWL", course.getPresentationOrJuryWL());
+        newTAB5Hash.put("Project", course.getProject());
+        newTAB5Hash.put("ProjectDur", course.getProjectDur());
+        newTAB5Hash.put("ProjectWL", course.getProjectWL());
+        newTAB5Hash.put("Portfolio", course.getPortfolio());
+        newTAB5Hash.put("PortfolioDur", course.getPortfolioDur());
+        newTAB5Hash.put("PortfolioWL", course.getPortfolioWL());
+        newTAB5Hash.put("SeminarOrWorkshop", course.getSeminarOrWorkshop());
+        newTAB5Hash.put("SeminarOrWorkshopDur", course.getSeminarOrWorkshopDur());
+        newTAB5Hash.put("SeminarOrWorkshopWL", course.getSeminarOrWorkshopWL());
+        newTAB5Hash.put("OralExam", course.getOralExam());
+        newTAB5Hash.put("OralExamDur", course.getOralExamDur());
+        newTAB5Hash.put("OralExamWL", course.getOralExamWL());
+        newTAB5Hash.put("Midterm", course.getMidterm());
+        newTAB5Hash.put("MidtermDur", course.getMidtermDur());
+        newTAB5Hash.put("MidtermWL", course.getMidtermWL());
+        newTAB5Hash.put("FinalExam", course.getFinal());
+        newTAB5Hash.put("FinalExamDur", course.getFinalDur());
+        newTAB5Hash.put("FinalExamWL", course.getFinalWL());
+        newTAB5Hash.put("TotalWorkload", course.getTotalWorkload());
+        return newTAB5Hash;
+    }
+    public HashMap fillnewTab6Hash(CourseInformationx course){
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1(), "ProgramCompetenciesOutcome1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel1(),
+                "ProgramCompetenciesOutcome1ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel2(),
+                "ProgramCompetenciesOutcome1ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel3(),
+                "ProgramCompetenciesOutcome1ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel4(),
+                "ProgramCompetenciesOutcome1ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1ContributionLevel5(),
+                "ProgramCompetenciesOutcome1ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome1LOno(), "ProgramCompetenciesOutcome1LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2(), "ProgramCompetenciesOutcome2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel1(),
+                "ProgramCompetenciesOutcome2ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel2(),
+                "ProgramCompetenciesOutcome2ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel3(),
+                "ProgramCompetenciesOutcome2ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel4(),
+                "ProgramCompetenciesOutcome2ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2ContributionLevel5(),
+                "ProgramCompetenciesOutcome2ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome2LOno(), "ProgramCompetenciesOutcome2LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3(), "ProgramCompetenciesOutcome3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel1(),
+                "ProgramCompetenciesOutcome3ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel2(),
+                "ProgramCompetenciesOutcome3ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel3(),
+                "ProgramCompetenciesOutcome3ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel4(),
+                "ProgramCompetenciesOutcome3ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3ContributionLevel5(),
+                "ProgramCompetenciesOutcome3ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome3LOno(), "ProgramCompetenciesOutcome3LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4(), "ProgramCompetenciesOutcome4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel1(),
+                "ProgramCompetenciesOutcome4ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel2(),
+                "ProgramCompetenciesOutcome4ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel3(),
+                "ProgramCompetenciesOutcome4ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel4(),
+                "ProgramCompetenciesOutcome4ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4ContributionLevel5(),
+                "ProgramCompetenciesOutcome4ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome4LOno(), "ProgramCompetenciesOutcome4LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5(), "ProgramCompetenciesOutcome5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel1(),
+                "ProgramCompetenciesOutcome5ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel2(),
+                "ProgramCompetenciesOutcome5ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel3(),
+                "ProgramCompetenciesOutcome5ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel4(),
+                "ProgramCompetenciesOutcome5ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5ContributionLevel5(),
+                "ProgramCompetenciesOutcome5ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome5LOno(), "ProgramCompetenciesOutcome5LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6(), "ProgramCompetenciesOutcome6");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel1(),
+                "ProgramCompetenciesOutcome6ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel2(),
+                "ProgramCompetenciesOutcome6ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel3(),
+                "ProgramCompetenciesOutcome6ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel4(),
+                "ProgramCompetenciesOutcome6ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6ContributionLevel5(),
+                "ProgramCompetenciesOutcome6ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome6LOno(), "ProgramCompetenciesOutcome6LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7(), "ProgramCompetenciesOutcome7");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel1(),
+                "ProgramCompetenciesOutcome7ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel2(),
+                "ProgramCompetenciesOutcome7ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel3(),
+                "ProgramCompetenciesOutcome7ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel4(),
+                "ProgramCompetenciesOutcome7ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7ContributionLevel5(),
+                "ProgramCompetenciesOutcome7ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome7LOno(), "ProgramCompetenciesOutcome7LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8(), "ProgramCompetenciesOutcome8");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel1(),
+                "ProgramCompetenciesOutcome8ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel2(),
+                "ProgramCompetenciesOutcome8ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel3(),
+                "ProgramCompetenciesOutcome8ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel4(),
+                "ProgramCompetenciesOutcome8ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8ContributionLevel5(),
+                "ProgramCompetenciesOutcome8ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome8LOno(), "ProgramCompetenciesOutcome8LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9(), "ProgramCompetenciesOutcome9");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel1(),
+                "ProgramCompetenciesOutcome9ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel2(),
+                "ProgramCompetenciesOutcome9ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel3(),
+                "ProgramCompetenciesOutcome9ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel4(),
+                "ProgramCompetenciesOutcome9ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9ContributionLevel5(),
+                "ProgramCompetenciesOutcome9ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome9LOno(), "ProgramCompetenciesOutcome9LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10(), "ProgramCompetenciesOutcome10");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel1(),
+                "ProgramCompetenciesOutcome10ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel2(),
+                "ProgramCompetenciesOutcome10ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel3(),
+                "ProgramCompetenciesOutcome10ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel4(),
+                "ProgramCompetenciesOutcome10ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10ContributionLevel5(),
+                "ProgramCompetenciesOutcome10ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome10LOno(), "ProgramCompetenciesOutcome10LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11(), "ProgramCompetenciesOutcome11");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel1(),
+                "ProgramCompetenciesOutcome11ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel2(),
+                "ProgramCompetenciesOutcome11ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel3(),
+                "ProgramCompetenciesOutcome11ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel4(),
+                "ProgramCompetenciesOutcome11ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11ContributionLevel5(),
+                "ProgramCompetenciesOutcome11ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome11LOno(), "ProgramCompetenciesOutcome11LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12(), "ProgramCompetenciesOutcome12");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel1(),
+                "ProgramCompetenciesOutcome12ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel2(),
+                "ProgramCompetenciesOutcome12ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel3(),
+                "ProgramCompetenciesOutcome12ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel4(),
+                "ProgramCompetenciesOutcome12ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12ContributionLevel5(),
+                "ProgramCompetenciesOutcome12ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome12LOno(), "ProgramCompetenciesOutcome12LOno");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13(), "ProgramCompetenciesOutcome13");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel1(),
+                "ProgramCompetenciesOutcome13ContributionLevel1");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel2(),
+                "ProgramCompetenciesOutcome13ContributionLevel2");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel3(),
+                "ProgramCompetenciesOutcome13ContributionLevel3");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel4(),
+                "ProgramCompetenciesOutcome13ContributionLevel4");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13ContributionLevel5(),
+                "ProgramCompetenciesOutcome13ContributionLevel5");
+        newTAB6Hash.put(course.getProgramCompetenciesOutcome13LOno(), "ProgramCompetenciesOutcome13LOno");
+        return newTAB6Hash;
     }
 
     @FXML
@@ -1407,6 +1805,7 @@ public class MainControllerX implements Initializable {
             else {
                 file1.setText(ListView.getSelectionModel().getSelectedItem());
                 warning.setText("");
+                comparefile1=file1.getText();
             }
         }
         else {
@@ -1417,6 +1816,7 @@ public class MainControllerX implements Initializable {
             else {
                 file2.setText(ListView.getSelectionModel().getSelectedItem());
                 warning.setText("");
+                comparefile2=file2.getText();
             }
         }
 
@@ -1440,8 +1840,34 @@ public class MainControllerX implements Initializable {
     }//
 
     @FXML
-    void CompareButtonA(ActionEvent event){
-        //Mete buraya ekle
+    void CompareButtonA(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("CompareSection.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+        MainControllerX mainController = fxmlLoader.getController();
+        stage.setScene(scene);
+        stage.show();
+
+        if (file1.getText()==""||file2.getText()=="") {
+            warning.setText("You have to select 2 courses");
+
+        }
+        else {
+
+            String firstFilePath=findMyPath(file1.getText());
+            String secondFilePath=findMyPath(file2.getText());
+            ArrayList<ObservableList> lists=CompareVersions(firstFilePath,secondFilePath);
+
+            mainController.compareFile1.setText(comparefile1);
+            mainController.compareFile2.setText(comparefile2);
+            mainController.Tab1list.setItems(lists.get(0));
+            mainController.Tab2list.setItems(lists.get(1));
+            mainController.Tab3list.setItems(lists.get(2));
+            mainController.Tab4list.setItems(lists.get(3));
+            mainController.Tab5list.setItems(lists.get(4));
+            mainController.Tab6list.setItems(lists.get(5));
+
+        }
     }
 
 
@@ -1502,7 +1928,36 @@ public class MainControllerX implements Initializable {
         System.out.println(lastVersion);
         return lastChar;
     }
+    @FXML
+    private ListView<String> SaveTab;
 
+    @FXML
+    private ListView<String> Tab1list;
+
+    @FXML
+    private ListView<String> Tab2list;
+
+    @FXML
+    private ListView<String> Tab3list;
+
+    @FXML
+    private ListView<String> Tab4list;
+
+    @FXML
+    private ListView<String> Tab5list;
+
+    @FXML
+    private ListView<String> Tab6list;
+
+
+    @FXML
+    private Label compareFile1;
+
+    @FXML
+    private Label compareFile2;
+
+    private String comparefile1="selected Course 1";
+    private String comparefile2="selected Course 2";
 
     @FXML
     private Label file1;

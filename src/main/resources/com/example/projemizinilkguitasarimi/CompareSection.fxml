@@ -13,19 +13,50 @@
             <Font name="System Bold" size="25.0" />
          </font></Label>
        <Button fx:id="back" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="36.0" prefWidth="180.0" text="Back" />
-      <ListView fx:id="Tab1list" layoutX="1094.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
+      <ListView fx:id="SaveTab" layoutX="1094.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
       <ListView fx:id="Tab2list" layoutX="914.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
       <ListView fx:id="Tab3list" layoutX="734.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
       <ListView fx:id="Tab4list" layoutX="554.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
       <ListView fx:id="Tab5list" layoutX="374.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
       <ListView fx:id="Tab6list" layoutX="194.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
-      <ListView fx:id="SaveTab"  layoutX="14.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
-      <Label alignment="CENTER" layoutX="62.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 1" textAlignment="CENTER" />
-      <Label alignment="CENTER" layoutX="242.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 2" textAlignment="CENTER" />
-      <Label alignment="CENTER" layoutX="422.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 3" textAlignment="CENTER" />
-      <Label alignment="CENTER" layoutX="602.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 4" textAlignment="CENTER" />
-      <Label alignment="CENTER" layoutX="782.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 5" textAlignment="CENTER" />
-      <Label alignment="CENTER" layoutX="962.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 6" textAlignment="CENTER" />
-      <Label alignment="CENTER" layoutX="1142.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="SAVE TAB" textAlignment="CENTER" />
+      <ListView fx:id="Tab1list" layoutX="14.0" layoutY="200.0" prefHeight="515.0" prefWidth="180.0" />
+      <Label alignment="CENTER" layoutX="62.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 1" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="242.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 2" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="422.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 3" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="602.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 4" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="782.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 5" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="962.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="TAB 6" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="1142.0" layoutY="152.0" prefHeight="36.0" prefWidth="84.0" text="SAVE TAB" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="compareFile1" alignment="CENTER" layoutX="839.0" layoutY="51.0" prefHeight="36.0" prefWidth="139.0" text=" " textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="compareFile2" alignment="CENTER" layoutX="1010.0" layoutY="51.0" prefHeight="36.0" prefWidth="146.0" text=" " textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
