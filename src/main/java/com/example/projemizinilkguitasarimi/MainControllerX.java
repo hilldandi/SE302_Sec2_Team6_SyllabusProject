@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 
 import java.io.*;
+import java.net.FileNameMap;
 import java.net.URL;
 import java.util.*;
 
@@ -95,7 +96,7 @@ public class MainControllerX implements Initializable {
             selectedkey=comboBox.getValue();
         }
 
-        String path="Document/";
+        String path=FinalPath;
         String combinedPath=path+selectedkey+"/"+selectedItem;
         CourseInformationx course=readJsonFile(combinedPath);
         MainControllerX mainController = fxmlLoader.getController();
@@ -139,6 +140,8 @@ public class MainControllerX implements Initializable {
         mainController.reqMaterial41.setText(course.getWeek5ReqMat());
         mainController.subject51.setText(course.getWeek6Subjects());
         mainController.reqMaterial51.setText(course.getWeek6ReqMat());
+        mainController.subject61.setText(course.getWeek7Subjects());
+        mainController.reqMaterial61.setText(course.getWeek7ReqMat());
         mainController.subject71.setText(course.getWeek8Subjects());
         mainController.reqMaterial71.setText(course.getWeek8ReqMat());
         mainController.subject81.setText(course.getWeek9Subjects());
@@ -445,15 +448,21 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void HelpButton(ActionEvent event) {
+        String helpDoc = "HelpDocument.pdf";
 
-        File file = new File("src/main/resources/com/example/projemizinilkguitasarimi/Help Document.pdf");
+        File file = new File(helpDoc);
         if (file.exists()){
-            try{
-                new ProcessBuilder("cmd","/c",file.getAbsolutePath()).start();
-            }
-            catch (IOException e ){
+            try {
+                String filePath = new File(helpDoc).getAbsolutePath();
+                Process process = Runtime.getRuntime().exec("cmd /c start \"\" \"" + filePath + "\"");
+                int exitCode = process.waitFor();
+                if (exitCode != 0) {
+                    System.out.println("Failed to open the file.");
+                }
+            } catch (Exception e) {
                 e.printStackTrace();
             }
+
         }
 
 
@@ -820,7 +829,7 @@ public class MainControllerX implements Initializable {
     @FXML
     public void search(ActionEvent event){
         comboBox.setValue(null);
-        String path="Document/";
+        String path=FinalPath;
         fileMap=GetFiles();
         String wordToFind=searchText.getText().toUpperCase();
         String vals;
@@ -837,7 +846,26 @@ public class MainControllerX implements Initializable {
 
 
     }
+    public void findDiff(Iterator<String> iterator, HashMap<String , String> newHashTab, HashMap<String , String> oldHashTab, ArrayList<String> version){
+        while(iterator.hasNext()){
+            String key = iterator.next();
+            System.out.println(newHashTab.get(key));
+            System.out.println(oldHashTab.get(key));
+            if (newHashTab.get(key) == null && oldHashTab.get(key) == null) {
+                continue;
+            }
+            if (newHashTab.get(key) == null && oldHashTab.get(key) != null) {
+                version.add(key + ": " + newHashTab.get(key));
+            }
+            if (newHashTab.get(key) != null && oldHashTab.get(key) == null) {
+                version.add(key + ": " + "NULL");
+            }
 
+            if (!Objects.equals(newHashTab.get(key).trim(), oldHashTab.get(key).trim())) {
+                version.add(key + ": " + newHashTab.get(key));
+            }
+        }
+    }
     public ArrayList<ObservableList> CompareVersions (String filePathOfOldVersion, String filePathOfNewVersion)throws IOException{
 
         CourseInformationx oldVersion, newVersion;
@@ -884,51 +912,13 @@ public class MainControllerX implements Initializable {
         ArrayList<String> vChanges6=new ArrayList<>();
 
 
-        while(iterator1.hasNext()){
-            key1 = iterator1.next();
-            System.out.println(newHashTab1.get(key1));
-            System.out.println(oldHashTab1.get(key1));
-            if(newHashTab1.get(key1).equals("")){break;}
-            else if (!Objects.equals(newHashTab1.get(key1), oldHashTab1.get(key1))) {
-                vChanges1.add(key1 + ": " + newHashTab1.get(key1));
-            }
-        }
-        while(iterator2.hasNext()){
-            key2 = iterator2.next();
-            if(newHashTab2.get(key2).equals("")){break;}
-            else if (!Objects.equals(newHashTab2.get(key2), oldHashTab2.get(key2))) {
-                vChanges2.add(key2 + ": " + newHashTab2.get(key2));
-            }
-        }
-        while(iterator3.hasNext()){
-            key3 = iterator3.next();
-            if(newHashTab3.get(key3).equals("")){break;}
-            else if (!Objects.equals(newHashTab3.get(key3), oldHashTab3.get(key3))) {
-                vChanges3.add(key3 + ": " + newHashTab3.get(key3));
-            }
-        }
+        findDiff(iterator1,newHashTab1,oldHashTab1,vChanges1);
+        findDiff(iterator2,newHashTab2,oldHashTab2,vChanges2);
+        findDiff(iterator3,newHashTab3,oldHashTab3,vChanges3);
+        findDiff(iterator4,newHashTab4,oldHashTab4,vChanges4);
+        findDiff(iterator5,newHashTab5,oldHashTab5,vChanges5);
+        findDiff(iterator6,newHashTab6,oldHashTab6,vChanges6);
 
-        while(iterator4.hasNext()){
-            key4 = iterator4.next();
-            if(newHashTab4.get(key4).equals("")){break;}
-            else if (!Objects.equals(newHashTab4.get(key4), oldHashTab4.get(key4))) {
-                vChanges4.add(key4 + ": " + newHashTab4.get(key4));
-            }
-        }
-        while(iterator5.hasNext()){
-            key5 = iterator5.next();
-            if(newHashTab5.get(key5).equals("")){break;}
-            else if (!Objects.equals(newHashTab5.get(key5), oldHashTab5.get(key5))) {
-                vChanges5.add(key5 + ": " + newHashTab5.get(key5));
-            }
-        }
-        while(iterator6.hasNext()){
-            key6 = iterator6.next();
-            if(newHashTab6.get(key6).equals("")){break;}
-            else if (!Objects.equals(newHashTab6.get(key6), oldHashTab6.get(key6))) {
-                vChanges6.add(key6 + ": " + newHashTab6.get(key6));
-            }
-        }
         System.out.println(vChanges1);
         System.out.println(vChanges2);
         System.out.println(vChanges3);
@@ -1624,7 +1614,7 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void delete(ActionEvent event) throws IOException {
-        String path = "Document/";
+        String path = FinalPath;
         String selectedDeletingFile;
         String combinedPath;
         String selectedDeletingLecture;
@@ -1651,37 +1641,51 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void look(ActionEvent event)throws IOException{
-        fileMap=GetFiles();
-        String vals;
-        ArrayList<String> Valuesx = new ArrayList<>();
+        try {
+            fileMap = GetFiles();
 
-        if (comboBox.getValue()==null){
-            for (int i=0;i<Keys.length;i++){
-                vals=(String) fileMap.get(Keys[i]);
-                Valuesx.addAll(List.of(vals.split(","))) ;
+            String vals;
+            ArrayList<String> Valuesx = new ArrayList<>();
+
+            if (comboBox.getValue() == null) {
+                for (int i = 0; i < Keys.length; i++) {
+                    vals = (String) fileMap.get(Keys[i]);
+                    Valuesx.addAll(List.of(vals.split(",")));
+                }
+                ObservableList<String> value = FXCollections.observableArrayList(Valuesx);
+                ListView.setItems(value);
+
+            } else {
+                vals = (String) fileMap.get(comboBox.getValue());
+                values = vals.split(",");
+                ObservableList<String> value = FXCollections.observableArrayList(values);
+                ListView.setItems(value);
             }
-            ObservableList<String> value = FXCollections.observableArrayList(Valuesx);
-            ListView.setItems(value);
+        }catch (Exception e){
+            File file=new File("error.log");
+            FileWriter writer=new FileWriter(file);
 
-        }else {
-            vals = (String) fileMap.get(comboBox.getValue());
-            values = vals.split(",");
-            ObservableList<String> value = FXCollections.observableArrayList(values);
-            ListView.setItems(value);
+            writer.write(e.getMessage());
+
+
         }
 
 
     }
 
     public HashMap<String, String> GetFiles() {
-        String path = "Document/";
-        String combinedPath = path;
+        String path = FinalPath;
+
         File directory = new File(path);
         Keys = directory.list();
         HashMap<String, String> jsonMap = new HashMap<>();
         for (String member : Keys) {
             File dir = new File(path + member);
+
             String[] innerList = dir.list();
+            if(innerList==null){
+                continue;
+            }
             String innerObject = "";
             for (int i = 0; i < innerList.length; i++) {
                 if (i == innerList.length - 1) {
@@ -1732,8 +1736,8 @@ public class MainControllerX implements Initializable {
         else {
             selectedkey=comboBox.getValue();
         }
-        String path="Document/";
-        String combinedPath=path+selectedkey+"/"+selectedItem;
+
+        String combinedPath=FinalPath+selectedkey+"/"+selectedItem;
 
         return combinedPath;
     }//
@@ -1775,9 +1779,9 @@ public class MainControllerX implements Initializable {
     @FXML
     public void CreateNewCourse()throws IOException {
         Gson gson = new Gson();
-        String path = "Document/";
+        createdir.mkdirs();
         String code =codeTextt2.getText().toUpperCase();
-        String combinedPath = path + code.toUpperCase();
+        String combinedPath = FinalPath + code.toUpperCase();
         String newFilePath;
 
         File directory=new File(combinedPath);
@@ -1787,6 +1791,7 @@ public class MainControllerX implements Initializable {
             newFilePath = code +"-V"+lastVersion+ ".json";
         }
         else{
+            directory.mkdirs();
             newFilePath= code+"-V0.json";
         }
         CourseInformationx course=new CourseInformationx();
@@ -1796,10 +1801,8 @@ public class MainControllerX implements Initializable {
 
 
         //Create new directory according to course code
-        File dir = new File(combinedPath);
-        dir.mkdirs();
-        File file = new File(dir, newFilePath);
 
+        File file = new File(directory,newFilePath);
         try (FileWriter fileWriter = new FileWriter(file)) {
             fileWriter.write(newJson);
             System.out.println("JSON written to file successfully.");
@@ -1827,6 +1830,13 @@ public class MainControllerX implements Initializable {
         System.out.println(lastVersion);
         return lastChar;
     }
+
+
+    static String userhome=System.getProperty("user.home");
+    static String GlobalpathName = "Document/";
+    static String FinalPath=userhome+File.separator+GlobalpathName;
+    static File createdir=new File(FinalPath);
+
     @FXML
     private ListView<String> SaveTab;
 
