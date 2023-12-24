@@ -41,7 +41,7 @@ Links are listed below:
 - Task Distribution : https://docs.google.com/spreadsheets/d/14o0TS5t9_6OMcc_IM1Q5O9BSorqrhp0r/edit#gid=529061030
 - Trello : https://trello.com/b/hSbBcknl/se-302-section2
 - Help Document : https://docs.google.com/document/d/1-MaVbK_uNuku-NJK_5S4E5Qa0vBWhpyt/edit?usp=sharing&ouid=110358587628809161749&rtpof=true&sd=true
-- Wiki : https://github.com/hilldandi/SE302_Sec2_Team6_SyllabusProject.wiki.git
+- Wiki : https://github.com/hilldandi/SE302_Sec2_Team6_SyllabusProject/wiki
 
 ## Contributors
 - Berkay ARDA
