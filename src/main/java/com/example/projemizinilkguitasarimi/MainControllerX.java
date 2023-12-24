@@ -12,11 +12,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import java.awt.Desktop;
 
 
 import java.io.*;
 import java.net.FileNameMap;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 
 
@@ -448,6 +451,7 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void HelpButton(ActionEvent event) {
+
         String helpDoc = "HelpDocument.pdf";
 
         File file = new File(helpDoc);
@@ -464,8 +468,6 @@ public class MainControllerX implements Initializable {
             }
 
         }
-
-
     }
 
     @Override
