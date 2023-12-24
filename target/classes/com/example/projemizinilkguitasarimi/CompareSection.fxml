@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
+<!DOCTYPE AnchorPane [
+        <!ELEMENT AnchorPane (children)*>
+        <!ATTLIST AnchorPane
+                prefHeight CDATA #REQUIRED
+                prefWidth CDATA #REQUIRED
+                style CDATA #REQUIRED
+                xmlns CDATA #REQUIRED
+                xmlns:fx CDATA #REQUIRED
+                fx:controller CDATA #REQUIRED>
+        <!ELEMENT children (Label|ListView)*>
+        <!ELEMENT Label (font)*>
+        <!ATTLIST Label
+                alignment CDATA #IMPLIED
+                fx:id CDATA #IMPLIED
+                layoutX CDATA #REQUIRED
+                layoutY CDATA #REQUIRED
+                prefHeight CDATA #REQUIRED
+                prefWidth CDATA #REQUIRED
+                text CDATA #REQUIRED
+                textAlignment CDATA #IMPLIED>
+        <!ELEMENT font (Font)*>
+        <!ELEMENT Font (#PCDATA)>
+        <!ATTLIST Font
+                name CDATA #REQUIRED
+                size CDATA #REQUIRED>
+        <!ELEMENT ListView (#PCDATA)>
+        <!ATTLIST ListView
+                fx:id CDATA #REQUIRED
+                layoutX CDATA #REQUIRED
+                layoutY CDATA #REQUIRED
+                prefHeight CDATA #REQUIRED
+                prefWidth CDATA #REQUIRED>
+        ]>
 <AnchorPane prefHeight="800.0" prefWidth="1315.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projemizinilkguitasarimi.MainControllerX">
    <children>
       <Label layoutX="552.0" layoutY="51.0" prefHeight="36.0" prefWidth="212.0" text="COMPARED FILE">
