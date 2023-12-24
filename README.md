@@ -4,12 +4,17 @@ University Management System Application (UMSA) is a software application that c
 
 ## Table of Contents
 
+- [Important Warning](#Important Warning)
 - [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documents](#documents)
 - [Contributors](#contributors)
+
+##Important Warning
+
+Before start the using app, user MUST create new syllabus file. (From "Create New Version")
 
 ## Overview
 
@@ -28,7 +33,16 @@ programming language, JSON File Handling, and JavaFX will be used for the implem
 
 ## Installation
 
+Installation:
+-Download the Executable:
+-Navigate it on GitHub. Download the latest ".exe" file.
 
+Running the Installer:
+-Locate the downloaded .exe file in your download folder.
+-Double-click the file to start the installation process.
+
+Launching the Program:
+-If installation is complete, you can launch it directly from the desktop shortcut or the start menu.
 
 ## Usage
 
