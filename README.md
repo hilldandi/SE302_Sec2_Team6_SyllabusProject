@@ -34,15 +34,15 @@ programming language, JSON File Handling, and JavaFX will be used for the implem
 ## Installation
 
 Installation:
--Download the Executable:
--Navigate it on GitHub. Download the latest ".exe" file.
+- Download the Executable:
+- Navigate it on GitHub. Download the latest ".exe" file.
 
 Running the Installer:
--Locate the downloaded .exe file in your download folder.
--Double-click the file to start the installation process.
+- Locate the downloaded .exe file in your download folder.
+- Double-click the file to start the installation process.
 
 Launching the Program:
--If installation is complete, you can launch it directly from the desktop shortcut or the start menu.
+- If installation is complete, you can launch it directly from the desktop shortcut or the start menu.
 
 ## Usage
 
