@@ -12,10 +12,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import java.awt.Desktop;
 
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 
 
@@ -445,18 +448,16 @@ public class MainControllerX implements Initializable {
 
     @FXML
     void HelpButton(ActionEvent event) {
+        try {
+            InputStream inputStream = getClass().getResourceAsStream("/com/example/projemizinilkguitasarimi/Help Document.pdf");
+            File tempFile = File.createTempFile("HelpDocument", ".pdf");
+            tempFile.deleteOnExit();
+            Files.copy(inputStream, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
-        File file = new File("src/main/resources/com/example/projemizinilkguitasarimi/Help Document.pdf");
-        if (file.exists()){
-            try{
-                new ProcessBuilder("cmd","/c",file.getAbsolutePath()).start();
-            }
-            catch (IOException e ){
-                e.printStackTrace();
-            }
+            Desktop.getDesktop().open(tempFile);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-
     }
 
     @Override
