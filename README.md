@@ -4,7 +4,7 @@ University Management System Application (UMSA) is a software application that c
 
 ## Table of Contents
 
-- [Important Warning](#Important Warning)
+- [Warning](#warning)
 - [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
@@ -12,7 +12,7 @@ University Management System Application (UMSA) is a software application that c
 - [Documents](#documents)
 - [Contributors](#contributors)
 
-##Important Warning
+## Warning
 
 Before start the using app, user MUST create new syllabus file. (From "Create New Version")
 
